@@ -1,0 +1,80 @@
+page-login {
+.toprow{
+    background-color: #efc658;
+    font-family: 'AppFont' !important;
+        height: 40px;
+}
+header .headerrow img {
+    display: none;
+}
+
+.thelabel{
+    color: black !important;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: end;
+    font-family: Appfont;
+    margin: 0;
+   
+}
+.remb{
+    color: gray !important;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 5px 0;
+    font-family: Appfont;
+    h6{
+        padding: 0 10px;
+        font-family: Appfont;
+        display: inline;
+        font-size: 15px
+   }
+}
+.text-input{
+    border: 1px solid lightgray;
+    height: 35px;
+    margin: 5px 0;
+    direction: rtl;
+    width: 100%
+}
+
+.btn{
+    background-color: #ba8700;
+    border-radius: 5px;
+    width: 60%;
+    margin: auto;
+    height: 40px;
+    font-size: 14px;
+    font-family: Appfont;
+}
+.forget{
+    font-family: Appfont;
+    font-size: 12px;
+    margin: 5px 0;
+    color: #ba8700;
+}
+.face , .twr{
+    background-image: url('../assets/imgs/facebook.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 40px;
+    text-align: center;
+    padding: 5px 14px;
+    margin: 20px auto 0;
+    font-weight: 500;
+    color:white;
+    font-family: 'AppFont' !important;
+}
+.twr{
+    background-image: url('../assets/imgs/twitter.png');
+    }
+
+ .checkbox-md .checkbox-checked {
+    
+    background-color: #ab7d04;
+}
+.myform{
+    width:90%;
+    margin: 0 auto;
+}   
+}
