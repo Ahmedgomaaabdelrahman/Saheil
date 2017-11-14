@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ChoosecountryPage } from '../choosecountry/choosecountry';
+import { ActivecodePage } from '../activecode/activecode';
 
 
 
@@ -16,4 +18,7 @@ export class SignupPage {
     console.log('ionViewDidLoad SignupPage');
   }
 
+  gotoActive(){
+    this.navCtrl.push(ActivecodePage);
+  }
 }

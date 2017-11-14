@@ -13,6 +13,10 @@ import { AboutsahielPage } from "../pages/aboutsahiel/aboutsahiel";
 import { HeaderComponent } from "../components/header/header";
 import { SubheaderComponent } from "../components/subheader/subheader";
 import { BottomimgComponent } from "../components/bottomimg/bottomimg";
+import { ActivecodePage } from '../pages/activecode/activecode';
+import { LanguagePage } from '../pages/language/language';
+import { ForgetpassPage } from '../pages/forgetpass/forgetpass';
+import { ChoosecountryPage } from '../pages/choosecountry/choosecountry';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { BottomimgComponent } from "../components/bottomimg/bottomimg";
     SignupPage,
     HeaderComponent,
     SubheaderComponent,
-    BottomimgComponent
+    BottomimgComponent,
+    ActivecodePage,
+    LanguagePage,
+    ForgetpassPage,
+    ChoosecountryPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +48,11 @@ import { BottomimgComponent } from "../components/bottomimg/bottomimg";
     SignupPage,
     HeaderComponent,
     SubheaderComponent,
-    BottomimgComponent
+    BottomimgComponent,
+    ActivecodePage,
+    LanguagePage,
+    ForgetpassPage,
+    ChoosecountryPage
   ],
   providers: [
     StatusBar,

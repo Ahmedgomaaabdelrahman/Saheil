@@ -1,0 +1,27 @@
+page-choosecountry {
+.toprow{
+    background-color: #efc658;
+    text-align: center;
+    font-family: 'AppFont' !important;
+}
+.choose{
+    width: 80%;
+    margin: 50px auto;
+    border: 2px solid #efc658 !important;
+    border-radius: 5px;
+    direction: rtl;
+    .label{
+        font-family: Appfont;
+        color: gray
+    }
+}
+.select-ios{
+    padding: 0;
+}
+.select-md {
+    padding: 0;
+}
+.select-md .select-icon .select-icon-inner , .select-ios .select-icon .select-icon-inner{
+    color: #efc658 !important;
+}
+}
