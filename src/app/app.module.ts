@@ -13,10 +13,12 @@ import { AboutsahielPage } from "../pages/aboutsahiel/aboutsahiel";
 import { HeaderComponent } from "../components/header/header";
 import { SubheaderComponent } from "../components/subheader/subheader";
 import { BottomimgComponent } from "../components/bottomimg/bottomimg";
-import { ActivecodePage } from '../pages/activecode/activecode';
-import { LanguagePage } from '../pages/language/language';
-import { ForgetpassPage } from '../pages/forgetpass/forgetpass';
-import { ChoosecountryPage } from '../pages/choosecountry/choosecountry';
+import { AuthproviderProvider } from '../providers/authprovider/authprovider';
+import { DomainProvider } from '../providers/domain/domain';
+import { GetServicesProvider } from '../providers/get-services/get-services';
+import { HttpClient,HttpClientModule } from '@angular/common/http';
+import { HttpModule ,Http} from '@angular/http';
+// import {User} from "../models/user/user";
 
 @NgModule({
   declarations: [
@@ -28,15 +30,10 @@ import { ChoosecountryPage } from '../pages/choosecountry/choosecountry';
     SignupPage,
     HeaderComponent,
     SubheaderComponent,
-    BottomimgComponent,
-    ActivecodePage,
-    LanguagePage,
-    ForgetpassPage,
-    ChoosecountryPage
-  ],
+    BottomimgComponent],
   imports: [
-    BrowserModule,
-    IonicModule.forRoot(MyApp)
+    BrowserModule,HttpClientModule,
+      IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -48,16 +45,15 @@ import { ChoosecountryPage } from '../pages/choosecountry/choosecountry';
     SignupPage,
     HeaderComponent,
     SubheaderComponent,
-    BottomimgComponent,
-    ActivecodePage,
-    LanguagePage,
-    ForgetpassPage,
-    ChoosecountryPage
+    BottomimgComponent
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    AuthproviderProvider,
+    DomainProvider,
+    GetServicesProvider,  HttpClient
   ]
 })
 export class AppModule {}

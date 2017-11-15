@@ -5,7 +5,6 @@ import { SubheaderComponent } from "../../components/subheader/subheader";
 import { AboutsahielPage } from "../aboutsahiel/aboutsahiel";
 import { LoginPage } from "../login/login";
 import { SignupPage } from "../signup/signup";
-import { ChoosecountryPage } from '../choosecountry/choosecountry';
 
 
 @Component({
@@ -29,8 +28,7 @@ export class LoadingPage {
    this.navCtrl.push(LoginPage);
  }
 
-
- chooseCountry(){
-  this.navCtrl.push(ChoosecountryPage);
-}
+ goSignup(){
+   this.navCtrl.push(SignupPage);
+ }
 }
