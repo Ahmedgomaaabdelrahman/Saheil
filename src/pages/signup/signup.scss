@@ -51,6 +51,7 @@ header .headerrow img {
 .myform{
     width:90%;
     margin: 0 auto;
+    z-index: 1;
 } 
 .item{
     width: auto;
@@ -75,6 +76,7 @@ header .headerrow img {
     width: 30%;
     margin:20px auto;
     font-family: Appfont;
+    z-index: 1;
 }
 .radio-md .radio-checked {
     border-color: gray;
@@ -97,5 +99,8 @@ header .headerrow img {
 }
 .item-ios .radio-ios{
     margin:0;
+}
+.item-cover{
+    position: relative;
 }
 }

@@ -24,4 +24,53 @@ header .headerrow .rightimgs {display: none;}
 header .headerrow img {
     display: none;
 }
+
+.bottomdiv{
+    background-image: url(../assets/imgs/bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 250px;
+    
+}
+
+details{
+    width: 85%;
+    margin: 10px auto;
+    font-size: 17px;
+    font-family: Appfont;
+    direction: rtl;
+    p {
+        font-size: 15px;
+    }
+}
+summary{
+  background-color: lightgray;
+  color: gray;
+  padding: 0 10px;
+}
+details[open] > summary {
+    background-color: #c69d2f;
+    color: white;
+    
+  }
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary:after {
+    border-radius: 5px;
+    content: "+";
+    color: gray;
+    float: left;
+    font-weight: bold;
+    
+    padding: 0;
+    text-align: center;
+    width: 20px;
+  }
+
+  details[open] summary:after {
+    content: "-";
+    color: white;
+  }
 }

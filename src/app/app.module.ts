@@ -13,13 +13,10 @@ import { AboutsahielPage } from "../pages/aboutsahiel/aboutsahiel";
 import { HeaderComponent } from "../components/header/header";
 import { SubheaderComponent } from "../components/subheader/subheader";
 import { BottomimgComponent } from "../components/bottomimg/bottomimg";
-import { AuthproviderProvider } from '../providers/authprovider/authprovider';
-import { DomainProvider } from '../providers/domain/domain';
-import { GetServicesProvider } from '../providers/get-services/get-services';
-import { HttpClient,HttpClientModule } from '@angular/common/http';
-import { HttpModule ,Http} from '@angular/http';
-import { UserProvider } from '../providers/user/user';
-// import {User} from "../models/user/user";
+import { ActivecodePage } from '../pages/activecode/activecode';
+import { LanguagePage } from '../pages/language/language';
+import { ForgetpassPage } from '../pages/forgetpass/forgetpass';
+import { ChoosecountryPage } from '../pages/choosecountry/choosecountry';
 
 @NgModule({
   declarations: [
@@ -31,10 +28,15 @@ import { UserProvider } from '../providers/user/user';
     SignupPage,
     HeaderComponent,
     SubheaderComponent,
-    BottomimgComponent],
+    BottomimgComponent,
+    ActivecodePage,
+    LanguagePage,
+    ForgetpassPage,
+    ChoosecountryPage
+  ],
   imports: [
-    BrowserModule,HttpClientModule,
-      IonicModule.forRoot(MyApp)
+    BrowserModule,
+    IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -46,16 +48,16 @@ import { UserProvider } from '../providers/user/user';
     SignupPage,
     HeaderComponent,
     SubheaderComponent,
-    BottomimgComponent
+    BottomimgComponent,
+    ActivecodePage,
+    LanguagePage,
+    ForgetpassPage,
+    ChoosecountryPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthproviderProvider,
-    DomainProvider,
-    GetServicesProvider,  HttpClient,
-    UserProvider
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}
