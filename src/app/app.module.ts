@@ -18,6 +18,7 @@ import { DomainProvider } from '../providers/domain/domain';
 import { GetServicesProvider } from '../providers/get-services/get-services';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
 import { HttpModule ,Http} from '@angular/http';
+import { UserProvider } from '../providers/user/user';
 // import {User} from "../models/user/user";
 
 @NgModule({
@@ -53,7 +54,8 @@ import { HttpModule ,Http} from '@angular/http';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthproviderProvider,
     DomainProvider,
-    GetServicesProvider,  HttpClient
+    GetServicesProvider,  HttpClient,
+    UserProvider
   ]
 })
 export class AppModule {}
