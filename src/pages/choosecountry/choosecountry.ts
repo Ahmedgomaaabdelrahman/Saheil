@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { SignupPage } from '../signup/signup';
+import {GetServicesProvider} from "../../providers/get-services/get-services";
 
 
 @Component({
@@ -8,14 +9,21 @@ import { SignupPage } from '../signup/signup';
   templateUrl: 'choosecountry.html',
 })
 export class ChoosecountryPage {
+countries:any;
+  constructor(public service:GetServicesProvider,public navCtrl: NavController, public navParams: NavParams) {
+  }
+    submit(country){
+        this.navCtrl.push(SignupPage,country);
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+    }
+ionViewWillEnter(){
+    this.countries=[]
+    this.service.countryid().then(res=>{
+      this.countries=res;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ChoosecountryPage');
-  }
-  goSign(){ 
-    this.navCtrl.push(SignupPage);
-  }
+    })
+    console.log( this.countries)
+}
+
+
 }

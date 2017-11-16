@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { FCM } from '@ionic-native/fcm';
 
 import 'rxjs/add/operator/map';
 import {DomainProvider} from "../domain/domain";
@@ -13,7 +14,7 @@ import {DomainProvider} from "../domain/domain";
 @Injectable()
 export class GetServicesProvider {
 
-  constructor(public domain:DomainProvider,public http: HttpClient) {
+  constructor(private fcm: FCM,public domain:DomainProvider,public http: HttpClient) {
     console.log('Hello GetServicesProvider Provider');
   }
 countryid():Promise <any>{
@@ -38,4 +39,13 @@ serviceId():Promise <any>{
     })
     return promise;
 }
+getToken():Promise<any>{
+let promise=new Promise((resolve,reject)=>{
+    this.fcm.getToken().then(token=>{
+resolve(token)    })
+});
+return promise;
+
+}
+
 }

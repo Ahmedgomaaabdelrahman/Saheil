@@ -17,6 +17,14 @@ import { ActivecodePage } from '../pages/activecode/activecode';
 import { LanguagePage } from '../pages/language/language';
 import { ForgetpassPage } from '../pages/forgetpass/forgetpass';
 import { ChoosecountryPage } from '../pages/choosecountry/choosecountry';
+import {GetServicesProvider} from "../providers/get-services/get-services";
+import {DomainProvider} from "../providers/domain/domain";
+import {SearchProvider} from "../providers/search/search";
+import {UserProvider} from "../providers/user/user";
+import {AuthproviderProvider} from "../providers/authprovider/authprovider";
+import {HttpClientModule} from "@angular/common/http";
+import { CommonservicesProvider } from '../providers/commonservices/commonservices';
+import { FCM } from '@ionic-native/fcm';
 
 @NgModule({
   declarations: [
@@ -35,7 +43,7 @@ import { ChoosecountryPage } from '../pages/choosecountry/choosecountry';
     ChoosecountryPage
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,HttpClientModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -57,7 +65,8 @@ import { ChoosecountryPage } from '../pages/choosecountry/choosecountry';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},AuthproviderProvider,DomainProvider,GetServicesProvider,SearchProvider,UserProvider,
+    CommonservicesProvider,FCM
   ]
 })
 export class AppModule {}
