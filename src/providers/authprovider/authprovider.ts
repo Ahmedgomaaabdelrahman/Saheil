@@ -17,4 +17,7 @@ export class AuthproviderProvider {
 register(user){
     return this.http.post(this.url.url+'/api/register/',user);
 }
+    login(user){
+        return this.http.post(this.url.url+'/api/login/',user);
+    }
 }

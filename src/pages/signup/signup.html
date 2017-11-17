@@ -11,37 +11,48 @@
 </ion-row>
 
 <p class="topp">كما يمكنك استخدام اسم المستخدم وكلمه المرور لتسجيل الدخول للموقع</p>
-<form class="myform">
+<form class="myform"  #f="ngForm">
    <p class="thelabel">اسم المستخدم</p>
-   <ion-input style="text-align:center" type="text"></ion-input>
+   <ion-input [(ngModel)]="_username" id="_username" name="_username" style="text-align:center" type="text"></ion-input>
     <p class="thelabel">البريد الالكترونى</p>
-   <ion-input style="text-align:center" type="email"></ion-input>
+   <ion-input [(ngModel)]="_email" id="_email" name="_email" style="text-align:center" type="email"></ion-input>
    <p class="thelabel">كلمه المرور</p>
-   <ion-input style="text-align:center" type="password"></ion-input>
+   <ion-input [(ngModel)]="_password" id="_password" name="_password" style="text-align:center" type="password"></ion-input>
    <p class="thelabel">الجوال </p>
-   <ion-input style="text-align:center" type="tel"></ion-input>
-   <p class="thelabel">الدولة</p>
-   <ion-input style="text-align:center" type="text" placeholder="اختار الدولة"></ion-input>
-   <!--<ion-select>
-      <ion-option value="egy">مصر</ion-option>
-      <ion-option value="qatar">قطر</ion-option>
-      <ion-option value="sudia">السعودية</ion-option>
-   </ion-select>    -->
+   <ion-input [(ngModel)]="_mobile" id="_mobile" name="_mobile"  style="text-align:center" type="tel"></ion-input>
+
+        <ion-item>
+   <!--<p class="thelabel">الدولة</p>-->
+            <ion-label>اختر الخدمة</ion-label>
+
+    <ion-select [(ngModel)]="country_id" name="country_id" id="country_id"  interface="popover"   okText="اختر" cancelText="الغاء" required="true">
+            <!--<img src={{country.picpath}}>-->
+    <ion-option (ionSelect)="getSelectedService(country.service_id)"  *ngFor="let country of provideServices" value={{country.title_ar}} required>{{country.title_ar}}</ion-option>
+
+    </ion-select>
+        </ion-item>
   <ion-list radio-group style="text-align: end;margin: 0;">
         <ion-item>
-           <ion-label style="color: black;text-align: end;">مقدم خدمات</ion-label>
-            <ion-radio  name="ser"value="go"></ion-radio>
+           <!--<ion-label style="color: black;text-align: end;">مقدم خدمات</ion-label>-->
+            <!--<ion-radio  name="ser"value="go"></ion-radio>-->
         </ion-item>
 
         <ion-item>
-             <ion-label style="color: black;text-align: end;">باحث عن خدمات</ion-label>
-            <ion-radio checked="true"  name="ser" value="rust"></ion-radio>
+             <!--<ion-label style="color: black;text-align: end;">باحث عن خدمات</ion-label>-->
+            <!--<ion-radio checked="true"  name="ser" value="rust"></ion-radio>-->
         </ion-item>
   </ion-list>
-  <p class="thelabel">الخدمات المقدمة</p>
-  <ion-input style="text-align:center;z-index: 10;" type="text" placeholder="الخدمات المقدمة"></ion-input>
 
-  <button ion-button block class="btn" (click)="gotoActive()">تسجيل</button>
+  <!--<p class="thelabel">الخدمات المقدمة</p>-->
+  <!--<ion-input style="text-align:center" type="text" placeholder="الخدمات المقدمة"></ion-input>-->
+            <!--<ion-item>-->
+                <!--<ion-label>الخدمات المقدمة</ion-label>-->
+                <!--<ion-select [(ngModel)]="_service_id" name="_service_id" id="_service_id" interface="popover"   okText="اختر" cancelText="الغاء" required="true" >-->
+                <!--<ion-option (ionSelect)="getSelectedService(service)"  *ngFor="let service of provideServices"  value={{service.title_ar}} required>{{service.title_ar}}</ion-option>-->
+        <!--</ion-select></ion-item>-->
+
+  <button  [disabled]="!f.valid" (click)="submit()" ion-button block class="btn">التسجيل</button>
+
 </form>
 
 </ion-content>
