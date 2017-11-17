@@ -17,10 +17,8 @@ import { ActivecodePage } from '../pages/activecode/activecode';
 import { LanguagePage } from '../pages/language/language';
 import { ForgetpassPage } from '../pages/forgetpass/forgetpass';
 import { ChoosecountryPage } from '../pages/choosecountry/choosecountry';
-<<<<<<< HEAD
 import { DoctordetailsPage } from '../pages/doctordetails/doctordetails';
 import { AlldoctorsPage } from '../pages/alldoctors/alldoctors';
-=======
 import {GetServicesProvider} from "../providers/get-services/get-services";
 import {DomainProvider} from "../providers/domain/domain";
 import {SearchProvider} from "../providers/search/search";
@@ -29,7 +27,6 @@ import {AuthproviderProvider} from "../providers/authprovider/authprovider";
 import {HttpClientModule} from "@angular/common/http";
 import { CommonservicesProvider } from '../providers/commonservices/commonservices';
 import { FCM } from '@ionic-native/fcm';
->>>>>>> be93eed029966326a102cffe6166acc18e47779a
 
 @NgModule({
   declarations: [
