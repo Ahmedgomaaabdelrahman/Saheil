@@ -34,3 +34,9 @@ ion-modal {
     contain: strict;
     background-color: rgba(0, 0, 0, 0.84);
 }
+.content {
+    background-image: url(../assets/imgs/bg.png);
+    background-size: 100% 35%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}

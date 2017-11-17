@@ -17,6 +17,8 @@ import { ActivecodePage } from '../pages/activecode/activecode';
 import { LanguagePage } from '../pages/language/language';
 import { ForgetpassPage } from '../pages/forgetpass/forgetpass';
 import { ChoosecountryPage } from '../pages/choosecountry/choosecountry';
+import { DoctordetailsPage } from '../pages/doctordetails/doctordetails';
+import { AlldoctorsPage } from '../pages/alldoctors/alldoctors';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { ChoosecountryPage } from '../pages/choosecountry/choosecountry';
     ActivecodePage,
     LanguagePage,
     ForgetpassPage,
-    ChoosecountryPage
+    ChoosecountryPage,
+    DoctordetailsPage,
+    AlldoctorsPage
   ],
   imports: [
     BrowserModule,
@@ -52,7 +56,9 @@ import { ChoosecountryPage } from '../pages/choosecountry/choosecountry';
     ActivecodePage,
     LanguagePage,
     ForgetpassPage,
-    ChoosecountryPage
+    ChoosecountryPage,
+    DoctordetailsPage,
+    AlldoctorsPage
   ],
   providers: [
     StatusBar,
