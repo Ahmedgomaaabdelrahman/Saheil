@@ -30,6 +30,8 @@ import { FCM } from '@ionic-native/fcm';
 // import { TranslateModule } from '@ngx-translate/core';
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import { ClinkdetailsPage } from '../pages/clinkdetails/clinkdetails';
+import { AllclinksPage } from '../pages/allclinks/allclinks';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -50,7 +52,9 @@ export function createTranslateLoader(http: HttpClient) {
     ForgetpassPage,
     ChoosecountryPage,
     DoctordetailsPage,
-    AlldoctorsPage
+    AlldoctorsPage,
+    ClinkdetailsPage,
+    AllclinksPage
   ],
   imports: [
     BrowserModule,HttpClientModule,
@@ -80,7 +84,9 @@ export function createTranslateLoader(http: HttpClient) {
     ForgetpassPage,
     ChoosecountryPage,
     DoctordetailsPage,
-    AlldoctorsPage
+    AlldoctorsPage,
+    ClinkdetailsPage,
+    AllclinksPage
   ],
   providers: [
     StatusBar,
