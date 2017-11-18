@@ -11,7 +11,9 @@
 <div style="height: 55px;"></div>
 <div class="contdiv">
   <p> لاسترجاع كلمه المرور يرجى ادخال البريد الالكترونى</p>
-  <ion-input type="email" class="" placeholder="البريد الالكترونى"></ion-input>
+  <form #f="ngForm">
+  <ion-input type="email" [(ngModel)]="email" name="email" class="" placeholder="البريد الالكترونى" required></ion-input>
   <button ion-button outline (click)="dismiss()">موافق</button>
+  </form>
 </div>
 </ion-content>
