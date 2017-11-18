@@ -29,6 +29,7 @@ import { CommonservicesProvider } from '../providers/commonservices/commonservic
 import { FCM } from '@ionic-native/fcm';
 import { ClinkdetailsPage } from '../pages/clinkdetails/clinkdetails';
 import { AllclinksPage } from '../pages/allclinks/allclinks';
+import { EditaccountPage } from '../pages/editaccount/editaccount';
 
 @NgModule({
   declarations: [
@@ -48,8 +49,9 @@ import { AllclinksPage } from '../pages/allclinks/allclinks';
     DoctordetailsPage,
     AlldoctorsPage,
     ClinkdetailsPage,
-    AllclinksPage
-  ],
+    AllclinksPage,
+    EditaccountPage
+  ], 
   imports: [
     BrowserModule,HttpClientModule,
     IonicModule.forRoot(MyApp)
@@ -72,7 +74,8 @@ import { AllclinksPage } from '../pages/allclinks/allclinks';
     DoctordetailsPage,
     AlldoctorsPage,
     ClinkdetailsPage,
-    AllclinksPage
+    AllclinksPage,
+    EditaccountPage
   ],
   providers: [
     StatusBar,
