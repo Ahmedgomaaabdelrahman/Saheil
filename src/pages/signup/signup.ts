@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {  NavController, NavParams } from 'ionic-angular';
 import {GetServicesProvider} from "../../providers/get-services/get-services";
 import { ChoosecountryPage } from '../choosecountry/choosecountry';
 import { ActivecodePage } from '../activecode/activecode';
@@ -51,7 +51,7 @@ console.log(resS)
             email:this._email,
             mobile:this._mobile,
             password:this._password,
-            gsm_regid:token,
+            gcm_regid:token,
             country_id:this.navParams.data.country_id,
             service_id:this._service_id
         }

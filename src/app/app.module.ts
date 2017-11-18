@@ -24,10 +24,16 @@ import {DomainProvider} from "../providers/domain/domain";
 import {SearchProvider} from "../providers/search/search";
 import {UserProvider} from "../providers/user/user";
 import {AuthproviderProvider} from "../providers/authprovider/authprovider";
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { CommonservicesProvider } from '../providers/commonservices/commonservices';
 import { FCM } from '@ionic-native/fcm';
+// import { TranslateModule } from '@ngx-translate/core';
+import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
+import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 
+export function createTranslateLoader(http: HttpClient) {
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 @NgModule({
   declarations: [
     MyApp,
@@ -48,7 +54,15 @@ import { FCM } from '@ionic-native/fcm';
   ],
   imports: [
     BrowserModule,HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+      TranslateModule.forRoot({
+          loader: {
+              provide: TranslateLoader,
+              useFactory: (createTranslateLoader),
+              deps: [HttpClientModule]
+          }
+      })
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [

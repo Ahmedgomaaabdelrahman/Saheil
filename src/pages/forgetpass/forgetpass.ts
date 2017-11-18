@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, ViewController } from 'ionic-angular';
 import {AuthproviderProvider} from "../../providers/authprovider/authprovider";
+import {CommonservicesProvider} from "../../providers/commonservices/commonservices";
 
 
 @Component({
@@ -9,7 +10,7 @@ import {AuthproviderProvider} from "../../providers/authprovider/authprovider";
 })
 export class ForgetpassPage {
 
-  constructor(public auth:AuthproviderProvider,public viewCtrl : ViewController,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public common:CommonservicesProvider,public auth:AuthproviderProvider,public viewCtrl : ViewController,public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -17,8 +18,12 @@ export class ForgetpassPage {
   }
   email:any
   dismiss(){
-    this.auth.forgotPassword(this.email).subscribe(res=>{
-
+      console.log(this.email)
+let e={'email':this.email}
+      this.auth.forgotPassword(e).subscribe(res=>{
+      if(res['error'])
+        this.common.presentToast(res['error'])
+console.log(res['error'])
     })
     this.viewCtrl.dismiss();
   }
