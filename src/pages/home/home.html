@@ -1,5 +1,111 @@
 <ion-content>
+<header></header>
+<subheader></subheader>
+<ion-row class="toprow"><ion-col col-12 >الصفحه الرئيسيه</ion-col></ion-row>
+
+    <ion-slides pager>   
+        <ion-slide>
+            <img src="assets/imgs/image.png" alt="">
+        </ion-slide>
+
+        <ion-slide>
+            <img src="assets/imgs/topimg.png" alt="">
+        </ion-slide>
+
+        <ion-slide>
+            <img src="assets/imgs/image.png" alt="">
+        </ion-slide>
+    </ion-slides>
+
+<div>
+<ion-segment [(ngModel)]="pet" dir="rtl">
+    <ion-segment-button value="services">
+        الخدمات 
+    </ion-segment-button>
+    <ion-segment-button value="Album">
+    البوم الصور 
+    </ion-segment-button>
+    <ion-segment-button value="horsesoc">
+        مجتمع الخيل
+    </ion-segment-button>
+    <ion-segment-button value="horseday">
+           يوميات الخيل
+    </ion-segment-button>
+</ion-segment>
+</div>
+<div [ngSwitch]="pet" class="segdiv">
+    <div class="bigdiv" *ngSwitchDefault ngSelected="selected" >
+        <div class="serrow" (click)="gotodoctors()">
+            <h6 style="text-align:center">اطباء بيطرين</h6>
+            <ion-row style="height:45px">
+            <ion-col col-2><img width="50px"  src="assets/imgs/serv1.png" alt=""></ion-col>
+            <ion-col col-10>
+                <p>خلافا ان نص لوريم لويس نص  عشوائى خلافا ان نص لوريم لويس نص  عشوائى </p>
+            </ion-col>
+            </ion-row>
+        </div>
+
+        <div class="serrow" (click)="gotoclincs()">
+                <h6 style="text-align:center">عيادات بيطريه</h6>
+                <ion-row style="height:45px">
+                <ion-col col-2><img width="50px"  src="assets/imgs/serv2.png" alt=""></ion-col>
+                <ion-col col-10>
+                    <p>خلافا ان نص لوريم لويس نص  عشوائى خلافا ان نص لوريم لويس نص  عشوائى </p>
+                </ion-col>
+                </ion-row>
+        </div>
+        <div class="serrow">
+                <h6 style="text-align:center">نقل برى</h6>
+                <ion-row style="height:45px">
+                <ion-col col-2><img width="50px"  src="assets/imgs/serv3.png" alt=""></ion-col>
+                <ion-col col-10>
+                    <p>خلافا ان نص لوريم لويس نص  عشوائى خلافا ان نص لوريم لويس نص  عشوائى </p>
+                </ion-col>
+                </ion-row>
+        </div>
+        <div class="serrow">
+                <h6 style="text-align:center">نقل جوى</h6>
+                <ion-row style="height:45px">
+                <ion-col col-2><img width="50px"  src="assets/imgs/serv3.png" alt=""></ion-col>
+                <ion-col col-10>
+                    <p>خلافا ان نص لوريم لويس نص  عشوائى خلافا ان نص لوريم لويس نص  عشوائى </p>
+                </ion-col>
+                </ion-row>
+        </div>
+        <div class="serrow">
+                <h6 style="text-align:center">مستلزمات الخيل</h6>
+                <ion-row style="height:45px">
+                <ion-col col-2><img width="50px"  src="assets/imgs/serv4.png" alt=""></ion-col>
+                <ion-col col-10>
+                    <p>خلافا ان نص لوريم لويس نص  عشوائى خلافا ان نص لوريم لويس نص  عشوائى </p>
+                </ion-col>
+                </ion-row>
+        </div>      
+        <div class="serrow">
+                <h6 style="text-align:center">تجار الخيل</h6>
+                <ion-row style="height:45px">
+                <ion-col col-2><img width="50px"  src="assets/imgs/serv5.png" alt=""></ion-col>
+                <ion-col col-10>
+                    <p>خلافا ان نص لوريم لويس نص  عشوائى خلافا ان نص لوريم لويس نص  عشوائى </p>
+                </ion-col>
+                </ion-row>
+        </div>  
+        
+    </div>
+
+    <div *ngSwitchCase="'Album'">
+       
+     </div>
+
+    <div *ngSwitchCase="'horsesoc'">
+       
+    </div>
+
+    <div *ngSwitchCase="'horseday'">
+        
+    </div>
+</div>
+
   
- 
   
 </ion-content>

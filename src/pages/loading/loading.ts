@@ -6,6 +6,7 @@ import { AboutsahielPage } from "../aboutsahiel/aboutsahiel";
 import { LoginPage } from "../login/login";
 import { SignupPage } from "../signup/signup";
 import { ChoosecountryPage } from '../choosecountry/choosecountry';
+import { HomePage } from '../home/home';
 
 
 @Component({
@@ -32,5 +33,9 @@ export class LoadingPage {
 
  chooseCountry(){
   this.navCtrl.push(ChoosecountryPage);
+}
+
+gohome(){
+  this.navCtrl.push(HomePage);
 }
 }

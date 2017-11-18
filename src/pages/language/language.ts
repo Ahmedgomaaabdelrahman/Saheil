@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AboutsahielPage } from '../aboutsahiel/aboutsahiel';
 import { LoadingPage } from '../loading/loading';
 import { AlldoctorsPage } from '../alldoctors/alldoctors';
+import { AllclinksPage } from '../allclinks/allclinks';
 
 @Component({
   selector: 'page-language',
@@ -22,5 +23,8 @@ export class LanguagePage {
 
   goDoctors(){
     this.navCtrl.push(AlldoctorsPage);
+  }
+  gotoclinks(){
+    this.navCtrl.push(AllclinksPage);
   }
 }

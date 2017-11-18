@@ -1,3 +1,97 @@
 page-home {
+    .toprow{
+        background-color: #efc658;
+        text-align: center;
+        font-family: 'AppFont' !important;
+        font-weight: bold;
+    }
 
+    .topdiv{
+        background-image: url(../assets/imgs/topimg.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        height: 140px;
+        opacity: 0.8;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.84);
+        .heart{
+            position: absolute;
+            left: 10px;
+            height: 25px;
+            margin: 10px 0;
+        }
+    
+
+        .simg{
+            height: 100px;
+            margin-top: 20px;
+        }
+    }
+
+    .docname{
+        text-align: center;
+        font-family: 'AppFont' !important;
+        font-weight: bold;
+        margin-top: -26px;
+    }
+
+    .send{
+        width: 30%;
+        margin: 10px auto;
+        background-color: #a97b03;
+        color: white;
+        height: 30px;
+        font-family: Appfont;
+       
+    }
+    .segment-ios .segment-button{
+        border:1px solid #a97b03 !important;
+    }
+    .segment-md .segment-button , .segment-ios .segment-button{
+        background-color: #a97b03;
+        opacity: 1;
+        font-family: Appfont;
+        color: white;
+        font-size: 14px;
+        height: 40px;
+    }
+
+    .segment-md .segment-button.segment-activated , .segment-ios .segment-button.segment-activated
+    {
+        background-color: #e8e8e8 !important;
+        color: #a97b03 !important;
+        border-bottom: 1px solid #a97b03 !important;
+        font-weight: 500;
+        
+    }
+
+    .segdiv{
+        height: 100%;
+    }
+    .slides{
+        height: 20% !important;
+        
+    }
+    .bigdiv{
+        background-color: #e8e8e8;
+        padding: 10px 30px;
+        height: 100%;
+    }
+
+    .serrow{
+        font-family: Appfont;
+        direction: rtl;
+        background: white;
+        margin: 0 0 5px;
+        border: 1px solid lightgray;
+        h6,p{margin:0}
+        h6{margin: 0;font-weight: 600;opacity: .7;font-size: 14px;}
+        p{color:gray;font-size:12px;line-height: 17px;}
+        .col{
+            text-align: center;
+        }
+        img{
+            margin-top: -12px;
+        }
+    }
 }

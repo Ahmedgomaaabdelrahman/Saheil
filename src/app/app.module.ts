@@ -27,6 +27,8 @@ import {AuthproviderProvider} from "../providers/authprovider/authprovider";
 import {HttpClientModule} from "@angular/common/http";
 import { CommonservicesProvider } from '../providers/commonservices/commonservices';
 import { FCM } from '@ionic-native/fcm';
+import { ClinkdetailsPage } from '../pages/clinkdetails/clinkdetails';
+import { AllclinksPage } from '../pages/allclinks/allclinks';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { FCM } from '@ionic-native/fcm';
     ForgetpassPage,
     ChoosecountryPage,
     DoctordetailsPage,
-    AlldoctorsPage
+    AlldoctorsPage,
+    ClinkdetailsPage,
+    AllclinksPage
   ],
   imports: [
     BrowserModule,HttpClientModule,
@@ -66,7 +70,9 @@ import { FCM } from '@ionic-native/fcm';
     ForgetpassPage,
     ChoosecountryPage,
     DoctordetailsPage,
-    AlldoctorsPage
+    AlldoctorsPage,
+    ClinkdetailsPage,
+    AllclinksPage
   ],
   providers: [
     StatusBar,
