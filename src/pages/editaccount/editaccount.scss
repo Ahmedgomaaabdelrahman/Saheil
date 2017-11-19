@@ -1,0 +1,67 @@
+page-editaccount {
+.toprow{
+    background-color:white;
+    text-align: center;
+    font-family: 'AppFont' !important;
+    font-weight: bold;
+    color:black;
+    width: 50%;
+    margin: auto;
+    p{
+        display: inline-block;
+        margin: 0;
+    }
+}
+
+.topdiv{
+    background-image: url(../assets/imgs/imagebar.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100px;
+    text-align: center;
+    padding: 7px;
+    background-color: rgba(0, 0, 0, 0.84);
+    .heart{
+        position: absolute;
+        left: 10px;
+        height: 25px;
+        margin: 10px 0;
+    }
+
+.editicon{
+    position: relative;
+    top: 55px;
+    right: 30px;
+}
+    .simg{
+        height: 85px;
+        margin-top: 10px;
+        border: 5px solid #c7981c;
+        width: 90px;
+        margin: 0 auto;
+        border-radius: 50%;
+        background-image: url(../assets/imgs/doctor.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+.editinput{
+    border:1px solid gray;
+    width: 90%;
+    height: 30px;
+    margin: 10px auto 0;
+    ::placeholder{
+        font-family: Appfont;
+    }
+    .text-input{
+        margin: 5px ;
+        text-align: end;
+    }
+
+    .input-cover{
+        position: static;
+    }
+}
+
+}

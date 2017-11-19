@@ -7,6 +7,7 @@ import { LoginPage } from "../login/login";
 import { SignupPage } from "../signup/signup";
 import { ChoosecountryPage } from '../choosecountry/choosecountry';
 import { HomePage } from '../home/home';
+import { EditaccountPage } from '../editaccount/editaccount';
 
 
 @Component({
@@ -36,6 +37,6 @@ export class LoadingPage {
 }
 
 gohome(){
-  this.navCtrl.push(HomePage);
+  this.navCtrl.push(EditaccountPage);
 }
 }

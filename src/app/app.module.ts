@@ -32,6 +32,7 @@ import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import { ClinkdetailsPage } from '../pages/clinkdetails/clinkdetails';
 import { AllclinksPage } from '../pages/allclinks/allclinks';
+import { EditaccountPage } from '../pages/editaccount/editaccount';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -54,8 +55,9 @@ export function createTranslateLoader(http: HttpClient) {
     DoctordetailsPage,
     AlldoctorsPage,
     ClinkdetailsPage,
-    AllclinksPage
-  ],
+    AllclinksPage,
+    EditaccountPage
+  ], 
   imports: [
     BrowserModule,HttpClientModule,
     IonicModule.forRoot(MyApp),
@@ -86,7 +88,8 @@ export function createTranslateLoader(http: HttpClient) {
     DoctordetailsPage,
     AlldoctorsPage,
     ClinkdetailsPage,
-    AllclinksPage
+    AllclinksPage,
+    EditaccountPage
   ],
   providers: [
     StatusBar,
