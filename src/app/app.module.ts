@@ -30,6 +30,11 @@ import { FCM } from '@ionic-native/fcm';
 import { ClinkdetailsPage } from '../pages/clinkdetails/clinkdetails';
 import { AllclinksPage } from '../pages/allclinks/allclinks';
 import { EditaccountPage } from '../pages/editaccount/editaccount';
+import { TransportPage } from '../pages/transport/transport';
+import { FeePage } from '../pages/fee/fee';
+import { RatePage } from '../pages/rate/rate';
+import { CancelhintPage } from '../pages/cancelhint/cancelhint';
+import { ComplainPage } from '../pages/complain/complain';
 
 @NgModule({
   declarations: [
@@ -50,7 +55,12 @@ import { EditaccountPage } from '../pages/editaccount/editaccount';
     AlldoctorsPage,
     ClinkdetailsPage,
     AllclinksPage,
-    EditaccountPage
+    EditaccountPage,
+    TransportPage,
+    FeePage,
+    RatePage,
+    CancelhintPage,
+    ComplainPage,
   ], 
   imports: [
     BrowserModule,HttpClientModule,
@@ -75,7 +85,12 @@ import { EditaccountPage } from '../pages/editaccount/editaccount';
     AlldoctorsPage,
     ClinkdetailsPage,
     AllclinksPage,
-    EditaccountPage
+    EditaccountPage,
+    TransportPage,
+    FeePage,
+    RatePage,
+    CancelhintPage,
+    ComplainPage,
   ],
   providers: [
     StatusBar,
