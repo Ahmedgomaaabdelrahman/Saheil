@@ -24,9 +24,12 @@ import {DomainProvider} from "../providers/domain/domain";
 import {SearchProvider} from "../providers/search/search";
 import {UserProvider} from "../providers/user/user";
 import {AuthproviderProvider} from "../providers/authprovider/authprovider";
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { CommonservicesProvider } from '../providers/commonservices/commonservices';
 import { FCM } from '@ionic-native/fcm';
+// import { TranslateModule } from '@ngx-translate/core';
+import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
+import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import { ClinkdetailsPage } from '../pages/clinkdetails/clinkdetails';
 import { AllclinksPage } from '../pages/allclinks/allclinks';
 import { EditaccountPage } from '../pages/editaccount/editaccount';
@@ -36,6 +39,9 @@ import { RatePage } from '../pages/rate/rate';
 import { CancelhintPage } from '../pages/cancelhint/cancelhint';
 import { ComplainPage } from '../pages/complain/complain';
 
+export function createTranslateLoader(http: HttpClient) {
+    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 @NgModule({
   declarations: [
     MyApp,
@@ -64,7 +70,15 @@ import { ComplainPage } from '../pages/complain/complain';
   ], 
   imports: [
     BrowserModule,HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+      TranslateModule.forRoot({
+          loader: {
+              provide: TranslateLoader,
+              useFactory: (createTranslateLoader),
+              deps: [HttpClientModule]
+          }
+      })
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
