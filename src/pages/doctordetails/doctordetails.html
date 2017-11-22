@@ -7,7 +7,7 @@
    <div class="topdiv">
      <img class="heart" src="assets/imgs/fav.png">
       <!-- <img class="fimg" src="assets/imgs/topimg.png"> -->
-      <img class="simg" src="assets/imgs/doctor.png">
+      <img class="simg" src={{details.picpath}}>
    </div>
   
    <ion-row style="margin-top:-25px">
@@ -17,7 +17,7 @@
       <ion-col col-9></ion-col>
    </ion-row>
    <ion-row class="docname">
-     <ion-col col-12>دكتور/احمد عبدالله</ion-col>
+     <ion-col col-12>{{details.name_ar}}</ion-col>
    </ion-row>
 
 
@@ -39,12 +39,7 @@
       <div *ngSwitchDefault>
         <div class="innerseg">
           <p>
-            تنظيم سباقات الخيل  تنظيم سباقات الخيل 
-            تنظيم سباقات الخيل تنظيم سباقات الخيل تنظيم سباقات الخيل 
-            تنظيم سباقات الخيل تنظيم سباقات الخيل 
-            تنظيم سباقات الخيل تنظيم سباقات الخيل 
-            تنظيم سباقات الخيل 
-          </p>
+{{details.details_ar}}          </p>
         </div>
       </div>
     
@@ -52,15 +47,15 @@
         <div class="innerseg" style="border-bottom:1px solid gray;">
          <ion-row>
            <ion-col col-1><img src="assets/imgs/address.png"></ion-col>
-           <ion-col col-11> شارع اى حاجه فى اى حته تلاقيه </ion-col>
+           <ion-col col-11>{{details.address_ar}} </ion-col>
          </ion-row>
          <ion-row>
             <ion-col col-1><img src="assets/imgs/email.png"></ion-col>
-            <ion-col col-11>aaaaa@sdfsdfsd.com</ion-col>
+            <ion-col col-11>{{details.email}}</ion-col>
          </ion-row>
          <ion-row>
             <ion-col col-1><img src="assets/imgs/face.png"></ion-col>
-            <ion-col col-11>aaaaa@sdfsdfsd.com</ion-col>
+            <ion-col col-11>{{details.facebook}}</ion-col>
           </ion-row>
           <ion-row>
              <ion-col col-1><img src="assets/imgs/tw.png"></ion-col>
@@ -71,7 +66,7 @@
 
       <div *ngSwitchCase="'location'">
          <div>
-           <img class="map" src="assets/imgs/map.jpg">
+           <!--<img class="map" src="assets/imgs/map.jpg">-->
          </div></div>
 
     </div>

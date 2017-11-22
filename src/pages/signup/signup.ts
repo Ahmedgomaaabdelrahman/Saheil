@@ -57,7 +57,9 @@ console.log(resS)
         }
 
 console.log('user',User);
+        this.common.presentLoadingDefault('وف يتم التسجيل برجاء الانتظار')
 this.auth.register(User).subscribe(res=>{
+    this.common.loadDismess()
     if(res['error']!=null) {
         this.common.presentToast(res['error'])
         console.log(res);

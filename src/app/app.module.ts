@@ -27,12 +27,22 @@ import {AuthproviderProvider} from "../providers/authprovider/authprovider";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { CommonservicesProvider } from '../providers/commonservices/commonservices';
 import { FCM } from '@ionic-native/fcm';
+import { IonicStorageModule,Storage } from '@ionic/storage';
+
 // import { TranslateModule } from '@ngx-translate/core';
+
+import { SecureStorage, SecureStorageObject } from '@ionic-native/secure-storage';
+
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import { ClinkdetailsPage } from '../pages/clinkdetails/clinkdetails';
 import { AllclinksPage } from '../pages/allclinks/allclinks';
 import { EditaccountPage } from '../pages/editaccount/editaccount';
+import { Camera, CameraOptions } from '@ionic-native/camera';
+import { ActionSheet, ActionSheetOptions } from '@ionic-native/action-sheet';
+import { Geolocation } from '@ionic-native/geolocation';
+import {SelectlocPage} from "../pages/selectloc/selectloc";
+import { VeterinariansProvider } from '../providers/veterinarians/veterinarians';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -45,6 +55,7 @@ export function createTranslateLoader(http: HttpClient) {
     AboutsahielPage,
     LoginPage,
     SignupPage,
+      SelectlocPage,
     HeaderComponent,
     SubheaderComponent,
     BottomimgComponent,
@@ -61,13 +72,14 @@ export function createTranslateLoader(http: HttpClient) {
   imports: [
     BrowserModule,HttpClientModule,
     IonicModule.forRoot(MyApp),
+
       TranslateModule.forRoot({
           loader: {
               provide: TranslateLoader,
               useFactory: (createTranslateLoader),
               deps: [HttpClientModule]
           }
-      })
+      }),IonicStorageModule.forRoot()
 
   ],
   bootstrap: [IonicApp],
@@ -78,6 +90,7 @@ export function createTranslateLoader(http: HttpClient) {
     AboutsahielPage,
     LoginPage,
     SignupPage,
+      SelectlocPage,
     HeaderComponent,
     SubheaderComponent,
     BottomimgComponent,
@@ -95,7 +108,8 @@ export function createTranslateLoader(http: HttpClient) {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},AuthproviderProvider,DomainProvider,GetServicesProvider,SearchProvider,UserProvider,
-    CommonservicesProvider,FCM
+    CommonservicesProvider,FCM,SecureStorage,Camera,ActionSheet,Geolocation,{ provide: IonicStorageModule, useClass: IonicStorageModule},
+    VeterinariansProvider
   ]
 })
 export class AppModule {}

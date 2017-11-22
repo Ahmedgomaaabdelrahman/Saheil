@@ -1,0 +1,152 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Sahel Horse Cycle 3  (Veterinary_Clinics)",
+		"_postman_id": "93e40c7f-8b2b-9146-5028-69409bd2fbee",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Veterinary Clinics",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/members/services/2",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Veterinary Clinics Via Country (Pass Country Id)",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/members/services/2/country/64",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Service Details (Veterinary Clinics Details)",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/members/services/details/3",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/send/message",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "suppose that visitor must be login (Member ID)",
+							"type": "text"
+						},
+						{
+							"key": "member_service_id",
+							"value": "1",
+							"description": "Member Service ID",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "مواعيد العمل ",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "ماهي مواعيد العمل اليومية والاسبوعية",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Messages's Inbox",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/messages/inbox",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "Member ID",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "View Message Details",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/view/message",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "Member ID",
+							"type": "text"
+						},
+						{
+							"key": "message_id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "The Sent Messages",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/messages/sent",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "Member ID",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

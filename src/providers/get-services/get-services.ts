@@ -4,6 +4,8 @@ import { FCM } from '@ionic-native/fcm';
 
 import 'rxjs/add/operator/map';
 import {DomainProvider} from "../domain/domain";
+import {SecureStorage, SecureStorageObject} from "@ionic-native/secure-storage";
+import {Events, LoadingController, ToastController} from "ionic-angular";
 
 /*
   Generated class for the GetServicesProvider provider.

@@ -4,6 +4,7 @@ import { ForgetpassPage } from '../forgetpass/forgetpass';
 import {AuthproviderProvider} from "../../providers/authprovider/authprovider";
 import {CommonservicesProvider} from "../../providers/commonservices/commonservices";
 import {GetServicesProvider} from "../../providers/get-services/get-services";
+import {HomePage} from "../home/home";
 
 
 @Component({
@@ -19,20 +20,29 @@ export class LoginPage {
   }
 _mobile:any;
   _password:any;
+  loadingMSG='برجاء الانتظار'
+    succsesMSG='مرحباّ!'
   submit(){
-      this.getService.getToken().then(token=>{
+      // this.getService.getToken().then(token=>{
           var user={
               mobile:this._mobile,
               password:this._password,
-              gcm_regid:token
+              gcm_regid:'123456'
           }
+          this.common.presentLoadingDefault(this.loadingMSG)
           this.auth.login(user).subscribe(res=>{
               if(res['error'] !=null){
+                  this.common.loadDismess();
                   this.common.presentToast(res['error'])}else{
-                  this.common.presentToast('مرحبا!')
+
+                  this.common.storeValue('user',res)
+                  this.common.loadDismess();
+                  this.common.presentToast(this.succsesMSG)
+                  console.log(res)
+this.navCtrl.push(HomePage,res)
               }
           })
-      })
+      // })
   }
   ionViewDidLoad() {
 
