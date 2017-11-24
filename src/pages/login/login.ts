@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {NavController, NavParams, ModalController } from 'ionic-angular';
+import {NavController, NavParams, ModalController, MenuController} from 'ionic-angular';
 import { ForgetpassPage } from '../forgetpass/forgetpass';
 import {AuthproviderProvider} from "../../providers/authprovider/authprovider";
 import {CommonservicesProvider} from "../../providers/commonservices/commonservices";
@@ -13,10 +13,11 @@ import {HomePage} from "../home/home";
 })
 export class LoginPage {
 
-  constructor(public auth:AuthproviderProvider,
+  constructor(public menuCtrl:MenuController,
+      public auth:AuthproviderProvider,
               public common:CommonservicesProvider,
               public getService:GetServicesProvider,public modalCtrl: ModalController,public navCtrl: NavController, public navParams: NavParams) {
-
+      this.menuCtrl.enable(false)
   }
     _save:any;
 _mobile:any;
@@ -41,10 +42,14 @@ if(this._save){
                   this.common.loadDismess();
                   this.common.presentToast(this.succsesMSG)
                   console.log(res)
-this.navCtrl.push(HomePage,res)
+this.navCtrl.setRoot(HomePage,res)
               }
           })
       // })
+  }
+  ionViewWillEnter(){
+      this.menuCtrl.enable(false)
+
   }
   ionViewDidLoad() {
 

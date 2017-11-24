@@ -13,6 +13,7 @@ import {CommonservicesProvider} from "../providers/commonservices/commonservices
 import {LoginPage} from "../pages/login/login";
 import {AuthproviderProvider} from "../providers/authprovider/authprovider";
 import {EditaccountPage} from "../pages/editaccount/editaccount";
+import {KnowlegePage} from "../pages/knowlege/knowlege";
 
 @Component({
   templateUrl: 'app.html'
@@ -52,6 +53,9 @@ this.nav.setRoot(EditaccountPage)
            this.common.removeStoredKey('user')
 });
    })
+    }
+    knowladge(){
+        this.nav.push(KnowlegePage)
     }
 }
 

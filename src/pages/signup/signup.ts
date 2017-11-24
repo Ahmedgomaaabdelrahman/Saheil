@@ -5,6 +5,7 @@ import { ChoosecountryPage } from '../choosecountry/choosecountry';
 import { ActivecodePage } from '../activecode/activecode';
 import {AuthproviderProvider} from "../../providers/authprovider/authprovider";
 import {CommonservicesProvider} from "../../providers/commonservices/commonservices";
+import {HomePage} from "../home/home";
 
 
 
@@ -64,6 +65,9 @@ this.auth.register(User).subscribe(res=>{
         this.common.presentToast(res['error'])
         console.log(res);
     }else{
+        this.common.presentToast('تم التسجيل بنجاح')
+        this.common.storeValue('user',res)
+this.navCtrl.setRoot(HomePage)
         console.log('تم التسجيل بنجاح')}
 }); })
     }

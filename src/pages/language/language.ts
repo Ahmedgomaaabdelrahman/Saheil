@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {  NavController, NavParams } from 'ionic-angular';
+import {MenuController, NavController, NavParams} from 'ionic-angular';
 import { AboutsahielPage } from '../aboutsahiel/aboutsahiel';
 import { LoadingPage } from '../loading/loading';
 import { AlldoctorsPage } from '../alldoctors/alldoctors';
@@ -11,7 +11,9 @@ import { AllclinksPage } from '../allclinks/allclinks';
 })
 export class LanguagePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public menuCtrl:MenuController,public navCtrl: NavController, public navParams: NavParams) {
+      this.menuCtrl.enable(false)
+
   }
 
   ionViewDidLoad() {
@@ -25,6 +27,8 @@ export class LanguagePage {
     this.navCtrl.push(AlldoctorsPage);
   }
   gotoclinks(){
-    this.navCtrl.push(AllclinksPage);
+      this.navCtrl.push(LoadingPage);
+
+      // this.navCtrl.push(AllclinksPage);
   }
 }
