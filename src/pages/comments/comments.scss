@@ -1,0 +1,103 @@
+page-comments {
+    .content{
+        background-color: #f4f4f4;
+        background-image: none;
+    }
+    .toprow{
+        background-color: #efc658;
+        text-align: center;
+        font-family: 'AppFont' !important;
+        font-weight: bold;
+    }
+    .controw{
+        border-top: 1px solid lightgray;
+        padding: 5px;
+        height: 155px;
+        background-color: #f4f4f4;
+        min-height: 155px;
+        z-index: 100;
+        height: 155px;
+    
+        .docimg{
+            height:60px;
+            min-height: 60px;
+            max-height: 60px;
+        }
+        .row , .col {
+            padding: 0
+        }
+    
+        p , h6{
+            margin: 0;
+            font-family:Appfont;
+            padding: 2px 5px
+        }
+    
+        h6{ 
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-flex;
+        }
+    
+        .p1{ 
+            font-size: 11px;
+            color: black;
+            max-height: 75px;
+            height: 75px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+    
+       .p2{
+            color: lightgray;
+            font-size: 12px;
+            height: 25px;
+            max-height: 25px;
+            min-height: 25px;
+        }
+       .p3{
+           display: inline;
+           color: #ba8700;
+           font-size: 12px;
+        }
+    
+        [col-1]{
+            text-align: center;
+            img{
+                width: 20px;
+                max-width: 20px;
+            }
+        }
+    }
+    .botrow{
+        position: fixed;
+        bottom: 0;
+        height: 70px;
+        direction: rtl;
+        width: 100%;
+        background: white;
+        color: black;
+    }
+
+    .send{
+        text-align: center;
+        font-size: 25px;
+        padding-top: 20px;
+        color: white;
+        background-color: #efc658;
+    }
+    .input{
+        ::placeholder{
+            font-family: Appfont;
+        }
+    }
+    .text-input{
+        height: 38px;
+        direction: rtl;
+        margin: 10px;
+        
+    }
+    .input-cover{
+        position: static;
+    }
+}

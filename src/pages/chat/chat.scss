@@ -1,0 +1,45 @@
+page-chat {
+.toprow{
+    background-color: white;
+    text-align: center;
+    color:#efc658;
+    font-family: 'AppFont' !important;
+    border-bottom: 2px solid gray;
+}
+.conrdiv{
+    background-color: #f4f4f4;
+    height:100%;
+    font-family: Appfont;
+    p{
+        margin:0;
+        height: auto;
+    }
+}
+.browndiv{
+    background-color: #ab7d04;
+    width: 90%;
+    margin: 20px auto 0;
+    height: auto;
+    padding: 0 10px;
+    .p1{
+        color:white;
+    }
+}
+.graydiv{
+    background-color: lightgray;
+    width: 78%;
+    height: auto;
+    padding: 0 10px;
+    .p1{
+        color:black;
+    }
+}
+.sender{
+    border-radius: 50%;
+    background-color: gray;
+    height: 50px;
+    width: 50px;
+    float: left;
+    display: inline-block;
+}
+}

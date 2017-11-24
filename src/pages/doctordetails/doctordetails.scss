@@ -90,15 +90,20 @@ page-doctordetails {
         .row{
             direction: rtl;
             font-family: Appfont;
-            margin: auto;
+            margin: 10px auto;
             width: 90%;
+            height: 30px;
+            max-height: 30px;
+            min-height: 30px;
             [col-1]{
-                text-align:center;
-                padding-top:10px;
+                text-align: center;
+                padding-top: 7px;
             }
           
             img{
                 height: 20px;
+                max-height: 20px;
+                min-height: 20px;
             }
         }
     }

@@ -1,0 +1,52 @@
+page-knowlegedetails {
+    .toprow{
+        background-color: #efc658;
+        text-align: center;
+        font-family: 'AppFont' !important;
+    }
+    .contdiv{
+        padding: 10px 20px;
+        text-align: center;
+        font-family: Appfont;
+        height: 460px;
+        direction: rtl;
+        img{
+            border: 1px solid lightgray;
+            padding: 5px;
+        }
+        h6{
+            margin: 5px 15px 20px;
+            font-weight: 600;
+            line-height: 25px;
+            font-size: 14px;
+        }
+        p{
+            color: gray;
+            margin:0;
+            height: 125px;
+            min-height: 125px;
+            max-height: 125px;
+            overflow:hidden;
+        }
+        .btn{
+            border-color: #bc8a06;
+            color: #bc8a06;
+            font-family: Appfont;
+            height: 40px;
+            width: 120px;
+            font-weight: 600;
+        }
+        .disable-hover.button.button-md.button-outline.button-outline-md.activated{
+            color:white;
+            background-color: #bc8a06;
+         }
+    }
+    .btndiv{
+        background-color: #efc658;
+        color: white;
+        padding-top: 5px;
+        margin-top: -5px;
+        height: 40px;
+    }
+
+}

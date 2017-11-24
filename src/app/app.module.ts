@@ -38,6 +38,17 @@ import { FeePage } from '../pages/fee/fee';
 import { RatePage } from '../pages/rate/rate';
 import { CancelhintPage } from '../pages/cancelhint/cancelhint';
 import { ComplainPage } from '../pages/complain/complain';
+import { HorsesuppPage } from '../pages/horsesupp/horsesupp';
+import { AllsuppPage } from '../pages/allsupp/allsupp';
+import { KnowlegePage } from '../pages/knowlege/knowlege';
+import { KnowlegedetailsPage } from '../pages/knowlegedetails/knowlegedetails';
+import { CommentsPage } from '../pages/comments/comments';
+import { SendrequestPage } from '../pages/sendrequest/sendrequest';
+import { AirtansportPage } from '../pages/airtansport/airtansport';
+import { AirtransdetailsPage } from '../pages/airtransdetails/airtransdetails';
+import { CartshoppingPage } from '../pages/cartshopping/cartshopping';
+import { FavoritePage } from '../pages/favorite/favorite';
+import { ChatPage } from '../pages/chat/chat';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -67,6 +78,17 @@ export function createTranslateLoader(http: HttpClient) {
     RatePage,
     CancelhintPage,
     ComplainPage,
+    HorsesuppPage,
+    AllsuppPage,
+    KnowlegePage,
+    KnowlegedetailsPage,
+    CommentsPage,
+    SendrequestPage,
+    AirtansportPage,
+    AirtransdetailsPage,
+    CartshoppingPage,
+    FavoritePage,
+    ChatPage
   ], 
   imports: [
     BrowserModule,HttpClientModule,
@@ -91,6 +113,10 @@ export function createTranslateLoader(http: HttpClient) {
     HeaderComponent,
     SubheaderComponent,
     BottomimgComponent,
+    HorsesuppPage,
+    AllsuppPage,
+    KnowlegePage,
+    KnowlegedetailsPage,
     ActivecodePage,
     LanguagePage,
     ForgetpassPage,
@@ -105,6 +131,13 @@ export function createTranslateLoader(http: HttpClient) {
     RatePage,
     CancelhintPage,
     ComplainPage,
+    CommentsPage,
+    SendrequestPage,
+    AirtansportPage,
+    AirtransdetailsPage,
+    CartshoppingPage,
+    FavoritePage,
+    ChatPage
   ],
   providers: [
     StatusBar,

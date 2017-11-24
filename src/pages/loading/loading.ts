@@ -9,7 +9,9 @@ import { ChoosecountryPage } from '../choosecountry/choosecountry';
 import { HomePage } from '../home/home';
 import { EditaccountPage } from '../editaccount/editaccount';
 import { TransportPage } from '../transport/transport';
-
+import { HorsesuppPage } from '../horsesupp/horsesupp';
+import { AllsuppPage } from '../allsupp/allsupp';
+import { KnowlegePage } from '../knowlege/knowlege'; 
 
 @Component({
   selector: 'page-loading',
@@ -27,17 +29,16 @@ export class LoadingPage {
  gotoNotes(){
    this.navCtrl.push(AboutsahielPage);
  }
-
+  
  goSignin(){
    this.navCtrl.push(LoginPage);
  }
-
 
  chooseCountry(){
   this.navCtrl.push(ChoosecountryPage);
 }
 
 gohome(){
-  this.navCtrl.push(TransportPage);
+  this.navCtrl.push(KnowlegePage);
 }
 }
