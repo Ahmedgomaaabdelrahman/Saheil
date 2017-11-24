@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AlldoctorsPage } from '../alldoctors/alldoctors';
 import { AllclinksPage } from '../allclinks/allclinks';
+import {CommonservicesProvider} from "../../providers/commonservices/commonservices";
 import { TransportPage } from '../transport/transport';
 
 @Component({
@@ -10,8 +11,11 @@ import { TransportPage } from '../transport/transport';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
- 
+  constructor(public common:CommonservicesProvider,public navCtrl: NavController) {
+ this.common.getStoredValue('user').then(user=>{
+     console.log('user : ',user);
+ })
+
   }
   
   gotodoctors(){

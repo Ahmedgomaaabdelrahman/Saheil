@@ -10,19 +10,28 @@
   </ion-row>
    <div class="topdiv">
     
-    <div class="simg" src="assets/imgs/doctor.png">
-      <img height="25px" class="editicon" src="assets/imgs/editicon.png" ></div>
+    <div class="simg">
+      <img height="25px" class="editicon" (click)="profileImage()" src="assets/imgs/editicon.png" ></div>
    </div>
 
-<form>
-  <ion-input class="editinput" type="text" placeholder="اسم المستخدم"></ion-input>
-  <ion-input class="editinput" type="text" placeholder="البريد الالكترونى"></ion-input>
-  <ion-input class="editinput" type="text" placeholder="نبذة تعريفيه"></ion-input>
-  <ion-input class="editinput" type="text" placeholder="العنوان"></ion-input>
-  <ion-input class="editinput" type="text" placeholder="الجوال"></ion-input>
-  <ion-input class="editinput" type="text" placeholder="العنوان على الخريظه"></ion-input>
-  <ion-input class="editinput" type="text" placeholder="فيس بوك"></ion-input>
-  <ion-input class="editinput" type="text" placeholder="تويتر"></ion-input>
+<form #f="ngForm">
+  <ion-input class="editinput" [(ngModel)]="username" name="username" type="text" placeholder="اسم المستخدم"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="email" name="email" type="email" placeholder="البريد الالكترونى"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="service_details_ar" name="service_details_ar" type="text" placeholder="نبذة تعريفيه بالعربية"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="service_details_en" name="service_details_en" type="text" placeholder="نبذة تعريفيه بالانجليزية"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="service_name_ar" name="service_name_ar" type="text" placeholder="اسم الخدمة بالعربية"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="service_name_en" name="service_name_en" type="text" placeholder="اسم الخدمة بالانجليزية"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="service_adress_ar" name="service_adress_ar" type="text" placeholder="العنوان بالعربية"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="service_adress_en" name="service_adress_en" type="text" placeholder="العنوان بالانجليزية"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="mobile" name="mobile" type="tel" placeholder="الجوال"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="password" name="password" type="password" placeholder="الرقم السري"></ion-input>
+  <!--<ion-input class="editinput" type="text" placeholder="العنوان على الخريظه"></ion-input>-->
+    <button  class="editinput"  (click)="selectLoc()">"العنوان على الخريظه</button>
+    <button  class="editinput"  (click)="serviceImage()">اضف صورة عن الخدمة  </button>
+<img *ngIf="service_image != null" src='{{D}}{{service_image}}'>
+    <ion-input class="editinput" [(ngModel)]="facebook" name="facebook" type="text" placeholder="فيس بوك"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="twitter" name="twitter" type="text" placeholder="تويتر"></ion-input>
+    <button  class="editinput" (click)="submit()"></button>
 </form>
 
 </ion-content>

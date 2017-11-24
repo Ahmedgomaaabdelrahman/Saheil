@@ -79,3 +79,7 @@ ion-modal {
     height: 540px;
     min-height: 540px;
 }
+::-webkit-scrollbar,
+*::-webkit-scrollbar {
+    display: none;
+}

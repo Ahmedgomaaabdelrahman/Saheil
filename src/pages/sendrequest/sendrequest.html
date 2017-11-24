@@ -7,13 +7,13 @@
         <ion-col col-1 style="text-align:start"></ion-col>
         <ion-col col-4 style="text-align:end"></ion-col>
     </ion-row>
- <form>
-   <ion-input class="editinput" type="text" placeholder="اسم المستخدم"></ion-input>
-   <ion-input class="editinput" type="text" placeholder="البريد الالكترونى"></ion-input>
-   <ion-input class="editinput" type="text" placeholder="الجوال"></ion-input>
-   <ion-textarea class="message" type="text" placeholder="الرساله"></ion-textarea>
+ <form #f="ngForm">
+   <!--<ion-input class="editinput" type="text" placeholder="اسم المستخدم"></ion-input>-->
+   <ion-input class="editinput" [(ngModel)]="_subject" name="_subject" type="text" placeholder="الموضوع"></ion-input>
+   <!--<ion-input class="editinput" type="text" placeholder="الجوال"></ion-input>-->
+   <ion-textarea class="message" [(ngModel)]="_message" name="_message" type="text" placeholder="الرساله"></ion-textarea>
    
-   <button ion-button block class="sendbtn">ارسال</button>
+   <button ion-button (click)="send()" block class="sendbtn">ارسال</button>
  </form>
  
  </ion-content>

@@ -22,7 +22,7 @@ export class ForgetpassPage {
 let e={'email':this.email}
       this.auth.forgotPassword(e).subscribe(res=>{
       if(res['error'])
-        this.common.presentToast(res['error'])
+        this.common.presentToast(res['error'],)
 console.log(res['error'])
     })
     this.viewCtrl.dismiss();

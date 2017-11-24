@@ -1,0 +1,152 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Sahel Horse Cycle 5  (Horse_Land_Transport) copy",
+		"_postman_id": "e1d3a4fe-5b98-ec53-81ea-9a544909706f",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Horse Land Tansport Services",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/members/services/4",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Horse Land Tansport Via Country (Pass Country Id)",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/members/services/4/country/64",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Service Details (Horse Land Transport  Details)",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/members/services/details/4",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/send/message",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "suppose that visitor must be login (Member ID)",
+							"type": "text"
+						},
+						{
+							"key": "member_service_id",
+							"value": "1",
+							"description": "Member Service ID",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "مواعيد العمل ",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "ماهي مواعيد العمل اليومية والاسبوعية",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Messages's Inbox",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/messages/inbox",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "Member ID",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "View Message Details",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/view/message",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "Member ID",
+							"type": "text"
+						},
+						{
+							"key": "message_id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "The Sent Messages",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/messages/sent",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "Member ID",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

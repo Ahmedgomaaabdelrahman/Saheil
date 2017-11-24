@@ -3,6 +3,7 @@ import { MenuController, NavController } from 'ionic-angular';
 import { CartshoppingPage } from '../../pages/cartshopping/cartshopping';
 import { FavoritePage } from '../../pages/favorite/favorite';
 
+
 /**
  * Generated class for the HeaderComponent component.
  *

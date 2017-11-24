@@ -22,4 +22,10 @@ register(user){
     }  forgotPassword(email){
         return this.http.post(this.url.url+'/api/forgot/password/',email);
     }
+    updateInfo(user){
+        return this.http.post(this.url.url+"/api/update/info",user)
+    }
+    logout(id){
+        return this.http.post(this.url.url+"/api/logout",id)
+    }
 }
