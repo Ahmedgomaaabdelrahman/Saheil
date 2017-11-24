@@ -14,7 +14,7 @@ export class AlldoctorsPage {
   }
     ionViewWillLoad(){
         this.veterinariansArray=[]
-        this.veterinations.getAllVeterinarians().subscribe(veterinarians=>{
+        this.veterinations.getAllServices(1).subscribe(veterinarians=>{
             this.veterinariansArray=veterinarians;
             console.log( this.veterinariansArray)
 

@@ -68,3 +68,18 @@ ion-modal {
     background-position: bottom;
     background-repeat: no-repeat;
 }
+.menubtn{
+    background-color: #ba8700;
+    color: white;
+    font-family: Appfont;
+    direction: rtl;
+    padding: 0;
+}
+.md .menu-inner{
+    height: 540px;
+    min-height: 540px;
+}
+::-webkit-scrollbar,
+*::-webkit-scrollbar {
+    display: none;
+}

@@ -67,11 +67,15 @@ page-clinkdetails {
         .segdiv{
             height: 185px;
         }
-    
-        .map{
-            height: 185px;
-            width: 100%;
-        }
+
+  #map {
+
+    height: 185px;
+    width: 100%;
+  }
+  .map {
+    height: 185px;
+    width: 100%;    }
         .innerseg{
             border-bottom:1px solid gray;
             border-right:1px solid gray;

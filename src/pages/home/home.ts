@@ -15,6 +15,7 @@ export class HomePage {
  this.common.getStoredValue('user').then(user=>{
      console.log('user : ',user);
  })
+
   }
   
   gotodoctors(){

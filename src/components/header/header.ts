@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuController } from 'ionic-angular';
 
 /**
  * Generated class for the HeaderComponent component.
@@ -14,9 +15,12 @@ export class HeaderComponent {
 
   text: string;
 
-  constructor() {
+  constructor(public menuCtrl: MenuController) {
     console.log('Hello HeaderComponent Component');
     this.text = 'Hello World';
   }
-
+  
+  openMenu() {
+    this.menuCtrl.open();
+  }
 }

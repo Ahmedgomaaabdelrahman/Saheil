@@ -30,25 +30,46 @@ service_details_en:string
     twitter:any;
   constructor(public domain:DomainProvider,public modalCtrl:ModalController,public common:CommonservicesProvider,private auth:AuthproviderProvider,public navCtrl: NavController, public navParams: NavParams) {
   this.common.getStoredValue('user').then(user=>{
-      console.log(user.member_id)
-      console.log(user)
-      this.member_id=user.member_id
+      console.log('edit user',user)
+      try {
+          console.log(user.member_id)
+          console.log(user)
+          this.member_id = user.member_id
+//////////////
+          this.image = user.image;
+          this.username = user.username;
+          this.email = user.email;
+          this.latlng = user.latlng;
+          this.password = user.password;
+          this.gcm_regid=user.gcm_regid
+          this.service_name_ar = user.service_name_ar;
+          this.service_name_en = user.service_name_en;
+          this.service_image = user.service_image;
+          this.service_adress_ar = user.service_adress_ar;
+          this.service_adress_en = user.service_adress_en;
+          this.service_details_ar = user.service_details_ar;
+          this.service_details_en = user.service_details_en;
+          this.facebook = user.facebook;
+          this.twitter = user.twitter;
+///////////////
+      }catch (e){
+          console.log(e)
+      }
   })
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad EditaccountPage');
-
   }
 submit(){
   let  user={
       'image':this.image,//use cam
       'member_id':this.member_id,// storage
-        'username':this.username,
-        'email':this.email,
+      'username':this.username,
+      'email':this.email,
       'map':this.latlng,
-        'password':this.password,
-        'gcm_regid':this.gcm_regid,//cordova fcm
+      'password':this.password,
+      'gcm_regid':this.gcm_regid,//cordova fcm
       'service_name_ar':this.service_name_ar,
       'service_name_en':this.service_name_en,
       'service_image':this.service_image,//use cam
@@ -64,12 +85,18 @@ submit(){
     })
 }
     profileImage(){
-        this.common.presentActionSheet('use cam',this.profileCam(0),'use galery',this.profileCam(1))
+        this.common.presentActionSheet('use cam','use galery').then(res=> {
+            console.log(res)
 
+            this.profileCam(res)
+        })
     }
 
     serviceImage(){
-        this.common.presentActionSheet('use cam',this.serviceCam(0),'use galery',this.serviceCam(1))
+        this.common.presentActionSheet('use cam','use galery').then(res=> {
+            console.log(res)
+            this.serviceCam(res)
+        })
 
     }
     serviceCam(source){

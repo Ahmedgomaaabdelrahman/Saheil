@@ -18,11 +18,13 @@ export class LoginPage {
               public getService:GetServicesProvider,public modalCtrl: ModalController,public navCtrl: NavController, public navParams: NavParams) {
 
   }
+    _save:any;
 _mobile:any;
   _password:any;
   loadingMSG='برجاء الانتظار'
     succsesMSG='مرحباّ!'
   submit(){
+      console.log(this._save)
       // this.getService.getToken().then(token=>{
           var user={
               mobile:this._mobile,
@@ -34,8 +36,8 @@ _mobile:any;
               if(res['error'] !=null){
                   this.common.loadDismess();
                   this.common.presentToast(res['error'])}else{
-
-                  this.common.storeValue('user',res)
+if(this._save){
+                  this.common.storeValue('user',res)}
                   this.common.loadDismess();
                   this.common.presentToast(this.succsesMSG)
                   console.log(res)

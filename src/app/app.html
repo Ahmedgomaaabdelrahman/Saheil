@@ -1,1 +1,58 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu side="right" [content]="content">
+        <ion-header>
+          <ion-toolbar>
+            <ion-title style="text-align:center;">
+              <img src="assets/imgs/x.png" menuClose  style="float: left;margin-top: 25px;"height="40px"height="25px">
+              <img src="assets/imgs/smallsahel.png" height="40px">
+              
+              <br>
+              
+              <img src="assets/imgs/slogan.png"height="40px"height="25px">
+              
+            </ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+             <ion-list>
+              <button class="menubtn" menuClose ion-item color="standard" >
+               الرئيسية
+              </button>
+               <button class="menubtn" menuClose ion-item color="standard" >
+              
+              نبذة عن صهيل  
+              </button>
+               <button class="menubtn" menuClose ion-item color="standard" >
+              الخدمات
+               
+              </button>
+               <button class="menubtn" menuClose ion-item color="standard" >
+             
+               البوم الصور
+              </button>
+               <button class="menubtn" menuClose ion-item color="standard">
+              اخبار البطولات  
+              
+              </button>
+               <button class="menubtn" menuClose ion-item color="standard" >
+              ثقف نفسك 
+                 
+              </button>
+               <button class="menubtn" menuClose ion-item color="standard">
+               يوميات الخيل 
+               
+              </button>
+               <button class="menubtn" menuClose ion-item color="standard">
+                الفاعليات القادمة
+               
+              </button>
+                 <button class="menubtn" (click)="updateInfo()" menuClose ion-item color="standard">
+تعديل البيانات الشخصية
+              </button>
+                 <button class="menubtn" (click)="logout()" menuClose ion-item color="standard">
+الخروج من البرنامج
+                 </button>
+            </ion-list>
+        </ion-content>
+      </ion-menu>
+
+<ion-nav [root]="rootPage" #content></ion-nav>

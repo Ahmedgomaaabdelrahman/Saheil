@@ -15,10 +15,40 @@ lang:any
     console.log('Hello VeterinariansProvider Provider');
     this.lang=url.lang;
   }
-    getAllVeterinarians(){
-        return this.http.get(this.url.url+'api/'+this.lang+'/veterinarians');
+    getAllServices(id){
+        return this.http.get(this.url.url+'api/'+this.lang+'/members/services/'+id);
     }
     getVeterinarianDetail(id){
-        return this.http.get(this.url.url+'api/'+this.lang+'/veterinarian/'+id);
+        return this.http.get(this.url.url+'api/'+this.lang+'/members/services/details/'+id);
+    }
+    sendOrder(msg){
+        return this.http.post(this.url.url+'api/send/message/',msg);
+
     }
 }
+//
+//             "key": "member_id",
+//             "value": "1",
+//             "description": "suppose that visitor must be login (Member ID)",
+//             "type": "text"
+//         },
+//         {
+//             "key": "member_service_id",
+//             "value": "1",
+//             "description": "Member Service ID",
+//             "type": "text"
+//         },
+//         {
+//             "key": "subject",
+//             "value": "مواعيد العمل ",
+//             "description": "",
+//             "type": "text"
+//         },
+//         {
+//             "key": "message",
+//             "value": "ماهي مواعيد العمل اليومية والاسبوعية",
+//             "description": "",
+//             "type": "text"
+//         }
+//     ]
+// },

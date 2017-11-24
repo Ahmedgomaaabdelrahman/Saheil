@@ -48,6 +48,8 @@ import { FeePage } from '../pages/fee/fee';
 import { RatePage } from '../pages/rate/rate';
 import { CancelhintPage } from '../pages/cancelhint/cancelhint';
 import { ComplainPage } from '../pages/complain/complain';
+import { VeterinaryclinicsProvider } from '../providers/veterinaryclinics/veterinaryclinics';
+import {SendrequestPage} from "../pages/sendrequest/sendrequest";
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -61,6 +63,7 @@ export function createTranslateLoader(http: HttpClient) {
     LoginPage,
     SignupPage,
       SelectlocPage,
+      SendrequestPage,
     HeaderComponent,
     SubheaderComponent,
     BottomimgComponent,
@@ -104,6 +107,7 @@ export function createTranslateLoader(http: HttpClient) {
     HeaderComponent,
     SubheaderComponent,
     BottomimgComponent,
+      SendrequestPage,
     ActivecodePage,
     LanguagePage,
     ForgetpassPage,
@@ -124,7 +128,8 @@ export function createTranslateLoader(http: HttpClient) {
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},AuthproviderProvider,DomainProvider,GetServicesProvider,SearchProvider,UserProvider,
     CommonservicesProvider,FCM,SecureStorage,Camera,ActionSheet,Geolocation,{ provide: IonicStorageModule, useClass: IonicStorageModule},
-    VeterinariansProvider
+    VeterinariansProvider,
+    VeterinaryclinicsProvider
   ]
 })
 export class AppModule {}

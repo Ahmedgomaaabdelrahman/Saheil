@@ -44,7 +44,9 @@ export class CommonservicesProvider {
     removeStoredKey(key:any){
         this.store.remove(key);
     }
-    presentActionSheet(msg1,callback1,msg2,callback2) {
+    presentActionSheet(msg1,msg2):Promise<any> {
+        let promise=new Promise((resolve,reject)=>{
+
         let actionSheet = this.actionSheetCtrl.create({
             title: 'Modify your album',
             buttons: [
@@ -52,14 +54,14 @@ export class CommonservicesProvider {
                     text: msg1,
                     role: 'destructive',
                     handler: () => {
-                        callback1
+                        resolve(0)
                         console.log('Destructive clicked');
                     }
                 },
                 {
                     text: msg2,
                     handler: () => {
-                        callback2
+                        resolve(1)
                         console.log('Archive clicked');
                     }
                 },
@@ -74,6 +76,8 @@ export class CommonservicesProvider {
         });
 
         actionSheet.present();
+        })
+     return promise
     }
 
  createTranslateLoader(http: HttpClient) {
@@ -139,7 +143,7 @@ export class CommonservicesProvider {
         const toast = this.toast.create({
             message: msg,
             duration: 3000,
-            position: 'top'
+            position: 'bottom'
             ,dismissOnPageChange:true,
             showCloseButton:true
             ,closeButtonText:closeText
@@ -153,7 +157,7 @@ export class CommonservicesProvider {
         toast.present();
 
     }
-    presentLoadingDefault(msg:any) {
+    presentLoadingDefault(msg?:any) {
         this.loading = this.loadingCtrl.create({
             spinner:'ios',
             content: msg
