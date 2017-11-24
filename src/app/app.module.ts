@@ -43,6 +43,11 @@ import { ActionSheet, ActionSheetOptions } from '@ionic-native/action-sheet';
 import { Geolocation } from '@ionic-native/geolocation';
 import {SelectlocPage} from "../pages/selectloc/selectloc";
 import { VeterinariansProvider } from '../providers/veterinarians/veterinarians';
+import { TransportPage } from '../pages/transport/transport';
+import { FeePage } from '../pages/fee/fee';
+import { RatePage } from '../pages/rate/rate';
+import { CancelhintPage } from '../pages/cancelhint/cancelhint';
+import { ComplainPage } from '../pages/complain/complain';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -67,7 +72,12 @@ export function createTranslateLoader(http: HttpClient) {
     AlldoctorsPage,
     ClinkdetailsPage,
     AllclinksPage,
-    EditaccountPage
+    EditaccountPage,
+    TransportPage,
+    FeePage,
+    RatePage,
+    CancelhintPage,
+    ComplainPage,
   ], 
   imports: [
     BrowserModule,HttpClientModule,
@@ -102,7 +112,12 @@ export function createTranslateLoader(http: HttpClient) {
     AlldoctorsPage,
     ClinkdetailsPage,
     AllclinksPage,
-    EditaccountPage
+    EditaccountPage,
+    TransportPage,
+    FeePage,
+    RatePage,
+    CancelhintPage,
+    ComplainPage,
   ],
   providers: [
     StatusBar,
