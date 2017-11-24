@@ -48,7 +48,6 @@ import { FeePage } from '../pages/fee/fee';
 import { RatePage } from '../pages/rate/rate';
 import { CancelhintPage } from '../pages/cancelhint/cancelhint';
 import { ComplainPage } from '../pages/complain/complain';
-<<<<<<< HEAD
 import { HorsesuppPage } from '../pages/horsesupp/horsesupp';
 import { AllsuppPage } from '../pages/allsupp/allsupp';
 import { KnowlegePage } from '../pages/knowlege/knowlege';
@@ -60,10 +59,8 @@ import { AirtransdetailsPage } from '../pages/airtransdetails/airtransdetails';
 import { CartshoppingPage } from '../pages/cartshopping/cartshopping';
 import { FavoritePage } from '../pages/favorite/favorite';
 import { ChatPage } from '../pages/chat/chat';
-=======
 import { VeterinaryclinicsProvider } from '../providers/veterinaryclinics/veterinaryclinics';
-import {SendrequestPage} from "../pages/sendrequest/sendrequest";
->>>>>>> 02b7927743932dbe6b46f3461f7c57e1193fcd1e
+
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -132,14 +129,11 @@ export function createTranslateLoader(http: HttpClient) {
     HeaderComponent,
     SubheaderComponent,
     BottomimgComponent,
-<<<<<<< HEAD
     HorsesuppPage,
     AllsuppPage,
     KnowlegePage,
     KnowlegedetailsPage,
-=======
       SendrequestPage,
->>>>>>> 02b7927743932dbe6b46f3461f7c57e1193fcd1e
     ActivecodePage,
     LanguagePage,
     ForgetpassPage,
