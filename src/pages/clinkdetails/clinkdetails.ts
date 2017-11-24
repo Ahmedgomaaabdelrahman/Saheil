@@ -84,10 +84,7 @@ export class ClinkdetailsPage {
 
 
     }
-    setMapOnAll(map) {
-        for (var i = 0; i < this.markers.length; i++) {
-            this.markers[i].setMap(map);
-        }}
+
     contact(){
         this.nav.push(SendrequestPage,this.id)
     }

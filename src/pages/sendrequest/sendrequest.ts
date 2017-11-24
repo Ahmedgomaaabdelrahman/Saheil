@@ -9,11 +9,15 @@ import {CommonservicesProvider} from "../../providers/commonservices/commonservi
 })
 export class SendrequestPage {
 _member_id
-    _member_service_id
+    // _member_service_id
   _subject
   _message
   constructor(public common:CommonservicesProvider,private v:VeterinariansProvider,public navCtrl: NavController, public navParams: NavParams) {
-  // this.common.getStoredValue('user').then()
+  let self=this;
+  this.common.getStoredValue('user').then(res=>{
+      this._member_id=res.member_id
+
+  })
 }
 
   ionViewDidLoad() {
@@ -21,7 +25,7 @@ _member_id
 
   }
 send(){
-  msg={
+ let msg={
     'member_id':this._member_id,
   'member_service_id':this.navParams.data,
       'subject':this._subject,
@@ -29,7 +33,10 @@ send(){
   }
   this.v.sendOrder(msg).subscribe(res=>{
     console.log(res)
-    this.common.presentToast(res[0])
+      if(res.message_id!=null){
+    this.common.presentToast('تم الارسال')}else{
+          this.common.presentToast('لم يتم الارسال')
+      }
   })
 }
 }

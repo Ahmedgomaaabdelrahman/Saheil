@@ -3,6 +3,7 @@ import {  NavController, NavParams , Platform, ViewController} from 'ionic-angul
 import {BehaviorSubject} from "rxjs/BehaviorSubject";
 
 import {VeterinariansProvider} from "../../providers/veterinarians/veterinarians";
+import {SendrequestPage} from "../sendrequest/sendrequest";
 declare var google;
 
 
@@ -22,7 +23,7 @@ export class DoctordetailsPage {
     public loc ;
     public placelabel:string;
     public customerid : string;
-  constructor(public view:ViewController,public platform:Platform,public veterinarian:VeterinariansProvider,public navParams: NavParams) {
+  constructor(public nav:NavController,public view:ViewController,public platform:Platform,public veterinarian:VeterinariansProvider,public navParams: NavParams) {
       platform.ready().then(() => {
           // this.loadMap();
       });
@@ -83,8 +84,7 @@ console.log(latLng)
 
 
     }
-    setMapOnAll(map) {
-        for (var i = 0; i < this.markers.length; i++) {
-            this.markers[i].setMap(map);
-        }}
+    contact(){
+        this.nav.push(SendrequestPage,this.id)
+    }
 }
