@@ -33,10 +33,10 @@ send(){
   }
   this.v.sendOrder(msg).subscribe(res=>{
     console.log(res)
-      if(res.message_id!=null){
-    this.common.presentToast('تم الارسال')}else{
-          this.common.presentToast('لم يتم الارسال')
-      }
+    //   if(res.message_id!=null){
+    // this.common.presentToast('تم الارسال')}else{
+    //       this.common.presentToast('لم يتم الارسال')
+    //   }
   })
 }
 }

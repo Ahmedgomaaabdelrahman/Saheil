@@ -20,7 +20,7 @@ import {EditaccountPage} from "../pages/editaccount/editaccount";
 export class MyApp {
     @ViewChild(Nav) nav: Nav;
 
-  rootPage:any = LanguagePage;
+  rootPage:any = EditaccountPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private common:CommonservicesProvider
   ,private auth:AuthproviderProvider) {
