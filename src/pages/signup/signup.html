@@ -21,35 +21,35 @@
    <p class="thelabel">الجوال </p>
    <ion-input [(ngModel)]="_mobile" id="_mobile" name="_mobile"  style="text-align:center" type="tel"></ion-input>
 
-        <ion-item>
+    <ion-item class="selection">
    <!--<p class="thelabel">الدولة</p>-->
-            <ion-label>اختر الخدمة</ion-label>
+        <ion-label>اختر الخدمة</ion-label>
 
-    <ion-select   interface="popover"   okText="اختر" cancelText="الغاء" required="true">
-            <!--<img src={{country.picpath}}>-->
-    <ion-option (ionSelect)="getSelectedService(s.service_id)"  *ngFor="let s of provideServices" value={{s.title_ar}}  required>{{s.title_ar}}</ion-option>
-
-    </ion-select>
-        </ion-item>
-  <ion-list radio-group style="text-align: end;margin: 0;">
+        <ion-select   interface="popover"   okText="اختر" cancelText="الغاء" required="true">
+                <!--<img src={{country.picpath}}>-->
+           <ion-option (ionSelect)="getSelectedService(s.service_id)"  *ngFor="let s of provideServices" value={{s.title_ar}}  required>{{s.title_ar}}</ion-option>
+        </ion-select>
+    </ion-item>
+  <!-- <ion-list radio-group style="text-align: end;margin: 0;">
         <ion-item>
-           <!--<ion-label style="color: black;text-align: end;">مقدم خدمات</ion-label>-->
-            <!--<ion-radio  name="ser"value="go"></ion-radio>-->
+           <ion-label style="color: black;text-align: end;">مقدم خدمات</ion-label>
+            <ion-radio  name="ser"value="go"></ion-radio>
         </ion-item>
 
         <ion-item>
-             <!--<ion-label style="color: black;text-align: end;">باحث عن خدمات</ion-label>-->
-            <!--<ion-radio checked="true"  name="ser" value="rust"></ion-radio>-->
+             <ion-label style="color: black;text-align: end;">باحث عن خدمات</ion-label>
+            <ion-radio checked="true"  name="ser" value="rust"></ion-radio>
         </ion-item>
-  </ion-list>
+  </ion-list> -->
 
   <!--<p class="thelabel">الخدمات المقدمة</p>-->
   <!--<ion-input style="text-align:center" type="text" placeholder="الخدمات المقدمة"></ion-input>-->
-            <ion-item>
-                <ion-label> اختر الدولة</ion-label>
-                <ion-select  interface="popover"   okText="اختر" cancelText="الغاء" required="true" >
-                <ion-option (ionSelect)="getSelectedC(c.country_id)"  *ngFor="let c of cs"  value={{c.title_ar}} required>{{c.title_ar}}</ion-option>
-        </ion-select></ion-item>
+    <ion-item class="selection">
+        <ion-label> اختر الدولة</ion-label>
+        <ion-select  interface="popover"   okText="اختر" cancelText="الغاء" required="true" >
+            <ion-option (ionSelect)="getSelectedC(c.country_id)"  *ngFor="let c of cs"  value={{c.title_ar}} required>{{c.title_ar}}</ion-option>
+        </ion-select>
+    </ion-item>
 
   <button  [disabled]="!f.valid" (click)="submit()" ion-button block class="btn">التسجيل</button>
 
