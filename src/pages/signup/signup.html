@@ -25,9 +25,9 @@
    <!--<p class="thelabel">الدولة</p>-->
             <ion-label>اختر الخدمة</ion-label>
 
-    <ion-select [(ngModel)]="country_id" name="country_id" id="country_id"  interface="popover"   okText="اختر" cancelText="الغاء" required="true">
+    <ion-select   interface="popover"   okText="اختر" cancelText="الغاء" required="true">
             <!--<img src={{country.picpath}}>-->
-    <ion-option (ionSelect)="getSelectedService(country.service_id)"  *ngFor="let country of provideServices" value={{country.title_ar}} required>{{country.title_ar}}</ion-option>
+    <ion-option (ionSelect)="getSelectedService(s.service_id)"  *ngFor="let s of provideServices" value={{s.title_ar}}  required>{{s.title_ar}}</ion-option>
 
     </ion-select>
         </ion-item>
@@ -45,11 +45,11 @@
 
   <!--<p class="thelabel">الخدمات المقدمة</p>-->
   <!--<ion-input style="text-align:center" type="text" placeholder="الخدمات المقدمة"></ion-input>-->
-            <!--<ion-item>-->
-                <!--<ion-label>الخدمات المقدمة</ion-label>-->
-                <!--<ion-select [(ngModel)]="_service_id" name="_service_id" id="_service_id" interface="popover"   okText="اختر" cancelText="الغاء" required="true" >-->
-                <!--<ion-option (ionSelect)="getSelectedService(service)"  *ngFor="let service of provideServices"  value={{service.title_ar}} required>{{service.title_ar}}</ion-option>-->
-        <!--</ion-select></ion-item>-->
+            <ion-item>
+                <ion-label> اختر الدولة</ion-label>
+                <ion-select  interface="popover"   okText="اختر" cancelText="الغاء" required="true" >
+                <ion-option (ionSelect)="getSelectedC(c.country_id)"  *ngFor="let c of cs"  value={{c.title_ar}} required>{{c.title_ar}}</ion-option>
+        </ion-select></ion-item>
 
   <button  [disabled]="!f.valid" (click)="submit()" ion-button block class="btn">التسجيل</button>
 

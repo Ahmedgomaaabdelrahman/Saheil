@@ -4,44 +4,45 @@ import {AuthproviderProvider} from "../../providers/authprovider/authprovider";
 import {CommonservicesProvider} from "../../providers/commonservices/commonservices";
 import {SelectlocPage} from "../selectloc/selectloc";
 import {DomainProvider} from "../../providers/domain/domain";
+import {HomePage} from "../home/home";
 
 @Component({
   selector: 'page-editaccount',
   templateUrl: 'editaccount.html',
 })
 export class EditaccountPage {
-    D=this.domain.url
-member_id
+    D=this.domain.url;
+member_id;
     image:any;
-  username:string
+  username:string;
   mobile:number;
 email:string;
-password:string
+password:string;
     gcm_regid:string;
 service_name_en:string;
 service_name_ar:string;
 service_image:any;
-service_adress_ar:string
-service_adress_en:string
+service_adress_ar:string;
+service_adress_en:string;
     map:any;
-service_details_ar:string
-service_details_en:string
+service_details_ar:string;
+service_details_en:string;
     facebook:any;
     twitter:any;
   constructor(public domain:DomainProvider,public modalCtrl:ModalController,public common:CommonservicesProvider,private auth:AuthproviderProvider,public navCtrl: NavController, public navParams: NavParams) {
   this.common.getStoredValue('user').then(user=>{
       console.log('edit user',user)
       try {
-          console.log(user.member_id)
-          console.log(user)
-          this.member_id = user.member_id
+          // console.log(user.member_id);
+          // console.log(user);
+          this.member_id = user.member_id;
 //////////////
           this.image = user.image;
           this.username = user.username;
           this.email = user.email;
           this.latlng = user.latlng;
           this.password = user.password;
-          this.gcm_regid=user.gcm_regid
+          this.gcm_regid=user.gcm_regid;
           this.service_name_ar = user.service_name_ar;
           this.service_name_en = user.service_name_en;
           this.service_image = user.service_image;
@@ -62,14 +63,16 @@ service_details_en:string
     console.log('ionViewDidLoad EditaccountPage');
   }
 submit(){
-  let  user={
+  var  user={
       'image':this.image,//use cam
       'member_id':this.member_id,// storage
       'username':this.username,
       'email':this.email,
+      'mobile':this.mobile,
       'map':this.latlng,
       'password':this.password,
-      'gcm_regid':this.gcm_regid,//cordova fcm
+      // 'gcm_regid':this.gcm_regid,//cordova fcm
+      'gcm_regid':'123456',//cordova fcm
       'service_name_ar':this.service_name_ar,
       'service_name_en':this.service_name_en,
       'service_image':this.service_image,//use cam
@@ -80,8 +83,27 @@ submit(){
       'facebook':this.facebook,
       'twitter':this.twitter
     };
-    this.auth.updateInfo(user).subscribe(res=>{
+    console.log('u',user)
 
+  let self=this;
+this.common.presentLoadingDefault();
+    this.auth.updateInfo(user).subscribe(res=> {
+        if (res['error'] != null) {
+            this.common.presentToast(res['error'])
+            console.log(res);
+        } else {
+
+// console.log('res',res)
+        this.common.presentToast('تم التعديل')
+        this.common.loadDismess();
+        self.common.getStoredValue('xuser').then(u => {
+            self.common.storeValue('user', user)
+            this.navCtrl.setRoot(HomePage)
+            if (u != null) {
+                self.common.storeValue('xuser', u)
+            }
+        })
+    }
     })
 }
     profileImage(){

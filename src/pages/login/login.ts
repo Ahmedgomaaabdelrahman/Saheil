@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {NavController, NavParams, ModalController } from 'ionic-angular';
+import {NavController, NavParams, ModalController, MenuController} from 'ionic-angular';
 import { ForgetpassPage } from '../forgetpass/forgetpass';
 import {AuthproviderProvider} from "../../providers/authprovider/authprovider";
 import {CommonservicesProvider} from "../../providers/commonservices/commonservices";
@@ -13,10 +13,11 @@ import {HomePage} from "../home/home";
 })
 export class LoginPage {
 
-  constructor(public auth:AuthproviderProvider,
+  constructor(public menuCtrl:MenuController,
+      public auth:AuthproviderProvider,
               public common:CommonservicesProvider,
               public getService:GetServicesProvider,public modalCtrl: ModalController,public navCtrl: NavController, public navParams: NavParams) {
-
+      // this.menuCtrl.enable(false)
   }
     _save:any;
 _mobile:any;
@@ -36,15 +37,27 @@ _mobile:any;
               if(res['error'] !=null){
                   this.common.loadDismess();
                   this.common.presentToast(res['error'])}else{
+                  //for chck auth
+                  this.common.storeValue('user',res).then(()=> {
+                      this.common.eventPublish('auth', true)
+                  })
+                  //for autologin
 if(this._save){
-                  this.common.storeValue('user',res)}
+                  this.common.storeValue('xuser',res).then(()=> {
+                      this.common.eventPublish('auth', true)
+})
+}
                   this.common.loadDismess();
                   this.common.presentToast(this.succsesMSG)
                   console.log(res)
-this.navCtrl.push(HomePage,res)
+this.navCtrl.setRoot(HomePage,res)
               }
           })
       // })
+  }
+  ionViewWillEnter(){
+      this.menuCtrl.enable(true)
+
   }
   ionViewDidLoad() {
 

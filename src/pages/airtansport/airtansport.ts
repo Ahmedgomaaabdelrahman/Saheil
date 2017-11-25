@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {  NavController, NavParams } from 'ionic-angular';
+import { DoctordetailsPage } from '../doctordetails/doctordetails';
+import {VeterinariansProvider} from "../../providers/veterinarians/veterinarians";
 import { AirtransdetailsPage } from '../airtransdetails/airtransdetails';
 
 
@@ -9,13 +11,22 @@ import { AirtransdetailsPage } from '../airtransdetails/airtransdetails';
 })
 export class AirtansportPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+    veterinariansArray
+    constructor(public veterinations:VeterinariansProvider,public navCtrl: NavController, public navParams: NavParams) {
+    }
+    ionViewWillLoad(){
+        this.veterinariansArray=[]
+        this.veterinations.getAllServices(3).subscribe(veterinarians=>{
+            this.veterinariansArray=veterinarians;
+            console.log( this.veterinariansArray)
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AirtansportPage');
-  }
-  gotodetails(){
-    this.navCtrl.push(AirtransdetailsPage);
-  }
+        })
+    }
+
+    ionViewDidLoad() {
+        console.log('ionViewDidLoad AllclinksPage');
+    }
+    gotodetails(id){
+        this.navCtrl.push(AirtransdetailsPage,id);
+    }
 }

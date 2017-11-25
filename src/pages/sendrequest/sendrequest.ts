@@ -12,7 +12,7 @@ _member_id
     // _member_service_id
   _subject
   _message
-  constructor(public common:CommonservicesProvider,private v:VeterinariansProvider,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public common:CommonservicesProvider,public v:VeterinariansProvider,public navCtrl: NavController, public navParams: NavParams) {
   let self=this;
   this.common.getStoredValue('user').then(res=>{
       this._member_id=res.member_id
@@ -33,10 +33,10 @@ send(){
   }
   this.v.sendOrder(msg).subscribe(res=>{
     console.log(res)
-    //   if(res.message_id!=null){
-    // this.common.presentToast('تم الارسال')}else{
-    //       this.common.presentToast('لم يتم الارسال')
-    //   }
+      if(res['message_id']!=null){
+    this.common.presentToast('تم الارسال')}else{
+          this.common.presentToast('لم يتم الارسال')
+      }
   })
 }
 }
