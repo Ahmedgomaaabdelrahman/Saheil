@@ -58,14 +58,14 @@ return promise
                     text: msg1,
                     role: 'destructive',
                     handler: () => {
-                        resolve(0)
+                        resolve(1)
                         console.log('Destructive clicked');
                     }
                 },
                 {
                     text: msg2,
                     handler: () => {
-                        resolve(1)
+                        resolve(0)
                         console.log('Archive clicked');
                     }
                 },

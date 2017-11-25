@@ -77,9 +77,9 @@ this.auth.register(User).subscribe(res=>{
         this.common.presentToast(res['error'])
         console.log(res);
     }else{
-        this.common.eventPublish('auth',true)
-
+        this.common.eventPublish('auth', true)
         this.common.presentToast('تم التسجيل بنجاح')
+        this.common.storeValue('xuser',res)
         this.common.storeValue('user',res)
 this.navCtrl.setRoot(HomePage)
         console.log('تم التسجيل بنجاح')}
