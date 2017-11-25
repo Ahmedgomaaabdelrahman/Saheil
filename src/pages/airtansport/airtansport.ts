@@ -18,7 +18,7 @@ export class AirtansportPage {
         this.veterinariansArray=[]
         this.veterinations.getAllServices(3).subscribe(veterinarians=>{
             this.veterinariansArray=veterinarians;
-            console.log( this.veterinariansArray)
+            console.log("asasacasca"+ this.veterinariansArray)
 
         })
     }
