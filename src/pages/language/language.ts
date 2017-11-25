@@ -12,7 +12,7 @@ import { AllclinksPage } from '../allclinks/allclinks';
 export class LanguagePage {
 
   constructor(public menuCtrl:MenuController,public navCtrl: NavController, public navParams: NavParams) {
-      this.menuCtrl.enable(false)
+      this.menuCtrl.enable(true)
 
   }
 

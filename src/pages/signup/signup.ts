@@ -14,6 +14,8 @@ import {HomePage} from "../home/home";
   templateUrl: 'signup.html',
 })
 export class SignupPage {
+    cs:any;
+
     public countries:any;
     public provideServices:any;
     private _username
@@ -28,7 +30,13 @@ export class SignupPage {
 
   }
   ionViewWillEnter(){
+      this.cs=[]
+      this.services.countryid().then(res=>{
+          this.cs=res;
+          console.log(res)
 
+      })
+      console.log( this.cs)
       this.services.serviceId().then(resS=>{
           this.provideServices=resS
 console.log(resS)
@@ -41,7 +49,11 @@ console.log(resS)
         this._service_id=service;
         console.log(service);
     }
+    getSelectedC(c){
+        console.log(c);
 
+        this._country_id=c
+    }
     submit(){
     // let user=new User()
         this.services.getToken().then(token=>{
@@ -53,7 +65,7 @@ console.log(resS)
             mobile:this._mobile,
             password:this._password,
             gcm_regid:token,
-            country_id:this.navParams.data.country_id,
+            country_id:this._country_id,
             service_id:this._service_id
         }
 
@@ -65,6 +77,8 @@ this.auth.register(User).subscribe(res=>{
         this.common.presentToast(res['error'])
         console.log(res);
     }else{
+        this.common.eventPublish('auth',true)
+
         this.common.presentToast('تم التسجيل بنجاح')
         this.common.storeValue('user',res)
 this.navCtrl.setRoot(HomePage)
@@ -74,4 +88,5 @@ this.navCtrl.setRoot(HomePage)
   gotoActive(){
     this.navCtrl.push(ActivecodePage);
   }
+
 }

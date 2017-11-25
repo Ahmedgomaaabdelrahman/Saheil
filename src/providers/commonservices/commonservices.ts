@@ -25,10 +25,14 @@ export class CommonservicesProvider {
               public http: HttpClient,private toast: ToastController) {
     console.log('Hello CommonservicesProvider Provider');
   }
-    storeValue(key:any,value:any){
-      console.log('store',key,value)
-        this.store.set(key,value);
+    storeValue(key:any,value:any):Promise<any>{
+let promise=new Promise((resolve,reject)=>{
+    console.log('store',key,value)
+    this.store.set(key,value);
+    resolve(true)
+})
 
+return promise
     }
     getStoredValue(key:string):Promise<any>{
         let promise=new Promise((resolve,reject)=>{
@@ -196,5 +200,10 @@ export class CommonservicesProvider {
     }
     eventPublish(ev,content){
         this.event.publish(ev, content)
+    }
+    eventSubs(ev,callback){
+        this.event.subscribe(ev, (user) => {
+        return callback
+        });
     }
 }

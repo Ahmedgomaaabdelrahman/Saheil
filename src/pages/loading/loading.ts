@@ -20,14 +20,14 @@ import { KnowlegePage } from '../knowlege/knowlege';
 export class LoadingPage {
 
   constructor(public menuCtrl:MenuController,public navCtrl: NavController, public navParams: NavParams) {
-  this.menuCtrl.enable(false)
+  // this.menuCtrl.enable(false)
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoadingPage');
   }
     ionViewWillEnter(){
-        this.menuCtrl.enable(false)
+        // this.menuCtrl.enable(false)
 
     }
  gotoNotes(){
@@ -39,7 +39,7 @@ export class LoadingPage {
  }
 
  chooseCountry(){
-  this.navCtrl.push(ChoosecountryPage);
+  this.navCtrl.push(SignupPage);
 }
 
 gohome(){

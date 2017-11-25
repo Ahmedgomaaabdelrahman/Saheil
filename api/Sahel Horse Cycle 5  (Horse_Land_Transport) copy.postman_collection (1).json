@@ -57,19 +57,31 @@
 						},
 						{
 							"key": "member_service_id",
-							"value": "1",
+							"value": "5",
 							"description": "Member Service ID",
 							"type": "text"
 						},
 						{
-							"key": "subject",
-							"value": "مواعيد العمل ",
+							"key": "origin",
+							"value": "حديقة الحيوانات بالجيزة",
 							"description": "",
 							"type": "text"
 						},
 						{
-							"key": "message",
-							"value": "ماهي مواعيد العمل اليومية والاسبوعية",
+							"key": "origin_map",
+							"value": "30.0226574,31.211472",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "destination",
+							"value": "كلية الطب البيطري جامعة الزقازيق",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "destination_map",
+							"value": "30.5849932,31.5170008",
 							"description": "",
 							"type": "text"
 						}

@@ -17,7 +17,7 @@ export class LoginPage {
       public auth:AuthproviderProvider,
               public common:CommonservicesProvider,
               public getService:GetServicesProvider,public modalCtrl: ModalController,public navCtrl: NavController, public navParams: NavParams) {
-      this.menuCtrl.enable(false)
+      // this.menuCtrl.enable(false)
   }
     _save:any;
 _mobile:any;
@@ -37,8 +37,16 @@ _mobile:any;
               if(res['error'] !=null){
                   this.common.loadDismess();
                   this.common.presentToast(res['error'])}else{
+                  //for chck auth
+                  this.common.storeValue('user',res).then(()=> {
+                      this.common.eventPublish('auth', true)
+                  })
+                  //for autologin
 if(this._save){
-                  this.common.storeValue('user',res)}
+                  this.common.storeValue('xuser',res).then(()=> {
+                      this.common.eventPublish('auth', true)
+})
+}
                   this.common.loadDismess();
                   this.common.presentToast(this.succsesMSG)
                   console.log(res)
@@ -48,7 +56,7 @@ this.navCtrl.setRoot(HomePage,res)
       // })
   }
   ionViewWillEnter(){
-      this.menuCtrl.enable(false)
+      this.menuCtrl.enable(true)
 
   }
   ionViewDidLoad() {

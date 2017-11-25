@@ -14,41 +14,43 @@
         </ion-header>
         <ion-content>
              <ion-list>
-              <button class="menubtn" menuClose ion-item color="standard" >
+                 <button class="menubtn" *ngIf="flag" (click)="updateInfo()" menuClose ion-item color="standard">
+                     تعديل البيانات الشخصية
+                 </button>
+              <button class="menubtn" (click)="goToMain()" menuClose ion-item color="standard" >
                الرئيسية
               </button>
                <button class="menubtn" menuClose ion-item color="standard" >
               
               نبذة عن صهيل  
               </button>
-               <button class="menubtn" menuClose ion-item color="standard" >
-              الخدمات
-               
-              </button>
-               <button class="menubtn" menuClose ion-item color="standard" >
-             
-               البوم الصور
-              </button>
+               <!--<button class="menubtn" menuClose ion-item color="standard" >-->
+              <!--الخدمات-->
+               <!---->
+              <!--</button>-->
+               <!--<button class="menubtn" menuClose ion-item color="standard" >-->
+             <!---->
+               <!--البوم الصور-->
+              <!--</button>-->
+                 <button class="menubtn" (click)="knowladge()" menuClose ion-item color="standard" >
+                     ثقف نفسك
+
+                 </button>
                <button class="menubtn" menuClose ion-item color="standard">
               اخبار البطولات  
               
               </button>
-               <button class="menubtn" (click)="knowladge()" menuClose ion-item color="standard" >
-              ثقف نفسك 
-                 
-              </button>
-               <button class="menubtn" menuClose ion-item color="standard">
-               يوميات الخيل 
-               
-              </button>
+
+               <!--<button class="menubtn" menuClose ion-item color="standard">-->
+               <!--يوميات الخيل -->
+               <!---->
+              <!--</button>-->
                <button class="menubtn" menuClose ion-item color="standard">
                 الفاعليات القادمة
                
               </button>
-                 <button class="menubtn" (click)="updateInfo()" menuClose ion-item color="standard">
-تعديل البيانات الشخصية
-              </button>
-                 <button class="menubtn" (click)="logout()" menuClose ion-item color="standard">
+
+                 <button class="menubtn" *ngIf="flag" (click)="logout()" menuClose ion-item color="standard">
 الخروج من البرنامج
                  </button>
             </ion-list>

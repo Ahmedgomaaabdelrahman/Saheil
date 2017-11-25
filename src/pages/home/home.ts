@@ -5,6 +5,7 @@ import { AllclinksPage } from '../allclinks/allclinks';
 import {CommonservicesProvider} from "../../providers/commonservices/commonservices";
 import { TransportPage } from '../transport/transport';
 import {AirtansportPage} from "../airtansport/airtansport";
+import {HorsesuppPage} from "../horsesupp/horsesupp";
 
 @Component({
   selector: 'page-home',
@@ -36,5 +37,8 @@ export class HomePage {
     goTransAir(){
         this.navCtrl.push(AirtansportPage);
 
+    }
+    goHorsesupp(){
+        this.navCtrl.push(HorsesuppPage)
     }
 }

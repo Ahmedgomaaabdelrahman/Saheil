@@ -46,7 +46,7 @@ page-editaccount {
     }
 }
 
-.editinput{
+.editinput , .btn{
     border:1px solid gray;
     width: 90%;
     height: 30px;
@@ -63,5 +63,8 @@ page-editaccount {
         position: static;
     }
 }
-
+.btn{
+    background-color: #dfc262;
+    font-family: Appfont;
+}
 }

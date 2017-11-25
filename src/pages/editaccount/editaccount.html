@@ -25,13 +25,14 @@
   <ion-input class="editinput" [(ngModel)]="service_adress_en" name="service_adress_en" type="text" placeholder="العنوان بالانجليزية"></ion-input>
   <ion-input class="editinput" [(ngModel)]="mobile" name="mobile" type="tel" placeholder="الجوال"></ion-input>
   <ion-input class="editinput" [(ngModel)]="password" name="password" type="password" placeholder="الرقم السري"></ion-input>
-  <!--<ion-input class="editinput" type="text" placeholder="العنوان على الخريظه"></ion-input>-->
-    <button  class="editinput"  (click)="selectLoc()">"العنوان على الخريظه</button>
-    <button  class="editinput"  (click)="serviceImage()">اضف صورة عن الخدمة  </button>
-<img *ngIf="service_image != null" src='{{D}}{{service_image}}'>
-    <ion-input class="editinput" [(ngModel)]="facebook" name="facebook" type="text" placeholder="فيس بوك"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="facebook" name="facebook" type="text" placeholder="فيس بوك"></ion-input>
   <ion-input class="editinput" [(ngModel)]="twitter" name="twitter" type="text" placeholder="تويتر"></ion-input>
-    <button  class="editinput" (click)="submit()"></button>
+
+  <!--<ion-input class="editinput" type="text" placeholder="العنوان على الخريظه"></ion-input>-->
+    <button ion-button block class="btn"  (click)="selectLoc()">العنوان على الخريظه</button>
+    <button ion-button block class="btn"  (click)="serviceImage()">اضف صورة عن الخدمة  </button>
+<img *ngIf="service_image != null" src='{{D}}{{service_image}}'>
+     <button ion-button block class="btn"(click)="submit()">تعديل</button>
 </form>
 
 </ion-content>
