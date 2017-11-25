@@ -59,7 +59,7 @@ console.log(resS)
         this.services.getToken().then(token=>{
 
 
-        let User={
+        var User={
             username:this._username,
             email:this._email,
             mobile:this._mobile,
@@ -77,11 +77,13 @@ this.auth.register(User).subscribe(res=>{
         this.common.presentToast(res['error'])
         console.log(res);
     }else{
-        this.common.eventPublish('auth', true)
         this.common.presentToast('تم التسجيل بنجاح')
-        this.common.storeValue('xuser',res)
-        this.common.storeValue('user',res)
-this.navCtrl.setRoot(HomePage)
+        this.common.storeValue('xuser',User)
+        //for chck auth
+        this.common.storeValue('user',res).then(()=> {
+            this.common.eventPublish('auth', true)
+        })
+        this.navCtrl.setRoot(HomePage)
         console.log('تم التسجيل بنجاح')}
 }); })
     }

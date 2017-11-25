@@ -33,8 +33,8 @@ service_details_en:string;
   this.common.getStoredValue('user').then(user=>{
       console.log('edit user',user)
       try {
-          console.log(user.member_id);
-          console.log(user);
+          // console.log(user.member_id);
+          // console.log(user);
           this.member_id = user.member_id;
 //////////////
           this.image = user.image;
@@ -68,9 +68,11 @@ submit(){
       'member_id':this.member_id,// storage
       'username':this.username,
       'email':this.email,
+      'mobile':this.mobile,
       'map':this.latlng,
       'password':this.password,
-      'gcm_regid':this.gcm_regid,//cordova fcm
+      // 'gcm_regid':this.gcm_regid,//cordova fcm
+      'gcm_regid':'123456',//cordova fcm
       'service_name_ar':this.service_name_ar,
       'service_name_en':this.service_name_en,
       'service_image':this.service_image,//use cam
@@ -81,20 +83,27 @@ submit(){
       'facebook':this.facebook,
       'twitter':this.twitter
     };
+    console.log('u',user)
 
   let self=this;
 this.common.presentLoadingDefault();
-    this.auth.updateInfo(user).subscribe(res=>{
-console.log('res',res)
+    this.auth.updateInfo(user).subscribe(res=> {
+        if (res['error'] != null) {
+            this.common.presentToast(res['error'])
+            console.log(res);
+        } else {
+
+// console.log('res',res)
         this.common.presentToast('تم التعديل')
-this.common.loadDismess();
-        self.common.getStoredValue('xuser').then(u=>{
-            self.common.storeValue('user',user)
-this.navCtrl.setRoot(HomePage)
-            if(u !=null){
-                self.common.storeValue('xuser',u)
+        this.common.loadDismess();
+        self.common.getStoredValue('xuser').then(u => {
+            self.common.storeValue('user', user)
+            this.navCtrl.setRoot(HomePage)
+            if (u != null) {
+                self.common.storeValue('xuser', u)
             }
         })
+    }
     })
 }
     profileImage(){
