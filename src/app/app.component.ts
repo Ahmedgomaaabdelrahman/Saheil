@@ -17,6 +17,8 @@ import {KnowlegePage} from "../pages/knowlege/knowlege";
 import { SignupPage } from '../pages/signup/signup';
 import { TransportPage } from '../pages/transport/transport';
 import { AirtansportPage } from '../pages/airtansport/airtansport';
+import { HrssupsellersPage } from '../pages/hrssupsellers/hrssupsellers';
+import { ConsultationPage } from '../pages/consultation/consultation';
 
 @Component({
   templateUrl: 'app.html'
@@ -25,7 +27,7 @@ export class MyApp {
 
     @ViewChild(Nav) nav: Nav;
   flag:boolean;
-  rootPage:any = AirtansportPage;
+  rootPage:any = LanguagePage;
 
   constructor(public events:Events,platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private common:CommonservicesProvider
   ,private auth:AuthproviderProvider) {

@@ -74,10 +74,22 @@ ion-modal {
     font-family: Appfont;
     direction: rtl;
     padding: 0;
+    ion-icon{
+        margin: 0 5px;
+    }
 }
 .md .menu-inner{
     height: 540px;
     min-height: 540px;
+    width: 225px;
+}
+.ios .menu-inner{
+    height: 540px;
+    min-height: 540px;
+    width: 225px;
+}
+.toolbar-ios ion-title{
+    padding: 0 10px;
 }
 ::-webkit-scrollbar,
 *::-webkit-scrollbar {

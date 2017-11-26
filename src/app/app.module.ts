@@ -60,6 +60,10 @@ import { CartshoppingPage } from '../pages/cartshopping/cartshopping';
 import { FavoritePage } from '../pages/favorite/favorite';
 import { ChatPage } from '../pages/chat/chat';
 import { VeterinaryclinicsProvider } from '../providers/veterinaryclinics/veterinaryclinics';
+import { HrssupsellersPage } from '../pages/hrssupsellers/hrssupsellers';
+import { SellerdetailsPage } from '../pages/sellerdetails/sellerdetails';
+import { ConsultationPage } from '../pages/consultation/consultation';
+import { ConsuldetailsPage } from '../pages/consuldetails/consuldetails';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -73,8 +77,8 @@ export function createTranslateLoader(http: HttpClient) {
     AboutsahielPage,
     LoginPage,
     SignupPage,
-      SelectlocPage,
-      SendrequestPage,
+    SelectlocPage,
+    SendrequestPage,
     HeaderComponent,
     SubheaderComponent,
     BottomimgComponent,
@@ -102,7 +106,11 @@ export function createTranslateLoader(http: HttpClient) {
     AirtransdetailsPage,
     CartshoppingPage,
     FavoritePage,
-    ChatPage
+    ChatPage,
+    HrssupsellersPage,
+    SellerdetailsPage,
+    ConsultationPage,
+    ConsuldetailsPage
   ], 
   imports: [
     BrowserModule,HttpClientModule,
@@ -125,7 +133,7 @@ export function createTranslateLoader(http: HttpClient) {
     AboutsahielPage,
     LoginPage,
     SignupPage,
-      SelectlocPage,
+    SelectlocPage,
     HeaderComponent,
     SubheaderComponent,
     BottomimgComponent,
@@ -133,7 +141,7 @@ export function createTranslateLoader(http: HttpClient) {
     AllsuppPage,
     KnowlegePage,
     KnowlegedetailsPage,
-      SendrequestPage,
+    SendrequestPage,
     ActivecodePage,
     LanguagePage,
     ForgetpassPage,
@@ -154,7 +162,11 @@ export function createTranslateLoader(http: HttpClient) {
     AirtransdetailsPage,
     CartshoppingPage,
     FavoritePage,
-    ChatPage
+    ChatPage,
+    HrssupsellersPage,
+    SellerdetailsPage,
+    ConsultationPage,
+    ConsuldetailsPage
   ],
   providers: [
     StatusBar,

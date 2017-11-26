@@ -10,15 +10,17 @@
         <ion-content>
              <ion-list>
                  <button class="menubtn" *ngIf="flag" (click)="updateInfo()" menuClose ion-item color="standard">
-                     تعديل البيانات الشخصية
+                    <ion-icon name="person"></ion-icon> حسابى 
                  </button>
-              <button class="menubtn" (click)="goToMain()" menuClose ion-item color="standard" >
-               الرئيسية
-              </button>
-               <button class="menubtn" menuClose ion-item color="standard" >
-              
-              نبذة عن صهيل  
-              </button>
+                 <button class="menubtn" (click)="goToMain()" menuClose ion-item color="standard" >
+                    <ion-icon name="desktop"></ion-icon>الرئيسية 
+                 </button>
+                 <button class="menubtn" menuClose ion-item color="standard" >
+                    <ion-icon name="bulb"></ion-icon>نبذة عن صهيل  
+                </button>
+                <button class="menubtn" menuClose ion-item color="standard" >
+                    <ion-icon name="basket"></ion-icon>المتجر 
+                </button>
                <!--<button class="menubtn" menuClose ion-item color="standard" >-->
               <!--الخدمات-->
                <!---->
@@ -28,11 +30,11 @@
                <!--البوم الصور-->
               <!--</button>-->
                  <button class="menubtn" (click)="knowladge()" menuClose ion-item color="standard" >
-                     ثقف نفسك
+                    <ion-icon name="book"></ion-icon>ثقف نفسك   
 
                  </button>
                <button class="menubtn" menuClose ion-item color="standard">
-              اخبار البطولات  
+                  <ion-icon name="trophy"></ion-icon>اخبار البطولات  
               
               </button>
 
@@ -41,12 +43,12 @@
                <!---->
               <!--</button>-->
                <button class="menubtn" menuClose ion-item color="standard">
-                الفاعليات القادمة
+                  <ion-icon name="albums"></ion-icon> الفاعليات القادمة 
                
               </button>
 
                  <button class="menubtn" *ngIf="flag" (click)="logout()" menuClose ion-item color="standard">
-الخروج من البرنامج
+                    <ion-icon name="log-out"></ion-icon>الخروج من البرنامج
                  </button>
             </ion-list>
         </ion-content>
