@@ -15,8 +15,11 @@
                  <button class="menubtn" (click)="goToMain()" menuClose ion-item color="standard" >
                     <ion-icon name="desktop"></ion-icon>الرئيسية 
                  </button>
+                 <button class="menubtn" *ngIf="flag" (click)="inbox()" menuClose ion-item color="standard" >
+                    <ion-icon name="mail"></ion-icon>صندوق الوارد
+                </button>
                  <button class="menubtn" menuClose ion-item color="standard" >
-                    <ion-icon name="bulb"></ion-icon>نبذة عن صهيل  
+                    <ion-icon name="bulb"></ion-icon>نبذة عن صهيل
                 </button>
                 <button class="menubtn" menuClose ion-item color="standard" >
                     <ion-icon name="basket"></ion-icon>المتجر 
