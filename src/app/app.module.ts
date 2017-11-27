@@ -64,6 +64,9 @@ import { HrssupsellersPage } from '../pages/hrssupsellers/hrssupsellers';
 import { SellerdetailsPage } from '../pages/sellerdetails/sellerdetails';
 import { ConsultationPage } from '../pages/consultation/consultation';
 import { ConsuldetailsPage } from '../pages/consuldetails/consuldetails';
+import { AddproductPage } from '../pages/addproduct/addproduct';
+import { ProductdetailsPage } from '../pages/productdetails/productdetails';
+import { HorsesellerPage } from '../pages/horseseller/horseseller';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -110,7 +113,10 @@ export function createTranslateLoader(http: HttpClient) {
     HrssupsellersPage,
     SellerdetailsPage,
     ConsultationPage,
-    ConsuldetailsPage
+    ConsuldetailsPage,
+    AddproductPage,
+    ProductdetailsPage,
+    HorsesellerPage
   ], 
   imports: [
     BrowserModule,HttpClientModule,
@@ -166,7 +172,10 @@ export function createTranslateLoader(http: HttpClient) {
     HrssupsellersPage,
     SellerdetailsPage,
     ConsultationPage,
-    ConsuldetailsPage
+    ConsuldetailsPage,
+    AddproductPage,
+    ProductdetailsPage,
+    HorsesellerPage
   ],
   providers: [
     StatusBar,
