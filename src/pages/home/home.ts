@@ -6,6 +6,7 @@ import {CommonservicesProvider} from "../../providers/commonservices/commonservi
 import { TransportPage } from '../transport/transport';
 import {AirtansportPage} from "../airtansport/airtansport";
 import {HorsesuppPage} from "../horsesupp/horsesupp";
+import {HrssupsellersPage} from "../hrssupsellers/hrssupsellers";
 
 @Component({
   selector: 'page-home',
@@ -39,6 +40,6 @@ export class HomePage {
 
     }
     goHorsesupp(){
-        this.navCtrl.push(HorsesuppPage)
+        this.navCtrl.push(HrssupsellersPage)
     }
 }

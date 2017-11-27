@@ -64,9 +64,14 @@ import { HrssupsellersPage } from '../pages/hrssupsellers/hrssupsellers';
 import { SellerdetailsPage } from '../pages/sellerdetails/sellerdetails';
 import { ConsultationPage } from '../pages/consultation/consultation';
 import { ConsuldetailsPage } from '../pages/consuldetails/consuldetails';
+<<<<<<< HEAD
 import { AddproductPage } from '../pages/addproduct/addproduct';
 import { ProductdetailsPage } from '../pages/productdetails/productdetails';
 import { HorsesellerPage } from '../pages/horseseller/horseseller';
+=======
+import { SupsProvider } from '../providers/sups/sups';
+import { MailProvider } from '../providers/mail/mail';
+>>>>>>> a6126e9eb0aa2ed179894b6511eebe5ab07dfd9d
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -183,7 +188,9 @@ export function createTranslateLoader(http: HttpClient) {
     {provide: ErrorHandler, useClass: IonicErrorHandler},AuthproviderProvider,DomainProvider,GetServicesProvider,SearchProvider,UserProvider,
     CommonservicesProvider,FCM,SecureStorage,Camera,ActionSheet,Geolocation,{ provide: IonicStorageModule, useClass: IonicStorageModule},
     VeterinariansProvider,
-    VeterinaryclinicsProvider
+    VeterinaryclinicsProvider,
+    SupsProvider,
+    MailProvider
   ]
 })
 export class AppModule {}

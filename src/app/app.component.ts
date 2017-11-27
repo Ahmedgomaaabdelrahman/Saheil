@@ -90,5 +90,8 @@ this.nav.push(EditaccountPage)
             }
         })
     }
+    inbox(){
+        this.nav.push(ConsultationPage)
+    }
 }
 
