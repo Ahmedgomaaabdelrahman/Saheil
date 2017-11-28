@@ -69,6 +69,7 @@ import { ProductdetailsPage } from '../pages/productdetails/productdetails';
 import { HorsesellerPage } from '../pages/horseseller/horseseller';
 import { SupsProvider } from '../providers/sups/sups';
 import { MailProvider } from '../providers/mail/mail';
+import { HorsesPage } from '../pages/horses/horses';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -118,7 +119,8 @@ export function createTranslateLoader(http: HttpClient) {
     ConsuldetailsPage,
     AddproductPage,
     ProductdetailsPage,
-    HorsesellerPage
+    HorsesellerPage,
+    HorsesPage
   ], 
   imports: [
     BrowserModule,HttpClientModule,
@@ -177,7 +179,8 @@ export function createTranslateLoader(http: HttpClient) {
     ConsuldetailsPage,
     AddproductPage,
     ProductdetailsPage,
-    HorsesellerPage
+    HorsesellerPage,
+    HorsesPage
   ],
   providers: [
     StatusBar,

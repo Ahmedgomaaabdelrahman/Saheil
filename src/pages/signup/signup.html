@@ -25,7 +25,7 @@
    <!--<p class="thelabel">الدولة</p>-->
         <ion-label>اختر الخدمة</ion-label>
 
-        <ion-select   interface="popover"   okText="اختر" cancelText="الغاء" required="true">
+        <ion-select   okText="اختر" cancelText="الغاء" required="true">
                 <!--<img src={{country.picpath}}>-->
            <ion-option (ionSelect)="getSelectedService(s.service_id)"  *ngFor="let s of provideServices" value={{s.title_ar}}  required>{{s.title_ar}}</ion-option>
         </ion-select>
@@ -46,7 +46,7 @@
   <!--<ion-input style="text-align:center" type="text" placeholder="الخدمات المقدمة"></ion-input>-->
     <ion-item class="selection">
         <ion-label> اختر الدولة</ion-label>
-        <ion-select  interface="popover"   okText="اختر" cancelText="الغاء" required="true" >
+        <ion-select  okText="اختر" cancelText="الغاء" required="true" >
             <ion-option (ionSelect)="getSelectedC(c.country_id)"  *ngFor="let c of cs"  value={{c.title_ar}} required>{{c.title_ar}}</ion-option>
         </ion-select>
     </ion-item>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { HorsesPage } from '../horses/horses';
 
 
 @Component({
@@ -14,5 +15,7 @@ export class HorsesellerPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad HorsesellerPage');
   }
-
+gotodetails(){
+  this.navCtrl.push(HorsesPage);
+}
 }
