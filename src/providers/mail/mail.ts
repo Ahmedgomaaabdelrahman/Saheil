@@ -21,5 +21,12 @@ export class MailProvider {
         }
         return this.http.post(this.url.url+'api/messages/sent/',mail);
     }
+    getMsgDetails(msg,member_id){
+        let mail={
+            'member_id':member_id,
+            'message_id':msg.message_id
+        }
+        return this.http.post(this.url.url+'/api/view/message/',mail);
+    }
 
 }

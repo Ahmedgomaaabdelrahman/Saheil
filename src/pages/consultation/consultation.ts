@@ -11,13 +11,16 @@ import {CommonservicesProvider} from "../../providers/commonservices/commonservi
     templateUrl: 'consultation.html',
 })
 export class ConsultationPage {
-
+msgs:any
     constructor(private common:CommonservicesProvider,private mail:MailProvider,public navCtrl: NavController, public navParams: NavParams) {
+
     }
     ionViewWillEnter(){
+        this.msgs=[];
         this.common.getStoredValue('user').then(res=>{
             this.mail.getMyInbox(res.member_id).subscribe(res=>{
                 console.log(res)
+                this.msgs=res
             })
         })
 
@@ -25,7 +28,7 @@ export class ConsultationPage {
     ionViewDidLoad() {
         console.log('ionViewDidLoad ConsultationسPage');
     }
-    gotodetails(){
-        this.navCtrl.push(ConsuldetailsPage);
+    gotodetails(msg){
+        this.navCtrl.push(ConsuldetailsPage,msg);
     }
 }

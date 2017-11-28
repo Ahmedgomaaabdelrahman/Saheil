@@ -35,15 +35,15 @@ export class ClinkdetailsPage {
         this.id=this.navParams.data
         this.veterinarian.getVeterinarianDetail(this.id).subscribe(v=>{
             this.details=v[0];
-            this.loc=v[0].map;
-            console.log(v[0].map)
-            parseInt(v[0].map)
-
-            var str = v[0].map;
-            var res = str.split(", ");
+            // this.loc=v[0].map;
+            // console.log(v[0].map)
+            // parseInt(v[0].map)
+            //
+            // var str = v[0].map;
+            // var res = str.split(", ");
             // document.getElementById("demo").innerHTML = parseFloat(res[1]);
 
-            this.loadMap(parseFloat(res[0]),parseFloat(res[1]));
+            this.loadMap(parseFloat(v[0].latitude),parseFloat(v[0].longitude));
 
             // console.log('ddd',res)
             // let lat=res[0]
@@ -58,7 +58,7 @@ export class ClinkdetailsPage {
     //map
     loadMap(ll,uu) {
 
-        let latLng = new google.maps.LatLng(-34.397,150.644);
+        let latLng = new google.maps.LatLng(ll,uu);
         console.log(latLng)
         let mapOptions = {
             // center: latLng,
