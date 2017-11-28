@@ -14,8 +14,9 @@ export class CartshoppingPage {
   }
 
   ionViewDidLoad() {
-      this.common.getStoredValue('cart').then(res={
+      this.common.getStoredValue('cart').then(res=>{
           console.log(res);
+      
   });
     console.log('ionViewDidLoad CartshoppingPage');
   }

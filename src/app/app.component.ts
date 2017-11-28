@@ -31,7 +31,7 @@ export class MyApp {
 
     @ViewChild(Nav) nav: Nav;
   flag:boolean;
-  rootPage:any = LanguagePage;
+  rootPage:any = HorsesellerPage;
 
   constructor(public events:Events,platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private common:CommonservicesProvider
   ,private auth:AuthproviderProvider) {
