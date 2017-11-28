@@ -35,9 +35,9 @@ ionViewWillLoad(){
     this.id=this.navParams.data
   this.veterinarian.getVeterinarianDetail(this.id).subscribe(v=>{
     this.details=v[0];
-    this.loc=v[0].map;
-      console.log(v[0].map)
-      parseInt(v[0].map)
+    // this.loc=v[0].map;
+      // console.log(v[0].map)
+      // parseInt(v[0].map)
 
       var str = v[0].map;
       var res = str.split(", ");
@@ -45,10 +45,11 @@ ionViewWillLoad(){
 
       this.loadMap(parseFloat(res[0]),parseFloat(res[1]));
 
-      // console.log('ddd',res)
+console.log('ddd',v[0])
       // let lat=res[0]
       // let lng=res[1].split(' ')
-      // console.log('ddd',parseFloat(lng[0]))
+      console.log('ddd',parseFloat(v[0].latitude))
+      console.log('ddd',parseFloat(v[0].longitude))
   })
 }
   ionViewDidLoad() {

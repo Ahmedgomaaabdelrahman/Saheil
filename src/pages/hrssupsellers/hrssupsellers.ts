@@ -7,8 +7,8 @@ import {HorsesuppPage} from "../horsesupp/horsesupp";
 
 
 @Component({
-  selector: 'page-hrssupsellers',
-  templateUrl: 'hrssupsellers.html',
+    selector: 'page-hrssupsellers',
+    templateUrl: 'hrssupsellers.html',
 })
 export class HrssupsellersPage {
 

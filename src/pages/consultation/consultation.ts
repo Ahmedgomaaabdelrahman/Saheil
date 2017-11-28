@@ -7,25 +7,25 @@ import {CommonservicesProvider} from "../../providers/commonservices/commonservi
 
 
 @Component({
-  selector: 'page-consultation',
-  templateUrl: 'consultation.html',
+    selector: 'page-consultation',
+    templateUrl: 'consultation.html',
 })
 export class ConsultationPage {
 
-  constructor(private common:CommonservicesProvider,private mail:MailProvider,public navCtrl: NavController, public navParams: NavParams) {
-  }
-ionViewWillEnter(){
-    this.common.getStoredValue('user').then(res=>{
-        this.mail.getMyInbox(res.member_id).subscribe(res=>{
-          console.log(res)
+    constructor(private common:CommonservicesProvider,private mail:MailProvider,public navCtrl: NavController, public navParams: NavParams) {
+    }
+    ionViewWillEnter(){
+        this.common.getStoredValue('user').then(res=>{
+            this.mail.getMyInbox(res.member_id).subscribe(res=>{
+                console.log(res)
+            })
         })
-    })
 
-}
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ConsultationسPage');
-  }
-gotodetails(){
-  this.navCtrl.push(ConsuldetailsPage);
-}
+    }
+    ionViewDidLoad() {
+        console.log('ionViewDidLoad ConsultationسPage');
+    }
+    gotodetails(){
+        this.navCtrl.push(ConsuldetailsPage);
+    }
 }

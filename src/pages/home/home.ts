@@ -9,32 +9,32 @@ import {HorsesuppPage} from "../horsesupp/horsesupp";
 import {HrssupsellersPage} from "../hrssupsellers/hrssupsellers";
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+    selector: 'page-home',
+    templateUrl: 'home.html'
 })
 export class HomePage {
 
-  constructor(public menuCtrl:MenuController,public common:CommonservicesProvider,public navCtrl: NavController) {
-      this.menuCtrl.enable(true)
+    constructor(public menuCtrl:MenuController,public common:CommonservicesProvider,public navCtrl: NavController) {
+        this.menuCtrl.enable(true)
 
-      this.common.getStoredValue('user').then(user=>{
-     console.log('user : ',user);
- })
+        this.common.getStoredValue('user').then(user=>{
+            console.log('user : ',user);
+        })
 
-  }
-  ionViewWillEnter(){
-      this.menuCtrl.enable(true)
+    }
+    ionViewWillEnter(){
+        this.menuCtrl.enable(true)
 
-  }
-  gotodoctors(){
-   this.navCtrl.push(AlldoctorsPage);
-  }
-  gotoclincs(){
-    this.navCtrl.push(AllclinksPage);
-  }
-  goTrans(){
-    this.navCtrl.push(TransportPage);
-  }
+    }
+    gotodoctors(){
+        this.navCtrl.push(AlldoctorsPage);
+    }
+    gotoclincs(){
+        this.navCtrl.push(AllclinksPage);
+    }
+    goTrans(){
+        this.navCtrl.push(TransportPage);
+    }
     goTransAir(){
         this.navCtrl.push(AirtansportPage);
 
