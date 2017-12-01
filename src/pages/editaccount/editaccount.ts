@@ -125,7 +125,7 @@ this.common.presentLoadingDefault();
         this.common.camPic(source).then(res=>{
             // console.log('img',res)
             // this.service_image=res;
-            this.service_image('data:image/jpeg;base64,' + res)
+            this.service_image='data:image/jpeg;base64,' + res
         }).catch(e=>{
             console.log('cam error :', e)
         })

@@ -10,15 +10,31 @@ import {DomainProvider} from "../domain/domain";
 */
 @Injectable()
 export class SupsProvider {
-    lang:any
-    constructor(public url:DomainProvider,public http: HttpClient) {
+    lang: any
+
+    constructor(public url: DomainProvider, public http: HttpClient) {
         console.log('Hello VeterinariansProvider Provider');
-        this.lang=url.lang;
+        this.lang = url.lang;
     }
-    getAllSupplies(id){
-        return this.http.get(this.url.url+'api/'+this.lang+'/members/services/details/'+id);
+
+    getAllSupplies(id) {
+        return this.http.get(this.url.url + 'api/' + this.lang + '/members/services/details/' + id);
     }
-    getSupplyDetail(id){
-        return this.http.get(this.url.url+'api/'+this.lang+'/supply/'+id);
+
+    getSupplyDetail(id) {
+        return this.http.get(this.url.url + 'api/' + this.lang + '/supply/' + id);
+    }
+
+    addSup(item) {
+
+        return this.http.post(this.url.url + 'api/supplies/add/',item);
+    }
+    getSupsCategoties(){
+            return this.http.get(this.url.url + 'api/' + this.lang + '/supplies/category');
+
+    }
+    getUserFav(memberId){
+
+        return this.http.post(this.url.url+"/api/supplies/favorite",memberId)
     }
 }

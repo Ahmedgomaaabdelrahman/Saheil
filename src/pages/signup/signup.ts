@@ -56,7 +56,7 @@ console.log(resS)
     }
     submit(){
     // let user=new User()
-        this.services.getToken().then(token=>{
+    //     this.services.getToken().then(token=>{
 
 
         var User={
@@ -64,7 +64,8 @@ console.log(resS)
             email:this._email,
             mobile:this._mobile,
             password:this._password,
-            gcm_regid:token,
+            // gcm_regid:token,
+            gcm_regid:'12342',
             country_id:this._country_id,
             service_id:this._service_id
         }
@@ -85,7 +86,8 @@ this.auth.register(User).subscribe(res=>{
         })
         this.navCtrl.setRoot(HomePage)
         console.log('تم التسجيل بنجاح')}
-}); })
+});
+        // })
     }
   gotoActive(){
     this.navCtrl.push(ActivecodePage);

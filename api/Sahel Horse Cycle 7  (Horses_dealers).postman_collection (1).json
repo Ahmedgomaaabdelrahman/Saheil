@@ -1,0 +1,525 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Sahel Horse Cycle 7  (Horses_dealers)",
+		"_postman_id": "64741b46-2e06-0397-5d39-2cb20e21e9e9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Horse's Dealers",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/members/services/6",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Horse's Dealers Via Country (Pass Country Id)",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/members/services/6/country/64",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Service Details (Horse's Dealers Details)",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/members/services/details/7",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/send/message",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "suppose that visitor must be login (Member ID)",
+							"type": "text"
+						},
+						{
+							"key": "member_service_id",
+							"value": "1",
+							"description": "Member Service ID",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "مواعيد العمل ",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "ماهي مواعيد العمل اليومية والاسبوعية",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Messages's Inbox",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/messages/inbox",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "Member ID",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "View Message Details",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/view/message",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "Member ID",
+							"type": "text"
+						},
+						{
+							"key": "message_id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "The Sent Messages",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/messages/sent",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "Member ID",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Horse Details",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/horse/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Horses's Categories",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/horses/category",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Manage Horses",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/horses/manage",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "6",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Horse",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/horses/add",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "title_ar",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "title_en",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "details_ar",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "details_en",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "500",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "1",
+							"description": "../api/ar/horses/category",
+							"type": "text"
+						},
+						{
+							"key": "homeland",
+							"value": "هولندذ",
+							"description": "الموطن / بلد المنشأ",
+							"type": "text"
+						},
+						{
+							"key": "color",
+							"value": "ابيض",
+							"description": "اللون",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "20",
+							"description": "عمر ",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Edit 's Horses Data",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/horses/edit",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "horse_id",
+							"value": "2",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "member_id",
+							"value": "6",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "title_ar",
+							"value": "test2",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "title_en",
+							"value": "test2",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "image",
+							"value": "test2",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "details_ar",
+							"value": "test2",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "details_en",
+							"value": "test2",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "price",
+							"value": "30",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "4",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "homeland",
+							"value": "لندن",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "color",
+							"value": "اسود",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "25",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Horses",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/horses/delete",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "horse_id",
+							"value": "5",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "member_id",
+							"value": "6",
+							"type": "text",
+							"description": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List Horses Favorite",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/horses/favorite",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "5",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Horses Favorite",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/horses/favorite/add",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "5",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "horse_id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delet Horses Favorite",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/horses/favorite/delete",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "horse_favorite_id",
+							"value": "2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "member_id",
+							"value": "5",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Horses Cart",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/horses/cart",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "shipping",
+							"value": "عنوان توصيل الطلب",
+							"description": "عنوان التوصيل / عنوان الشحن",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "010123123123",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "items",
+							"value": "[{\"horse_id\":\"1\",\"quantity\":\"1\"},{\"horse_id\":\"2\",\"quantity\":\"1\"}]",
+							"description": "الخيل المطلوبة",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Horses Cart History",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/horses/cart/history",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

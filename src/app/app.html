@@ -12,6 +12,9 @@
                  <button class="menubtn" *ngIf="flag" (click)="updateInfo()" menuClose ion-item color="standard">
                     <ion-icon name="person"></ion-icon> حسابى 
                  </button>
+                 <button class="menubtn"  *ngIf="supsSellerFlag" (click)="supsSeller()" menuClose ion-item color="standard" >
+                     <ion-icon name="basket"></ion-icon>المتجر
+                 </button>
                  <button class="menubtn" (click)="goToMain()" menuClose ion-item color="standard" >
                     <ion-icon name="desktop"></ion-icon>الرئيسية 
                  </button>
@@ -21,9 +24,9 @@
                  <button class="menubtn" menuClose ion-item color="standard" >
                     <ion-icon name="bulb"></ion-icon>نبذة عن صهيل
                 </button>
-                <button class="menubtn" menuClose ion-item color="standard" >
-                    <ion-icon name="basket"></ion-icon>المتجر 
-                </button>
+                <!--<button class="menubtn" menuClose ion-item color="standard" >-->
+                    <!--<ion-icon name="basket"></ion-icon>المتجر -->
+                <!--</button>-->
                <!--<button class="menubtn" menuClose ion-item color="standard" >-->
               <!--الخدمات-->
                <!---->

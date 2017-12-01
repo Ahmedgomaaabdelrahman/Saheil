@@ -1,0 +1,489 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Sahel Horse Cycle 6  (Horse_Supplies)",
+		"_postman_id": "9ee66c28-5d48-f002-afd2-62bd963792cd",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Horse's Supplies",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/members/services/5",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Horse's Supplies Via Country (Pass Country Id)",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/members/services/5/country/64",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Service Details (Horse's Supplies Details)",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/members/services/details/6",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/send/message",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "suppose that visitor must be login (Member ID)",
+							"type": "text"
+						},
+						{
+							"key": "member_service_id",
+							"value": "1",
+							"description": "Member Service ID",
+							"type": "text"
+						},
+						{
+							"key": "subject",
+							"value": "مواعيد العمل ",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "message",
+							"value": "ماهي مواعيد العمل اليومية والاسبوعية",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Messages's Inbox",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/messages/inbox",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "Member ID",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "View Message Details",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/view/message",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "Member ID",
+							"type": "text"
+						},
+						{
+							"key": "message_id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "The Sent Messages",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/messages/sent",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "Member ID",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Supply Details",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/supply/5",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Horeses's Supplies",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/supplies/add",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "title_ar",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "title_en",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "details_ar",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "details_en",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "500",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "1",
+							"description": "../api/ar/supplies/category",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Horse's Supplies",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/supplies/edit",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "supply_id",
+							"value": "10",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "member_id",
+							"value": "2",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "title_ar",
+							"value": "test2",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "title_en",
+							"value": "test2",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "image",
+							"value": "test2",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "details_ar",
+							"value": "test2",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "details_en",
+							"value": "test2",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "price",
+							"value": "30",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "4",
+							"description": "../api/ar/supplies/category",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Horse's Supplies",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/supplies/delete",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "supply_id",
+							"value": "10",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "member_id",
+							"value": "2",
+							"type": "text",
+							"description": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "manage horses's supplies",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/supplies/manage",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "5",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "List supplies favorite",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/supplies/favorite",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "5",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add supplies favorite",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/supplies/favorite/add",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "5",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "supply_id",
+							"value": "5",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "delete supplies favorite",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/supplies/favorite/delete",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "supply_favorite_id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "member_id",
+							"value": "5",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Horse 's Supplies Cart",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/supplies/cart",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "shipping",
+							"value": "عنوان توصيل الطلب",
+							"description": "عنوان التوصيل / عنوان الشحن",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "010123123123",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "items",
+							"value": "[{\"supply_id\":\"1\",\"quantity\":\"9\"},{\"supply_id\":\"2\",\"quantity\":\"9\"}]",
+							"description": "مستلزمات الخيل مجمعة",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Horse Supplies Cart History",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/supplies/cart/history",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Supplies Category",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/supplies/category",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

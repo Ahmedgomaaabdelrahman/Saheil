@@ -2,25 +2,28 @@
   <header></header>
  <subheader></subheader>
 <ion-row class="toprow"><ion-col col-12 >اضافة منتج</ion-col></ion-row>
-<form class="myform">
-  <button ion-button block class="btn">اضافة صور</button>
-  <ion-input type="text" placeholder="اسم المنتج"></ion-input>
-  <ion-input type="text" placeholder="product name"></ion-input>
-  <ion-input type="text" placeholder="الوصف"></ion-input>
-  <ion-input type="text" placeholder="Description"></ion-input>
-  <ion-input type="text" placeholder="السعر"></ion-input>
-  <ion-input type="text" placeholder="price"></ion-input>
+<form class="myform" #f="ngForm">
+
+  <button ion-button block (click)="serviceImage()" class="btn" >اضافة صور</button>
+<img *ngIf="image != null" src={{image}}/>
+    <ion-input type="text" placeholder="اسم المنتج">{{title_ar}}</ion-input>
+  <ion-input type="text" placeholder="product name">{{title_en}}</ion-input>
+  <ion-input type="text" placeholder="الوصف">{{details_ar}}</ion-input>
+  <ion-input type="text" placeholder="Description">{{details_en}}</ion-input>
+  <ion-input type="text" placeholder="السعر">{{price}}</ion-input>
+  <!--<ion-input type="text" placeholder="price"></ion-input>-->
   
   <ion-item class="selection">
          <ion-label>اختر القسم</ion-label>
-         <ion-select>
-          <ion-option value="nes">لجام</ion-option>
-          <ion-option value="n64">لجام 2</ion-option>
-          <ion-option value="ps"> لجام 3</ion-option>
+             <ion-select   okText="اختر" cancelText="الغاء" required="true">
+
+             <ion-option (ionSelect)="getSelectedCat(c.category_id)"  *ngFor="let c of allCategories"  value={{c.title_ar}} required>{{c.title_ar}}</ion-option>
+
+
         </ion-select>
      </ion-item>
 
-     <button ion-button block class="btn">اضافة</button>
+     <button ion-button block (click)="submit()" class="btn">اضافة</button>
 </form>
 
 </ion-content>

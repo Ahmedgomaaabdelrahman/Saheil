@@ -28,6 +28,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { CommonservicesProvider } from '../providers/commonservices/commonservices';
 import { FCM } from '@ionic-native/fcm';
 import { IonicStorageModule,Storage } from '@ionic/storage';
+import {Users} from '../modes/users';
 
 // import { TranslateModule } from '@ngx-translate/core';
 
@@ -190,7 +191,7 @@ export function createTranslateLoader(http: HttpClient) {
     VeterinariansProvider,
     VeterinaryclinicsProvider,
     SupsProvider,
-    MailProvider
+    MailProvider,Users
   ]
 })
 export class AppModule {}
