@@ -24,6 +24,11 @@ import { ProductdetailsPage } from '../pages/productdetails/productdetails';
 import { HorsesuppPage } from '../pages/horsesupp/horsesupp';
 import { HorsesellerPage } from '../pages/horseseller/horseseller';
 import { TournewsPage } from '../pages/tournews/tournews';
+import { SellerproductsPage } from '../pages/sellerproducts/sellerproducts';
+import { EditproductPage } from '../pages/editproduct/editproduct';
+import { AddhorsePage } from '../pages/addhorse/addhorse';
+import { EdithorsePage } from '../pages/edithorse/edithorse';
+import { MyhorsesPage } from '../pages/myhorses/myhorses';
 
 @Component({
   templateUrl: 'app.html'
