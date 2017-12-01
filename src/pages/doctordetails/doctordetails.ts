@@ -39,17 +39,17 @@ ionViewWillLoad(){
       // console.log(v[0].map)
       // parseInt(v[0].map)
 
-      var str = v[0].map;
-      var res = str.split(", ");
+      // var str = v[0].map;
+      // var res = str.split(", ");
       // document.getElementById("demo").innerHTML = parseFloat(res[1]);
 
-      this.loadMap(parseFloat(res[0]),parseFloat(res[1]));
+      this.loadMap(parseFloat(v[0].latitude),parseFloat(v[0].longitude));
 
 console.log('ddd',v[0])
       // let lat=res[0]
       // let lng=res[1].split(' ')
-      console.log('ddd',parseFloat(v[0].latitude))
-      console.log('ddd',parseFloat(v[0].longitude))
+      // console.log('ddd',parseFloat(v[0].latitude))
+      // console.log('ddd',parseFloat(v[0].longitude))
   })
 }
   ionViewDidLoad() {
@@ -59,7 +59,7 @@ console.log('ddd',v[0])
   //map
     loadMap(ll,uu) {
 
-            let latLng = new google.maps.LatLng(-34.397,150.644);
+            let latLng = new google.maps.LatLng(ll,uu);
 console.log(latLng)
             let mapOptions = {
                 // center: latLng,

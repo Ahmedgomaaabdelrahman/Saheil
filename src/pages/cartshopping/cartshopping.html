@@ -4,15 +4,15 @@
    <ion-row class="toprow"><ion-col col-12 >سلة المشتريات</ion-col>
    </ion-row>
    <div class="contdiv">
-    
-        <ion-row class="itemrow">
-            <ion-col col-1 style="text-align:center"><img src="assets/imgs/starb.png"height="15px"><p style="margin:40px 0"></p>
+
+        <ion-row *ngFor="let sup of sups" class="itemrow">
+            <ion-col col-1 style="text-align:center"><img src={{sup.picpath}} height="15px"><p style="margin:40px 0"></p>
              <img src="assets/imgs/delete.png"height="15px" style="margin: 10px 5px;">
             </ion-col>
             <ion-col col-4><img class="shopimg" src="assets/imgs/shopimage.png"></ion-col>
             <ion-col col-7>
               <ion-row>
-                <ion-col col-11><p class="p1">لجام حصان</p></ion-col>
+                <ion-col col-11><p class="p1">{{sup.title_ar}}</p></ion-col>
                 <ion-col col-1><ion-icon name="add"></ion-icon></ion-col>
               </ion-row>
               <ion-row>
@@ -26,95 +26,95 @@
             </ion-col>
            
            </ion-row>
-       
-           <ion-row class="itemrow">
-               <ion-col col-1 style="text-align:center"><img src="assets/imgs/starb.png"height="15px"><p style="margin:40px 0"></p>
-                <img src="assets/imgs/delete.png"height="15px" style="margin: 10px 5px;">
-               </ion-col>
-               <ion-col col-4><img class="shopimg" src="assets/imgs/shopimage.png"></ion-col>
-               <ion-col col-7>
-                 <ion-row>
-                   <ion-col col-11><p class="p1">لجام حصان</p></ion-col>
-                   <ion-col col-1><ion-icon name="add"></ion-icon></ion-col>
-                 </ion-row>
-                 <ion-row>
-                    <ion-col col-11><p class="p2">اسم التاجر:عبد الله فيصل</p></ion-col>
-                    <ion-col col-1><p>3</p></ion-col>
-                  </ion-row>
-                  <ion-row>
-                      <ion-col col-11><p class="p3">75 ريال</p></ion-col>
-                      <ion-col col-1><ion-icon name="remove"></ion-icon></ion-col>
-                    </ion-row>
-               </ion-col>
-              
-           </ion-row>
-       
-       
-           <ion-row class="itemrow">
-             <ion-col col-1 style="text-align:center"><img src="assets/imgs/starb.png"height="15px"><p style="margin:40px 0"></p>
-               <img src="assets/imgs/delete.png"height="15px" style="margin: 10px 5px;">
-             </ion-col>
-             <ion-col col-4><img class="shopimg" src="assets/imgs/shopimage.png"></ion-col>
-             <ion-col col-7>
-               <ion-row>
-                 <ion-col col-11><p class="p1">لجام حصان</p></ion-col>
-                 <ion-col col-1><ion-icon name="add"></ion-icon></ion-col>
-               </ion-row>
-               <ion-row>
-                   <ion-col col-11><p class="p2">اسم التاجر:عبد الله فيصل</p></ion-col>
-                   <ion-col col-1><p>3</p></ion-col>
-                 </ion-row>
-                 <ion-row>
-                     <ion-col col-11><p class="p3">75 ريال</p></ion-col>
-                     <ion-col col-1><ion-icon name="remove"></ion-icon></ion-col>
-                   </ion-row>
-             </ion-col>
-           </ion-row>
+
+           <!--<ion-row class="itemrow">-->
+               <!--<ion-col col-1 style="text-align:center"><img src="assets/imgs/starb.png"height="15px"><p style="margin:40px 0"></p>-->
+                <!--<img src="assets/imgs/delete.png"height="15px" style="margin: 10px 5px;">-->
+               <!--</ion-col>-->
+               <!--<ion-col col-4><img class="shopimg" src="assets/imgs/shopimage.png"></ion-col>-->
+               <!--<ion-col col-7>-->
+                 <!--<ion-row>-->
+                   <!--<ion-col col-11><p class="p1">لجام حصان</p></ion-col>-->
+                   <!--<ion-col col-1><ion-icon name="add"></ion-icon></ion-col>-->
+                 <!--</ion-row>-->
+                 <!--<ion-row>-->
+                    <!--<ion-col col-11><p class="p2">اسم التاجر:عبد الله فيصل</p></ion-col>-->
+                    <!--<ion-col col-1><p>3</p></ion-col>-->
+                  <!--</ion-row>-->
+                  <!--<ion-row>-->
+                      <!--<ion-col col-11><p class="p3">75 ريال</p></ion-col>-->
+                      <!--<ion-col col-1><ion-icon name="remove"></ion-icon></ion-col>-->
+                    <!--</ion-row>-->
+               <!--</ion-col>-->
+              <!---->
+           <!--</ion-row>-->
        
        
+           <!--<ion-row class="itemrow">-->
+             <!--<ion-col col-1 style="text-align:center"><img src="assets/imgs/starb.png"height="15px"><p style="margin:40px 0"></p>-->
+               <!--<img src="assets/imgs/delete.png"height="15px" style="margin: 10px 5px;">-->
+             <!--</ion-col>-->
+             <!--<ion-col col-4><img class="shopimg" src="assets/imgs/shopimage.png"></ion-col>-->
+             <!--<ion-col col-7>-->
+               <!--<ion-row>-->
+                 <!--<ion-col col-11><p class="p1">لجام حصان</p></ion-col>-->
+                 <!--<ion-col col-1><ion-icon name="add"></ion-icon></ion-col>-->
+               <!--</ion-row>-->
+               <!--<ion-row>-->
+                   <!--<ion-col col-11><p class="p2">اسم التاجر:عبد الله فيصل</p></ion-col>-->
+                   <!--<ion-col col-1><p>3</p></ion-col>-->
+                 <!--</ion-row>-->
+                 <!--<ion-row>-->
+                     <!--<ion-col col-11><p class="p3">75 ريال</p></ion-col>-->
+                     <!--<ion-col col-1><ion-icon name="remove"></ion-icon></ion-col>-->
+                   <!--</ion-row>-->
+             <!--</ion-col>-->
+           <!--</ion-row>-->
        
-           <ion-row class="itemrow">
-               <ion-col col-1 style="text-align:center"><img src="assets/imgs/starb.png"height="15px"><p style="margin:40px 0"></p>
-                 <img src="assets/imgs/delete.png"height="15px" style="margin: 10px 5px;">
-               </ion-col>
-               <ion-col col-4><img class="shopimg" src="assets/imgs/shopimage.png"></ion-col>
-               <ion-col col-7>
-                 <ion-row>
-                   <ion-col col-11><p class="p1">لجام حصان</p></ion-col>
-                   <ion-col col-1><ion-icon name="add"></ion-icon></ion-col>
-                 </ion-row>
-                 <ion-row>
-                     <ion-col col-11><p class="p2">اسم التاجر:عبد الله فيصل</p></ion-col>
-                     <ion-col col-1><p>3</p></ion-col>
-                   </ion-row>
-                   <ion-row>
-                       <ion-col col-11><p class="p3">75 ريال</p></ion-col>
-                       <ion-col col-1><ion-icon name="remove"></ion-icon></ion-col>
-                     </ion-row>
-               </ion-col>
-           </ion-row>
        
        
-           <ion-row class="itemrow">
-               <ion-col col-1 style="text-align:center"><img src="assets/imgs/starb.png"height="15px"><p style="margin:40px 0"></p>
-                 <img src="assets/imgs/delete.png"height="15px" style="margin: 10px 5px;">
-               </ion-col>
-               <ion-col col-4><img class="shopimg" src="assets/imgs/shopimage.png"></ion-col>
-               <ion-col col-7>
-                 <ion-row>
-                   <ion-col col-11><p class="p1">لجام حصان</p></ion-col>
-                   <ion-col col-1><ion-icon name="add"></ion-icon></ion-col>
-                 </ion-row>
-                 <ion-row>
-                     <ion-col col-11><p class="p2">اسم التاجر:عبد الله فيصل</p></ion-col>
-                     <ion-col col-1><p>3</p></ion-col>
-                   </ion-row>
-                   <ion-row>
-                       <ion-col col-11><p class="p3">75 ريال</p></ion-col>
-                       <ion-col col-1><ion-icon name="remove"></ion-icon></ion-col>
-                     </ion-row>
-               </ion-col>
-           </ion-row>
+           <!--<ion-row class="itemrow">-->
+               <!--<ion-col col-1 style="text-align:center"><img src="assets/imgs/starb.png"height="15px"><p style="margin:40px 0"></p>-->
+                 <!--<img src="assets/imgs/delete.png"height="15px" style="margin: 10px 5px;">-->
+               <!--</ion-col>-->
+               <!--<ion-col col-4><img class="shopimg" src="assets/imgs/shopimage.png"></ion-col>-->
+               <!--<ion-col col-7>-->
+                 <!--<ion-row>-->
+                   <!--<ion-col col-11><p class="p1">لجام حصان</p></ion-col>-->
+                   <!--<ion-col col-1><ion-icon name="add"></ion-icon></ion-col>-->
+                 <!--</ion-row>-->
+                 <!--<ion-row>-->
+                     <!--<ion-col col-11><p class="p2">اسم التاجر:عبد الله فيصل</p></ion-col>-->
+                     <!--<ion-col col-1><p>3</p></ion-col>-->
+                   <!--</ion-row>-->
+                   <!--<ion-row>-->
+                       <!--<ion-col col-11><p class="p3">75 ريال</p></ion-col>-->
+                       <!--<ion-col col-1><ion-icon name="remove"></ion-icon></ion-col>-->
+                     <!--</ion-row>-->
+               <!--</ion-col>-->
+           <!--</ion-row>-->
+       
+       
+           <!--<ion-row class="itemrow">-->
+               <!--<ion-col col-1 style="text-align:center"><img src="assets/imgs/starb.png"height="15px"><p style="margin:40px 0"></p>-->
+                 <!--<img src="assets/imgs/delete.png"height="15px" style="margin: 10px 5px;">-->
+               <!--</ion-col>-->
+               <!--<ion-col col-4><img class="shopimg" src="assets/imgs/shopimage.png"></ion-col>-->
+               <!--<ion-col col-7>-->
+                 <!--<ion-row>-->
+                   <!--<ion-col col-11><p class="p1">لجام حصان</p></ion-col>-->
+                   <!--<ion-col col-1><ion-icon name="add"></ion-icon></ion-col>-->
+                 <!--</ion-row>-->
+                 <!--<ion-row>-->
+                     <!--<ion-col col-11><p class="p2">اسم التاجر:عبد الله فيصل</p></ion-col>-->
+                     <!--<ion-col col-1><p>3</p></ion-col>-->
+                   <!--</ion-row>-->
+                   <!--<ion-row>-->
+                       <!--<ion-col col-11><p class="p3">75 ريال</p></ion-col>-->
+                       <!--<ion-col col-1><ion-icon name="remove"></ion-icon></ion-col>-->
+                     <!--</ion-row>-->
+               <!--</ion-col>-->
+           <!--</ion-row>-->
 
    
 

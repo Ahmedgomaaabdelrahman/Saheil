@@ -8,17 +8,18 @@ import {CommonservicesProvider} from "../../providers/commonservices/commonservi
   templateUrl: 'cartshopping.html',
 })
 export class CartshoppingPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams,private common:CommonservicesProvider) {
-
+sups:any
+  constructor(private comman:CommonservicesProvider,public navCtrl: NavController, public navParams: NavParams,private common:CommonservicesProvider) {
+  this.sups=[];
+  let self=this;
+this.common.getStoredValue('cart').then(res=>{
+  self.sups=res
+  console.log(res)
+})
   }
 
   ionViewDidLoad() {
-      this.common.getStoredValue('cart').then(res=>{
-          console.log(res);
-      
-  });
-    console.log('ionViewDidLoad CartshoppingPage');
+
   }
 
 }

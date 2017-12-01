@@ -2,36 +2,13 @@
     <header></header>
     <subheader></subheader>
    <ion-row class="toprow"><ion-col col-12 >الاستشارات</ion-col></ion-row>
-   <div class="contdiv">
-     <h6>المرسل / احمد محمد عبد الله</h6>
-     <p> تنظيم البطولة العربيهتنظيم البطولة العربيهتنظيم البطولة العربيه</p>
-     <p (click)="gotodetails()">المزيد من التفاصيل</p>
+
+
+   <div *ngFor="let msg of msgs" class="contdiv">
+     <h6>{{msg.subject}}</h6>
+     <p>{{msg.created}}</p>
+     <p (click)="gotodetails(msg)">المزيد من التفاصيل</p>
      <img height="8px" src="assets/imgs/more.png">
    </div>
 
-   <div class="contdiv">
-      <h6>المرسل / احمد محمد عبد الله</h6>
-      <p> تنظيم البطولة العربيهتنظيم البطولة العربيهتنظيم البطولة العربيه</p>
-     <p (click)="gotodetails()">المزيد من التفاصيل</p>
-      <img height="8px" src="assets/imgs/more.png">
-    </div>
-    <div class="contdiv">
-        <h6>المرسل / احمد محمد عبد الله</h6>
-        <p> تنظيم البطولة العربيهتنظيم البطولة العربيهتنظيم البطولة العربيه</p>
-       <p (click)="gotodetails()">المزيد من التفاصيل</p>
-        <img height="8px" src="assets/imgs/more.png">
-      </div>
-
-    <div class="contdiv">
-        <h6>المرسل / احمد محمد عبد الله</h6>
-        <p> تنظيم البطولة العربيهتنظيم البطولة العربيهتنظيم البطولة العربيه</p>
-       <p (click)="gotodetails()">المزيد من التفاصيل</p>
-        <img height="8px" src="assets/imgs/more.png">
-    </div>
-    <div class="contdiv">
-        <h6>المرسل / احمد محمد عبد الله</h6>
-        <p> تنظيم البطولة العربيهتنظيم البطولة العربيهتنظيم البطولة العربيه</p>
-       <p (click)="gotodetails()">المزيد من التفاصيل</p>
-        <img height="8px" src="assets/imgs/more.png">
-      </div>  
       </ion-content>

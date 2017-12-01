@@ -29,13 +29,22 @@ export class HorsesuppPage {
         console.log('ionViewDidLoad HorsesuppPage');
 
     }
+    supArrayy:any;
     addToBasket(sup){
-var supArray=[]
+this.supArrayy=[]
         let self=this
         this.common.getStoredValue('cart').then(cart=>{
-            supArray=cart;
-            // cart.push(sup)
-            self.common.storeValue('cart',sup);
+            if(cart !=null){
+            for(let i=0;i<cart.length;i++){
+                self.supArrayy.push(cart[i])
+
+
+            }
+                self.supArrayy.push(sup)
+                self.common.storeValue('cart',self.supArrayy);
+            }else{
+                self.supArrayy.push(sup)
+                self.common.storeValue('cart',self.supArrayy);            }
 
         })
     }
