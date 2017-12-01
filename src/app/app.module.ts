@@ -71,6 +71,17 @@ import { HorsesellerPage } from '../pages/horseseller/horseseller';
 import { SupsProvider } from '../providers/sups/sups';
 import { MailProvider } from '../providers/mail/mail';
 import { HorsesPage } from '../pages/horses/horses';
+import { TourtablesPage } from '../pages/tourtables/tourtables';
+import { OnetourcommentsPage } from '../pages/onetourcomments/onetourcomments';
+import { TournewsPage } from '../pages/tournews/tournews';
+import { OnetourdetailsPage } from '../pages/onetourdetails/onetourdetails';
+import { OnetourPage } from '../pages/onetour/onetour';
+import { LivestreamPage } from '../pages/livestream/livestream';
+import { SellerproductsPage } from '../pages/sellerproducts/sellerproducts';
+import { EdithorsePage } from '../pages/edithorse/edithorse';
+import { EditproductPage } from '../pages/editproduct/editproduct';
+import { AddhorsePage } from '../pages/addhorse/addhorse';
+import { MyhorsesPage } from '../pages/myhorses/myhorses';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -121,7 +132,18 @@ export function createTranslateLoader(http: HttpClient) {
     AddproductPage,
     ProductdetailsPage,
     HorsesellerPage,
-    HorsesPage
+    HorsesPage,
+    TournewsPage,
+    TourtablesPage,
+    OnetourcommentsPage,
+    OnetourdetailsPage,
+    OnetourPage,
+    LivestreamPage,
+    SellerproductsPage,
+    EdithorsePage,
+    EditproductPage,
+    AddhorsePage,
+    MyhorsesPage
   ], 
   imports: [
     BrowserModule,HttpClientModule,
@@ -181,7 +203,18 @@ export function createTranslateLoader(http: HttpClient) {
     AddproductPage,
     ProductdetailsPage,
     HorsesellerPage,
-    HorsesPage
+    HorsesPage,
+    TournewsPage,
+    TourtablesPage,
+    OnetourcommentsPage,
+    OnetourdetailsPage,
+    OnetourPage,
+    LivestreamPage,
+    SellerproductsPage,
+    EdithorsePage,
+    EditproductPage,
+    AddhorsePage,
+    MyhorsesPage
   ],
   providers: [
     StatusBar,

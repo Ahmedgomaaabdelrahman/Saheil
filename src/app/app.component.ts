@@ -11,16 +11,13 @@ import {LoginPage} from "../pages/login/login";
 import {AuthproviderProvider} from "../providers/authprovider/authprovider";
 import {EditaccountPage} from "../pages/editaccount/editaccount";
 import {KnowlegePage} from "../pages/knowlege/knowlege";
-import { SignupPage } from '../pages/signup/signup';
-import { TransportPage } from '../pages/transport/transport';
-import { AirtansportPage } from '../pages/airtansport/airtansport';
-import { HrssupsellersPage } from '../pages/hrssupsellers/hrssupsellers';
+
 import { ConsultationPage } from '../pages/consultation/consultation';
 import { AddproductPage } from './../pages/addproduct/addproduct';
-import { ProductdetailsPage } from '../pages/productdetails/productdetails';
-import { HorsesuppPage } from '../pages/horsesupp/horsesupp';
-import { HorsesellerPage } from '../pages/horseseller/horseseller';
+
 import {Users} from '../modes/users';
+
+
 @Component({
   templateUrl: 'app.html'
 })
@@ -32,10 +29,10 @@ export class MyApp {
 
   rootPage:any = LanguagePage;
 
-  constructor(public user:Users,public events:Events,platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private common:CommonservicesProvider
-  ,private auth:AuthproviderProvider) {
+  constructor(public user:Users,public events:Events,platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private common:CommonservicesProvider,private auth:AuthproviderProvider)
+  {
       this.flag=false;
-this.supsSellerFlag=false;
+      this.supsSellerFlag=false;
     platform.ready().then(() => {
         console.log('user',this.user.getuser())
 
