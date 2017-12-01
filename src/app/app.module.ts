@@ -70,6 +70,12 @@ import { HorsesellerPage } from '../pages/horseseller/horseseller';
 import { SupsProvider } from '../providers/sups/sups';
 import { MailProvider } from '../providers/mail/mail';
 import { HorsesPage } from '../pages/horses/horses';
+import { TourtablesPage } from '../pages/tourtables/tourtables';
+import { OnetourcommentsPage } from '../pages/onetourcomments/onetourcomments';
+import { TournewsPage } from '../pages/tournews/tournews';
+import { OnetourdetailsPage } from '../pages/onetourdetails/onetourdetails';
+import { OnetourPage } from '../pages/onetour/onetour';
+import { LivestreamPage } from '../pages/livestream/livestream';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -120,7 +126,13 @@ export function createTranslateLoader(http: HttpClient) {
     AddproductPage,
     ProductdetailsPage,
     HorsesellerPage,
-    HorsesPage
+    HorsesPage,
+    TournewsPage,
+    TourtablesPage,
+    OnetourcommentsPage,
+    OnetourdetailsPage,
+    OnetourPage,
+    LivestreamPage
   ], 
   imports: [
     BrowserModule,HttpClientModule,
@@ -180,7 +192,13 @@ export function createTranslateLoader(http: HttpClient) {
     AddproductPage,
     ProductdetailsPage,
     HorsesellerPage,
-    HorsesPage
+    HorsesPage,
+    TournewsPage,
+    TourtablesPage,
+    OnetourcommentsPage,
+    OnetourdetailsPage,
+    OnetourPage,
+    LivestreamPage
   ],
   providers: [
     StatusBar,

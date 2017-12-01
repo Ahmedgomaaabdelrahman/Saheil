@@ -23,6 +23,7 @@ import { AddproductPage } from './../pages/addproduct/addproduct';
 import { ProductdetailsPage } from '../pages/productdetails/productdetails';
 import { HorsesuppPage } from '../pages/horsesupp/horsesupp';
 import { HorsesellerPage } from '../pages/horseseller/horseseller';
+import { TournewsPage } from '../pages/tournews/tournews';
 
 @Component({
   templateUrl: 'app.html'
@@ -31,7 +32,7 @@ export class MyApp {
 
     @ViewChild(Nav) nav: Nav;
   flag:boolean;
-  rootPage:any = HorsesellerPage;
+  rootPage:any = TournewsPage;
 
   constructor(public events:Events,platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private common:CommonservicesProvider
   ,private auth:AuthproviderProvider) {
