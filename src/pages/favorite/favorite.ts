@@ -27,16 +27,16 @@ let self=this
     })
     console.log('ionViewDidLoad FavoritePage');
   }
-    deleteToUserFav(itemToBeDeleted){
-        let fav={
-            "member_id":this.member_id,"supply_id":itemToBeDeleted
-        }
+  //   deleteToUserFav(itemToBeDeleted){
+  //       let fav={
+  //           "member_id":this.member_id,"supply_id":itemToBeDeleted
+  //       }
 
-        this.sups.deleteToUserFav(fav).subscribe(res=>{
-            console.log(res)
+  //       this.sups.deleteToUserFav(fav).subscribe(res=>{
+  //           console.log(res)
   // this.favs.splice()
-            this.common.presentToast('تمت الحذف من قائمة المفضلة')
-        })
+  //           this.common.presentToast('تمت الحذف من قائمة المفضلة')
+  //       })
 
-  }
+  // }
 }
