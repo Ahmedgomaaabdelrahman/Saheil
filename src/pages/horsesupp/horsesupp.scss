@@ -27,7 +27,16 @@ h6{
     padding: 5px;
     border-bottom: 1px solid #ba8700;
     width: 50%;
+    height: 30px;
+    min-height: 30px;
     margin: 0 auto;
     font-size: 15px;
+    max-height: 30px;
+}
+.imgcont{
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 }

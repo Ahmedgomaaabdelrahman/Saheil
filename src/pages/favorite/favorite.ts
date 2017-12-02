@@ -42,5 +42,5 @@ self.member_id=user.member_id
             this.common.presentToast('تمت الحذف من قائمة المفضلة')}
         })
 
-  }
+   }
 }

@@ -8,16 +8,16 @@
   <ion-row  class="itemrow" *ngFor="let f of favs;let i=index">
     <ion-col col-4><img class="shopimg" src={{f.supplies[0].picpath}}></ion-col>
     <ion-col col-8>
-      <ion-row>
+      <ion-row style="height:35px">
         <ion-col col-10><p class="p1">{{f.supplies[0].title}}</p></ion-col>
-        <!--<ion-col col-2><img src="assets/imgs/favb.png"height="20px"></ion-col>-->
-      </ion-row>
+        <ion-col col-2 style="text-align: center;"><img src="assets/imgs/delete.png" height="15px" style="margin: 10px 5px;" (click)="deleteToUserFav(f.supplies[0].supply_id,i)"></ion-col>
+    </ion-row>
       <ion-row>
           <ion-col col-12><p class="p2">{{f.supplies[0].details}}</p></ion-col>
       </ion-row>
       <ion-row>
           <ion-col col-10><p class="p3">{{f.supplies[0].price}} ريال</p></ion-col>
-          <ion-col col-2 style="text-align: center;"><img src="assets/imgs/delete.png" height="15px" style="margin: 10px 5px;" (click)="deleteToUserFav(f.supplies[0].supply_id,i)"></ion-col>
+          <!-- <ion-col col-2 style="text-align: center;"><img src="assets/imgs/delete.png" height="15px" style="margin: 10px 5px;" (click)="deleteToUserFav(f.supplies[0].supply_id,i)"></ion-col> -->
       </ion-row>
     </ion-col>
   
