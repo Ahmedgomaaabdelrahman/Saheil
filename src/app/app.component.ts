@@ -115,5 +115,8 @@ this.supsSellerFlag=false
         this.nav.push(FavoritePage)
 
     }
+    addproduct(){
+        this.nav.push(AddproductPage);
+    }
 }
 
