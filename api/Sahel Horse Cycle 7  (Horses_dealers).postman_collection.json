@@ -520,6 +520,17 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "List All Horses",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/horses",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }

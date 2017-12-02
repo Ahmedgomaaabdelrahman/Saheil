@@ -18,19 +18,19 @@
 					"formdata": [
 						{
 							"key": "username",
-							"value": "hazem_test_2",
+							"value": "hazem",
 							"type": "text",
 							"description": "User Name"
 						},
 						{
 							"key": "mobile",
-							"value": "1234565",
+							"value": "01234565",
 							"type": "text",
 							"description": "Mobile,you will recive s.m.s code (Delayed)"
 						},
 						{
 							"key": "email",
-							"value": "hazem_test@gmail.com",
+							"value": "hazem.elsayed8@gmail.com",
 							"type": "text",
 							"description": "Email "
 						},
@@ -54,7 +54,7 @@
 						},
 						{
 							"key": "service_id",
-							"value": "6",
+							"value": "1",
 							"description": "get from ../api/ar/service ",
 							"type": "text"
 						}
@@ -199,7 +199,7 @@
 					"formdata": [
 						{
 							"key": "member_id",
-							"value": "8",
+							"value": "1",
 							"type": "text",
 							"description": ""
 						},
@@ -297,6 +297,39 @@
 							"key": "twitter",
 							"value": "http://twitter.com/",
 							"description": "رابط التويتر ",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "500",
+							"description": "سعر الخدمة ,, لو ملهاش قيمة فدي هتعتبر مجانية",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://sahel-horse.com/api/credit",
+			"request": {
+				"url": "http://sahel-horse.com/api/credit",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "50",
+							"description": "دي معناها ان العضو هيضاف لية 50 دولار ",
 							"type": "text"
 						}
 					]

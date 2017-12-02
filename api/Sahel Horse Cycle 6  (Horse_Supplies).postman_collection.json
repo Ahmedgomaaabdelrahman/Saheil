@@ -484,6 +484,17 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "List All Supplies",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/supplies",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }

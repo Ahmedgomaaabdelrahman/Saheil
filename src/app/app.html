@@ -15,6 +15,9 @@
                  <button class="menubtn"  *ngIf="supsSellerFlag" (click)="supsSeller()" menuClose ion-item color="standard" >
                      <ion-icon name="basket"></ion-icon>المتجر
                  </button>
+                 <button class="menubtn"  *ngIf="flag" (click)="fav()" menuClose ion-item color="standard" >
+                     <ion-icon name="star"></ion-icon>المفضلة
+                 </button>
                  <button class="menubtn" (click)="goToMain()" menuClose ion-item color="standard" >
                     <ion-icon name="desktop"></ion-icon>الرئيسية 
                  </button>

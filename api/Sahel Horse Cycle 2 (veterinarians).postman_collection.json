@@ -147,6 +147,39 @@
 				"description": ""
 			},
 			"response": []
+		},
+		{
+			"name": "Send Message Replay",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/send/message/replay",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "1",
+							"description": "Member ID",
+							"type": "text"
+						},
+						{
+							"key": "message_id",
+							"value": "1",
+							"description": "Message ID",
+							"type": "text"
+						},
+						{
+							"key": "replay",
+							"value": "ماهي مواعيد العمل اليومية والاسبوعية",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }

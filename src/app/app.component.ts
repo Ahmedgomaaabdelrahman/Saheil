@@ -16,10 +16,10 @@ import { ConsultationPage } from '../pages/consultation/consultation';
 import { AddproductPage } from './../pages/addproduct/addproduct';
 
 import {Users} from '../modes/users';
+import {FavoritePage} from "../pages/favorite/favorite";
 
 
-@Component({
-  templateUrl: 'app.html'
+@Component({templateUrl: 'app.html'
 })
 export class MyApp {
 
@@ -109,6 +109,10 @@ this.supsSellerFlag=false
     }
     supsSeller(){
         this.nav.push(AddproductPage)
+
+    }
+    fav(){
+        this.nav.push(FavoritePage)
 
     }
 }

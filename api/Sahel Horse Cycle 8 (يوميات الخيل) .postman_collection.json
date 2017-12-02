@@ -1,0 +1,189 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Sahel Horse diaries Cycle 8 (يوميات الخيل) ",
+		"_postman_id": "751c88ef-5417-dec6-d612-df20a16d08db",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://www.sahel-horse.com/api/ar/diaries",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/diaries",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://www.sahel-horse.com/api/ar/diaries/details/1",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/diaries/details/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://www.sahel-horse.com/api/diaries/manage",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/diaries/manage",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "6",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://www.sahel-horse.com/api/diaries/add",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/diaries/add",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "member_id",
+							"value": "2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "title_ar",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "title_en",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "details_ar",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "details_en",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://www.sahel-horse.com/api/diaries/edit",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/diaries/edit",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "diary_id",
+							"value": "2",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "member_id",
+							"value": "2",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "title_ar",
+							"value": "test2",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "title_en",
+							"value": "test2",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "image",
+							"value": "test2",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "details_ar",
+							"value": "test2",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "details_en",
+							"value": "test2",
+							"type": "text",
+							"description": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://www.sahel-horse.com/api/diaries/delete",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/diaries/delete",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "diary_id",
+							"value": "2",
+							"type": "text",
+							"description": ""
+						},
+						{
+							"key": "member_id",
+							"value": "2",
+							"type": "text",
+							"description": ""
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

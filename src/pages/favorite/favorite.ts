@@ -16,6 +16,7 @@ export class FavoritePage {
   ionViewWillEnter() {
 let self=this
     this.common.getStoredValue('user').then(user=>{
+        console.log(user.member_id)
 
         self.sups.getUserFav(user.member_id).subscribe(res=>{
           console.log(res)

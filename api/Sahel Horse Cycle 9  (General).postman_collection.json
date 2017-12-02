@@ -1,0 +1,99 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Sahel Horse Cycle 9  (General)",
+		"_postman_id": "9097644f-98eb-161d-2d59-e711b903f609",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "قسم ثقف نفسك ,, عرض الجميع",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/news",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "تقاصيل الخاص بقسم ثقف نفسك",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/news/20",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "عن صهيل الخيل",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/aboutus",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "بث مباشر",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/live",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "فاعليات قادمة",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/upcoming/events",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "تفاصيل الخاصة بالفاعليات القادمة",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/upcoming/events/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "اخبار البطولات",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/tournaments",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "تفاصيل اخبار البطولات",
+			"request": {
+				"url": "http://www.sahel-horse.com/api/ar/tournaments/1",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
