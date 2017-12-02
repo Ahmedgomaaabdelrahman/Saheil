@@ -49,7 +49,9 @@ submit(){
       "details_en" :this.details_en,
       "price" :this.price,
       "category_id":this.category_id}
-      this.sups.addSup(addSup).subscribe(response=>{
+    console.log(addSup)
+
+    this.sups.addSup(addSup).subscribe(response=>{
 console.log(response)
       })
 }

@@ -10,10 +10,13 @@ import {CommonservicesProvider} from "../../providers/commonservices/commonservi
     templateUrl: 'horsesupp.html',
 })
 export class HorsesuppPage {
+
     supArray:any;
+    member_id
     constructor(public common:CommonservicesProvider,public sups:SupsProvider,public navCtrl: NavController, public navParams: NavParams) {
     }
     ionViewWillEnter(){
+
         this.supArray=[]
         this.sups.getAllSupplies(this.navParams.data).subscribe(res=>{
             console.log(res)
@@ -21,7 +24,24 @@ export class HorsesuppPage {
 
 
         })
+        this.common.getStoredValue('user').then(user=>{
+            this.member_id=user.member_id;
+        })
+
+
     }
+    addToFav(itemToBeAdded){
+
+        let fav={
+            "member_id":this.member_id,"supply_id":itemToBeAdded
+        }
+
+        this.sups.addToUserFav(fav).subscribe(res=>{
+            console.log(res)
+            this.common.presentToast('تمت الاضافة الي قائمة المفضلة')
+        })
+    }
+
 // getDetails(id){
 //     this.sups.getSupplyDetail(id)
 // }

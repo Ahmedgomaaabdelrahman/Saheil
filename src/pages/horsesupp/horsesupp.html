@@ -9,7 +9,7 @@
           <div style="height: 120px;">
             <ion-row style="position: absolute;top: 10px;width: 95%;">
               <ion-col col-6> <img src="assets/imgs/starb.png" height="15px"></ion-col>
-              <ion-col col-6><p class="p1">100ريال</p></ion-col>
+              <ion-col col-6><p class="p1">{{sup.price}}</p></ion-col>
             </ion-row>
             <img src={{sup.picpath}}>
           </div>
@@ -18,7 +18,7 @@
             <!--<p class="p2">تنظيم البطولة الدوليه الوطنيه الاولى تنظيم البطولة الدوليه الوطنيه الاولى</p>-->
             <ion-row>
               <button (click)="addToBasket(sup)"><ion-col col-6 style="text-align:center"><img height="15px" src="assets/imgs/basket.png"></ion-col></button>
-              <ion-col col-6 style="text-align:center"><img height="15px" src="assets/imgs/favb.png"></ion-col>
+              <ion-col col-6 style="text-align:center"><img height="15px" (click)="addToFav(sup.supply_id)" src="assets/imgs/favb.png"></ion-col>
             </ion-row>
           </div>
         </div>

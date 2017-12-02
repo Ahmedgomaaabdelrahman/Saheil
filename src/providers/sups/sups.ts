@@ -34,7 +34,17 @@ export class SupsProvider {
 
     }
     getUserFav(memberId){
+let fav={
+    "member_id":memberId
+}
+        return this.http.post(this.url.url+"/api/supplies/favorite",fav)
+    }
+    addToUserFav(req){
 
-        return this.http.post(this.url.url+"/api/supplies/favorite",memberId)
+        return this.http.post(this.url.url+"/api/supplies/favorite/add",req)
+    }
+    deleteToUserFav(req){
+
+        return this.http.post(this.url.url+"/api/supplies/delete",req)
     }
 }

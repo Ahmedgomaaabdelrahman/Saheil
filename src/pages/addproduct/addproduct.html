@@ -6,11 +6,11 @@
 
   <button ion-button block (click)="serviceImage()" class="btn" >اضافة صور</button>
 <img *ngIf="image != null" src={{image}}/>
-    <ion-input type="text" placeholder="اسم المنتج">{{title_ar}}</ion-input>
-  <ion-input type="text" placeholder="product name">{{title_en}}</ion-input>
-  <ion-input type="text" placeholder="الوصف">{{details_ar}}</ion-input>
-  <ion-input type="text" placeholder="Description">{{details_en}}</ion-input>
-  <ion-input type="text" placeholder="السعر">{{price}}</ion-input>
+    <ion-input type="text" [(ngModel)]="title_ar" name="title_ar" placeholder="اسم المنتج">{{title_ar}}</ion-input>
+  <ion-input type="text" [(ngModel)]="title_en" name="title_en" placeholder="product name">{{title_en}}</ion-input>
+  <ion-input type="text"  [(ngModel)]="details_ar" name="details_ar" placeholder="الوصف">{{details_ar}}</ion-input>
+  <ion-input type="text" [(ngModel)]="details_en" name="details_en" placeholder="Description">{{details_en}}</ion-input>
+  <ion-input type="text"  [(ngModel)]="price" name="price" placeholder="السعر">{{price}}</ion-input>
   <!--<ion-input type="text" placeholder="price"></ion-input>-->
   
   <ion-item class="selection">
