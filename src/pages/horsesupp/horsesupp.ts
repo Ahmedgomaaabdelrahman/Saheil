@@ -8,7 +8,7 @@ import {CommonservicesProvider} from "../../providers/commonservices/commonservi
 @Component({
     selector: 'page-horsesupp',
     templateUrl: 'horsesupp.html',
-})
+}) 
 export class HorsesuppPage {
 
     supArray:any;
