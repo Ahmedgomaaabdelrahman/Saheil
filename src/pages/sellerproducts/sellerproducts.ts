@@ -11,9 +11,10 @@ export class SellerproductsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
+  ionViewWillEnter() {
     console.log('ionViewDidLoad SellerproductsPage');
   }
+
   edit(){
     this.navCtrl.push(EditproductPage);
   }

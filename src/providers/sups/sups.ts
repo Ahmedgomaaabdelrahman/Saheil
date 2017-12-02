@@ -44,7 +44,11 @@ let fav={
         return this.http.post(this.url.url+"/api/supplies/favorite/add",req)
     }
     deleteToUserFav(req){
-
-        return this.http.post(this.url.url+"/api/supplies/delete",req)
+        // http://www.sahel-horse.com/api/supplies/favorite/delete
+        return this.http.post(this.url.url+"/api/supplies/favorite/delete",req)
+    }
+    getMySuplies(req){
+        // http://www.sahel-horse.com/api/supplies/manage
+                    return this.http.post(this.url.url+"/api/supplies/manage",req)
     }
 }
