@@ -14,6 +14,7 @@ export class EditaccountPage {
     D=this.domain.url;
 member_id;
     image:any;
+    sendimage:any;
   username:string;
   mobile:number;
 email:string;
@@ -22,6 +23,7 @@ password:string;
 service_name_en:string;
 service_name_ar:string;
 service_image:any;
+service_sendimage:any;
 service_adress_ar:string;
 service_adress_en:string;
     map:any;
@@ -64,7 +66,7 @@ service_details_en:string;
   }
 submit(){
   var  user={
-      'image':this.image,//use cam
+      'image':this.sendimage,//use cam
       'member_id':this.member_id,// storage
       'username':this.username,
       'email':this.email,
@@ -75,7 +77,7 @@ submit(){
       'gcm_regid':'123456',//cordova fcm
       'service_name_ar':this.service_name_ar,
       'service_name_en':this.service_name_en,
-      'service_image':this.service_image,//use cam
+      'service_image':this.service_sendimage,//use cam
       'service_adress_ar':this.service_adress_ar,
       'service_adress_en':this.service_adress_en,
       'service_details_ar':this.service_details_ar,
@@ -126,6 +128,7 @@ this.common.presentLoadingDefault();
             // console.log('img',res)
             // this.service_image=res;
             this.service_image='data:image/jpeg;base64,' + res
+            this.service_sendimage= res
         }).catch(e=>{
             console.log('cam error :', e)
         })
@@ -135,6 +138,7 @@ this.common.presentLoadingDefault();
             // console.log('img',res)
             // this.image=res;
             this.image='data:image/jpeg;base64,' + res
+            this.sendimage=res
         }).catch(e=>{
             console.log('cam error :', e)
         })

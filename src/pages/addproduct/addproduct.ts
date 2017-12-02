@@ -17,7 +17,7 @@ export class AddproductPage {
     details_en
     price
     category_id
-
+sendimage
     allCategories
   constructor(private common:CommonservicesProvider,private sups:SupsProvider,public navCtrl: NavController, public navParams: NavParams) {
 
@@ -44,7 +44,7 @@ submit(){
       "member_id":this.member_id,
       "title_ar":this.title_ar,
       "title_en" :this.title_en,
-      "image" :this.image,
+      "image" :this.sendimage,
       "details_ar" :this.details_ar,
       "details_en" :this.details_en,
       "price" :this.price,
@@ -57,7 +57,7 @@ console.log(response)
 }
     serviceImage(){
         this.common.presentActionSheet('use cam','use galery').then(res=> {
-            console.log(res)
+            // console.log(res)
             this.serviceCam(res)
         })
 
@@ -67,6 +67,7 @@ console.log(response)
             // console.log('img',res)
             // this.service_image=res;
             this.image='data:image/jpeg;base64,' + res
+            this.sendimage=res
         }).catch(e=>{
             console.log('cam error :', e)
         })
