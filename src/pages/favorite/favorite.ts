@@ -37,7 +37,6 @@ self.member_id=user.member_id
         this.sups.deleteToUserFav(fav).subscribe(res=>{
             console.log(fav)
             console.log(res)
-            // console.log(res.error)
             if(res['error']==null){
   this.favs.splice(index,1)
             this.common.presentToast('تمت الحذف من قائمة المفضلة')}

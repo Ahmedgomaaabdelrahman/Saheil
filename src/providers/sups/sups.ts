@@ -22,12 +22,18 @@ export class SupsProvider {
     }
 
     getSupplyDetail(id) {
-        return this.http.get(this.url.url + 'api/' + this.lang + '/supply/' + id);
-    }
 
+        return this.http.get(this.url.url + '/api/' + this.lang + '/supply/' + id);
+    }
+deleteSup(req){
+    return this.http.post(this.url.url+"/api/supplies/delete",req)
+
+}
     addSup(item) {
 
         return this.http.post(this.url.url + 'api/supplies/add/',item);
+    } editSup(item) {
+        return this.http.post(this.url.url + 'api/supplies/edit',item);
     }
     getSupsCategoties(){
             return this.http.get(this.url.url + 'api/' + this.lang + '/supplies/category');
@@ -37,18 +43,23 @@ export class SupsProvider {
 let fav={
     "member_id":memberId
 }
-        return this.http.post(this.url.url+"/api/supplies/favorite",fav)
+        return this.http.post(this.url.url+"api/supplies/favorite",fav)
     }
     addToUserFav(req){
 
-        return this.http.post(this.url.url+"/api/supplies/favorite/add",req)
+        return this.http.post(this.url.url+"api/supplies/favorite/add",req)
     }
     deleteToUserFav(req){
         // http://www.sahel-horse.com/api/supplies/favorite/delete
-        return this.http.post(this.url.url+"/api/supplies/favorite/delete",req)
+        return this.http.post(this.url.url+"api/supplies/favorite/delete",req)
     }
     getMySuplies(req){
+        let my={
+            "member_id":req
+        }
+
         // http://www.sahel-horse.com/api/supplies/manage
-                    return this.http.post(this.url.url+"/api/supplies/manage",req)
+                    return this.http.post(this.url.url+"api/supplies/manage",my)
     }
+
 }

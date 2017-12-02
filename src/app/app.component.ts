@@ -17,6 +17,7 @@ import { AddproductPage } from './../pages/addproduct/addproduct';
 
 import {Users} from '../modes/users';
 import {FavoritePage} from "../pages/favorite/favorite";
+import {SellerproductsPage} from "../pages/sellerproducts/sellerproducts";
 
 
 @Component({templateUrl: 'app.html'
@@ -108,7 +109,7 @@ this.supsSellerFlag=false
         this.nav.push(ConsultationPage)
     }
     supsSeller(){
-        this.nav.push(AddproductPage)
+        this.nav.push(SellerproductsPage)
 
     }
     fav(){
