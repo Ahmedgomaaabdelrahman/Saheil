@@ -5,23 +5,27 @@
    </ion-row>
    <div class="contdiv">
 
-        <ion-row *ngFor="let sup of sups" class="itemrow">
-            <ion-col col-1 style="text-align:center"><img src={{sup.picpath}} height="15px"><p style="margin:40px 0"></p>
-             <img src="assets/imgs/delete.png"height="15px" style="margin: 10px 5px;">
+        <ion-row *ngFor="let sup of sups;let i =index;" class="itemrow">
+            <ion-col col-1 style="text-align:center">
+                <!--<img src={{sup.picpath}} height="15px">-->
+                <p style="margin:40px 0"></p>
+             <img src="assets/imgs/delete.png"  height="15px" style="margin: 10px 5px;" (click)="delete(i)">
             </ion-col>
-            <ion-col col-4><img class="shopimg" src="assets/imgs/shopimage.png"></ion-col>
+            <ion-col col-4><img class="shopimg" src={{sup.picpath}}></ion-col>
             <ion-col col-7>
               <ion-row>
-                <ion-col col-11><p class="p1">{{sup.title_ar}}</p></ion-col>
-                <ion-col col-1><ion-icon name="add"></ion-icon></ion-col>
+                <ion-col col-11><p class="p1">{{sup.title}}</p></ion-col>
+                <ion-col col-1><ion-icon name="add" (click)="add(i)"></ion-icon></ion-col>
               </ion-row>
               <ion-row>
-                 <ion-col col-11><p class="p2">اسم التاجر:عبد الله فيصل</p></ion-col>
-                 <ion-col col-1><p>3</p></ion-col>
+                 <ion-col col-11>
+                     <p class="p2">{{sup.details}}</p>
+                 </ion-col>
+                 <ion-col col-1><p>{{quantity[i]}}</p></ion-col>
                </ion-row>
                <ion-row>
-                   <ion-col col-11><p class="p3">75 ريال</p></ion-col>
-                   <ion-col col-1><ion-icon name="remove"></ion-icon></ion-col>
+                   <ion-col col-11><p class="p3">{{sup.price}} ريال</p></ion-col>
+                   <ion-col col-1><ion-icon name="remove" (click)="remove(i)"></ion-icon></ion-col>
                  </ion-row>
             </ion-col>
            
@@ -32,7 +36,7 @@
    
 
     <ion-row class="botrow">
-      <ion-col col-8><p>المجموع 350 ريال</p></ion-col>
+      <ion-col col-8><p>المجموع {{totalPrice}} ريال</p></ion-col>
       <ion-col col-4><p>تاكيد</p></ion-col>
     </ion-row>
 </div>

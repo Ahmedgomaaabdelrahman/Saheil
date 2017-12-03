@@ -9,15 +9,54 @@ import {CommonservicesProvider} from "../../providers/commonservices/commonservi
 })
 export class CartshoppingPage {
 sups:any
+    quantity:any
+  // remove:any
+totalPrice:number
   constructor(private comman:CommonservicesProvider,public navCtrl: NavController, public navParams: NavParams,private common:CommonservicesProvider) {
-  this.sups=[];
-  let self=this;
-this.common.getStoredValue('cart').then(res=>{
-  self.sups=res
-  console.log(res)
-})
-  }
 
+  }
+  add(i){
+
+  this.quantity[i]+=1;
+      this.totalPrice+=parseInt(this.sups[i].price)
+
+      console.log(this.quantity[i])
+  }
+  remove(i){
+
+      if(this.quantity[i] > 0 ){
+  this.quantity[i]-=1;
+          this.totalPrice-=parseInt(this.sups[i].price)
+
+      }
+  console.log(this.quantity[i])
+  }
+ionViewWillEnter(){
+    this.sups=[];
+    this.quantity=[];
+    this.totalPrice=0;
+    let self=this;
+    this.common.getStoredValue('cart').then(res=>{
+
+        self.sups=res
+      for(let i=0 ;i<res.length;i++){
+
+          self.quantity.push(0)
+      // self.totalPrice+=parseInt(res[i].price)
+        }
+        console.log(res.length)
+        console.log( self.quantity)
+
+    })
+}
+    delete(i){
+    // if()
+this.totalPrice=this.totalPrice-(this.quantity[i]*parseInt(this.sups[i].price))
+        console.log(this.quantity[i]*parseInt(this.sups[i].price))
+        console.log(this.quantity[i]*parseInt(this.sups[i].price))
+        this.sups.splice(i)
+this.comman.storeValue("cart",this.sups)
+    }
   ionViewDidLoad() {
 
   }

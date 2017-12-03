@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { EditproductPage } from '../editproduct/editproduct';
 import {SupsProvider} from "../../providers/sups/sups";
 import {CommonservicesProvider} from "../../providers/commonservices/commonservices";
+import {AddproductPage} from "../addproduct/addproduct";
 
 @Component({
   selector: 'page-sellerproducts',
@@ -28,6 +29,9 @@ export class SellerproductsPage {
 
         })
         console.log('ionViewDidLoad FavoritePage');
+    }
+    addNew(){
+      this.navCtrl.push(AddproductPage)
     }
     deleteASup(itemId,index){
 
