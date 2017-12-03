@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HorsesPage } from '../horses/horses';
+import {VeterinariansProvider} from "../../providers/veterinarians/veterinarians";
 
 
 @Component({
@@ -8,14 +9,24 @@ import { HorsesPage } from '../horses/horses';
   templateUrl: 'horseseller.html',
 })
 export class HorsesellerPage {
+    veterinariansArray
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    constructor(public veterinations:VeterinariansProvider,public navCtrl: NavController, public navParams: NavParams) {
   }
+    ionViewWillLoad(){
+        this.veterinariansArray=[]
+        this.veterinations.getAllServices(6).subscribe(veterinarians=>{
+            this.veterinariansArray=veterinarians;
+            console.log( this.veterinariansArray)
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HorsesellerPage');
-  }
-gotodetails(){
-  this.navCtrl.push(HorsesPage);
+        })
+    }
+
+    ionViewDidLoad() {
+        console.log('ionViewDidLoad AllclinksPage');
+    }
+
+    gotodetails(id){
+  this.navCtrl.push(HorsesPage,id);
 }
 }

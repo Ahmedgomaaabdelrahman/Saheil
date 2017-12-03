@@ -83,6 +83,7 @@ import { EditproductPage } from '../pages/editproduct/editproduct';
 import { AddhorsePage } from '../pages/addhorse/addhorse';
 import { MyhorsesPage } from '../pages/myhorses/myhorses';
 import { PaymentPage } from '../pages/payment/payment';
+import { DealersProvider } from '../providers/dealers/dealers';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -227,7 +228,8 @@ export function createTranslateLoader(http: HttpClient) {
     VeterinariansProvider,
     VeterinaryclinicsProvider,
     SupsProvider,
-    MailProvider,Users
+    MailProvider,Users,
+    DealersProvider
   ]
 })
 export class AppModule {}

@@ -7,6 +7,7 @@ import { TransportPage } from '../transport/transport';
 import {AirtansportPage} from "../airtansport/airtansport";
 import {HorsesuppPage} from "../horsesupp/horsesupp";
 import {HrssupsellersPage} from "../hrssupsellers/hrssupsellers";
+import {HorsesellerPage} from "../horseseller/horseseller";
 
 @Component({
     selector: 'page-home',
@@ -41,5 +42,9 @@ export class HomePage {
     }
     goHorsesupp(){
         this.navCtrl.push(HrssupsellersPage)
+    }
+    goHorseSellers(){
+        this.navCtrl.push(HorsesellerPage)
+
     }
 }

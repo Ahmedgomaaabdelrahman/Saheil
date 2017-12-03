@@ -96,7 +96,7 @@ this.supsSellerFlag=false
             }else{
                 this.flag=false
             }
-            if(this.user.getuser()==5){
+            if(this.user.getuser()==5 ||this.user.getuser()==6){
                 this.supsSellerFlag=true
             }else{
                 this.supsSellerFlag=false
@@ -109,6 +109,7 @@ this.supsSellerFlag=false
         this.nav.push(ConsultationPage)
     }
     supsSeller(){
+
         this.nav.push(SellerproductsPage)
 
     }
