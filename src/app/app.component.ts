@@ -20,6 +20,10 @@ import {FavoritePage} from "../pages/favorite/favorite";
 import {SellerproductsPage} from "../pages/sellerproducts/sellerproducts";
 import { AllmyhorsesPage } from '../pages/allmyhorses/allmyhorses';
 import { FavtypePage } from './../pages/favtype/favtype';
+import { TournewsPage } from '../pages/tournews/tournews';
+import { LivestreamPage } from '../pages/livestream/livestream';
+import { OnetourdetailsPage } from '../pages/onetourdetails/onetourdetails';
+
 
 
 @Component({templateUrl: 'app.html'

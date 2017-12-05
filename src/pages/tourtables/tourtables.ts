@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { OnetourPage } from './../onetour/onetour';
 
 
 @Component({
@@ -14,5 +15,8 @@ export class TourtablesPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad TourtablesPage');
   }
-
+ 
+  goone(){
+    this.navCtrl.push(OnetourPage);
+  }
 }

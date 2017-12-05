@@ -4,4 +4,21 @@ page-livestream {
     text-align: center;
     font-family: 'AppFont' !important;
 }
+#live{
+    text-align: center;
+    font-family: Appfont;
+    h6{
+        font-weight: 600;
+    }
+    p{
+        color: gray;
+        margin: 10px 20px 0;
+    }
+}
+.vid {
+    height: 200px;
+    width: 95%;
+    border: 1px solid gray;
+    margin: 10px 0;
+}
 }

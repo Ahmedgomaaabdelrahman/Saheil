@@ -1,3 +1,61 @@
 page-onetourdetails {
+.toprow{
+    background-color: #efc658;
+    text-align: center;
+    font-family: 'AppFont' !important;
+}
+#live{
+    direction: rtl;
+    text-align: center;
+    font-family: Appfont;
+    h6{
+        font-weight: 600;
+        margin: 10px 15px;
+        text-align: start;
+    }
+    p{ text-align: start;
+        color: gray;
+        margin: 10px 20px 0;
+        height: 100px;
+        max-height: 100px;
+        overflow: scroll;
+    }
+}
+.vid {
+    height: 175px;
+    width: 95%;
+    border: 1px solid gray;
+    margin: 10px auto 0;
+    padding: 5px;
+    max-width: 95%;
+    max-height: 175px;
+}
+.rowbot{
+    background: #ba8700;
+    margin: 0 10px;
+    
+}
+.headrow , .tablerow{
+    margin: 0 10px;    
+    text-align:start;
+    font-weight:600;
+    border-bottom: 1px solid lightgray;
+    font-size: 10px;
+    .col{
+        border-right: 1px solid lightgray;
+        border-left: 1px solid lightgray;
+    }
+}
 
+.tablerow{
+    font-weight:normal;
+   
+}
+.btndiv{
+    background-color: #efc658;
+    color: white;
+    padding-top: 5px;
+    margin-top: 20px;
+    height: 40px;
+}
 }
