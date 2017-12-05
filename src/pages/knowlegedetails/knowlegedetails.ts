@@ -10,6 +10,7 @@ import { CommentsPage } from '../comments/comments';
 export class KnowlegedetailsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
   }
 
   ionViewDidLoad() {
