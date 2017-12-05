@@ -26,7 +26,7 @@ allnews:any
       this.allnews=res
     })
     }
-  gotodetails(){
-    this.navCtrl.push(KnowlegedetailsPage);
+  gotodetails(news_Id){
+    this.navCtrl.push(KnowlegedetailsPage,news_Id);
   }
 }

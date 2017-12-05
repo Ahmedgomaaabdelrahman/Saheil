@@ -18,4 +18,8 @@ lang:any
   getAllnews(){
           return this.http.get(this.url.url + 'api/' + this.lang + '/news' );
 }
+getnewsDetails(news_id){
+        return this.http.get(this.url.url + 'api/' + this.lang + '/news/'+news_id);
+
+  }
 }
