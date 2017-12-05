@@ -11,18 +11,16 @@ import {LoginPage} from "../pages/login/login";
 import {AuthproviderProvider} from "../providers/authprovider/authprovider";
 import {EditaccountPage} from "../pages/editaccount/editaccount";
 import {KnowlegePage} from "../pages/knowlege/knowlege";
-
 import { ConsultationPage } from '../pages/consultation/consultation';
 import { AddproductPage } from './../pages/addproduct/addproduct';
-
 import {Users} from '../modes/users';
 import {FavoritePage} from "../pages/favorite/favorite";
 import {SellerproductsPage} from "../pages/sellerproducts/sellerproducts";
 import {AddhorsePage} from "../pages/addhorse/addhorse";
+import { AllmyhorsesPage } from '../pages/allmyhorses/allmyhorses';
 
 
-@Component({templateUrl: 'app.html'
-})
+@Component({templateUrl: 'app.html'})
 export class MyApp {
 
     @ViewChild(Nav) nav: Nav;

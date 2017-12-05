@@ -3,8 +3,12 @@
   <header></header>
   <subheader></subheader>
  <ion-row class="toprow"><ion-col col-12 >منتجاتك</ion-col></ion-row>
- <ion-row class="toprow"><ion-col col-12 >  <ion-icon (click)="addNew()" ios="ios-add" md="md-add"></ion-icon>
- </ion-col></ion-row>
+ <ion-row style="margin-top:20px" >
+        <ion-col col-4 ></ion-col>
+     <ion-col col-4 class="toprow"  (click)="addNew()">  <ion-icon ios="ios-add" md="md-add"></ion-icon>
+     </ion-col>
+     <ion-col col-4 ></ion-col>
+</ion-row>
     <div>
         <ion-row dir="rtl" class="controw" *ngFor="let item of mySups;let i=index">
             <ion-col col-3 >
