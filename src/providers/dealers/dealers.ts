@@ -27,6 +27,14 @@ export class DealersProvider {
 getDealerHoursesDetails(id){
         return this.http.get(this.url.url+'api/'+this.lang+'/members/services/details/'+id);
     }
+    addHorse(horse){
+            return this.http.post(this.url.url+'api/horses/add/',horse);
+
+    }
+    gethorseCategoties(){
+            return this.http.get(this.url.url+'api/'+this.lang+'/horses/category');
+
+    }
     addToUserFav(fav){
 
     }

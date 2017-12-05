@@ -2,26 +2,50 @@
     <header></header>
    <subheader></subheader>
   <ion-row class="toprow"><ion-col col-12 >اضافة بيانات الخيل</ion-col></ion-row>
-  <form class="myform">
-      <button ion-button block class="btn">اضافة صورة</button>
-      <div class="divimg"><img src="assets/imgs/horse.png"></div>
-    <ion-input type="text" placeholder="فئه الخيل"></ion-input>
-    <ion-input type="text" placeholder="Horse type"></ion-input>
-    <ion-input type="text" placeholder="التفاصيل"></ion-input>
-    <ion-input type="text" placeholder="Details"></ion-input>
-    <ion-input type="text" placeholder="السعر"></ion-input>
-    <ion-input type="text" placeholder="اللون"></ion-input>
-    <ion-input type="text" placeholder="color"></ion-input>
-    <ion-input type="text" placeholder="العمر"></ion-input>
-    <ion-input type="text" placeholder="Age"></ion-input>
+    <!--<form class="myform" #f="ngForm">-->
+
+        <!--&lt;!&ndash;<button ion-button block (click)="serviceImage()" class="btn" >اضافة صور</button>&ndash;&gt;-->
+        <!--&lt;!&ndash;<img *ngIf="image != null" src={{image}}/>&ndash;&gt;-->
+        <!--<ion-input type="text" [(ngModel)]="title_ar" name="title_ar" placeholder="اسم المنتج">{{title_ar}}</ion-input>-->
+        <!--<ion-input type="text" [(ngModel)]="title_en" name="title_en" placeholder="product name">{{title_en}}</ion-input>-->
+        <!--<ion-input type="text"  [(ngModel)]="details_ar" name="details_ar" placeholder="الوصف">{{details_ar}}</ion-input>-->
+        <!--<ion-input type="text" [(ngModel)]="details_en" name="details_en" placeholder="Description">{{details_en}}</ion-input>-->
+        <!--<ion-input type="text"  [(ngModel)]="price" name="price" placeholder="السعر">{{price}}</ion-input>-->
+        <!--&lt;!&ndash;<ion-input type="text" placeholder="price"></ion-input>&ndash;&gt;-->
+
+        <!--<ion-item class="selection">-->
+            <!--<ion-label>اختر القسم</ion-label>-->
+            <!--<ion-select   okText="اختر" cancelText="الغاء" required="true">-->
+
+                <!--<ion-option (ionSelect)="getSelectedCat(c.category_id)"  *ngFor="let c of allCategories"  value={{c.title_ar}} required>{{c.title_ar}}</ion-option>-->
+
+
+            <!--</ion-select>-->
+        <!--</ion-item>-->
+
+        <!--<button ion-button block (click)="submit()" class="btn">اضافة</button>-->
+    <!--</form>-->
+
+    <form class="myform" #f="ngForm">
+      <button ion-button block (click)="serviceImage()"  class="btn">اضافة صورة</button>
+
+      <div class="divimg"> <img *ngIf="image != null" src={{image}}></div>
+    <ion-input type="text" [(ngModel)]="title_ar" name="title_ar" placeholder="نوع الخيل">{{title_ar}}</ion-input>
+    <ion-input type="text" [(ngModel)]="title_en" name="title_en" placeholder="Horse type">{{title_en}}</ion-input>
+    <ion-input type="text" [(ngModel)]="details_ar" name="details_ar" placeholder="التفاصيل">{{details_ar}}</ion-input>
+    <ion-input type="text" [(ngModel)]="details_en" name="details_en" placeholder="Details">{{details_en}}</ion-input>
+    <ion-input type="text" [(ngModel)]="homeland" name="homeland" placeholder="Homeland">{{homeland}}</ion-input>
+    <ion-input type="text" [(ngModel)]="price" name="price" placeholder="السعر">{{price}}</ion-input>
+    <ion-input type="text" [(ngModel)]="color" name="color" placeholder="اللون">{{color}}</ion-input>
+    <!--<ion-input type="text" placeholder="color"></ion-input>-->
+    <ion-input type="text" [(ngModel)]="age" name="age" placeholder="العمر">{{age}}</ion-input>
+    <!--<ion-input type="text" placeholder="Age"></ion-input>-->
     
     <ion-item class="selection">
-           <ion-label>اختر القسم</ion-label>
-           <ion-select>
-            <ion-option value="nes">قسم واحد </ion-option>
-            <ion-option value="n64">قسم اتنين</ion-option>
-            <ion-option value="ps"> قسم تلاته</ion-option>
-          </ion-select>
+        <ion-label>اختر القسم</ion-label>
+        <ion-select   okText="اختر" cancelText="الغاء" required="true">
+            <ion-option (ionSelect)="getSelectedCat(c.category_id)"  *ngFor="let c of allCategories"  value={{c.title_ar}} required>{{c.title_ar}}</ion-option>
+        </ion-select>
     </ion-item>
     <ion-item class="selection">
         <ion-label>اختر البلد</ion-label>
@@ -31,8 +55,8 @@
          <ion-option value="ps"> مصر تانى</ion-option>
        </ion-select>
  </ion-item>
-       
-       <button ion-button block class="btn">اضافة</button>
+
+        <button ion-button block (click)="submit()" class="btn">اضافة</button>
   </form>
   
   </ion-content>

@@ -5,14 +5,14 @@
     </ion-row>
 
 
-    <ion-row dir="rtl" class="controw">
+    <ion-row dir="rtl" class="controw" *ngFor="let news of allnews">
         <ion-col col-4 >
-          <img class="docimg" src="assets/imgs/horse.png">
+          <img class="docimg" src={{news.picpath}}>
         </ion-col>
         <ion-col col-8>
           <ion-row>
             <ion-col col-12>
-               <h6>يوميات مربط خيل  اعشق وانتج من الخيول العربيه</h6>
+               <h6>{{news.title_ar}}</h6>
             </ion-col>
           </ion-row>
           <ion-row>
@@ -20,25 +20,25 @@
                 <img src="assets/imgs/pdficon.png">
             </ion-col>
              <ion-col col-11>
-                <p class="p1">
-                   تنظيم البطوله العربيه للخيول 
-                   تنظيم البطوله العربيه للخيول 
-                   
-                </p>
+                <!--<p class="p1">-->
+                   <!--تنظيم البطوله العربيه للخيول -->
+                   <!--تنظيم البطوله العربيه للخيول -->
+                   <!---->
+                <!--</p>-->
              </ion-col>
            </ion-row>
      
         
            <ion-row>
                  <ion-col col-4 (click)="gotodetails()">
-                   <p class="p3">المزيد</p>
+                   <p class="p3"><a href={{news.attachments}}>تحميل</a></p>
                    <img height="8px" src="assets/imgs/more.png">
                  </ion-col>
                  <ion-col col-4>
-                    <p class="p2">تعليقات 20</p>
+                    <!--<p class="p2">تعليقات 20</p>-->
                   </ion-col>
                   <ion-col col-4>
-                    <p class="p2">اعجابات 50</p>
+                    <!--<p class="p2">اعجابات 50</p>-->
                    </ion-col>
                </ion-row>
          
@@ -46,206 +46,206 @@
     </ion-row>
  
 
-    <ion-row dir="rtl" class="controw">
-      <ion-col col-4 >
-        <img class="docimg" src="assets/imgs/horse.png">
-      </ion-col>
-      <ion-col col-8>
-        <ion-row>
-          <ion-col col-12>
-             <h6>يوميات مربط خيل  اعشق وانتج من الخيول العربيه</h6>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-1>
-              <img src="assets/imgs/pdficon.png">
-          </ion-col>
-           <ion-col col-11>
-              <p class="p1">
-                 تنظيم البطوله العربيه للخيول 
-                 تنظيم البطوله العربيه للخيول 
-                 
-              </p>
-           </ion-col>
-         </ion-row>
-   
-      
-         <ion-row>
-               <ion-col col-4 (click)="gotodetails()">
-                 <p class="p3">المزيد</p>
-                 <img height="8px" src="assets/imgs/more.png">
-               </ion-col>
-               <ion-col col-4>
-                  <p class="p2">تعليقات 20</p>
-                </ion-col>
-                <ion-col col-4>
-                  <p class="p2">اعجابات 50</p>
-                 </ion-col>
-             </ion-row>
-       
-      </ion-col>
-  </ion-row>
+    <!--<ion-row dir="rtl" class="controw">-->
+      <!--<ion-col col-4 >-->
+        <!--<img class="docimg" src="assets/imgs/horse.png">-->
+      <!--</ion-col>-->
+      <!--<ion-col col-8>-->
+        <!--<ion-row>-->
+          <!--<ion-col col-12>-->
+             <!--<h6>يوميات مربط خيل  اعشق وانتج من الخيول العربيه</h6>-->
+          <!--</ion-col>-->
+        <!--</ion-row>-->
+        <!--<ion-row>-->
+          <!--<ion-col col-1>-->
+              <!--<img src="assets/imgs/pdficon.png">-->
+          <!--</ion-col>-->
+           <!--<ion-col col-11>-->
+              <!--<p class="p1">-->
+                 <!--تنظيم البطوله العربيه للخيول -->
+                 <!--تنظيم البطوله العربيه للخيول -->
+                 <!---->
+              <!--</p>-->
+           <!--</ion-col>-->
+         <!--</ion-row>-->
+   <!---->
+      <!---->
+         <!--<ion-row>-->
+               <!--<ion-col col-4 (click)="gotodetails()">-->
+                 <!--<p class="p3">المزيد</p>-->
+                 <!--<img height="8px" src="assets/imgs/more.png">-->
+               <!--</ion-col>-->
+               <!--<ion-col col-4>-->
+                  <!--<p class="p2">تعليقات 20</p>-->
+                <!--</ion-col>-->
+                <!--<ion-col col-4>-->
+                  <!--<p class="p2">اعجابات 50</p>-->
+                 <!--</ion-col>-->
+             <!--</ion-row>-->
+       <!---->
+      <!--</ion-col>-->
+  <!--</ion-row>-->
 
 
-  <ion-row dir="rtl" class="controw">
-    <ion-col col-4 >
-      <img class="docimg" src="assets/imgs/horse.png">
-    </ion-col>
-    <ion-col col-8>
-      <ion-row>
-        <ion-col col-12>
-           <h6>يوميات مربط خيل  اعشق وانتج من الخيول العربيه</h6>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col col-1>
-            <img src="assets/imgs/pdficon.png">
-        </ion-col>
-         <ion-col col-11>
-            <p class="p1">
-               تنظيم البطوله العربيه للخيول 
-               تنظيم البطوله العربيه للخيول 
-               
-            </p>
-         </ion-col>
-       </ion-row>
- 
-    
-       <ion-row>
-             <ion-col col-4 (click)="gotodetails()">
-               <p class="p3">المزيد</p>
-               <img height="8px" src="assets/imgs/more.png">
-             </ion-col>
-             <ion-col col-4>
-                <p class="p2">تعليقات 20</p>
-              </ion-col>
-              <ion-col col-4>
-                <p class="p2">اعجابات 50</p>
-               </ion-col>
-           </ion-row>
-     
-    </ion-col>
-</ion-row>
+  <!--<ion-row dir="rtl" class="controw">-->
+    <!--<ion-col col-4 >-->
+      <!--<img class="docimg" src="assets/imgs/horse.png">-->
+    <!--</ion-col>-->
+    <!--<ion-col col-8>-->
+      <!--<ion-row>-->
+        <!--<ion-col col-12>-->
+           <!--<h6>يوميات مربط خيل  اعشق وانتج من الخيول العربيه</h6>-->
+        <!--</ion-col>-->
+      <!--</ion-row>-->
+      <!--<ion-row>-->
+        <!--<ion-col col-1>-->
+            <!--<img src="assets/imgs/pdficon.png">-->
+        <!--</ion-col>-->
+         <!--<ion-col col-11>-->
+            <!--<p class="p1">-->
+               <!--تنظيم البطوله العربيه للخيول -->
+               <!--تنظيم البطوله العربيه للخيول -->
+               <!---->
+            <!--</p>-->
+         <!--</ion-col>-->
+       <!--</ion-row>-->
+ <!---->
+    <!---->
+       <!--<ion-row>-->
+             <!--<ion-col col-4 (click)="gotodetails()">-->
+               <!--<p class="p3">المزيد</p>-->
+               <!--<img height="8px" src="assets/imgs/more.png">-->
+             <!--</ion-col>-->
+             <!--<ion-col col-4>-->
+                <!--<p class="p2">تعليقات 20</p>-->
+              <!--</ion-col>-->
+              <!--<ion-col col-4>-->
+                <!--<p class="p2">اعجابات 50</p>-->
+               <!--</ion-col>-->
+           <!--</ion-row>-->
+     <!---->
+    <!--</ion-col>-->
+<!--</ion-row>-->
 
 
-<ion-row dir="rtl" class="controw">
-  <ion-col col-4 >
-    <img class="docimg" src="assets/imgs/horse.png">
-  </ion-col>
-  <ion-col col-8>
-    <ion-row>
-      <ion-col col-12>
-         <h6>يوميات مربط خيل  اعشق وانتج من الخيول العربيه</h6>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-1>
-          <img src="assets/imgs/pdficon.png">
-      </ion-col>
-       <ion-col col-11>
-          <p class="p1">
-             تنظيم البطوله العربيه للخيول 
-             تنظيم البطوله العربيه للخيول 
-             
-          </p>
-       </ion-col>
-     </ion-row>
+<!--<ion-row dir="rtl" class="controw">-->
+  <!--<ion-col col-4 >-->
+    <!--<img class="docimg" src="assets/imgs/horse.png">-->
+  <!--</ion-col>-->
+  <!--<ion-col col-8>-->
+    <!--<ion-row>-->
+      <!--<ion-col col-12>-->
+         <!--<h6>يوميات مربط خيل  اعشق وانتج من الخيول العربيه</h6>-->
+      <!--</ion-col>-->
+    <!--</ion-row>-->
+    <!--<ion-row>-->
+      <!--<ion-col col-1>-->
+          <!--<img src="assets/imgs/pdficon.png">-->
+      <!--</ion-col>-->
+       <!--<ion-col col-11>-->
+          <!--<p class="p1">-->
+             <!--تنظيم البطوله العربيه للخيول -->
+             <!--تنظيم البطوله العربيه للخيول -->
+             <!---->
+          <!--</p>-->
+       <!--</ion-col>-->
+     <!--</ion-row>-->
+
+  <!---->
+     <!--<ion-row>-->
+           <!--<ion-col col-4 (click)="gotodetails()">-->
+             <!--<p class="p3">المزيد</p>-->
+             <!--<img height="8px" src="assets/imgs/more.png">-->
+           <!--</ion-col>-->
+           <!--<ion-col col-4>-->
+              <!--<p class="p2">تعليقات 20</p>-->
+            <!--</ion-col>-->
+            <!--<ion-col col-4>-->
+              <!--<p class="p2">اعجابات 50</p>-->
+             <!--</ion-col>-->
+         <!--</ion-row>-->
+   <!---->
+  <!--</ion-col>-->
+<!--</ion-row>-->
+
+<!--<ion-row dir="rtl" class="controw">-->
+  <!--<ion-col col-4 >-->
+    <!--<img class="docimg" src="assets/imgs/horse.png">-->
+  <!--</ion-col>-->
+  <!--<ion-col col-8>-->
+    <!--<ion-row>-->
+      <!--<ion-col col-12>-->
+         <!--<h6>يوميات مربط خيل  اعشق وانتج من الخيول العربيه</h6>-->
+      <!--</ion-col>-->
+    <!--</ion-row>-->
+    <!--<ion-row>-->
+      <!--<ion-col col-1>-->
+          <!--<img src="assets/imgs/pdficon.png">-->
+      <!--</ion-col>-->
+       <!--<ion-col col-11>-->
+          <!--<p class="p1">-->
+             <!--تنظيم البطوله العربيه للخيول -->
+             <!--تنظيم البطوله العربيه للخيول -->
+             <!---->
+          <!--</p>-->
+       <!--</ion-col>-->
+     <!--</ion-row>-->
+
+  <!---->
+     <!--<ion-row>-->
+           <!--<ion-col col-4 (click)="gotodetails()">-->
+             <!--<p class="p3">المزيد</p>-->
+             <!--<img height="8px" src="assets/imgs/more.png">-->
+           <!--</ion-col>-->
+           <!--<ion-col col-4>-->
+              <!--<p class="p2">تعليقات 20</p>-->
+            <!--</ion-col>-->
+            <!--<ion-col col-4>-->
+              <!--<p class="p2">اعجابات 50</p>-->
+             <!--</ion-col>-->
+         <!--</ion-row>-->
+   <!---->
+  <!--</ion-col>-->
+<!--</ion-row>-->
+
+<!--<ion-row dir="rtl" class="controw">-->
+  <!--<ion-col col-4 >-->
+    <!--<img class="docimg" src="assets/imgs/horse.png">-->
+  <!--</ion-col>-->
+  <!--<ion-col col-8>-->
+    <!--<ion-row>-->
+      <!--<ion-col col-12>-->
+         <!--<h6>يوميات مربط خيل  اعشق وانتج من الخيول العربيه</h6>-->
+      <!--</ion-col>-->
+    <!--</ion-row>-->
+    <!--<ion-row>-->
+      <!--<ion-col col-1>-->
+          <!--<img src="assets/imgs/pdficon.png">-->
+      <!--</ion-col>-->
+       <!--<ion-col col-11>-->
+          <!--<p class="p1">-->
+             <!--تنظيم البطوله العربيه للخيول -->
+             <!--تنظيم البطوله العربيه للخيول -->
+             <!---->
+          <!--</p>-->
+       <!--</ion-col>-->
+     <!--</ion-row>-->
 
   
-     <ion-row>
-           <ion-col col-4 (click)="gotodetails()">
-             <p class="p3">المزيد</p>
-             <img height="8px" src="assets/imgs/more.png">
-           </ion-col>
-           <ion-col col-4>
-              <p class="p2">تعليقات 20</p>
-            </ion-col>
-            <ion-col col-4>
-              <p class="p2">اعجابات 50</p>
-             </ion-col>
-         </ion-row>
-   
-  </ion-col>
-</ion-row>
-
-<ion-row dir="rtl" class="controw">
-  <ion-col col-4 >
-    <img class="docimg" src="assets/imgs/horse.png">
-  </ion-col>
-  <ion-col col-8>
-    <ion-row>
-      <ion-col col-12>
-         <h6>يوميات مربط خيل  اعشق وانتج من الخيول العربيه</h6>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-1>
-          <img src="assets/imgs/pdficon.png">
-      </ion-col>
-       <ion-col col-11>
-          <p class="p1">
-             تنظيم البطوله العربيه للخيول 
-             تنظيم البطوله العربيه للخيول 
-             
-          </p>
-       </ion-col>
-     </ion-row>
-
-  
-     <ion-row>
-           <ion-col col-4 (click)="gotodetails()">
-             <p class="p3">المزيد</p>
-             <img height="8px" src="assets/imgs/more.png">
-           </ion-col>
-           <ion-col col-4>
-              <p class="p2">تعليقات 20</p>
-            </ion-col>
-            <ion-col col-4>
-              <p class="p2">اعجابات 50</p>
-             </ion-col>
-         </ion-row>
-   
-  </ion-col>
-</ion-row>
-
-<ion-row dir="rtl" class="controw">
-  <ion-col col-4 >
-    <img class="docimg" src="assets/imgs/horse.png">
-  </ion-col>
-  <ion-col col-8>
-    <ion-row>
-      <ion-col col-12>
-         <h6>يوميات مربط خيل  اعشق وانتج من الخيول العربيه</h6>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-1>
-          <img src="assets/imgs/pdficon.png">
-      </ion-col>
-       <ion-col col-11>
-          <p class="p1">
-             تنظيم البطوله العربيه للخيول 
-             تنظيم البطوله العربيه للخيول 
-             
-          </p>
-       </ion-col>
-     </ion-row>
-
-  
-     <ion-row>
-           <ion-col col-4 (click)="gotodetails()">
-             <p class="p3">المزيد</p>
-             <img height="8px" src="assets/imgs/more.png">
-           </ion-col>
-           <ion-col col-4>
-              <p class="p2">تعليقات 20</p>
-            </ion-col>
-            <ion-col col-4>
-              <p class="p2">اعجابات 50</p>
-             </ion-col>
-         </ion-row>
-   
-  </ion-col>
-</ion-row>
+     <!--<ion-row>-->
+           <!--<ion-col col-4 (click)="gotodetails()">-->
+             <!--<p class="p3">المزيد</p>-->
+             <!--<img height="8px" src="assets/imgs/more.png">-->
+           <!--</ion-col>-->
+           <!--<ion-col col-4>-->
+              <!--<p class="p2">تعليقات 20</p>-->
+            <!--</ion-col>-->
+            <!--<ion-col col-4>-->
+              <!--<p class="p2">اعجابات 50</p>-->
+             <!--</ion-col>-->
+         <!--</ion-row>-->
+   <!---->
+  <!--</ion-col>-->
+<!--</ion-row>-->
    
 </ion-content>

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {SupsProvider} from "../../providers/sups/sups";
 import {CommonservicesProvider} from "../../providers/commonservices/commonservices";
+import {SellerproductsPage} from "../sellerproducts/sellerproducts";
 
 
 @Component({
@@ -52,6 +53,8 @@ submit(){
     console.log(addSup)
 
     this.sups.addSup(addSup).subscribe(response=>{
+        this.common.presentToast('تمت اضافة المنتج بنجاح')
+        this.navCtrl.push(SellerproductsPage)
 console.log(response)
       })
 }
@@ -68,6 +71,8 @@ console.log(response)
             // this.service_image=res;
             this.image='data:image/jpeg;base64,' + res
             this.sendimage=res
+
+
         }).catch(e=>{
             console.log('cam error :', e)
         })

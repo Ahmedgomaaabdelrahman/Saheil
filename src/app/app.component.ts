@@ -18,6 +18,7 @@ import { AddproductPage } from './../pages/addproduct/addproduct';
 import {Users} from '../modes/users';
 import {FavoritePage} from "../pages/favorite/favorite";
 import {SellerproductsPage} from "../pages/sellerproducts/sellerproducts";
+import {AddhorsePage} from "../pages/addhorse/addhorse";
 
 
 @Component({templateUrl: 'app.html'
@@ -27,6 +28,7 @@ export class MyApp {
     @ViewChild(Nav) nav: Nav;
   flag:boolean;
     supsSellerFlag:boolean;
+    horseSellerFlag:boolean;
 
   rootPage:any = LanguagePage;
 
@@ -34,6 +36,7 @@ export class MyApp {
   {
       this.flag=false;
       this.supsSellerFlag=false;
+      this.horseSellerFlag=false;
     platform.ready().then(() => {
         console.log('user',this.user.getuser())
 
@@ -75,6 +78,7 @@ this.nav.push(EditaccountPage)
            this.common.removeStoredKey('user')
            this.flag=false;
 this.supsSellerFlag=false
+this.horseSellerFlag=false
        });
    })
     }
@@ -96,10 +100,16 @@ this.supsSellerFlag=false
             }else{
                 this.flag=false
             }
-            if(this.user.getuser()==5 ||this.user.getuser()==6){
+            if(this.user.getuser()==5 ){
                 this.supsSellerFlag=true
             }else{
                 this.supsSellerFlag=false
+
+            }
+            if(this.user.getuser()== 6 ){
+                this.horseSellerFlag=true
+            }else{
+                this.horseSellerFlag=false
 
             }
         })
@@ -119,6 +129,9 @@ this.supsSellerFlag=false
     }
     addproduct(){
         this.nav.push(AddproductPage);
+    }
+    addHorse(){
+        this.nav.push(AddhorsePage);
     }
 }
 
