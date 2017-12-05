@@ -33,8 +33,11 @@ p{
 
 }
 .p2{
-    
-    color: gray; 
+    color: gray;
+    height: 30px;
+    max-height: 30px;
+    font-size: 12px;
+    overflow: scroll;
 }
 .p3{
     font-weight: 600;

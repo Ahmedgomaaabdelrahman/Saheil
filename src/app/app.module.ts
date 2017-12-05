@@ -84,6 +84,9 @@ import { AddhorsePage } from '../pages/addhorse/addhorse';
 import { MyhorsesPage } from '../pages/myhorses/myhorses';
 import { PaymentPage } from '../pages/payment/payment';
 import { DealersProvider } from '../providers/dealers/dealers';
+import { AllmyhorsesPage } from '../pages/allmyhorses/allmyhorses';
+import { FavtypePage } from '../pages/favtype/favtype';
+
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -146,7 +149,9 @@ export function createTranslateLoader(http: HttpClient) {
     EditproductPage,
     AddhorsePage,
     MyhorsesPage,
-    PaymentPage
+    PaymentPage,
+    AllmyhorsesPage,
+    FavtypePage
   ], 
   imports: [
     BrowserModule,HttpClientModule,
@@ -218,7 +223,9 @@ export function createTranslateLoader(http: HttpClient) {
     EditproductPage,
     AddhorsePage,
     MyhorsesPage,
-    PaymentPage
+    PaymentPage,
+    AllmyhorsesPage,
+    FavtypePage
   ],
   providers: [
     StatusBar,

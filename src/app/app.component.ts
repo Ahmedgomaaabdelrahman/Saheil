@@ -18,6 +18,8 @@ import { AddproductPage } from './../pages/addproduct/addproduct';
 import {Users} from '../modes/users';
 import {FavoritePage} from "../pages/favorite/favorite";
 import {SellerproductsPage} from "../pages/sellerproducts/sellerproducts";
+import { AllmyhorsesPage } from '../pages/allmyhorses/allmyhorses';
+import { FavtypePage } from './../pages/favtype/favtype';
 
 
 @Component({templateUrl: 'app.html'
