@@ -84,6 +84,7 @@ import { AddhorsePage } from '../pages/addhorse/addhorse';
 import { MyhorsesPage } from '../pages/myhorses/myhorses';
 import { PaymentPage } from '../pages/payment/payment';
 import { DealersProvider } from '../providers/dealers/dealers';
+import { KnowladgeProvider } from '../providers/knowladge/knowladge';
 import { AllmyhorsesPage } from '../pages/allmyhorses/allmyhorses';
 import { FavtypePage } from '../pages/favtype/favtype';
 
@@ -236,7 +237,8 @@ export function createTranslateLoader(http: HttpClient) {
     VeterinaryclinicsProvider,
     SupsProvider,
     MailProvider,Users,
-    DealersProvider
+    DealersProvider,
+    KnowladgeProvider
   ]
 })
 export class AppModule {}

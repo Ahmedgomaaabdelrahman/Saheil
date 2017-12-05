@@ -42,6 +42,7 @@ service_details_en:string;
           this.image = user.image;
           this.username = user.username;
           this.email = user.email;
+          this.mobile = user.mobile;
           this.latlng = user.latlng;
           this.password = user.password;
           this.gcm_regid=user.gcm_regid;

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { KnowlegedetailsPage } from '../knowlegedetails/knowlegedetails';
+import {KnowladgeProvider} from "../../providers/knowladge/knowladge";
 
 
 @Component({
@@ -8,14 +9,24 @@ import { KnowlegedetailsPage } from '../knowlegedetails/knowlegedetails';
   templateUrl: 'knowlege.html',
 })
 export class KnowlegePage {
+allnews:any
+  constructor(public news:KnowladgeProvider,public navCtrl: NavController, public navParams: NavParams) {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
+  ionViewWillEnter() {
+  this.allnews=[]
     console.log('ionViewDidLoad KnowlegePage');
+    this._getAllnews()
+
   }
-  gotodetails(){
-    this.navCtrl.push(KnowlegedetailsPage);
+    _getAllnews(){
+    this.news.getAllnews().subscribe(res=>{
+      console.log(res);
+      this.allnews=res
+    })
+    }
+  gotodetails(news_Id){
+    this.navCtrl.push(KnowlegedetailsPage,news_Id);
   }
 }

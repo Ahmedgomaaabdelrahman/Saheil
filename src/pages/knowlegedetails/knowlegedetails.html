@@ -5,22 +5,20 @@
     </ion-row>
 
     <div class="contdiv">
-      <img src="assets/imgs/horse1.png">
-      <h6>يوميات مربط اعشق وانتج من الخيول العربيه ماتراع الافضل</h6>
-      <p>  عندما كان طفلا صغيراعندما كان طفلا صغيرا
-          عندما كان طفلا صغيراعندما كان طفلا صغيرا
-          عندما كان طفلا صغيرا
-          عندما كان طفلا صغيراعندما كان طفلا صغيرا
+      <img src={{newsD.attachments}}>
+      <h6>{{newsD.title_ar}}</h6>
+      <p>{{newsD.details}}
       </p>
       <ion-row>
         <ion-col col-4>
-          <div class="btndiv">تحميل الملف</div>
        </ion-col>
        <ion-col col-4 (click)="gocomments()">
-          <p style="color: #ba8700;">50 تعليقات</p>
+          <!--<p style="color: #ba8700;">50 تعليقات</p>-->
+           <div class="btndiv"><a href={{newsD.attachments}}>تحميل الملف</a></div>
+
        </ion-col>
        <ion-col col-4>
-          <p>اعجابات 50</p>
+          <!--<p>اعجابات 50</p>-->
        </ion-col>
       </ion-row>
     </div>
