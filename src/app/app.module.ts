@@ -87,6 +87,7 @@ import { DealersProvider } from '../providers/dealers/dealers';
 import { KnowladgeProvider } from '../providers/knowladge/knowladge';
 import { AllmyhorsesPage } from '../pages/allmyhorses/allmyhorses';
 import { FavtypePage } from '../pages/favtype/favtype';
+import { ChampionsNewsProvider } from '../providers/champions-news/champions-news';
 
 
 
@@ -238,7 +239,8 @@ export function createTranslateLoader(http: HttpClient) {
     SupsProvider,
     MailProvider,Users,
     DealersProvider,
-    KnowladgeProvider
+    KnowladgeProvider,
+    ChampionsNewsProvider
   ]
 })
 export class AppModule {}

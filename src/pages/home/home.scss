@@ -5,7 +5,13 @@ page-home {
         font-family: 'AppFont' !important;
         font-weight: bold;
     }
-
+    .btndiv{
+        background-color: #efc658;
+        color: white;
+        padding-top: 5px;
+        margin-top: 20px;
+        height: 40px;
+    }
     .topdiv{
         background-image: url(../assets/imgs/topimg.png);
         background-size: 100% 100%;

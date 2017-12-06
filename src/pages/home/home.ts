@@ -8,6 +8,7 @@ import {AirtansportPage} from "../airtansport/airtansport";
 import {HorsesuppPage} from "../horsesupp/horsesupp";
 import {HrssupsellersPage} from "../hrssupsellers/hrssupsellers";
 import {HorsesellerPage} from "../horseseller/horseseller";
+import {LivestreamPage} from "../livestream/livestream";
 
 @Component({
     selector: 'page-home',
@@ -26,6 +27,9 @@ export class HomePage {
     ionViewWillEnter(){
         this.menuCtrl.enable(true)
 
+    }
+    live(){
+        this.navCtrl.push(LivestreamPage)
     }
     gotodoctors(){
         this.navCtrl.push(AlldoctorsPage);
