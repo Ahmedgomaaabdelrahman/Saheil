@@ -15,11 +15,19 @@ export class KnowlegedetailsPage {
 
   }
 newsD
+  details:any
+  title
+    attachments
+    picpath
   ionViewWillEnter() {
+    let self=this
     this.news.getnewsDetails(this.navParams.data).subscribe(res=>{
-    this.newsD=res
-
-        console.log('ionViewDidLoad KnowlegedetailsPage',res);
+    self.newsD=res[0]
+self.title=res[0].title_ar
+        self.details=res[0].details
+        self.attachments=res[0].attachments
+        self.picpath=res[0].picpath
+        console.log('ionViewDidLoad KnowlegedetailsPage',self.newsD);
 
     })
   }

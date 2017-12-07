@@ -4,11 +4,6 @@
   <ion-row class="toprow"><ion-col col-12 >اخبار البطولات والجداول</ion-col>
   </ion-row>
 
-  <div class="contdiv"(click)="goone()">بطولة قطر الدوليه للخيل</div>
-  <div class="contdiv"(click)="goone()">بطوله قطر المحليه الخامسة</div>
-  <div class="contdiv"(click)="goone()">بطولة قطر الدوليه للخيل</div>
-  <div class="contdiv"(click)="goone()">بطوله قطر المحليه الخامسة</div>
-  <div class="contdiv"(click)="goone()">بطولة قطر الدوليه للخيل</div>
-  <div class="contdiv"(click)="goone()">بطوله قطر المحليه الخامسة</div>
+  <div class="contdiv" *ngFor="let t of tours" (click)="goone(t.tournament_id)">{{t.title_ar}}</div>
 
 </ion-content>

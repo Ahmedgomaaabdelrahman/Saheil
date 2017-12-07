@@ -25,6 +25,8 @@ import { TournewsPage } from '../pages/tournews/tournews';
 import { LivestreamPage } from '../pages/livestream/livestream';
 import { OnetourdetailsPage } from '../pages/onetourdetails/onetourdetails';
 import { AlbumPage } from './../pages/album/album';
+import {TourtablesPage} from "../pages/tourtables/tourtables";
+import {OnetourPage} from "../pages/onetour/onetour";
 
 
 
@@ -145,5 +147,9 @@ this.horseSellerFlag=false
     }
   
     
+    tournmentsNews(){
+        this.nav.push(OnetourPage);
+
+    }
 }
 

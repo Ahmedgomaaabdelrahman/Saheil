@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {ChampionsNewsProvider} from "../../providers/champions-news/champions-news";
 
 
 @Component({
@@ -8,11 +9,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class LivestreamPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public champs:ChampionsNewsProvider,public navCtrl: NavController, public navParams: NavParams) {
   }
+title
+    details
+    stream
+    ionViewWillEnter() {
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LivestreamPage');
+    this.champs.live().subscribe(res=>{
+this.stream=res[0]['stream']
+        this.details=res[0]['details']
+        this.title=res[0]['title']
+        console.log();
+        console.log('reeees',res);
+
+    })
   }
 
 }

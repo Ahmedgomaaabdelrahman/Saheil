@@ -90,6 +90,7 @@ import { FavtypePage } from '../pages/favtype/favtype';
 import { ImagedetailsPage } from '../pages/imagedetails/imagedetails';
 import { AlbumPage } from '../pages/album/album';
 import { AllImagesPage } from '../pages/all-images/all-images';
+import { ChampionsNewsProvider } from '../providers/champions-news/champions-news';
 
 
 
@@ -247,7 +248,8 @@ export function createTranslateLoader(http: HttpClient) {
     SupsProvider,
     MailProvider,Users,
     DealersProvider,
-    KnowladgeProvider
+    KnowladgeProvider,
+    ChampionsNewsProvider
   ]
 })
 export class AppModule {}
