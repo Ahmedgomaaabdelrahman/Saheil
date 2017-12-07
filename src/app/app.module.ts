@@ -87,6 +87,9 @@ import { DealersProvider } from '../providers/dealers/dealers';
 import { KnowladgeProvider } from '../providers/knowladge/knowladge';
 import { AllmyhorsesPage } from '../pages/allmyhorses/allmyhorses';
 import { FavtypePage } from '../pages/favtype/favtype';
+import { ImagedetailsPage } from '../pages/imagedetails/imagedetails';
+import { AlbumPage } from '../pages/album/album';
+import { AllImagesPage } from '../pages/all-images/all-images';
 
 
 
@@ -152,7 +155,10 @@ export function createTranslateLoader(http: HttpClient) {
     MyhorsesPage,
     PaymentPage,
     AllmyhorsesPage,
-    FavtypePage
+    FavtypePage,
+    ImagedetailsPage,
+    AlbumPage,
+    AllImagesPage
   ], 
   imports: [
     BrowserModule,HttpClientModule,
@@ -226,8 +232,11 @@ export function createTranslateLoader(http: HttpClient) {
     MyhorsesPage,
     PaymentPage,
     AllmyhorsesPage,
-    FavtypePage
-  ],
+    FavtypePage,
+    ImagedetailsPage,
+    AlbumPage,
+    AllImagesPage
+  ], 
   providers: [
     StatusBar,
     SplashScreen,

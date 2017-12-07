@@ -48,7 +48,7 @@
                     <ion-icon name="book"></ion-icon>ثقف نفسك   
 
                  </button>
-               <button class="menubtn" menuClose ion-item color="standard">
+               <button class="menubtn" (click)="goAlbum()" menuClose ion-item color="standard">
                   <ion-icon name="trophy"></ion-icon>البوم صور  
               
               </button>
@@ -57,7 +57,7 @@
                <!--يوميات الخيل -->
                <!---->
               <!--</button>-->
-               <button class="menubtn" menuClose ion-item color="standard">
+               <button class="menubtn" (click)="nextEvent()" menuClose ion-item color="standard">
                   <ion-icon name="albums"></ion-icon> الفاعليات القادمة 
                
               </button>

@@ -24,6 +24,7 @@ import { FavtypePage } from './../pages/favtype/favtype';
 import { TournewsPage } from '../pages/tournews/tournews';
 import { LivestreamPage } from '../pages/livestream/livestream';
 import { OnetourdetailsPage } from '../pages/onetourdetails/onetourdetails';
+import { AlbumPage } from './../pages/album/album';
 
 
 
@@ -139,5 +140,10 @@ this.horseSellerFlag=false
     addHorse(){
         this.nav.push(AddhorsePage);
     }
+    goAlbum(){ 
+        this.nav.push(AlbumPage);
+    }
+  
+    
 }
 
