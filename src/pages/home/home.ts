@@ -9,6 +9,7 @@ import {HorsesuppPage} from "../horsesupp/horsesupp";
 import {HrssupsellersPage} from "../hrssupsellers/hrssupsellers";
 import {HorsesellerPage} from "../horseseller/horseseller";
 import {LivestreamPage} from "../livestream/livestream";
+import { TourtablesPage } from '../tourtables/tourtables';
 
 @Component({
     selector: 'page-home',
@@ -51,4 +52,8 @@ export class HomePage {
         this.navCtrl.push(HorsesellerPage)
 
     }
+    tours(){
+        this.navCtrl.push(TourtablesPage);
+    }
+     
 }

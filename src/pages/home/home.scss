@@ -6,11 +6,15 @@ page-home {
         font-weight: bold;
     }
     .btndiv{
-        background-color: #efc658;
-        color: white;
         padding-top: 5px;
         margin-top: 20px;
         height: 40px;
+        text-align: center;
+        font-family: Appfont;
+        width: 90%;
+        margin: 20px auto;
+        border: 1px solid #efc658;
+        color: #ba8700;
     }
     .topdiv{
         background-image: url(../assets/imgs/topimg.png);
