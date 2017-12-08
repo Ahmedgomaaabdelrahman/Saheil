@@ -91,6 +91,7 @@ import { ImagedetailsPage } from '../pages/imagedetails/imagedetails';
 import { AlbumPage } from '../pages/album/album';
 import { AllImagesPage } from '../pages/all-images/all-images';
 import { ChampionsNewsProvider } from '../providers/champions-news/champions-news';
+import { AlbumProvider } from '../providers/album/album';
 
 
 
@@ -249,7 +250,8 @@ export function createTranslateLoader(http: HttpClient) {
     MailProvider,Users,
     DealersProvider,
     KnowladgeProvider,
-    ChampionsNewsProvider
+    ChampionsNewsProvider,
+    AlbumProvider
   ]
 })
 export class AppModule {}
