@@ -27,6 +27,7 @@ import { OnetourdetailsPage } from '../pages/onetourdetails/onetourdetails';
 import { AlbumPage } from './../pages/album/album';
 import {TourtablesPage} from "../pages/tourtables/tourtables";
 import {OnetourPage} from "../pages/onetour/onetour";
+import { NexteventsPage } from './../pages/nextevents/nextevents';
 
 
 
@@ -144,6 +145,9 @@ this.horseSellerFlag=false
     }
     goAlbum(){ 
         this.nav.push(AlbumPage);
+    }
+    nextEvent(){
+        this.nav.push(NexteventsPage);
     }
   
     

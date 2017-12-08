@@ -91,6 +91,10 @@ import { ImagedetailsPage } from '../pages/imagedetails/imagedetails';
 import { AlbumPage } from '../pages/album/album';
 import { AllImagesPage } from '../pages/all-images/all-images';
 import { ChampionsNewsProvider } from '../providers/champions-news/champions-news';
+import { NextevedetailsPage } from '../pages/nextevedetails/nextevedetails';
+import { NexteventsPage } from '../pages/nextevents/nextevents';
+import { HorsedaysPage } from '../pages/horsedays/horsedays';
+import { AddhorsedaysPage } from '../pages/addhorsedays/addhorsedays';
 
 
 
@@ -159,7 +163,11 @@ export function createTranslateLoader(http: HttpClient) {
     FavtypePage,
     ImagedetailsPage,
     AlbumPage,
-    AllImagesPage
+    AllImagesPage,
+    NexteventsPage,
+    NextevedetailsPage,
+    AddhorsedaysPage,
+    HorsedaysPage
   ], 
   imports: [
     BrowserModule,HttpClientModule,
@@ -236,7 +244,11 @@ export function createTranslateLoader(http: HttpClient) {
     FavtypePage,
     ImagedetailsPage,
     AlbumPage,
-    AllImagesPage
+    AllImagesPage,
+    NexteventsPage,
+    NextevedetailsPage,
+    AddhorsedaysPage,
+    HorsedaysPage
   ], 
   providers: [
     StatusBar,
