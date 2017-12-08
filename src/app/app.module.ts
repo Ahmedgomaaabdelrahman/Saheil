@@ -96,6 +96,8 @@ import { NextevedetailsPage } from '../pages/nextevedetails/nextevedetails';
 import { NexteventsPage } from '../pages/nextevents/nextevents';
 import { HorsedaysPage } from '../pages/horsedays/horsedays';
 import { AddhorsedaysPage } from '../pages/addhorsedays/addhorsedays';
+import { UpcommingEventsProvider } from '../providers/upcomming-events/upcomming-events';
+import { HorsesBlogsProvider } from '../providers/horses-blogs/horses-blogs';
 
 
 
@@ -263,7 +265,9 @@ export function createTranslateLoader(http: HttpClient) {
     DealersProvider,
     KnowladgeProvider,
     ChampionsNewsProvider,
-    AlbumProvider
+    AlbumProvider,
+    UpcommingEventsProvider,
+    HorsesBlogsProvider
   ]
 })
 export class AppModule {}
