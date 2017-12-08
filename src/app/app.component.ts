@@ -28,7 +28,7 @@ import { AlbumPage } from './../pages/album/album';
 import {TourtablesPage} from "../pages/tourtables/tourtables";
 import {OnetourPage} from "../pages/onetour/onetour";
 import {AllImagesPage} from "../pages/all-images/all-images";
-
+import { NexteventsPage } from './../pages/nextevents/nextevents';
 
 
 @Component({templateUrl: 'app.html'
@@ -145,6 +145,9 @@ this.horseSellerFlag=false
     }
     goAlbum(){ 
         this.nav.push(AllImagesPage);
+    }
+    nextEvent(){
+        this.nav.push(NexteventsPage);
     }
   
     
