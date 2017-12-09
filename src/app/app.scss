@@ -4,9 +4,14 @@
 font-family: AppFont;
 src: url("../assets/fonts/Cairo/Cairo-regular.ttf");
 }
+
+@font-face {
+    font-family:sFont;
+    src: url("../assets/fonts/ArefRuqaa-Regular.ttf");
+    }
 .topp{
     margin:0;
-    font-family: Appfont;
+    font-family: sFont;
     
 }
 // App Global Sass
