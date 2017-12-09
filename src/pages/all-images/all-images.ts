@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ImagedetailsPage } from './../imagedetails/imagedetails';
+import {AlbumProvider} from "../../providers/album/album";
 
 
 @Component({
@@ -9,13 +10,18 @@ import { ImagedetailsPage } from './../imagedetails/imagedetails';
 })
 export class AllImagesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public album:AlbumProvider,public navCtrl: NavController, public navParams: NavParams) {
   }
+imgs
+    ionViewWillEnter(){
+this.imgs=[]
+        this.album.getgallery().subscribe(res=>{
+            console.log(res)
+            this.imgs=res;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AllImagesPage');
-  }
-  gotodtails(){
-    this.navCtrl.push(ImagedetailsPage);
+
+        })}
+  gotodtails(img_id){
+    this.navCtrl.push(ImagedetailsPage,img_id);
   } 
 }

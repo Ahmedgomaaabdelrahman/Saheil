@@ -27,10 +27,10 @@ import { OnetourdetailsPage } from '../pages/onetourdetails/onetourdetails';
 import { AlbumPage } from './../pages/album/album';
 import {TourtablesPage} from "../pages/tourtables/tourtables";
 import {OnetourPage} from "../pages/onetour/onetour";
+import {AllImagesPage} from "../pages/all-images/all-images";
 import { NexteventsPage } from './../pages/nextevents/nextevents';
 import { NaqlbaryPage } from '../pages/naqlbary/naqlbary';
 import { HorsedaysPage } from './../pages/horsedays/horsedays';
-
 
 
 
@@ -147,7 +147,7 @@ this.horseSellerFlag=false
         this.nav.push(AddhorsePage);
     }
     goAlbum(){ 
-        this.nav.push(AlbumPage);
+        this.nav.push(AllImagesPage);
     }
     nextEvent(){
         this.nav.push(NexteventsPage);

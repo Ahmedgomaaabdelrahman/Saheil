@@ -91,12 +91,15 @@ import { ImagedetailsPage } from '../pages/imagedetails/imagedetails';
 import { AlbumPage } from '../pages/album/album';
 import { AllImagesPage } from '../pages/all-images/all-images';
 import { ChampionsNewsProvider } from '../providers/champions-news/champions-news';
+import { AlbumProvider } from '../providers/album/album';
 import { NextevedetailsPage } from '../pages/nextevedetails/nextevedetails';
 import { NexteventsPage } from '../pages/nextevents/nextevents';
 import { HorsedaysPage } from '../pages/horsedays/horsedays';
 import { AddhorsedaysPage } from '../pages/addhorsedays/addhorsedays';
 import { NaqldetailsPage } from '../pages/naqldetails/naqldetails';
 import { NaqlbaryPage } from '../pages/naqlbary/naqlbary';
+import { UpcommingEventsProvider } from '../providers/upcomming-events/upcomming-events';
+import { HorsesBlogsProvider } from '../providers/horses-blogs/horses-blogs';
 
 
 
@@ -267,7 +270,10 @@ export function createTranslateLoader(http: HttpClient) {
     MailProvider,Users,
     DealersProvider,
     KnowladgeProvider,
-    ChampionsNewsProvider
+    ChampionsNewsProvider,
+    AlbumProvider,
+    UpcommingEventsProvider,
+    HorsesBlogsProvider
   ]
 })
 export class AppModule {}

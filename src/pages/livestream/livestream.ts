@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {ChampionsNewsProvider} from "../../providers/champions-news/champions-news";
+import { DomSanitizer } from '@angular/platform-browser';
 
 
 @Component({
@@ -8,16 +9,19 @@ import {ChampionsNewsProvider} from "../../providers/champions-news/champions-ne
   templateUrl: 'livestream.html',
 })
 export class LivestreamPage {
-
-  constructor(public champs:ChampionsNewsProvider,public navCtrl: NavController, public navParams: NavParams) {
+url
+  constructor(public sanitizer: DomSanitizer,public champs:ChampionsNewsProvider,public navCtrl: NavController, public navParams: NavParams) {
   }
+
 title
     details
     stream
     ionViewWillEnter() {
 
     this.champs.live().subscribe(res=>{
-this.stream=res[0]['stream']
+        this.stream=res[0]['stream']
+
+        this.getSafeUrl(this.stream)
         this.details=res[0]['details']
         this.title=res[0]['title']
         console.log();
@@ -25,5 +29,7 @@ this.stream=res[0]['stream']
 
     })
   }
-
+    getSafeUrl(url) {
+        this.url = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    }
 }
