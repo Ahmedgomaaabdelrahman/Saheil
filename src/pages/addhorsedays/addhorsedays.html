@@ -1,18 +1,19 @@
-<!--
-  Generated template for the AddhorsedaysPage page.
+<ion-content>
+  <header></header>
+ <subheader></subheader>
+<ion-row class="toprow"><ion-col col-12 >يوميات الخيل</ion-col></ion-row>
+<form class="myform" #f="ngForm">
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>addhorsedays</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
+  <ion-input type="text"placeholder="اسم المستخدم"></ion-input>
+  <ion-input type="text"placeholder="اضف صوره/فيديو" readonly></ion-input>
+  <div style="border: 1px solid lightgray;">
+    <img class="upload" src="assets/imgs/addimage.png">
+    <img class="upload" src="assets/imgs/video.png">
+    <img class="upload"  src="assets/imgs/camera.png">
+  </div>
+  <ion-input type="text"placeholder="عنوان الصوره"></ion-input>
+  
+     <button ion-button block class="btn">اضافة</button>
+</form>
 
 </ion-content>

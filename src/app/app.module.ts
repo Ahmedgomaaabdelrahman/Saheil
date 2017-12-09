@@ -95,6 +95,8 @@ import { NextevedetailsPage } from '../pages/nextevedetails/nextevedetails';
 import { NexteventsPage } from '../pages/nextevents/nextevents';
 import { HorsedaysPage } from '../pages/horsedays/horsedays';
 import { AddhorsedaysPage } from '../pages/addhorsedays/addhorsedays';
+import { NaqldetailsPage } from '../pages/naqldetails/naqldetails';
+import { NaqlbaryPage } from '../pages/naqlbary/naqlbary';
 
 
 
@@ -167,7 +169,9 @@ export function createTranslateLoader(http: HttpClient) {
     NexteventsPage,
     NextevedetailsPage,
     AddhorsedaysPage,
-    HorsedaysPage
+    HorsedaysPage,
+    NaqldetailsPage,
+    NaqlbaryPage
   ], 
   imports: [
     BrowserModule,HttpClientModule,
@@ -248,7 +252,9 @@ export function createTranslateLoader(http: HttpClient) {
     NexteventsPage,
     NextevedetailsPage,
     AddhorsedaysPage,
-    HorsedaysPage
+    HorsedaysPage,
+    NaqldetailsPage,
+    NaqlbaryPage
   ], 
   providers: [
     StatusBar,

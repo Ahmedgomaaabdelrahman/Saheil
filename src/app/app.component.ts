@@ -28,6 +28,9 @@ import { AlbumPage } from './../pages/album/album';
 import {TourtablesPage} from "../pages/tourtables/tourtables";
 import {OnetourPage} from "../pages/onetour/onetour";
 import { NexteventsPage } from './../pages/nextevents/nextevents';
+import { NaqlbaryPage } from '../pages/naqlbary/naqlbary';
+import { HorsedaysPage } from './../pages/horsedays/horsedays';
+
 
 
 
@@ -41,7 +44,7 @@ export class MyApp {
     horseSellerFlag:boolean;
 
   rootPage:any = LanguagePage;
-
+ 
   constructor(public user:Users,public events:Events,platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private common:CommonservicesProvider,private auth:AuthproviderProvider)
   {
       this.flag=false;

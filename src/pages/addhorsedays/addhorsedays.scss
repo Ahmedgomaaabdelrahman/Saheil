@@ -1,3 +1,126 @@
 page-addhorsedays {
+    .toprow{
+    background-color: #efc658;
+    text-align: center;
+    font-family: 'AppFont' !important;
+}
 
+.text-input{
+    border: 1px solid lightgray;
+    height: 40px;
+    margin: 5px 0;
+    width: 100%;
+    direction: rtl;
+    
+}
+.text-input[placeholder="product name"] , .text-input[placeholder="Description"] , .text-input[placeholder="price"]{
+  direction: ltr;
+    
+}
+.text-input::placeholder{
+        font-family: Appfont;
+        font-size: 12px;
+        padding: 5px
+    }
+.myform{
+    width:90%;
+    margin: 0 auto;
+    z-index: 1;
+} 
+.item{
+    width: auto;
+    display: inline-flex;
+    height: 40px;
+}
+.label{
+    font-family: Appfont;
+    font-size: 12px;
+}
+.item-md.item-block .item-inner{
+    padding: 0;
+    border:none;
+}
+.item-md .radio-md{
+    margin: 0;
+}
+
+.btn{
+    background-color: #ba8700;
+    border-radius: 5px;
+    width: 30%;
+    margin:20px auto;
+    font-family: Appfont;
+    z-index: 1;
+}
+.radio-md .radio-checked {
+    border-color: gray;
+}
+.radio-md .radio-inner{
+    background-color: black
+}
+.list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block{
+    border:none;
+}
+.list-ios > .item-block:first-child, .list-ios > .item-wrapper:last-child .item-block{
+    border:none;
+    
+}
+.list-ios > .item-block:last-child .item-inner{
+    padding: 0;
+}
+.list-ios .item-block .item-inner{
+     border:none;
+}
+.item-ios .radio-ios{
+    margin:0;
+}
+.item-cover{
+    position: relative;
+}
+    .select-text {
+        pointer-events: all;
+
+        //overflow: hidden;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 16;
+        font-size: inherit;
+        text-overflow: ellipsis;
+        //white-space: normal;
+    }
+ .selection{
+    width: 100%;
+    direction: rtl;
+    padding: 0;
+    border: 1px solid lightgray;
+    margin: 5px 0;
+    .select{
+        width: 219px;
+        min-width: 220px;
+        text-align: center;
+    }
+    .select-text{
+        font-family: Appfont;
+        width: 174px;
+        max-width: 300px;
+        min-width: 215px;
+        text-align: center;
+    
+    }
+    .label{
+        width: 100px;
+        min-width: 100px;
+        max-width: 100px;
+        color: black
+    }
+ }
+.upload{ 
+    height: 20px;
+    width: 20px;
+    margin: 5px;
+}
+.input-cover{
+    position: static;
+}
 }
