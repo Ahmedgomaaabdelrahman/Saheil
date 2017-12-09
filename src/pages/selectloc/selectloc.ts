@@ -76,7 +76,8 @@ loadMap() {
 
     }
     sendLocation(){
-    // let location = new Location (this.lat,this.lng,this.placelabel);
-    console.log(this.lat,this.lng);
-    this.view.dismiss({lat:this.lat,lng:this.lng})}
+        // this.location = new Location (this.lat,this.lng,this.placelabel);
+        // console.log(this.location.lat,this.location.lng,this.location.label);
+    this.view.dismiss({lat:this.lat,lng:this.lng,adress:this.placelabel})
+    }
 }

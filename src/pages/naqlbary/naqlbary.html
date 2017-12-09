@@ -4,15 +4,16 @@
   <subheader></subheader>
  <ion-row class="toprow"><ion-col col-12 >النقل البرى</ion-col></ion-row>
 
-    <div>
+
+    <div *ngFor="let v of veterinariansArray">
         <ion-row dir="rtl" class="controw">
             <ion-col col-3 >
-                <img class="docimg" src="assets/imgs/doctorimage.png">
+                <img class="docimg" src={{v.service_image}}>
             </ion-col>
             <ion-col col-9>
                 <ion-row>
                     <ion-col col-11>
-                        <h6>اسم الشركة</h6>
+                        <h6>{{v.service_name}}</h6>
                     </ion-col>
                     <ion-col col-1>
                         <img src="assets/imgs/star.png">
@@ -21,7 +22,7 @@
                 <ion-row>
                     <ion-col col-11>
                         <p class="p1">
-                           عنوان الشركه
+                            {{v.service_address}}
                         </p>
                     </ion-col>
                     <ion-col col-1 style="padding-top: 25px;">
@@ -31,7 +32,7 @@
 
 
                 <ion-row>
-                    <ion-col col-11 (click)="gotodetails()">
+                    <ion-col col-11 (click)="gotodetails(v.member_service_id)">
                         <p class="p3">المزيد</p>
                         <img height="8px" src="assets/imgs/more.png">
                     </ion-col>

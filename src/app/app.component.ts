@@ -129,7 +129,9 @@ this.horseSellerFlag=false
 
     }
     inbox(){
-        this.nav.push(ConsultationPage)
+        this.nav.push(ConsultationPage,'in')
+    } outbox(){
+        this.nav.push(ConsultationPage,'out')
     }
     supsSeller(){
 

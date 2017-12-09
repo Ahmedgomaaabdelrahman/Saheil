@@ -20,6 +20,12 @@ export class MailProvider {
             'member_id':id
         }
         return this.http.post(this.url.url+'api/messages/sent/',mail);
+    }getMyaInbox(id){
+        let mail={
+            'member_id':id
+        }
+
+        return this.http.post(this.url.url+'api/messages/inbox/',mail);
     }
     getMsgDetails(msg,member_id){
         let mail={

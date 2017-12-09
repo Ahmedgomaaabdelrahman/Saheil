@@ -20,7 +20,7 @@ upevent
     // this.upevents=[]
 this.upcome.upcommingEventDetails(this.navParams.data).subscribe(res=>{
   // this.upevents=res;
-    self.newsD=res[0]
+  //   self.newsD=res[0]
     self.title=res[0].title_ar
     self.details=res[0].details
     self.picpath=res[0].picpath

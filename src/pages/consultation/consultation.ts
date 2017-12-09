@@ -17,11 +17,19 @@ msgs:any
     }
     ionViewWillEnter(){
         this.msgs=[];
+
         this.common.getStoredValue('user').then(res=>{
-            this.mail.getMyInbox(res.member_id).subscribe(res=>{
+            if(this.navParams.data==='in'){
+            this.mail.getMyaInbox(res.member_id).subscribe(res=>{
                 console.log(res)
                 this.msgs=res
-            })
+            })}
+            else if(this.navParams.data==='out'){
+                this.mail.getMyInbox(res.member_id).subscribe(res=>{
+                    console.log(res)
+                    this.msgs=res
+            })}
+
         })
 
     }

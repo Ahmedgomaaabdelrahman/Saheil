@@ -1,0 +1,77 @@
+page-sendrequest {
+  .toprow{
+    background-color: #efc658;
+    font-family: 'AppFont' !important;
+    height: 40px;
+  }
+
+  .topdiv{
+    background-image: url(../assets/imgs/imagebar.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100px;
+    text-align: center;
+    padding: 7px;
+    background-color: rgba(0, 0, 0, 0.84);
+    .heart{
+      position: absolute;
+      left: 10px;
+      height: 25px;
+      margin: 10px 0;
+    }
+
+    .editicon{
+      position: relative;
+      top: 55px;
+      right: 30px;
+    }
+    .simg{
+      height: 85px;
+      margin-top: 10px;
+      border: 5px solid #c7981c;
+      width: 90px;
+      margin: 0 auto;
+      border-radius: 50%;
+      background-image: url(../assets/imgs/doctor.png);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .editinput , .message{
+    border:1px solid lightgray;
+    width: 90%;
+    height: 30px;
+    margin: 10px auto 0;
+    ::placeholder{
+      font-family: Appfont;
+    }
+    .text-input{
+      margin: 5px ;
+      text-align: end;
+    }
+
+    .input-cover{
+      position: static;
+    }
+  }
+  .message{
+    height: 150px;
+  }
+  .sendbtn{
+    margin: 40px auto;
+    width: 25%;
+    color: white;
+    background-color: #c7981c;
+    font-family: Appfont;
+  }
+  .btn{
+    border:1px solid gray;
+    width: 90%;
+    height: 30px;
+    margin: 10px auto 0;
+    ::placeholder{
+      font-family: Appfont;
+    }
+  }
+}

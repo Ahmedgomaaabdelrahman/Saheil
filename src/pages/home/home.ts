@@ -10,6 +10,7 @@ import {HrssupsellersPage} from "../hrssupsellers/hrssupsellers";
 import {HorsesellerPage} from "../horseseller/horseseller";
 import {LivestreamPage} from "../livestream/livestream";
 import { TourtablesPage } from '../tourtables/tourtables';
+import {NaqlbaryPage} from "../naqlbary/naqlbary";
 
 @Component({
     selector: 'page-home',
@@ -39,7 +40,7 @@ export class HomePage {
         this.navCtrl.push(AllclinksPage);
     }
     goTrans(){
-        this.navCtrl.push(TransportPage);
+        this.navCtrl.push(NaqlbaryPage);
     }
     goTransAir(){
         this.navCtrl.push(AirtansportPage);

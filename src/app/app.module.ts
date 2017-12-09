@@ -100,6 +100,7 @@ import { NaqldetailsPage } from '../pages/naqldetails/naqldetails';
 import { NaqlbaryPage } from '../pages/naqlbary/naqlbary';
 import { UpcommingEventsProvider } from '../providers/upcomming-events/upcomming-events';
 import { HorsesBlogsProvider } from '../providers/horses-blogs/horses-blogs';
+import {TransportMessagePage} from "../pages/transport-message/transport-message";
 
 
 
@@ -134,7 +135,7 @@ export function createTranslateLoader(http: HttpClient) {
     CancelhintPage,
     ComplainPage,
     HorsesuppPage,
-    AllsuppPage,
+    AllsuppPage,TransportMessagePage,
     KnowlegePage,
     KnowlegedetailsPage,
     CommentsPage,
@@ -211,7 +212,7 @@ export function createTranslateLoader(http: HttpClient) {
     ForgetpassPage,
     ChoosecountryPage,
     DoctordetailsPage,
-    AlldoctorsPage,
+    AlldoctorsPage,TransportMessagePage,
     ClinkdetailsPage,
     AllclinksPage,
     EditaccountPage,
