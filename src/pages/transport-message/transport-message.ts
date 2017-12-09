@@ -26,11 +26,20 @@ export class TransportMessagePage {
     _destination
     _origin
     _message
+    flag:boolean
+
     constructor(public modalCtrl:ModalController,public common:CommonservicesProvider,public v:VeterinariansProvider,public navCtrl: NavController, public navParams: NavParams) {
         let self=this;
+        this.flag=false
         this.common.getStoredValue('user').then(res=>{
-            this._member_id=res.member_id
+            if(res!=null){
 
+
+                this._member_id=res.member_id
+                this.flag=true}else{this.flag=false
+                // this._member_id=res['member_id']
+
+            }
         })
     }
 

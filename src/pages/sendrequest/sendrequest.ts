@@ -12,10 +12,19 @@ _member_id
     // _member_service_id
   _subject
   _message
+    flag:boolean
   constructor(public common:CommonservicesProvider,public v:VeterinariansProvider,public navCtrl: NavController, public navParams: NavParams) {
+    this.flag=false
   let self=this;
   this.common.getStoredValue('user').then(res=>{
-      this._member_id=res.member_id
+      if(res!=null){
+
+
+          this._member_id=res.member_id
+          this.flag=true}else{this.flag=false
+          // this._member_id=res['member_id']
+
+      }
 
   })
 }

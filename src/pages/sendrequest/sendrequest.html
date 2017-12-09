@@ -13,7 +13,8 @@
    <!--<ion-input class="editinput" type="text" placeholder="الجوال"></ion-input>-->
    <ion-textarea class="message" [(ngModel)]="_message" name="_message" type="text" placeholder="الرساله"></ion-textarea>
    
-   <button ion-button (click)="send()" block class="sendbtn">ارسال</button>
+   <button ion-button *ngIf="flag" (click)="send()" block class="sendbtn">ارسال</button>
+   <p *ngIf="!flag"  block >عفوا يجب التسجيل اولا !</p>
  </form>
  
  </ion-content>
