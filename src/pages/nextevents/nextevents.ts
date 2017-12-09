@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { NextevedetailsPage } from './../nextevedetails/nextevedetails';
+import {UpcommingEventsProvider} from "../../providers/upcomming-events/upcomming-events";
 
 
 @Component({
@@ -9,13 +10,19 @@ import { NextevedetailsPage } from './../nextevedetails/nextevedetails';
 })
 export class NexteventsPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public upcome:UpcommingEventsProvider,public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NexteventsPage');
+
+  gotodetails(id){
+    this.navCtrl.push(NextevedetailsPage,id);
   }
-  gotodetails(){
-    this.navCtrl.push(NextevedetailsPage);
-  }
+    upevents:any
+    ionViewWillEnter() {
+        this.upevents=[]
+        this.upcome.allUpcommingEvents().subscribe(res=>{
+            this.upevents=res;
+            console.log('ress',res)
+        })
+    }
 }

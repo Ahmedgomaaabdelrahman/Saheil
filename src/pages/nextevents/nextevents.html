@@ -6,28 +6,26 @@
 </ion-row>
 
 
-<ion-row dir="rtl" class="controw">
-    <ion-col col-4 >
-      <img class="docimg" src="assets/imgs/horse.png">
+<ion-row dir="rtl" class="controw" col-4 *ngFor="let e of upevents">
+    <ion-col  >
+      <img class="docimg" src={{e.picpath}}>
     </ion-col>
     <ion-col col-8>
       <ion-row>
         <ion-col col-12>
-           <h6>عنوان الحدث</h6>
+           <h6>{{e.title_ar}} </h6>
         </ion-col>
       </ion-row>
       <ion-row>
          <ion-col col-11>
             <p class="p1">
-               تنظيم البطوله العربيه للخيول
-               تنظيم البطوله العربيه للخيول
-               
+{{e.details}}
             </p>
          </ion-col>
        </ion-row>
        
        <ion-row>
-          <ion-col col-11 (click)="gotodetails()">
+          <ion-col col-11 (click)="gotodetails(e.upcoming_events_id)">
               <p class="p3">المزيد</p>
               <img height="8px" src="assets/imgs/more.png">
           </ion-col>
