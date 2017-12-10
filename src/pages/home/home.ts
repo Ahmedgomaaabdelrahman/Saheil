@@ -11,6 +11,7 @@ import {HorsesellerPage} from "../horseseller/horseseller";
 import {LivestreamPage} from "../livestream/livestream";
 import { TourtablesPage } from '../tourtables/tourtables';
 import {NaqlbaryPage} from "../naqlbary/naqlbary";
+import { AddhorsedaysPage } from '../addhorsedays/addhorsedays';
 
 @Component({
     selector: 'page-home',
@@ -56,5 +57,7 @@ export class HomePage {
     tours(){
         this.navCtrl.push(TourtablesPage);
     }
-     
+    addnew(){
+        this.navCtrl.push(AddhorsedaysPage);
+      }
 }

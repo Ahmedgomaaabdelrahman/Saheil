@@ -18,7 +18,7 @@
     </ion-slides>
 
 <div>
-<ion-segment [(ngModel)]="pet" dir="rtl">
+<ion-segment [(ngModel)]="pet" dir="rtl" style="width: 100%; padding-top: 0px;">
     <ion-segment-button value="services">
         الخدمات 
     </ion-segment-button>
@@ -103,7 +103,50 @@
     </div>
 
     <div *ngSwitchCase="'horseday'">
-        
+        <ion-row style="height:120px">
+            <ion-col col-9>
+             <ion-scroll scrollX="true" style="height:120px" >
+               <ion-segment >
+                 <ion-segment-button style="  
+                 height: 200px;    background-color: transparent; width: auto">
+                   <div class="imgdiv"><img src="assets/imgs/horse.png"></div>
+                 </ion-segment-button>
+                 <ion-segment-button  style="  
+                 height: 200px;    background-color: transparent; width: auto">
+                   <div class="imgdiv"><img src="assets/imgs/horse.png"></div>
+                 </ion-segment-button><ion-segment-button  style="  
+                 height: 200px;    background-color: transparent; width: auto">
+                   <div class="imgdiv"><img src="assets/imgs/horse.png"></div>
+                 </ion-segment-button><ion-segment-button  style="  
+                 height: 200px;    background-color: transparent; width: auto">
+                   <div class="imgdiv"><img src="assets/imgs/horse.png"></div>
+                 </ion-segment-button><ion-segment-button  style="  
+                 height: 200px;    background-color: transparent; width: auto">
+                   <div class="imgdiv"><img src="assets/imgs/horse.png"></div>
+                 </ion-segment-button>
+                 
+               </ion-segment>
+             </ion-scroll>
+            </ion-col>
+            <ion-col col-3 (click)="addnew()">
+              <div class="addimg">
+                <ion-icon name="add"></ion-icon>
+                <p>اضف صوره</p>
+              </div>
+            </ion-col>
+          </ion-row>
+         <hr>
+          <div class="details">
+         <img src="assets/imgs/bigimage.png">
+         <div class="info">
+           <ion-row>
+             <ion-col col-6><h6>الخيول العربيه الاصليه</h6></ion-col>
+             <ion-col col-4><p>احمد محمد عبدالله</p></ion-col>
+             <ion-col col-2><img id="prof" src="assets/imgs/prf.png"></ion-col>
+           </ion-row>
+         
+            </div>
+          </div>
     </div>
 </div>
 
