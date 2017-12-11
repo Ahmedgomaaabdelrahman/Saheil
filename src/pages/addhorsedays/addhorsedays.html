@@ -4,16 +4,16 @@
 <ion-row class="toprow"><ion-col col-12 >يوميات الخيل</ion-col></ion-row>
 <form class="myform" #f="ngForm">
 
-  <ion-input type="text"placeholder="اسم المستخدم"></ion-input>
-  <ion-input type="text"placeholder="اضف صوره/فيديو" readonly></ion-input>
+  <!--<ion-input type="text"   placeholder="اسم المستخدم">{{title_ar}}</ion-input>-->
+  <!--<ion-input type="text"placeholder="اضف صوره/فيديو" readonly></ion-input>-->
   <div style="border: 1px solid lightgray;">
-    <img class="upload" src="assets/imgs/addimage.png">
-    <img class="upload" src="assets/imgs/video.png">
-    <img class="upload"  src="assets/imgs/camera.png">
+    <img class="upload" (click)="serviceImage()" src="assets/imgs/addimage.png">
+    <!--<img class="upload" src="assets/imgs/video.png">-->
+    <!--<img class="upload"  src="assets/imgs/camera.png">-->
   </div>
-  <ion-input type="text"placeholder="عنوان الصوره"></ion-input>
+  <ion-input type="text" [(ngModel)]="title_ar" name="title_ar" placeholder="عنوان الصوره">{{title_ar}}</ion-input>
   
-     <button ion-button block class="btn">اضافة</button>
+     <button ion-button block (click)="submit()" class="btn">اضافة</button>
 </form>
 
 </ion-content>

@@ -101,6 +101,7 @@ import { NaqlbaryPage } from '../pages/naqlbary/naqlbary';
 import { UpcommingEventsProvider } from '../providers/upcomming-events/upcomming-events';
 import { HorsesBlogsProvider } from '../providers/horses-blogs/horses-blogs';
 import {TransportMessagePage} from "../pages/transport-message/transport-message";
+import { DiariesProvider } from '../providers/diaries/diaries';
 
 
 
@@ -274,7 +275,8 @@ export function createTranslateLoader(http: HttpClient) {
     ChampionsNewsProvider,
     AlbumProvider,
     UpcommingEventsProvider,
-    HorsesBlogsProvider
+    HorsesBlogsProvider,
+    DiariesProvider
   ]
 })
 export class AppModule {}
