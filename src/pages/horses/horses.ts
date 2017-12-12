@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {CommonservicesProvider} from "../../providers/commonservices/commonservices";
 import {DealersProvider} from "../../providers/dealers/dealers";
+import {HorsedetailsPage} from "../horsedetails/horsedetails";
 
 
 @Component({
@@ -15,7 +16,10 @@ export class HorsesPage {
 
     constructor(public common: CommonservicesProvider, public dealer: DealersProvider, public navCtrl: NavController, public navParams: NavParams) {
     }
-
+    more(horse){
+        console.log(horse)
+        this.navCtrl.push(HorsedetailsPage,horse.horse_id)
+    }
     ionViewWillEnter() {
 
         this.hourses = []
@@ -52,5 +56,20 @@ console.log(this.hourses)
 
     }
 
+addFav(fid){
+    let fav={
+        'member_id':this.member_id,
+        'horse_id':fid
+    }
+    this.dealer.addToUserFav(fav).subscribe(res=>{
+        console.log(res)
+        if(!res['error']){
+        this.common.presentToast('تمت الاضافة الي المفضلة')}
+        else {
+            this.common.presentToast('عفوا لم تنجح العملية')}
+
+    }
+    })
+}
     supArrayy: any;
 }

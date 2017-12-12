@@ -36,6 +36,8 @@ getDealerHoursesDetails(id){
 
     }
     addToUserFav(fav){
+        // http://www.sahel-horse.com/api/horses/favorite/add
+        return this.http.post(this.url.url+'api/horses/favorite/add',fav);
 
     }
 }

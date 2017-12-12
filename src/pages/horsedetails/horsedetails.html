@@ -1,0 +1,99 @@
+<ion-content>
+  <header></header>
+  <subheader></subheader>
+  <ion-row class="toprow"><ion-col col-12 >{{details.title}}</ion-col></ion-row>
+  <div class="topdiv">
+    <!--<img class="heart" src="assets/imgs/fav.png">-->
+    <!-- <img class="fimg" src="assets/imgs/topimg.png"> -->
+    <img class="simg" src={{details.picpath}}>
+  </div>
+
+  <ion-row style="margin-top:-25px">
+    <ion-col col-3 style="text-align: center">
+      <img height="40px" src="assets/imgs/doctorchat.png">
+    </ion-col>
+    <ion-col col-9></ion-col>
+  </ion-row>
+  <ion-row class="docname">
+    <ion-col col-12>{{details.title}}</ion-col>
+  </ion-row>
+
+
+  <div>
+    <ion-segment [(ngModel)]="pet">
+      <!--<ion-segment-button value="location">-->
+      <!--الموقع-->
+      <!--</ion-segment-button>-->
+
+      <ion-segment-button value="about">
+صورة الفصيلة      </ion-segment-button>  <ion-segment-button value="horse">
+     صورة الحصان      </ion-segment-button>
+      <ion-segment-button value="contact">
+        التفاصيل
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <!---->
+  <div [ngSwitch]="pet" class="segdiv" ngSelected="selected">
+    <div *ngSwitchDefault>
+      <div class="innerseg">
+        <!--<p>-->
+          <!--{{details.details}}          </p>-->
+      </div>
+    </div>
+    <div *ngSwitchCase="'horse'">
+      <div class="innerseg">
+
+          <img src={{details.picpath}}>
+
+      </div>
+    </div>
+    <div *ngSwitchCase="'contact'">
+      <div class="innerseg" style="border-bottom:1px solid gray;">
+        <ion-row>
+          <!--<ion-col col-1>السعر</ion-col>-->
+          <ion-col col-11> السعر : {{details.price}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-1></ion-col>
+          <ion-col col-11>الدولة : {{details.country}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <!--<ion-col col-1><img src="assets/imgs/face.png"></ion-col>-->
+          <ion-col col-11>{{details.mother}} : الام</ion-col>
+        </ion-row>
+        <ion-row>
+          <!--<ion-col col-1><img src="assets/imgs/tw.png"></ion-col>-->
+          <ion-col col-11>{{details.father}} : الاب</ion-col>
+        </ion-row>
+        <ion-row>
+          <!--<ion-col col-1><img src="assets/imgs/tw.png"></ion-col>-->
+          <ion-col col-11>{{details.horse_breed}} : الفصيلة</ion-col>
+        </ion-row>
+        <ion-row>
+          <!--<ion-col col-1><img src="assets/imgs/tw.png"></ion-col>-->
+          <ion-col col-11>{{details.color}} : اللون</ion-col>
+        </ion-row> <ion-row>
+          <!--<ion-col col-1><img src="assets/imgs/tw.png"></ion-col>-->
+          <ion-col col-11>{{details.age}} : السن </ion-col>
+        </ion-row><ion-row>
+          <!--<ion-col col-1><img src="assets/imgs/tw.png"></ion-col>-->
+          <ion-col col-11>{{details.details}} : التفاصيل </ion-col>
+        </ion-row>
+      </div>
+    </div>
+
+    <!--<div  *ngSwitchCase="'location'">-->
+    <!--<div>-->
+    <!--&lt;!&ndash;<div #map id="map"></div>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<div #map id="map"></div>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<img class="map" src="assets/imgs/map.jpg">&ndash;&gt;-->
+    <!--</div></div>-->
+
+  </div>
+  <!--<div #map id="map"></div>-->
+
+  <button ion-button block (click)="contact()" class="send">ارسال الطلب</button>
+</ion-content>

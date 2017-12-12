@@ -102,6 +102,7 @@ import { UpcommingEventsProvider } from '../providers/upcomming-events/upcomming
 import { HorsesBlogsProvider } from '../providers/horses-blogs/horses-blogs';
 import {TransportMessagePage} from "../pages/transport-message/transport-message";
 import { DiariesProvider } from '../providers/diaries/diaries';
+import {HorsedetailsPage} from "../pages/horsedetails/horsedetails";
 
 
 
@@ -153,7 +154,7 @@ export function createTranslateLoader(http: HttpClient) {
     AddproductPage,
     ProductdetailsPage,
     HorsesellerPage,
-    HorsesPage,
+    HorsesPage,HorsedetailsPage,
     TournewsPage,
     TourtablesPage,
     OnetourcommentsPage,
@@ -203,7 +204,7 @@ export function createTranslateLoader(http: HttpClient) {
     HeaderComponent,
     SubheaderComponent,
     BottomimgComponent,
-    HorsesuppPage,
+    HorsesuppPage,HorsedetailsPage,
     AllsuppPage,
     KnowlegePage,
     KnowlegedetailsPage,

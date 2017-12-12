@@ -19,19 +19,13 @@ import {DiariesProvider} from "../../providers/diaries/diaries";
     templateUrl: 'home.html'
 })
 export class HomePage {
+    index:any;
+timer
     items:any;
     show:any;
     constructor(public diaries:DiariesProvider,public menuCtrl:MenuController,public common:CommonservicesProvider,public navCtrl: NavController) {
         this.menuCtrl.enable(true)
-//         this.items=[]
-//         this.diaries.getAllDiaries(1).subscribe(res=> {
-//             console.log(res['diaries'])
-// this.items=res['diaries']
-//
-//             // for (let i = 0; i < 4; i++) {
-//             //     this.items.push(res[i]);
-//             // }
-//         })
+
         this.common.getStoredValue('user').then(user=>{
             console.log('user : ',user);
         })
@@ -40,20 +34,58 @@ export class HomePage {
     ionViewWillEnter(){
         this.menuCtrl.enable(true)
         this.items=[]
-        this.index=[]
         this.show=[]
+        let self=this
         this.diaries.getAllDiaries(0).subscribe(res=> {
-            console.log(res['diaries'])
-            this.items=res['diaries']
-            // this.index=res['diaries']
+            this.index=0
 
-            // for (let i = 0; i < 4; i++) {
-            //     this.items.push(res[i]);
-            // }
+            this.items=res['diaries']
+             self.show=[]
+            let i=0
+                self.timer=   setInterval(function () {
+                    self.show={
+                        'picpath':res['diaries'][i]['picpath'],
+                        'username':res['diaries'][i]['member'][0]['username'],'created':res['diaries'][i]['created']
+                    }
+                    console.log(res['diaries'][i])
+                    console.log(self.items.length-1)
+                    if(i!=self.items.length-1){
+i++}else{
+                        i=0
+                    }
+                },3000);
+                console.log(self.show)
+
         })
     }
+    more(){
+        let self=this
+        // clearInterval()
+console.log(this.items[this.items.length-1]['diary_id'])
+console.log(this.items.length-1)
+        this.diaries.getAllDiaries(this.items.length-1).subscribe(res=> {
+                self.index=0
+                // this.items=res['diaries']
 
+                console.log(res['diaries'][0])
+                // self.show=[]
+                // let i=0
+                //     self.show={
+                //         'picpath':res['diaries'][i]['picpath'],
+                //         'username':res['diaries'][i]['member'][0]['username'],'created':res['diaries'][i]['created']
+                //     }
+            for (let i = 0; i <4; i++) {
+                                    if(res['diaries'][i]!=null){
+                                    this.items.push(res['diaries'][i])}}
+
+
+                console.log(self.show)
+            }
+        )
+    }
     clickShow(item){
+        clearInterval(this.timer);
+
         console.log(item)
         this.show=[]
         this.show={
@@ -117,31 +149,6 @@ export class HomePage {
 
             // infiniteScroll.complete();
     // }
-    more(){
-        // this.items=[]
-        this.diaries.getAllDiaries(4).subscribe(res=> {
-            console.log(res['diaries'])
-            for (let i = 0; i <4; i++) {
-                if(res['diaries'][i]!=null){
-                    this.items.push(res['diaries'][i])
-// this.index.push(res['diaries'][i])
-                }
 
-            }
-        })
-    }
-    index
-    less(){
-    //     this.items=[]
-    //     console.log(this.index)
-    //     console.log(this.index.length)
-    //     this.diaries.getAllDiaries(this.index.length-7).subscribe(res=> {
-    //         console.log(res['diaries'])
-    //         for (let i = 0; i <4; i++) {
-    //             this.index.splice(this.index.length-1,1)
-    //             if(res['diaries'][i]!=null){
-    //                 this.items.push(res['diaries'][i])}
-    //         }
-    //     })
-    }
+
 }
