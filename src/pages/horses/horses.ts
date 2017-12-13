@@ -69,7 +69,7 @@ addFav(fid){
             this.common.presentToast('عفوا لم تنجح العملية')}
 
     }
-    })
+    );
 }
     supArrayy: any;
 }

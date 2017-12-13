@@ -110,8 +110,9 @@ page-home {
 
     ion-segment-button.segment-button {
         display: inline-block!important;
-    
-        width: auto!important;
+        
+        width: 140px !important;
+        max-width: 140px !important;
       }
 
       ion-segment {
@@ -138,11 +139,14 @@ page-home {
         height: 78px;
         margin: 10px 0;
         img{
-            border-radius:50%;
+            border-radius: 50%;
             height: 100%;
+            width: 80px;
+            min-width: 80px;
+            max-width: 80px;
             max-height: 100%;
-            border:1px solid gray;
-            padding: 2px
+            border: 1px solid gray;
+            padding: 2px;
         }
       }
       .addimg{
@@ -189,5 +193,13 @@ page-home {
 
           }
       }
-    
+    .more{
+        width: 20%;
+        margin: 20px 0 0;
+        right: 0;
+        background-color: #CA7800;
+        color:white;
+        position: relative;
+        font-family: Appfont;
+    }
 }

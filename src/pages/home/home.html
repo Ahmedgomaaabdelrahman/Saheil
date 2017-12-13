@@ -103,15 +103,18 @@
     </div>
 
     <div *ngSwitchCase="'horseday'">
+        <ion-row style="direction:rtl">
+            <button ion-button block class="more" (click)="more()">المزيد <ion-icon name="arrow-round-back" style="margin:0 5px"></ion-icon></button>        
+        </ion-row>
         <ion-row style="height:120px">
             <ion-col col-9>
-                <button ion-button (click)="more()">more</button>
+              
                 <!--<button ion-button (click)="less()">less</button>-->
 
-             <ion-scroll scrollX="true" maxlength="4" class="con-scroll-x" has-bouncing="true" style="height:130px" >
+             <ion-scroll scrollX="true" class="con-scroll-x" has-bouncing="true" style="height:130px" >
                <ion-segment >
                    <ion-segment-button  style="
-                 height: 200px;    background-color: transparent; width: auto" *ngFor="let item of items">
+                 height: 200px;    background-color: transparent" *ngFor="let item of items">
                    <div class="imgdiv"><img (click)="clickShow(item)" src={{item.picpath}}></div>
                        <!--<ion-infinite-scroll not-on (ionInfinite)="doInfinite($event)">-->
                            <!--<ion-infinite-scroll-content scrollX="true"  scrollY="false"-->
