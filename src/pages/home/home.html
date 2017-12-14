@@ -104,10 +104,13 @@
 
     <div *ngSwitchCase="'horseday'">
         <ion-row style="direction:rtl">
-            <button ion-button block class="more" (click)="more()">المزيد <ion-icon name="arrow-round-back" style="margin:0 5px"></ion-icon></button>        
-        </ion-row>
-        <ion-row style="direction:rtl">
-            <button ion-button block class="more" (click)="less()">الرجوع <ion-icon name="arrow-round-back" style="margin:0 5px"></ion-icon></button>
+            <ion-col col-6 style="text-align:start">
+                 <button ion-button block class="more" style="float:right" (click)="more()">المزيد <ion-icon name="arrow-round-back" style="margin:0 5px"></ion-icon></button>                    
+            </ion-col>
+            <ion-col col-6 style="text-align:end">
+                <button ion-button block class="more" style="float:left"(click)="less()"><ion-icon name="arrow-round-forward" style="margin:0 5px"></ion-icon>الرجوع </button>
+            </ion-col>
+            
         </ion-row>
         <ion-row style="height:120px">
             <ion-col col-9>
