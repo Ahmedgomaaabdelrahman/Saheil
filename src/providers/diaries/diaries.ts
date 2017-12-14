@@ -19,10 +19,14 @@ export class DiariesProvider {
     getAllDiaries(index){
         // http://www.sahel-horse.com/api/ar/diaries/page/3
         return this.http.get(this.url.url+'api/'+this.lang+'/diaries/page/'+index);
+    } getAllDiariesasc(index){
+        // http://www.sahel-horse.com/api/ar/diaries/page/1/asc
+        return this.http.get(this.url.url+'api/'+this.lang+'/diaries/page/'+index+'/asc');
     }
     getAllDiariesDetails(id){
         return this.http.get(this.url.url+'api/'+this.lang+'/diaries/details/'+id);
-    } addDiaries(diary){
+    }
+    addDiaries(diary){
         return this.http.post(this.url.url+'api/diaries/add/',diary);
     }
 }

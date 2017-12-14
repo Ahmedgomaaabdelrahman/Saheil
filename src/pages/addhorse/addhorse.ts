@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import {CommonservicesProvider} from "../../providers/commonservices/commonservices";
 import {DealersProvider} from "../../providers/dealers/dealers";
+import {GetServicesProvider} from "../../providers/get-services/get-services";
 
 
 @Component({
@@ -17,15 +18,17 @@ export class AddhorsePage {
     details_ar
     details_en
     price
+    country_id
     category_id
     homeland
   color
   age
     sendimage
     allCategories
-    constructor(private common:CommonservicesProvider,private dealer:DealersProvider,public navCtrl: NavController, public navParams: NavParams) {
+    constructor(public services:GetServicesProvider,private common:CommonservicesProvider,private dealer:DealersProvider,public navCtrl: NavController, public navParams: NavParams) {
 
     }
+    cs
     ionViewWillEnter(){
         this.allCategories=[]
         this.dealer.gethorseCategoties().subscribe(response=>{
@@ -34,6 +37,12 @@ export class AddhorsePage {
         })
         let self=this
         this.common.getStoredValue('user').then(user=>{    self.member_id=user.member_id
+        })
+        this.cs=[]
+        this.services.countryid().then(res=>{
+            this.cs=res;
+            console.log(res)
+
         })
     }
     ionViewDidLoad() {
@@ -79,5 +88,10 @@ export class AddhorsePage {
         }).catch(e=>{
             console.log('cam error :', e)
         })
+    }
+    getSelectedC(c){
+        console.log(c);
+
+        this.country_id=c
     }
 }

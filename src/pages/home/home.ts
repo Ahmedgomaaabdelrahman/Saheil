@@ -20,7 +20,9 @@ import {DiariesProvider} from "../../providers/diaries/diaries";
 })
 export class HomePage {
     index:any;
-timer
+timer:any
+
+startTimer:any
     items:any;
     show:any;
     constructor(public diaries:DiariesProvider,public menuCtrl:MenuController,public common:CommonservicesProvider,public navCtrl: NavController) {
@@ -32,54 +34,93 @@ timer
 
     }
     ionViewWillEnter(){
+        this.page=1
         this.menuCtrl.enable(true)
         this.items=[]
         this.show=[]
         let self=this
-        this.diaries.getAllDiaries(0).subscribe(res=> {
-            this.index=0
+        this.diaries.getAllDiaries(this.page).subscribe(res=> {
 
             this.items=res['diaries']
              self.show=[]
             let i=0
-                self.timer=   setInterval(function () {
+                self.startTimer=   setInterval(function () {
                     self.show={
                         'picpath':res['diaries'][i]['picpath'],
                         'username':res['diaries'][i]['member'][0]['username'],'created':res['diaries'][i]['created']
                     }
-                    console.log(res['diaries'][i])
-                    console.log(self.items.length-1)
+
                     if(i!=self.items.length-1){
 i++}else{
                         i=0
                     }
                 },3000);
-                console.log(self.show)
 
         })
     }
-    more(){
+    less(){
+console.log(this.page)
+        if(this.page>=0){
+
+        this.page-=1
+        clearInterval(this.timer);
+        clearInterval(this.startTimer);
         let self=this
         // clearInterval()
-console.log(this.items[this.items.length-1]['diary_id'])
-console.log(this.items.length-1)
-        this.diaries.getAllDiaries(this.items.length-1).subscribe(res=> {
-                self.index=0
-                // this.items=res['diaries']
+        console.log(this.items[this.items.length-1]['diary_id'])
+        console.log(this.items.length-1)
+        this.diaries.getAllDiariesasc(this.items.length-1).subscribe(res=> {
+            this.index=0
+            this.items=[]
+            console.log('new items :',res['diaries'].length)
 
-                console.log(res['diaries'][0])
-                // self.show=[]
-                // let i=0
-                //     self.show={
-                //         'picpath':res['diaries'][i]['picpath'],
-                //         'username':res['diaries'][i]['member'][0]['username'],'created':res['diaries'][i]['created']
-                //     }
-            for (let i = 0; i <4; i++) {
-                                    if(res['diaries'][i]!=null){
-                                    this.items.push(res['diaries'][i])}}
+            this.items=res['diaries']
+            self.show=[]
+            let i=0
+            self.startTimer=   setInterval(function () {
+                self.show={
+                    'picpath':res['diaries'][i]['picpath'],
+                    'username':res['diaries'][i]['member'][0]['username'],'created':res['diaries'][i]['created']
+                }
+                if(i!=self.items.length-1){
+                    i++}else{
+                    i=0
+                }
+            },3000);
+            }
+        )
+    }
+    }
+page
+    more(){
+        // clearInterval(this.timer);
+        clearInterval(this.startTimer);
+this.page+=1
+        console.log('num of page :',this.page)
 
+        let self=this
+        this.diaries.getAllDiaries(this.page).subscribe(res=> {
 
-                console.log(self.show)
+if(res['diaries'].length !=0){
+    this.index=0
+    this.items=[]
+            this.items=res['diaries']
+            self.show=[]
+            let i=0
+            self.startTimer=   setInterval(function () {
+                self.show={
+                    'picpath':res['diaries'][i]['picpath'],
+                    'username':res['diaries'][i]['member'][0]['username'],'created':res['diaries'][i]['created']
+                }
+
+                if(i!=self.items.length-1){
+                    i++}else{
+                    i=0
+                }
+            },3000);
+            }else {this.page-=1
+this.common.presentToast('انتهت اليوميات')
+}
             }
         )
     }
@@ -92,10 +133,7 @@ console.log(this.items.length-1)
             'picpath':item['picpath'],
             'username':item['member'][0]['username'],'created':item['created']
         }
-        // this.diaries.getAllDiariesDetails(id).subscribe(res=>{
-        //     console.log(res)
-        //     this.show=res['diaries'][0]
-        // })
+
     }
     live(){
         this.navCtrl.push(LivestreamPage)

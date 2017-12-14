@@ -139,7 +139,7 @@ this.horseSellerFlag=false
 
     }
     fav(){
-        this.nav.push(FavoritePage)
+        this.nav.push(FavtypePage)
 
     }
     addproduct(){

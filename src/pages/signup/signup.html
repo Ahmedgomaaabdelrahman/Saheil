@@ -47,7 +47,7 @@
     <ion-item class="selection">
         <ion-label> اختر الدولة</ion-label>
         <ion-select  okText="اختر" cancelText="الغاء" required="true" >
-            <ion-option (ionSelect)="getSelectedC(c.country_id)"  *ngFor="let c of cs"  value={{c.title_ar}} required>{{c.title_ar}}</ion-option>
+            <ion-option (ionSelect)="getSelectedC(c.title_ar)"  *ngFor="let c of cs"  value={{c.title_ar}} required>{{c.title_ar}}</ion-option>
         </ion-select>
     </ion-item>
 
