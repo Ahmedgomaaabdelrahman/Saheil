@@ -61,15 +61,15 @@ i++}else{
     less(){
 console.log(this.page)
         if(this.page>=0){
-
+            clearInterval(this.timer);
+            clearInterval(this.startTimer);
         this.page-=1
-        clearInterval(this.timer);
-        clearInterval(this.startTimer);
+
         let self=this
         // clearInterval()
         console.log(this.items[this.items.length-1]['diary_id'])
         console.log(this.items.length-1)
-        this.diaries.getAllDiariesasc(this.items.length-1).subscribe(res=> {
+        this.diaries.getAllDiariesasc(this.page).subscribe(res=> {
             this.index=0
             this.items=[]
             console.log('new items :',res['diaries'].length)
@@ -93,8 +93,7 @@ console.log(this.page)
     }
 page
     more(){
-        // clearInterval(this.timer);
-        clearInterval(this.startTimer);
+
 this.page+=1
         console.log('num of page :',this.page)
 
@@ -102,6 +101,8 @@ this.page+=1
         this.diaries.getAllDiaries(this.page).subscribe(res=> {
 
 if(res['diaries'].length !=0){
+    clearInterval(this.timer);
+    clearInterval(this.startTimer);
     this.index=0
     this.items=[]
             this.items=res['diaries']
