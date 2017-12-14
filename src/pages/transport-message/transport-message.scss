@@ -1,4 +1,4 @@
-page-sendrequest {
+page-transport-message {
   .toprow{
     background-color: #efc658;
     font-family: 'AppFont' !important;
@@ -66,10 +66,14 @@ page-sendrequest {
     font-family: Appfont;
   }
   .btn{
-    border:1px solid gray;
+    border: 1px solid gray;
     width: 90%;
     height: 30px;
+    background: white;
     margin: 10px auto 0;
+    color: #ba8700;
+    font-family: Appfont;
+    height: 50px;
     ::placeholder{
       font-family: Appfont;
     }
