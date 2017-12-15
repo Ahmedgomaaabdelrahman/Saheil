@@ -53,19 +53,28 @@ export class HorsesuppPage {
     addToBasket(sup){
 this.supArrayy=[]
         let self=this
-        this.common.getStoredValue('cart').then(cart=>{
-            if(cart !=null){
-            for(let i=0;i<cart.length;i++){
-                self.supArrayy.push(cart[i])
 
+        console.log('add to cart :',sup)
 
-            }
-                self.supArrayy.push(sup)
-                self.common.storeValue('cart',self.supArrayy);
-            }else{
-                self.supArrayy.push(sup)
-                self.common.storeValue('cart',self.supArrayy);            }
-
-        })
+        this.sups.addToCart(this.member_id,sup['supply_id']).subscribe(res=>{
+    console.log('add to cart :',res)
+    if(res['error']!=null){}
+    else{
+    this.common.presentToast('تمت الاضافة الي السلة')}
+})
+        // this.common.getStoredValue('cart').then(cart=>{
+        //     if(cart !=null){
+        //     for(let i=0;i<cart.length;i++){
+        //         self.supArrayy.push(cart[i])
+        //
+        //
+        //     }
+        //         self.supArrayy.push(sup)
+        //         self.common.storeValue('cart',self.supArrayy);
+        //     }else{
+        //         self.supArrayy.push(sup)
+        //         self.common.storeValue('cart',self.supArrayy);            }
+        //
+        // })
     }
 }

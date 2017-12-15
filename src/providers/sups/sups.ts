@@ -61,5 +61,52 @@ let fav={
         // http://www.sahel-horse.com/api/supplies/manage
                     return this.http.post(this.url.url+"api/supplies/manage",my)
     }
+    addToCart(member_id,supply_id){
+        //ضافة الي السرفر
+        // http://www.sahel-horse.com/api/supplies/cart/add
+        let my={
+            "member_id":member_id,
+            "supply_id":supply_id,
+            "quantity":0
+        }
 
+
+                    return this.http.post(this.url.url+"api/supplies/cart/add",my)
+    }
+    deleteFromCart(order_id){
+        //المسح مالسرفر قبل الشراء
+        //http://www.sahel-horse.com/api/supplies/cart/delete
+        let my={
+            "order_id":order_id
+        }
+
+        return this.http.post(this.url.url+"api/supplies/cart/delete",my)
+    }
+    getMyCart(member_id){
+        //عرض ماتمت اضافته الي السلة
+        //http://www.sahel-horse.com/api/ar/supplies/mycart
+        let my={
+            "member_id":member_id
+        }
+
+        return this.http.post(this.url.url+"api/"+this.lang+"/supplies/mycart",my)
+    }
+    buyslected(member_id,adress,mobile,items){
+        //عملية الشراء بعد التحكم فالكميات
+        //http://www.sahel-horse.com/api/supplies/cart
+        let my={
+            "member_id":member_id,
+            "shipping":adress,
+            "mobile":mobile,
+            "items":items
+        }
+
+        return this.http.post(this.url.url+"api/supplies/cart",my)
+    }
+
+    //عرض ماتمت اضافته الي السلة
+    //http://www.sahel-horse.com/api/ar/supplies/mycart
+    //عملية الشراء بعد التحكم فالكميات
+    //http://www.sahel-horse.com/api/supplies/cart
+    //http://www.sahel-horse.com/api/supplies/cart/checkout
 }

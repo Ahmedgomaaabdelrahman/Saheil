@@ -16,8 +16,8 @@
             <p *ngIf="mode == 1" class="p1">{{f.horses[0].title_ar}}</p>
         </ion-col>
         <ion-col col-2 style="text-align: center;">
-            <img src="assets/imgs/delete.png" *ngIf="mode != 1" height="15px" style="margin: 10px 5px;" (click)="deleteToUserFav(f.supplies[0].supply_id,i)">
-            <img src="assets/imgs/delete.png"  *ngIf="mode == 1"  height="15px" style="margin: 10px 5px;" (click)="deleteHorseUserFav(f.horses[0]['horse_id'],i)">
+            <img src="assets/imgs/delete.png" *ngIf="mode != 1" height="15px" style="margin: 10px 5px;" (click)="deleteToUserFav(f.supply_favorite_id,i)">
+            <img src="assets/imgs/delete.png"  *ngIf="mode == 1"  height="15px" style="margin: 10px 5px;" (click)="deleteHorseUserFav(f.horse_favorite_id,i)">
         </ion-col>
     </ion-row>
       <ion-row>
