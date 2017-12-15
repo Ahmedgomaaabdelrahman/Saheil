@@ -94,6 +94,7 @@ let fav={
     buyslected(member_id,adress,mobile,items){
         //عملية الشراء بعد التحكم فالكميات
         //http://www.sahel-horse.com/api/supplies/cart
+
         let my={
             "member_id":member_id,
             "shipping":adress,
