@@ -100,6 +100,7 @@ let fav={
             "mobile":mobile,
             "items":items
         }
+        console.log(my)
 
         return this.http.post(this.url.url+"api/supplies/cart",my)
     }
