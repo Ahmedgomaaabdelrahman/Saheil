@@ -40,4 +40,31 @@ getDealerHoursesDetails(id){
         return this.http.post(this.url.url+'api/horses/favorite/add',fav);
 
     }
+    deleteHorse(horse){
+        return this.http.post(this.url.url+'api/horses/delete',horse);
+        //http://www.sahel-horse.com/api/horses/delete
+    }
+    getHorsesfavorite(user){
+        let id={
+            'member_id':user
+        }
+        return this.http.post(this.url.url+'api/horses/favorite',id);
+        //http://www.sahel-horse.com/api/horses/favorite
+                }
+    manageHorse(id){
+        let dealer={
+            'member_id':id
+        }
+        return this.http.post(this.url.url+'api/horses/manage',dealer);
+    // http://www.sahel-horse.com/api/horses/manage
+       }  favoritedelete(id,horse_favorite_id){
+        let horse={
+            'member_id':id,
+            'horse_favorite_id':horse_favorite_id
+        }
+        console.log(horse)
+
+        return this.http.post(this.url.url+'api/horses/favorite/delete',horse);
+    // http://www.sahel-horse.com/api/horses/manage
+       }
 }

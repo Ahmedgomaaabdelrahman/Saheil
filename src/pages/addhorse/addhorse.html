@@ -27,17 +27,26 @@
     <!--</form>-->
 
     <form class="myform" #f="ngForm">
-      <button ion-button block (click)="serviceImage()"  class="btn">اضافة صورة</button>
+      <button ion-button block (click)="serviceImage()"  class="btn">اضافة صورة الحصان</button>
+        <ion-label  *ngIf="image != null">صورة الحصان</ion-label>
+        <div class="divimg"> <img *ngIf="image != null" src={{image}}></div>
+      <button ion-button block (click)="serviceImagebreed_image()"  class="btn">اضافة صورة الفصيلة</button>
 
-      <div class="divimg"> <img *ngIf="image != null" src={{image}}></div>
-    <ion-input type="text" [(ngModel)]="title_ar" name="title_ar" placeholder="نوع الخيل">{{title_ar}}</ion-input>
-    <ion-input type="text" [(ngModel)]="title_en" name="title_en" placeholder="Horse type">{{title_en}}</ion-input>
+        <ion-label *ngIf="horse_breed_image != null" >صورة الفصيلة</ion-label>
+
+        <div class="divimg"> <img *ngIf="horse_breed_image != null" src={{horse_breed_image}}></div>
+    <ion-input type="text" [(ngModel)]="title_ar" name="title_ar" placeholder="اسم الخيل">{{title_ar}}</ion-input>
+    <ion-input type="text" [(ngModel)]="title_en" name="title_en" placeholder="اسم الخيل">{{title_en}}</ion-input>
+    <ion-input type="text" [(ngModel)]="gender" name="gender" placeholder="النوع">{{gender}}</ion-input>
     <ion-input type="text" [(ngModel)]="details_ar" name="details_ar" placeholder="التفاصيل">{{details_ar}}</ion-input>
     <ion-input type="text" [(ngModel)]="details_en" name="details_en" placeholder="Details">{{details_en}}</ion-input>
     <ion-input type="text" [(ngModel)]="homeland" name="homeland" placeholder="Homeland">{{homeland}}</ion-input>
     <ion-input type="text" [(ngModel)]="price" name="price" placeholder="السعر">{{price}}</ion-input>
     <ion-input type="text" [(ngModel)]="color" name="color" placeholder="اللون">{{color}}</ion-input>
     <!--<ion-input type="text" placeholder="color"></ion-input>-->
+    <ion-input type="text" [(ngModel)]="mother" name="mother" placeholder="الأم">{{mother}}</ion-input>
+    <ion-input type="text" [(ngModel)]="father" name="father" placeholder="الأب">{{father}}</ion-input>
+    <ion-input type="text" [(ngModel)]="horse_breed" name="horse_breed" placeholder="الفصيلة">{{horse_breed}}</ion-input>
     <ion-input type="text" [(ngModel)]="age" name="age" placeholder="العمر">{{age}}</ion-input>
     <!--<ion-input type="text" placeholder="Age"></ion-input>-->
     

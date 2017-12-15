@@ -31,6 +31,7 @@ import {AllImagesPage} from "../pages/all-images/all-images";
 import { NexteventsPage } from './../pages/nextevents/nextevents';
 import { NaqlbaryPage } from '../pages/naqlbary/naqlbary';
 import { HorsedaysPage } from './../pages/horsedays/horsedays';
+import {MyhorsesPage} from "../pages/myhorses/myhorses";
 
 
 
@@ -146,7 +147,7 @@ this.horseSellerFlag=false
         this.nav.push(AddproductPage);
     }
     addHorse(){
-        this.nav.push(AddhorsePage);
+        this.nav.push(MyhorsesPage);
     }
     goAlbum(){ 
         this.nav.push(AllImagesPage);

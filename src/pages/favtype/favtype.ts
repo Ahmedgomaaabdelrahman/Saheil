@@ -18,4 +18,7 @@ export class FavtypePage {
   gofav(){ 
     this.navCtrl.push(FavoritePage);
   }
+    goHorsefav(){
+        this.navCtrl.push(FavoritePage,1);
+    }
 }

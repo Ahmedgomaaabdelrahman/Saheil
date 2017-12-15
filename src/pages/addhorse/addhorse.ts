@@ -23,6 +23,12 @@ export class AddhorsePage {
     homeland
   color
   age
+    gender
+    mother
+    father
+    horse_breed
+    horse_breed_image
+    horse_breed_imagesend
     sendimage
     allCategories
     constructor(public services:GetServicesProvider,private common:CommonservicesProvider,private dealer:DealersProvider,public navCtrl: NavController, public navParams: NavParams) {
@@ -64,7 +70,13 @@ export class AddhorsePage {
             "category_id":this.category_id,
             "color":this.color,
             "age":this.age,
-            "homeland":this.homeland
+            "homeland":this.homeland,
+"gender":this.gender,
+            "mother": this.mother,
+            "father": this.father,
+            "horse_breed": this.horse_breed,
+            "horse_breed_image": this.horse_breed_imagesend
+
         }
         console.log(Horse)
 
@@ -85,6 +97,23 @@ export class AddhorsePage {
             // this.service_image=res;
             this.image='data:image/jpeg;base64,' + res
             this.sendimage=res
+        }).catch(e=>{
+            console.log('cam error :', e)
+        })
+    }
+    serviceImagebreed_image(){
+        this.common.presentActionSheet('use cam','use galery').then(res=> {
+            // console.log(res)
+            this.serviceCambreed_image(res)
+        })
+
+    }
+    serviceCambreed_image(source){
+        this.common.camPic(source).then(res=>{
+            // console.log('img',res)
+            // this.service_image=res;
+            this.horse_breed_image='data:image/jpeg;base64,' + res
+            this.horse_breed_imagesend=res
         }).catch(e=>{
             console.log('cam error :', e)
         })
