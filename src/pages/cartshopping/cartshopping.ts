@@ -94,8 +94,8 @@ this.prepareToBuy().then(starttoBuy=>{
     console.log(starttoBuy)
     console.log(this.quantity)
     console.log(this.totalPrice)
-    this.adress='ss'
-    this.mobile='11'
+    // this.adress='ss'
+    // this.mobile='11'
 
     this.cart.buyslected(this.member_id,this.adress,this.mobile,starttoBuy).subscribe(res=>{
         // console.log(res)
