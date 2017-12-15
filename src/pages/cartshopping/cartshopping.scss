@@ -63,4 +63,20 @@ p{
         
     }
 }
+.inpttt{
+    border: 1px solid gray;
+    margin: 10px 0;
+   
+    .text-input{
+        text-align: start;
+        direction: rtl;
+    }
+    ::placeholder{
+        color:black;
+        direction: rtl;
+    }
+    .input-cover{
+        position: static;
+    }
+}
 }
