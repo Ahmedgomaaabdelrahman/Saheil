@@ -45,12 +45,11 @@ ionViewWillEnter(){
         self.member_id=user['member_id']
         self.cart.getMyCart(self.member_id).subscribe(res=>{
             self.sups=res
-            for(let i=0 ;i<res.length;i++){
+            for(let i=0 ;i< self.sups.length;i++){
 
                 self.quantity.push(0)
                 // self.totalPrice+=parseInt(res[i].price)
             }
-            console.log(res.length)
             console.log( self.quantity)        })
 
     })
@@ -68,29 +67,38 @@ prepareToBuy():Promise<any>{
 
         let promise=new Promise((resolve,reject)=>{
 
-
-            self.items=[]
-    let l=0
-            self.sups.forEach(function (s) {
+            for(let i=0;i<this.quantity.length;i++){
+                var item={
+                    "supply_id":this.sups[i]['supply_id'],
+                    "quantity":this.quantity[i]
+                }
+                this.items.push(item)
+            }
+            // self.items=[]
+    // let l=0
+    //         self.sups.forEach(function (s) {
         // console.log(s.index)
 
-        s['quantity']=self.quantity[l]
-        l++
-    })
-resolve(self.sups)
+        // s['quantity']=self.quantity[l]
+        // l++
+    // })
+resolve(self.items)
         })
     return promise
         }
  buy(){
+this.items=[]
 
 this.prepareToBuy().then(starttoBuy=>{
+
     console.log(starttoBuy)
     console.log(this.quantity)
     console.log(this.totalPrice)
-
-    // this.cart.buyslected(this.member_id,this.adress,this.mobile,this.items).subscribe(res=>{
-    //     console.log(res)
-    // })
+    this.adress='ss'
+    this.mobile='11'
+    this.cart.buyslected(this.member_id,this.adress,this.mobile,starttoBuy).subscribe(res=>{
+        console.log(res)
+    })
 })
 
  }
