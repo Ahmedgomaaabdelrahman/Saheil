@@ -72,6 +72,9 @@ prepareToBuy():Promise<any>{
                     "supply_id":this.sups[i]['supply_id'],
                     "quantity":this.quantity[i]
                 }
+                self.cart.quantityEdit(this.sups[i]['order_id'],this.quantity[i]).subscribe(res=>{
+                    console.log('res',res)
+                })
                 this.items.push(item)
             }
             // self.items=[]
@@ -98,7 +101,7 @@ this.prepareToBuy().then(starttoBuy=>{
     // this.mobile='11'
 
     this.cart.buyslected(this.member_id,this.adress,this.mobile,starttoBuy).subscribe(res=>{
-        // console.log(res)
+        console.log(res)
     })
 })
 

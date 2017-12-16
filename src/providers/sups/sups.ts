@@ -91,19 +91,30 @@ let fav={
 
         return this.http.post(this.url.url+"api/"+this.lang+"/supplies/mycart",my)
     }
+    quantityEdit(order_id,quantity){
+        //عرض ماتمت اضافته الي السلة
+        //http://www.sahel-horse.com/api/supplies/cart/edit
+        let my={
+            "order_id":order_id,
+            "quantity":quantity
+        }
+
+        return this.http.post(this.url.url+"api/supplies/cart/edit",my)
+    }
     buyslected(member_id,adress,mobile,items){
         //عملية الشراء بعد التحكم فالكميات
         //http://www.sahel-horse.com/api/supplies/cart
-
+//http://www.sahel-horse.com/api/supplies/cart/checkout
         let my={
             "member_id":member_id,
             "shipping":adress,
             "mobile":mobile,
-            "items":items
+            // "items":items
         }
         console.log(my)
 
-        return this.http.post(this.url.url+"api/supplies/cart",my)
+        // return this.http.post(this.url.url+"api/supplies/cart",my)
+        return this.http.post(this.url.url+"api/supplies/cart/checkout",my)
     }
 
     //عرض ماتمت اضافته الي السلة
