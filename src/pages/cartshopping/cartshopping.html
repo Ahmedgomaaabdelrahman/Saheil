@@ -31,16 +31,17 @@
            
            </ion-row>
 
-
+<form  #f="ngForm">
            <ion-row>
-             <ion-input  type="text" class="inpttt" placeholder="عنوان الشحن"></ion-input>
+
+             <ion-input [(ngModel)]="adress" name="adress"  type="text" class="inpttt" placeholder="عنوان الشحن"></ion-input>
            </ion-row>
 
            <ion-row>
-            <ion-input  type="number" class="inpttt" placeholder="رقم الموبايل"></ion-input>
+            <ion-input [(ngModel)]="mobile" name="mobile" type="number" class="inpttt" placeholder="رقم الموبايل"></ion-input>
           </ion-row>
 
-
+</form>
 
    
 
