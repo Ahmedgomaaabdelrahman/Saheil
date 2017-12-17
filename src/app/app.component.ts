@@ -32,6 +32,7 @@ import { NexteventsPage } from './../pages/nextevents/nextevents';
 import { NaqlbaryPage } from '../pages/naqlbary/naqlbary';
 import { HorsedaysPage } from './../pages/horsedays/horsedays';
 import {MyhorsesPage} from "../pages/myhorses/myhorses";
+import { Daf3Page } from './../pages/daf3/daf3';
 
 
 
@@ -44,7 +45,7 @@ export class MyApp {
     supsSellerFlag:boolean;
     horseSellerFlag:boolean;
 
-  rootPage:any = LanguagePage;
+  rootPage:any = Daf3Page;
  
   constructor(public user:Users,public events:Events,platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private common:CommonservicesProvider,private auth:AuthproviderProvider)
   {

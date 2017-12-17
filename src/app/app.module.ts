@@ -103,6 +103,7 @@ import { HorsesBlogsProvider } from '../providers/horses-blogs/horses-blogs';
 import {TransportMessagePage} from "../pages/transport-message/transport-message";
 import { DiariesProvider } from '../providers/diaries/diaries';
 import {HorsedetailsPage} from "../pages/horsedetails/horsedetails";
+import { Daf3Page } from '../pages/daf3/daf3';
 
 
 
@@ -177,7 +178,8 @@ export function createTranslateLoader(http: HttpClient) {
     AddhorsedaysPage,
     HorsedaysPage,
     NaqldetailsPage,
-    NaqlbaryPage
+    NaqlbaryPage,
+    Daf3Page
   ], 
   imports: [
     BrowserModule,HttpClientModule,
@@ -260,7 +262,8 @@ export function createTranslateLoader(http: HttpClient) {
     AddhorsedaysPage,
     HorsedaysPage,
     NaqldetailsPage,
-    NaqlbaryPage
+    NaqlbaryPage,
+    Daf3Page
   ], 
   providers: [
     StatusBar,
