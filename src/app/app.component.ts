@@ -45,7 +45,7 @@ export class MyApp {
     supsSellerFlag:boolean;
     horseSellerFlag:boolean;
 
-  rootPage:any = Daf3Page;
+  rootPage:any = LanguagePage;
  
   constructor(public user:Users,public events:Events,platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private common:CommonservicesProvider,private auth:AuthproviderProvider)
   {
