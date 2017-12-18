@@ -103,6 +103,9 @@ import { HorsesBlogsProvider } from '../providers/horses-blogs/horses-blogs';
 import {TransportMessagePage} from "../pages/transport-message/transport-message";
 import { DiariesProvider } from '../providers/diaries/diaries';
 import {HorsedetailsPage} from "../pages/horsedetails/horsedetails";
+import { PaypalProvider } from '../providers/paypal/paypal';
+import { PayPal, PayPalPayment, PayPalConfiguration } from '@ionic-native/paypal';
+
 
 
 
@@ -277,7 +280,8 @@ export function createTranslateLoader(http: HttpClient) {
     AlbumProvider,
     UpcommingEventsProvider,
     HorsesBlogsProvider,
-    DiariesProvider
+    DiariesProvider,
+    PaypalProvider,PayPal
   ]
 })
 export class AppModule {}
