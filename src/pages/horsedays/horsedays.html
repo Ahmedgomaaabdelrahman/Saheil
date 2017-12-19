@@ -1,51 +1,57 @@
 <ion-content>
   <header></header>
-  <subheader></subheader>
- <ion-row class="toprow"><ion-col col-12 >يوميات الخيل</ion-col></ion-row>
-
- <ion-row style="height:120px">
-   <ion-col col-9>
-    <ion-scroll scrollX="true" style="height:120px" >
-      <ion-segment style=" width: 120vw" >
-        <ion-segment-button style="  
-        height: 200px;">
-          <div class="imgdiv"><img src="assets/imgs/horse.png"></div>
-        </ion-segment-button>
-        <ion-segment-button  style="  
-        height: 200px;">
-          <div class="imgdiv"><img src="assets/imgs/horse.png"></div>
-        </ion-segment-button><ion-segment-button  style="  
-        height: 200px;">
-          <div class="imgdiv"><img src="assets/imgs/horse.png"></div>
-        </ion-segment-button><ion-segment-button  style="  
-        height: 200px;">
-          <div class="imgdiv"><img src="assets/imgs/horse.png"></div>
-        </ion-segment-button><ion-segment-button  style="  
-        height: 200px;">
-          <div class="imgdiv"><img src="assets/imgs/horse.png"></div>
-        </ion-segment-button>
+  <div >
+    <ion-row style="direction:rtl">
+        <ion-col col-6 style="text-align:start">
+             <button ion-button block class="more" style="float:right" (click)="more()"> <ion-icon name="arrow-round-back" style="margin:0 5px"></ion-icon></button>                    
+        </ion-col>
+        <ion-col col-6 style="text-align:end">
+            <button ion-button block class="more" style="float:left"(click)="less()"><ion-icon name="arrow-round-forward" style="margin:0 5px"></ion-icon></button>
+        </ion-col>
         
-      </ion-segment>
-    </ion-scroll>
-   </ion-col>
-   <ion-col col-3 (click)="addnew()">
-     <div class="addimg">
-       <ion-icon name="add"></ion-icon>
-       <p>اضف صوره</p>
-     </div>
-   </ion-col>
- </ion-row>
-<hr>
- <div class="details">
-<img src="assets/imgs/bigimage.png">
-<div class="info">
-  <ion-row>
-    <ion-col col-6><h6>الخيول العربيه الاصليه</h6></ion-col>
-    <ion-col col-4><p>احمد محمد عبدالله</p></ion-col>
-    <ion-col col-2><img id="prof" src="assets/imgs/prf.png"></ion-col>
-  </ion-row>
+    </ion-row>
+    <ion-row style="height:120px">
+        <ion-col col-10>
+          
+            <!--<button ion-button (click)="less()">less</button>-->
 
-   </div>
- </div>
+         <ion-scroll scrollX="true" has-bouncing="true" style="height:130px" >
+           <ion-segment >
+               <ion-segment-button  style="
+             height: 200px;    background-color: transparent" *ngFor="let item of items">
+               <div class="imgdiv"><img (click)="clickShow(item)" src={{item.picpath}}></div>
+                   <!--<ion-infinite-scroll not-on (ionInfinite)="doInfinite($event)">-->
+                       <!--<ion-infinite-scroll-content scrollX="true"  scrollY="false"-->
+                                                    <!--loadingSpinner="bubbles"-->
+                                                    <!--loadingText="Loading more data...">-->
+                       <!--</ion-infinite-scroll-content>                 </ion-infinite-scroll>-->
+             </ion-segment-button>
+    
+           </ion-segment>
+
+
+         </ion-scroll>
+
+        </ion-col>
+        <ion-col col-2 (click)="addnew()">
+          <div class="addimg">
+            <ion-icon name="add"></ion-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+     <hr>
+      <div class="details"  >
+        <img src="assets/imgs/horse.png">
+        <div class="info">
+          <ion-row>
+            <ion-col col-6><h6>اسم </h6></ion-col>
+            <ion-col  col-4><p>اسم</p></ion-col>
+            <ion-col col-2>
+                <img id="prof" src="assets/imgs/prf.png">
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+</div>
  </ion-content>
 

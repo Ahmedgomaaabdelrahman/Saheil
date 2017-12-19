@@ -13,6 +13,7 @@ import { TourtablesPage } from '../tourtables/tourtables';
 import {NaqlbaryPage} from "../naqlbary/naqlbary";
 import { AddhorsedaysPage } from '../addhorsedays/addhorsedays';
 import {DiariesProvider} from "../../providers/diaries/diaries";
+import { HorsedaysPage } from '../horsedays/horsedays';
 
 @Component({
     selector: 'page-home',
@@ -158,6 +159,10 @@ this.common.presentToast('انتهت اليوميات')
     goHorseSellers(){
         this.navCtrl.push(HorsesellerPage)
 
+    }
+
+    gohorsdays(){
+        this.navCtrl.push(HorsedaysPage);
     }
     tours(){
         this.navCtrl.push(TourtablesPage);
