@@ -16,7 +16,7 @@ export class FavtypePage {
     console.log('ionViewDidLoad FavtypePage');
   }
   gofav(){ 
-    this.navCtrl.push(FavoritePage);
+    this.navCtrl.push(FavoritePage,0);
   }
     goHorsefav(){
         this.navCtrl.push(FavoritePage,1);

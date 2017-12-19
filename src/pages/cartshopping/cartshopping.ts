@@ -100,7 +100,7 @@ this.prepareToBuy().then(starttoBuy=>{
     // this.adress='ss'
     // this.mobile='11'
 
-    this.cart.buyslected(this.member_id,this.adress,this.mobile,starttoBuy).subscribe(res=>{
+    this.cart.buyslected(this.member_id,this.adress,this.mobile,starttoBuy,this.totalPrice).subscribe(res=>{
         console.log(res)
     })
 })

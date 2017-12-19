@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {DomainProvider} from "../domain/domain";
+import {PaypalProvider} from "../paypal/paypal";
 
 /*
   Generated class for the SupsProvider provider.
@@ -12,7 +13,7 @@ import {DomainProvider} from "../domain/domain";
 export class SupsProvider {
     lang: any
 
-    constructor(public url: DomainProvider, public http: HttpClient) {
+    constructor(public url: DomainProvider, public http: HttpClient ,private paypal:PaypalProvider) {
         console.log('Hello VeterinariansProvider Provider');
         this.lang = url.lang;
     }
@@ -101,7 +102,7 @@ let fav={
 
         return this.http.post(this.url.url+"api/supplies/cart/edit",my)
     }
-    buyslected(member_id,adress,mobile,items){
+    buyslected(member_id,adress,mobile,items,price){
         //عملية الشراء بعد التحكم فالكميات
         //http://www.sahel-horse.com/api/supplies/cart
 //http://www.sahel-horse.com/api/supplies/cart/checkout
@@ -114,6 +115,7 @@ let fav={
         console.log(my)
 
         // return this.http.post(this.url.url+"api/supplies/cart",my)
+        this.paypal.pay(price)
         return this.http.post(this.url.url+"api/supplies/cart/checkout",my)
     }
 

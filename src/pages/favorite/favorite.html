@@ -12,20 +12,20 @@
     <ion-col col-8>
       <ion-row style="height:35px">
           <ion-col col-10>
-            <p *ngIf="mode != 1" class="p1">{{f.supplies[0].title}}</p>
+            <p *ngIf="mode == 0" class="p1">{{f.supplies[0].title}}</p>
             <p *ngIf="mode == 1" class="p1">{{f.horses[0].title_ar}}</p>
         </ion-col>
         <ion-col col-2 style="text-align: center;">
-            <img src="assets/imgs/delete.png" *ngIf="mode != 1" height="15px" style="margin: 10px 5px;" (click)="deleteToUserFav(f.supply_favorite_id,i)">
+            <img src="assets/imgs/delete.png" *ngIf="mode == 0" height="15px" style="margin: 10px 5px;" (click)="deleteToUserFav(f.supply_favorite_id,i)">
             <img src="assets/imgs/delete.png"  *ngIf="mode == 1"  height="15px" style="margin: 10px 5px;" (click)="deleteHorseUserFav(f.horse_favorite_id,i)">
         </ion-col>
     </ion-row>
       <ion-row>
-          <ion-col col-12><p *ngIf="mode  != 1" class="p2">{{f.supplies[0].details}}</p></ion-col>
+          <ion-col col-12><p *ngIf="mode  == 0" class="p2">{{f.supplies[0].details}}</p></ion-col>
       </ion-row>
       <ion-row>
           <ion-col col-10>
-              <p *ngIf="mode  != 1" class="p3">{{f.supplies[0].price}} ريال</p>
+              <p *ngIf="mode  == 0" class="p3">{{f.supplies[0].price}} ريال</p>
               <button ion-button block *ngIf="mode  == 1" class="edit" (click)="gotodetails(f.horses[0]['horse_id'])">التفاصيل</button>
           </ion-col>
           <!-- <ion-col col-2 style="text-align: center;"><img src="assets/imgs/delete.png" height="15px" style="margin: 10px 5px;" (click)="deleteToUserFav(f.supplies[0].supply_id,i)"></ion-col> -->
