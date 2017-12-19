@@ -1,0 +1,76 @@
+page-daf3 {
+    .toprow{
+        background-color: #efc658;
+        text-align: center;
+        font-family: 'AppFont' !important;
+    }
+    .text-input{
+        border: 1px solid lightgray;
+        height: 40px;
+        margin: 5px 0;
+        width: 100%;
+        direction: rtl;
+        
+    }
+
+    .text-input::placeholder{
+        font-family: Appfont;
+        font-size: 12px;
+        padding: 5px
+    }
+    .myform{
+        width: 90%;
+        margin: 25px auto;
+        z-index: 1;
+        direction: rtl;
+    } 
+    .label{
+        font-family: Appfont;
+        font-size: 12px;
+        margin: 10px !important;
+        width: 70px;
+    }
+    .item-md.item-block .item-inner{
+        padding: 0;
+        border:none;
+    }
+    .input-cover{
+        position: static;
+    }
+    .btn{
+        background-color: #ba8700;
+        border-radius: 5px;
+        width: 30%;
+        margin:20px auto;
+        font-family: Appfont;
+        z-index: 1;
+    }
+    .item {
+        ::focus{
+            border-bottom: none;
+        }
+    }
+
+    .thelabel{
+        color: black !important;
+        font-size: 13px;
+        font-weight: 600;
+        
+        font-family: Appfont;
+        margin: 0;
+       
+    }
+    ion-input{
+        width: 80%;
+        display: inline-block;
+    }
+    .dollar{
+        color: black !important;
+        font-size: 13px;
+        font-weight: 600;
+        
+        font-family: Appfont;
+        margin: 0;
+        display: inline-block;
+    }
+}

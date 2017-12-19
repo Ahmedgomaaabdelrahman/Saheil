@@ -106,6 +106,7 @@ import {HorsedetailsPage} from "../pages/horsedetails/horsedetails";
 import { PaypalProvider } from '../providers/paypal/paypal';
 import { PayPal, PayPalPayment, PayPalConfiguration } from '@ionic-native/paypal';
 
+import { Daf3Page } from '../pages/daf3/daf3';
 
 
 
@@ -180,7 +181,8 @@ export function createTranslateLoader(http: HttpClient) {
     AddhorsedaysPage,
     HorsedaysPage,
     NaqldetailsPage,
-    NaqlbaryPage
+    NaqlbaryPage,
+    Daf3Page
   ], 
   imports: [
     BrowserModule,HttpClientModule,
@@ -263,7 +265,8 @@ export function createTranslateLoader(http: HttpClient) {
     AddhorsedaysPage,
     HorsedaysPage,
     NaqldetailsPage,
-    NaqlbaryPage
+    NaqlbaryPage,
+    Daf3Page
   ], 
   providers: [
     StatusBar,

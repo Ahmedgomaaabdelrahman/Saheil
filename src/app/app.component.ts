@@ -32,6 +32,7 @@ import { NexteventsPage } from './../pages/nextevents/nextevents';
 import { NaqlbaryPage } from '../pages/naqlbary/naqlbary';
 import { HorsedaysPage } from './../pages/horsedays/horsedays';
 import {MyhorsesPage} from "../pages/myhorses/myhorses";
+import { Daf3Page } from './../pages/daf3/daf3';
 
 
 
