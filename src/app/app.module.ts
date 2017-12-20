@@ -107,7 +107,10 @@ import { PaypalProvider } from '../providers/paypal/paypal';
 import { PayPal, PayPalPayment, PayPalConfiguration } from '@ionic-native/paypal';
 
 import { Daf3Page } from '../pages/daf3/daf3';
+<<<<<<< HEAD
 import { InboxchatPage } from '../pages/inboxchat/inboxchat';
+=======
+>>>>>>> 771dc6bce07262a43e87caf34e748d91bede8456
 import { ChatProvider } from '../providers/chat/chat';
 
 
