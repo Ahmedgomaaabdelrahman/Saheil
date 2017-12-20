@@ -74,7 +74,10 @@
                   <ion-icon name="albums"></ion-icon> الفاعليات القادمة 
                
               </button>
+                 <button  *ngIf="flag" class="menubtn" (click)="pay()" menuClose ion-item color="standard">
+                     <ion-icon name="albums"></ion-icon>شراء رصيد
 
+                 </button>
                  <button class="menubtn" *ngIf="flag" (click)="logout()" menuClose ion-item color="standard">
                     <ion-icon name="log-out"></ion-icon>الخروج من البرنامج
                  </button>
