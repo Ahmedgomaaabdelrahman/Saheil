@@ -107,6 +107,7 @@ import { PaypalProvider } from '../providers/paypal/paypal';
 import { PayPal, PayPalPayment, PayPalConfiguration } from '@ionic-native/paypal';
 
 import { Daf3Page } from '../pages/daf3/daf3';
+import { ChatProvider } from '../providers/chat/chat';
 
 
 
@@ -284,7 +285,8 @@ export function createTranslateLoader(http: HttpClient) {
     UpcommingEventsProvider,
     HorsesBlogsProvider,
     DiariesProvider,
-    PaypalProvider,PayPal
+    PaypalProvider,PayPal,
+    ChatProvider
   ]
 })
 export class AppModule {}

@@ -156,8 +156,11 @@ this.horseSellerFlag=false
     nextEvent(){
         this.nav.push(NexteventsPage);
     }
-  
-    
+
+    pay(){
+        this.nav.push(Daf3Page);
+
+    }
     tournmentsNews(){
         this.nav.push(OnetourPage);
 

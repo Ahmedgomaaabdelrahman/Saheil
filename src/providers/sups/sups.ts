@@ -115,7 +115,7 @@ let fav={
         console.log(my)
 
         // return this.http.post(this.url.url+"api/supplies/cart",my)
-        this.paypal.pay(price)
+        // this.paypal.pay(price)
         return this.http.post(this.url.url+"api/supplies/cart/checkout",my)
     }
 
