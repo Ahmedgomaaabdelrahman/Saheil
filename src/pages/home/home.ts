@@ -14,6 +14,7 @@ import {NaqlbaryPage} from "../naqlbary/naqlbary";
 import { AddhorsedaysPage } from '../addhorsedays/addhorsedays';
 import {DiariesProvider} from "../../providers/diaries/diaries";
 import { HorsedaysPage } from '../horsedays/horsedays';
+import { ChatPage } from '../chat/chat';
 
 @Component({
     selector: 'page-home',
@@ -160,7 +161,9 @@ this.common.presentToast('انتهت اليوميات')
         this.navCtrl.push(HorsesellerPage)
 
     }
-
+    gochat(){
+        this.navCtrl.push(ChatPage);
+    }
     gohorsdays(){
         this.navCtrl.push(HorsedaysPage);
     }

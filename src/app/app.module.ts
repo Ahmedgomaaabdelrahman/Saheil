@@ -107,6 +107,7 @@ import { PaypalProvider } from '../providers/paypal/paypal';
 import { PayPal, PayPalPayment, PayPalConfiguration } from '@ionic-native/paypal';
 
 import { Daf3Page } from '../pages/daf3/daf3';
+import { InboxchatPage } from '../pages/inboxchat/inboxchat';
 
 
 
@@ -116,6 +117,7 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     MyApp,
+    InboxchatPage,
     HomePage,
     LoadingPage,
     AboutsahielPage,
@@ -200,6 +202,7 @@ export function createTranslateLoader(http: HttpClient) {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    InboxchatPage,
     HomePage,
     LoadingPage,
     AboutsahielPage,

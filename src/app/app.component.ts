@@ -33,6 +33,7 @@ import { NaqlbaryPage } from '../pages/naqlbary/naqlbary';
 import { HorsedaysPage } from './../pages/horsedays/horsedays';
 import {MyhorsesPage} from "../pages/myhorses/myhorses";
 import { Daf3Page } from './../pages/daf3/daf3';
+import { InboxchatPage } from '../pages/inboxchat/inboxchat';
 
 
 
@@ -134,6 +135,11 @@ this.horseSellerFlag=false
         this.nav.push(ConsultationPage,'in')
     } outbox(){
         this.nav.push(ConsultationPage,'out')
+    }
+
+
+    chatBox(){
+        this.nav.push(InboxchatPage);
     }
     supsSeller(){
 
