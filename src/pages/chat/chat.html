@@ -4,7 +4,7 @@
 </ion-row>
 <div  class="conrdiv">
   <div *ngFor="let m of msgs">
-    <div *ngIf="m['attachment'] == 'no'">
+    <div *ngIf="m['attachments'] == 'no'">
     <ion-row *ngIf="member_id == m['sender_id']" dir="rtl" style="margin:0 0 20px;">
       <ion-col col-8>
         <div class="browndiv">

@@ -13,6 +13,7 @@ export class ChatPage {
     service_image
     service_sendimage
     member_id
+
   constructor(private common:CommonservicesProvider,private chat:ChatProvider,public navCtrl: NavController, public navParams: NavParams) {
 
   }
@@ -66,8 +67,9 @@ getAllMessages(i?){
       this.chat.sendPublicChat(this.member_id,null,this.messageBody,'no').subscribe(res=>{
 
         console.log(res)
-      this.getAllMessages(0)
-      })
+      this.getAllMessages(1)
+          this.index=1
+      });
     }
     serviceCam(source){
         this.common.camPic(source).then(res=>{
@@ -77,7 +79,9 @@ getAllMessages(i?){
             this.service_sendimage= res
             this.common.presentLoadingDefault()
             this.chat.sendPublicChat(this.member_id,null,'image',this.service_sendimage).subscribe(res=>{
-                this.getAllMessages(0)
+                this.getAllMessages(1)
+                this.index=1
+
                 this.common.loadDismess()
 
             })
@@ -92,7 +96,7 @@ getAllMessages(i?){
 
         // setTimeout(() => {
                 // this.items.push( this.items.length );
-                this.chat.getPublicChat(0).subscribe(res=> {
+                this.chat.getPublicChat(1).subscribe(res=> {
                     // console.log(res['diaries'])
                     this.msgs=[]
                     for (let i = 0; i <10; i++) {
