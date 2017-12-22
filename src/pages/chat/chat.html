@@ -2,12 +2,13 @@
 <header></header>
 <ion-row class="toprow"><ion-col col-12 >احمد عبدالله</ion-col>
 </ion-row>
-<div class="conrdiv">
+<div  class="conrdiv">
+  <div *ngFor="let m of msgs">
   <ion-row dir="rtl" style="margin:0 0 20px;">
     <ion-col col-8>
       <div class="browndiv">
-        <p class="p1">لوريثم اوبيرسسكيبنس</p>
-        <p class="p2">pm4:30 </p>
+        <p class="p1">{{m['message']}}</p>
+        <p class="p2">{{m['created']}}</p>
       </div></ion-col>
     <ion-col col-4></ion-col>
   </ion-row>
@@ -17,10 +18,13 @@
       <ion-col col-8>
         <div class="sender"></div>
         <div class="graydiv">
-          <p class="p1">لوريثم اوبيرسسكيبنساوبيرسسكيبنساوبيرسسكيبنساوبيرسسكيبنساوبيرسسكيبنساوبيرسسكيبنس</p>
-          <p class="p2">4:30 pm</p>
+          <p class="p1">{{m['message']}}</p>
+          <p class="p2">{{m['created']}}</p>
         </div></ion-col>
     </ion-row>
+
+
+  </div>
 </div>
 
 </ion-content>

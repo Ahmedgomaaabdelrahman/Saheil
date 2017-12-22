@@ -17,9 +17,38 @@ export class ChatProvider {
         this.lang = url.lang;
 
     }
-
+    getPublicChat() {
+        return this.http.get(this.url.url + 'api/chat');
+    }
+    sendPublicChat(sender_id,receiver_id,msg,attachments?) {
+        let message={
+            'sender':sender_id,
+            'receiver':receiver_id,
+            'message':msg,
+            'attachments':attachments
+        }
+        return this.http.post(this.url.url + 'api/chat/send',message);
+    }
+    sendPrivateChat(sender_id,receiver_id,msg,attachments?) {
+        let message={
+            'sender':sender_id,
+            'receiver':receiver_id,
+            'message':msg,
+            'attachments':attachments
+        }
+        return this.http.post(this.url.url + 'api/chat/send/private',message);
+    }
+    getMyConversations(member_id) {
+        let message={
+            'member_id':member_id
+        }
+        return this.http.post(this.url.url + 'api/chat/friends',message);
+    }
     //http://www.sahel-horse.com/api/balance
     //http://www.sahel-horse.com/api/chat/send
-    //http://www.sahel-horse.com/api/chat}
+    //http://www.sahel-horse.com/api/chat
+//http://www.sahel-horse.com/api/chat/private //Post sender,receiver
+    //http://www.sahel-horse.com/api/chat/send/private //message,sender,receiver,attachments
+    //http://www.sahel-horse.com/api/chat/friends //member_id
 
 }

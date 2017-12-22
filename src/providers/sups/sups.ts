@@ -33,7 +33,8 @@ deleteSup(req){
     addSup(item) {
 
         return this.http.post(this.url.url + 'api/supplies/add/',item);
-    } editSup(item) {
+    }
+    editSup(item) {
         return this.http.post(this.url.url + 'api/supplies/edit',item);
     }
     getSupsCategoties(){
