@@ -3,6 +3,12 @@
 <ion-row class="toprow"><ion-col col-12 (click)="more()" >المزيد</ion-col>
 </ion-row>
 <div  class="conrdiv">
+
+  
+  <!-- code for image in chat you can use it as sender and reciver -->
+  <img src="assets/imgs/horse.png" class="chatimage">
+ 
+
   <div *ngFor="let m of msgs">
     <div *ngIf="m['attachments'] == 'no'">
     <ion-row *ngIf="member_id == m['sender_id']" dir="rtl" style="margin:0 0 20px;">
