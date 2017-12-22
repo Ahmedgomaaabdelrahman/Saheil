@@ -4,19 +4,21 @@
 </ion-row>
 <div  class="conrdiv">
   <div *ngFor="let m of msgs">
-  <ion-row dir="rtl" style="margin:0 0 20px;">
-    <ion-col col-8>
-      <div class="browndiv">
-        <p class="p1">{{m['message']}}</p>
-        <p class="p2">{{m['created']}}</p>
-      </div></ion-col>
-    <ion-col col-4></ion-col>
-  </ion-row>
+    <ion-row *ngIf="member_id == m['sender_id']" dir="rtl" style="margin:0 0 20px;">
+      <ion-col col-8>
+        <div class="browndiv">
+          <p class="p1">{{m['message']}}</p>
+          <p class="p2">{{m['created']}}</p>
+        </div></ion-col>
+      <ion-col col-4></ion-col>
+    </ion-row>
 
-  <ion-row dir="rtl" style="margin:0 0 20px;">
+    <ion-row *ngIf="member_id != m['sender_id']" dir="rtl" style="margin:0 0 20px;">
       <ion-col col-4></ion-col>
       <ion-col col-8>
-        <div class="sender"></div>
+        <!--<div class="sender" style="background:{{m.sender_image}}">-->
+        <img  class="sender" src={{m.sender_image}}>
+        <!--</div>-->
         <div class="graydiv">
           <p class="p1">{{m['message']}}</p>
           <p class="p2">{{m['created']}}</p>
