@@ -7,7 +7,7 @@ page-chat {
     border-bottom: 2px solid gray;
 }
 .conrdiv{
-    background-color: #f4f4f4;
+    // background-color: #f4f4f4;
     height:100%;
     font-family: Appfont;
     p{
@@ -41,5 +41,20 @@ page-chat {
     width: 50px;
     float: left;
     //display: inline-block;
+}
+.msg{
+    border: 1px solid #ab7d04;
+    font-family: Appfont;
+    
+}
+.btnchat{
+    height: 100%;
+    border: 1px solid #ab7d04;
+    margin: 0;
+    color: #ab7d04;
+
+    ion-icon{
+        font-size: 30px;
+    }
 }
 }
