@@ -17,8 +17,8 @@ export class ChatProvider {
         this.lang = url.lang;
 
     }
-    getPublicChat() {
-        return this.http.get(this.url.url + 'api/chat');
+    getPublicChat(index) {
+        return this.http.get(this.url.url + 'api/chat/page/'+index);
     }
     sendPublicChat(sender_id,receiver_id,msg,attachments?) {
         let message={
@@ -47,6 +47,7 @@ export class ChatProvider {
     //http://www.sahel-horse.com/api/balance
     //http://www.sahel-horse.com/api/chat/send
     //http://www.sahel-horse.com/api/chat
+    //http://www.sahel-horse.com/api/chat/page/1
 //http://www.sahel-horse.com/api/chat/private //Post sender,receiver
     //http://www.sahel-horse.com/api/chat/send/private //message,sender,receiver,attachments
     //http://www.sahel-horse.com/api/chat/friends //member_id

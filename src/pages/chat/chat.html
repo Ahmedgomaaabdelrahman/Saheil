@@ -1,9 +1,10 @@
 <ion-content>
 <header></header>
-<ion-row class="toprow"><ion-col col-12 >احمد عبدالله</ion-col>
+<ion-row class="toprow"><ion-col col-12 (click)="more()" >المزيد</ion-col>
 </ion-row>
 <div  class="conrdiv">
   <div *ngFor="let m of msgs">
+    <div *ngIf="m['attachment'] == 'no'">
     <ion-row *ngIf="member_id == m['sender_id']" dir="rtl" style="margin:0 0 20px;">
       <ion-col col-8>
         <div class="browndiv">
@@ -25,15 +26,21 @@
         </div></ion-col>
     </ion-row>
 
-
+    </div>
   </div>
 </div>
-
+  <ion-infinite-scroll not-on (ionInfinite)="doInfinite($event)">
+  <ion-infinite-scroll-content scrollX="true"  scrollY="false"
+  loadingSpinner="bubbles"
+  loadingText="Loading more data...">
+  </ion-infinite-scroll-content>                 </ion-infinite-scroll>
 </ion-content>
 <ion-footer>
+  <form #f="ngForm">
   <ion-row>
-    <ion-col col-2 style="text-align: center"><button ion-button clear class="btnchat" ><ion-icon name="send"></ion-icon></button></ion-col>
-    <ion-col col-8><ion-input type="text" class="msg"></ion-input></ion-col>
-    <ion-col col-2 style="text-align: center"><button ion-button clear class="btnchat" ><ion-icon name="attach"></ion-icon></button></ion-col>
+    <ion-col col-2 style="text-align: center"><button (click)="sendMessage()" ion-button clear class="btnchat" ><ion-icon name="send"></ion-icon></button></ion-col>
+    <ion-col col-8><ion-input [(ngModel)]="messageBody" name="messageBody" type="text" class="msg"></ion-input></ion-col>
+    <ion-col col-2 style="text-align: center"><button (click)="sendImage()" ion-button clear class="btnchat" ><ion-icon name="attach"></ion-icon></button></ion-col>
   </ion-row>
+  </form>
 </ion-footer>

@@ -106,7 +106,7 @@ this.horseSellerFlag=false
     identifyUser(){
 
         this.common.getStoredValue('user').then(user=>{
-
+if(user['service'] !=null){
             this.user.setuser(user.service[0].service_id)
             console.log('flag check',this.user.getuser()==5)
             if(user!=null){
@@ -127,6 +127,7 @@ this.horseSellerFlag=false
                 this.horseSellerFlag=false
 
             }
+}
         })
 
     }
