@@ -25,6 +25,7 @@ page-chat {
         color:white;
     }
 }
+
 .graydiv{
     background-color: lightgray;
     width: 78%;
@@ -56,5 +57,16 @@ page-chat {
     ion-icon{
         font-size: 30px;
     }
+}
+
+.chatimage{
+    height: 160px;
+    width: 160px;
+    float: right;
+    max-height: 160px;
+    max-width: 160px;
+    margin: 10px 20px;
+    border: 1px solid gray;
+    border-radius: 20px;
 }
 }
