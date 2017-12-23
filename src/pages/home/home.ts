@@ -15,6 +15,7 @@ import { AddhorsedaysPage } from '../addhorsedays/addhorsedays';
 import {DiariesProvider} from "../../providers/diaries/diaries";
 import { HorsedaysPage } from '../horsedays/horsedays';
 import { ChatPage } from '../chat/chat';
+import {LoginPage} from "../login/login";
 
 @Component({
     selector: 'page-home',
@@ -27,11 +28,15 @@ timer:any
 startTimer:any
     items:any;
     show:any;
+    member_id
     constructor(public diaries:DiariesProvider,public menuCtrl:MenuController,public common:CommonservicesProvider,public navCtrl: NavController) {
         this.menuCtrl.enable(true)
 
         this.common.getStoredValue('user').then(user=>{
             console.log('user : ',user);
+            if(user !=null){
+                this.member_id=user['member_id']
+            }
         })
 
     }
@@ -162,7 +167,13 @@ this.common.presentToast('انتهت اليوميات')
 
     }
     gochat(){
-        this.navCtrl.push(ChatPage);
+        if(this.member_id !=null){
+        this.navCtrl.push(ChatPage,{mode:0});
+        }
+        else{
+            this.navCtrl.push(LoginPage);
+
+        }
     }
     gohorsdays(){
         this.navCtrl.push(HorsedaysPage);

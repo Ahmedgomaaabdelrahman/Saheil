@@ -6,11 +6,10 @@
 
   
   <!-- code for image in chat you can use it as sender and reciver -->
-  <img src="assets/imgs/horse.png" class="chatimage">
- 
+
 
   <div *ngFor="let m of msgs">
-    <div *ngIf="m['attachment'] == 'no'">
+    <div *ngIf="m['message'] != null">
     <ion-row *ngIf="member_id == m['sender_id']" dir="rtl" style="margin:0 0 20px;">
       <ion-col col-8>
         <div class="browndiv">
@@ -24,7 +23,7 @@
       <ion-col col-4></ion-col>
       <ion-col col-8>
         <!--<div class="sender" style="background:{{m.sender_image}}">-->
-        <img  class="sender" src={{m.sender_image}}>
+        <img  (click)="goPrivate(m['sender_id'])" class="sender" src={{m.sender_image}}>
         <!--</div>-->
         <div class="graydiv">
           <p class="p1">{{m['message']}}</p>
@@ -32,6 +31,31 @@
         </div></ion-col>
     </ion-row>
 
+    </div>
+
+
+
+    <div *ngIf="m['message'] == ''">
+      <ion-row *ngIf="member_id == m['sender_id']" dir="rtl" style="margin:0 0 20px;">
+        <!--<ion-col col-8>-->
+          <!--<div class="browndiv">-->
+            <img   src={{m.attachments}} class="chatimage">
+          <!--</div>-->
+        <!--</ion-col>-->
+        <!--<ion-col col-4>-->
+
+        <!--</ion-col>-->
+      </ion-row>
+
+
+      <ion-row *ngIf="member_id != m['sender_id']" dir="rtl" style="margin:0 0 20px;">
+        <ion-col col-4></ion-col>
+        <ion-col col-8>
+          <!--<div class="sender" style="background:{{m.sender_image}}">-->
+          <img  class="sender" src={{m.sender_image}}>
+          <img   class="chatimage" src={{m.attachments}} >
+        </ion-col>
+      </ion-row>
     </div>
   </div>
 </div>
