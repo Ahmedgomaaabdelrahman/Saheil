@@ -33,6 +33,7 @@ import { NaqlbaryPage } from '../pages/naqlbary/naqlbary';
 import { HorsedaysPage } from './../pages/horsedays/horsedays';
 import {MyhorsesPage} from "../pages/myhorses/myhorses";
 import { Daf3Page } from './../pages/daf3/daf3';
+import {InboxchatPage} from "../pages/inboxchat/inboxchat";
 
 
 
@@ -164,6 +165,10 @@ if(user['service'] !=null){
     }
     tournmentsNews(){
         this.nav.push(OnetourPage);
+
+    }
+    chatBox(){
+        this.nav.push(InboxchatPage);
 
     }
 }

@@ -44,6 +44,13 @@ export class ChatProvider {
         }
         return this.http.post(this.url.url + 'api/chat/friends',message);
     }
+    getMyPraivateConversations(sender,receiver,index) {
+        let message={
+            'sender':sender,
+            'receiver':receiver
+        }
+        return this.http.post(this.url.url + 'api/chat/private/page/'+index,message);
+    }
     //http://www.sahel-horse.com/api/balance
     //http://www.sahel-horse.com/api/chat/send
     //http://www.sahel-horse.com/api/chat
@@ -51,5 +58,6 @@ export class ChatProvider {
 //http://www.sahel-horse.com/api/chat/private //Post sender,receiver
     //http://www.sahel-horse.com/api/chat/send/private //message,sender,receiver,attachments
     //http://www.sahel-horse.com/api/chat/friends //member_id
+    //http://www.sahel-horse.com/api/chat/private/page/1
 
 }
