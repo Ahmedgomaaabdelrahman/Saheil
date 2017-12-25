@@ -69,9 +69,9 @@
 <ion-footer>
   <form #f="ngForm">
   <ion-row>
-    <ion-col col-2 style="text-align: center"><button (click)="sendMessage()" ion-button clear class="btnchat" ><ion-icon name="send"></ion-icon></button></ion-col>
+    <ion-col col-2 style="text-align: center"><button [disabled]="!f.valid" (click)="sendMessage()" ion-button clear class="btnchat" ><ion-icon name="send"></ion-icon></button></ion-col>
     <ion-col col-8><ion-input [(ngModel)]="messageBody" name="messageBody" type="text" class="msg" required></ion-input></ion-col>
-    <ion-col col-2 style="text-align: center"><button [disabled]="!f.valid" (click)="sendImage()"  ion-button clear class="btnchat" ><ion-icon name="attach"></ion-icon></button></ion-col>
+    <ion-col col-2 style="text-align: center"><button  (click)="sendImage()"  ion-button clear class="btnchat" ><ion-icon name="attach"></ion-icon></button></ion-col>
   </ion-row>
   </form>
 </ion-footer>

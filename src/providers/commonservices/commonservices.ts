@@ -8,6 +8,7 @@ import {Camera,CameraOptions} from "@ionic-native/camera";
 import { ActionSheet, ActionSheetOptions } from '@ionic-native/action-sheet';
 import { IonicStorageModule,Storage } from '@ionic/storage';
 import { MediaCapture, MediaFile, CaptureError, CaptureImageOptions } from '@ionic-native/media-capture';
+import { Base64 } from '@ionic-native/base64';
 
 /*
   Generated class for the CommonservicesProvider provider.
@@ -21,7 +22,7 @@ export class CommonservicesProvider {
   constructor(private mediaCapture: MediaCapture,public event:Events,
               public actionSheetCtrl: ActionSheetController,
               private actionSheet: ActionSheet,
-              private camera: Camera,
+              private camera: Camera,private base64: Base64,
               public loadingCtrl: LoadingController,private store: Storage,
               public http: HttpClient,private toast: ToastController) {
     console.log('Hello CommonservicesProvider Provider');
@@ -219,5 +220,17 @@ return promise
         this.event.subscribe(ev, (user) => {
         return callback
         });
+    }
+    toBase64(filepath):Promise<any>{
+        let promise=new Promise((resolve,reject)=> {
+            let filePath: string = filepath;
+            this.base64.encodeFile(filePath).then((base64File: string) => {
+                resolve(base64File)
+                console.log(base64File);
+            }, (err) => {
+                console.log(err);
+            });
+        });
+    return promise
     }
 }

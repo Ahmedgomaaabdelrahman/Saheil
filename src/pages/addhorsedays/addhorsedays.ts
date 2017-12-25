@@ -59,8 +59,15 @@ export class AddhorsedaysPage {
     }
     serviceVideo(){
         this.common.media().then(res=>{
-            this.image='data:image/jpeg;base64,' + res
-            this.sendimage=res
+            console.log('video',res[0]['fullPath'])
+            this.image= res[0]['localURL']
+            this.common.toBase64(this.image).then(base64=>{
+                this.sendimage=base64
+                    console.log(this.sendimage)
+            }).catch(e=>{
+                console.log(e)
+                this.common.presentToast('خطأ')
+            })
         }).catch(e=>{
             console.log(e)
             this.common.presentToast('خطأ')

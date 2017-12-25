@@ -15,9 +15,9 @@
   
      <button ion-button block (click)="submit()" class="btn">اضافة</button>
 </form>
-    <video *ngIf="image != null" width="100" controls>
-        <source src={{image}}>
-        <source src="mov_bbb.ogg" type="video/ogg">
-        Your browser does not support HTML5 video.
+    <video *ngIf="image != null"  width="320" height="240" controls>
+        <source src={{image}} >
+        <!--<source src="mov_bbb.ogg" type="video/ogg">-->
+        <!--Your browser does not support HTML5 video.-->
     </video>
 </ion-content>

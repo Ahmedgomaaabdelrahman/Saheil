@@ -111,6 +111,7 @@ import { Daf3Page } from '../pages/daf3/daf3';
 import { InboxchatPage } from '../pages/inboxchat/inboxchat';
 import { ChatProvider } from '../providers/chat/chat';
 
+import { Base64 } from '@ionic-native/base64';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -277,7 +278,7 @@ export function createTranslateLoader(http: HttpClient) {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},AuthproviderProvider,DomainProvider,GetServicesProvider,SearchProvider,UserProvider,
-    CommonservicesProvider,FCM,SecureStorage,Camera,ActionSheet,Geolocation,MediaCapture,{ provide: IonicStorageModule, useClass: IonicStorageModule},
+    CommonservicesProvider,FCM,SecureStorage,Camera,ActionSheet,Geolocation,MediaCapture,Base64,{ provide: IonicStorageModule, useClass: IonicStorageModule},
     VeterinariansProvider,
     VeterinaryclinicsProvider,
     SupsProvider,
