@@ -57,6 +57,16 @@ export class AddhorsedaysPage {
         })
 
     }
+    serviceVideo(){
+        this.common.media().then(res=>{
+            this.image='data:image/jpeg;base64,' + res
+            this.sendimage=res
+        }).catch(e=>{
+            console.log(e)
+            this.common.presentToast('خطأ')
+        })
+
+    }
     serviceCam(source){
         this.common.camPic(source).then(res=>{
             // console.log('img',res)

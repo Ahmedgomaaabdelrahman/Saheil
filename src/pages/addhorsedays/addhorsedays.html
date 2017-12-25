@@ -8,12 +8,16 @@
   <!--<ion-input type="text"placeholder="اضف صوره/فيديو" readonly></ion-input>-->
   <div style="border: 1px solid lightgray;">
     <img class="upload" (click)="serviceImage()" src="assets/imgs/addimage.png">
-    <!--<img class="upload" src="assets/imgs/video.png">-->
+    <img class="upload" (click)="serviceVideo()" src="assets/imgs/video.png">
     <!--<img class="upload"  src="assets/imgs/camera.png">-->
   </div>
   <ion-input type="text" [(ngModel)]="title_ar" name="title_ar" placeholder="عنوان الصوره">{{title_ar}}</ion-input>
   
      <button ion-button block (click)="submit()" class="btn">اضافة</button>
 </form>
-
+    <video *ngIf="image != null" width="100" controls>
+        <source src={{image}}>
+        <source src="mov_bbb.ogg" type="video/ogg">
+        Your browser does not support HTML5 video.
+    </video>
 </ion-content>
