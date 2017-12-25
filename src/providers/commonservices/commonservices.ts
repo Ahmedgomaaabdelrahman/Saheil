@@ -7,6 +7,7 @@ import {SecureStorage, SecureStorageObject} from "@ionic-native/secure-storage";
 import {Camera,CameraOptions} from "@ionic-native/camera";
 import { ActionSheet, ActionSheetOptions } from '@ionic-native/action-sheet';
 import { IonicStorageModule,Storage } from '@ionic/storage';
+import { MediaCapture, MediaFile, CaptureError, CaptureImageOptions } from '@ionic-native/media-capture';
 
 /*
   Generated class for the CommonservicesProvider provider.
@@ -17,13 +18,26 @@ import { IonicStorageModule,Storage } from '@ionic/storage';
 @Injectable()
 export class CommonservicesProvider {
 
-  constructor(public event:Events,
+  constructor(private mediaCapture: MediaCapture,public event:Events,
               public actionSheetCtrl: ActionSheetController,
               private actionSheet: ActionSheet,
               private camera: Camera,
               public loadingCtrl: LoadingController,private store: Storage,
               public http: HttpClient,private toast: ToastController) {
     console.log('Hello CommonservicesProvider Provider');
+  }
+  media():Promise<any>{
+let promise =new Promise((resolve,reject)=>{
+
+
+      // let options: CaptureVideoOptions = { duration: 60 };
+      this.mediaCapture.captureVideo({ duration: 15 })
+          .then(
+              (data: MediaFile[]) => resolve(data),
+              (err: CaptureError) => console.error(reject(err))
+          );})
+
+        return promise;
   }
     storeValue(key:any,value:any):Promise<any>{
 let promise=new Promise((resolve,reject)=>{

@@ -98,18 +98,22 @@ getAllMessages(i?){
 
     }
     messageBody
+    sendmessageBody
     sendMessage(){
+        this.sendmessageBody=this.messageBody
+        this.messageBody=''
         if(this.navParams.data['mode']==0){
 
-      this.chat.sendPublicChat(this.member_id,null,this.messageBody,'no').subscribe(res=>{
+      this.chat.sendPublicChat(this.member_id,null,this.sendmessageBody,'no').subscribe(res=>{
 
         console.log(res)
       this.getAllMessages(1)
           this.index=1
-      });}else{
+      });
+        }else{
             console.log(this.member_id,this.navParams.data['id'],this.messageBody,)
 
-            this.chat.sendPrivateChat(this.member_id,this.navParams.data['id'],this.messageBody,null).subscribe(res=>{
+            this.chat.sendPrivateChat(this.member_id,this.navParams.data['id'],this.sendmessageBody,null).subscribe(res=>{
 
                 console.log(res)
                 this.getAllMessages(1)

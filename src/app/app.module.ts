@@ -29,6 +29,7 @@ import { CommonservicesProvider } from '../providers/commonservices/commonservic
 import { FCM } from '@ionic-native/fcm';
 import { IonicStorageModule,Storage } from '@ionic/storage';
 import {Users} from '../modes/users';
+import { MediaCapture, MediaFile, CaptureError, CaptureImageOptions } from '@ionic-native/media-capture';
 
 // import { TranslateModule } from '@ngx-translate/core';
 
@@ -276,7 +277,7 @@ export function createTranslateLoader(http: HttpClient) {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},AuthproviderProvider,DomainProvider,GetServicesProvider,SearchProvider,UserProvider,
-    CommonservicesProvider,FCM,SecureStorage,Camera,ActionSheet,Geolocation,{ provide: IonicStorageModule, useClass: IonicStorageModule},
+    CommonservicesProvider,FCM,SecureStorage,Camera,ActionSheet,Geolocation,MediaCapture,{ provide: IonicStorageModule, useClass: IonicStorageModule},
     VeterinariansProvider,
     VeterinaryclinicsProvider,
     SupsProvider,
