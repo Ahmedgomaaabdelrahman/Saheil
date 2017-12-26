@@ -58,9 +58,10 @@ export class AddhorsedaysPage {
 
     }
     serviceVideo(){
+        let self=this
         this.common.media().then(res=>{
             console.log('video',res[0]['fullPath'])
-            this.image= res[0]['localURL']
+            self.image= res[0]['fullPath']
             this.common.toBase64(this.image).then(base64=>{
                 this.sendimage=base64
                     console.log(this.sendimage)

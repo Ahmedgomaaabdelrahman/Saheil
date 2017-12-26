@@ -21,15 +21,15 @@
     <video *ngIf="image != null"  id="MY_VIDEO_1" class="video-js vjs-default-skin" controls
            preload="auto" width="320" height="240" poster="MY_VIDEO_POSTER.jpg"
            data-setup="{}">
-        <source src={{image}} type='video/mp4'>
-        <source src={{image}} type='video/webm'>
+        <source [src]='image' type='video/mp4'>
+        <source  [src]='image' type='video/webm'>
         <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
     </video>
-    <iframe  *ngIf="image != null" class="vid" width="420" height="315"
-            [src]='image'  webkitallowfullscreen mozallowfullscreen allowfullscreen>
-    </iframe>
+    <!--<iframe  *ngIf="image != null" class="vid" width="420" height="315"-->
+            <!--[src]='image'  webkitallowfullscreen mozallowfullscreen allowfullscreen>-->
+    <!--</iframe>-->
     <!--<video *ngIf="image != null"  width="320" height="240" controls>-->
-        <!--<source src="{{image}}" >-->
+        <!--<source src={{sendimage}} >-->
         <!--&lt;!&ndash;<source src="mov_bbb.ogg" type="video/ogg">&ndash;&gt;-->
         <!--&lt;!&ndash;Your browser does not support HTML5 video.&ndash;&gt;-->
     <!--</video>-->
