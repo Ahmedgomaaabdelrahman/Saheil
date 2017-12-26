@@ -1,5 +1,8 @@
 <ion-content>
-  <header></header>
+  <header>
+      <link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+      <script src="http://vjs.zencdn.net/4.12/video.js"></script>
+  </header>
  <subheader></subheader>
 <ion-row class="toprow"><ion-col col-12 >يوميات الخيل</ion-col></ion-row>
 <form class="myform" #f="ngForm">
@@ -15,9 +18,19 @@
   
      <button ion-button block (click)="submit()" class="btn">اضافة</button>
 </form>
-    <video *ngIf="image != null"  width="320" height="240" controls>
-        <source src="{{image}}" >
-        <!--<source src="mov_bbb.ogg" type="video/ogg">-->
-        <!--Your browser does not support HTML5 video.-->
+    <video *ngIf="image != null"  id="MY_VIDEO_1" class="video-js vjs-default-skin" controls
+           preload="auto" width="320" height="240" poster="MY_VIDEO_POSTER.jpg"
+           data-setup="{}">
+        <source src={{image}} type='video/mp4'>
+        <source src={{image}} type='video/webm'>
+        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
     </video>
+    <iframe  *ngIf="image != null" class="vid" width="420" height="315"
+            [src]='image'  webkitallowfullscreen mozallowfullscreen allowfullscreen>
+    </iframe>
+    <!--<video *ngIf="image != null"  width="320" height="240" controls>-->
+        <!--<source src="{{image}}" >-->
+        <!--&lt;!&ndash;<source src="mov_bbb.ogg" type="video/ogg">&ndash;&gt;-->
+        <!--&lt;!&ndash;Your browser does not support HTML5 video.&ndash;&gt;-->
+    <!--</video>-->
 </ion-content>
