@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {ChatProvider} from "../../providers/chat/chat";
 import {CommonservicesProvider} from "../../providers/commonservices/commonservices";
+import { Content } from 'ionic-angular';
 
 
 @Component({
@@ -9,6 +10,8 @@ import {CommonservicesProvider} from "../../providers/commonservices/commonservi
   templateUrl: 'chat.html',
 })
 export class ChatPage {
+    @ViewChild(Content) content:any;
+
     msgs
     service_image
     service_sendimage
@@ -23,9 +26,19 @@ export class ChatPage {
     console.log(this.navParams.data)
 this.reciver=this.navParams.data['id']
 }
+      // this.scrollDown()
   }
+    ngOnChanges(){
+        this.scrollDown()
+    }
 
-  ionViewWillEnter() {
+    scrollDown(){
+        let self =this
+        setTimeout(() => {
+            self.content.scrollToBottom();
+        }, 1000);
+    }
+  ionViewDidLoad() {
   this.common.getStoredValue('user').then(res=>{
     this.member_id=res.member_id
       console.log(this.member_id)
@@ -48,7 +61,10 @@ getAllMessages(i?){
 
 
         }
+        this.scrollDown()
+
     }
+
     });
     }else{
 
@@ -60,6 +76,8 @@ getAllMessages(i?){
 
 
             }
+            this.scrollDown()
+
         });
     }
         }else{
@@ -75,6 +93,8 @@ getAllMessages(i?){
 
                         }
                     }
+                    this.scrollDown()
+
                 });
             }else {
                 this.chat.getMyPraivateConversations(this.member_id, this.navParams.data['id'], i).subscribe(res => {
@@ -85,6 +105,8 @@ getAllMessages(i?){
                             this.msgs.push(res[l])
                         }
                     }
+                    this.scrollDown()
+
                 });
 
             }
@@ -94,6 +116,8 @@ getAllMessages(i?){
         this.common.presentActionSheet('cam',' galery').then(res=> {
             console.log(res)
             this.serviceCam(res)
+            this.scrollDown()
+
         })
 
     }
@@ -108,6 +132,7 @@ getAllMessages(i?){
 
         console.log(res)
       this.getAllMessages(1)
+
           this.index=1
       });
         }else{

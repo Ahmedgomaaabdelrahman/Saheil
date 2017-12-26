@@ -27,6 +27,7 @@ export class CommonservicesProvider {
               public http: HttpClient,private toast: ToastController) {
     console.log('Hello CommonservicesProvider Provider');
   }
+
   media():Promise<any>{
 let promise =new Promise((resolve,reject)=>{
 
