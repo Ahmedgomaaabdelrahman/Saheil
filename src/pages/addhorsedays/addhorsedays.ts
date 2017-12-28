@@ -14,6 +14,7 @@ export class AddhorsedaysPage {
 
     details_ar
     image
+    video
     sendimage
   member_id
   constructor(public common:CommonservicesProvider,public diaries:DiariesProvider,public navCtrl: NavController, public navParams: NavParams) {
@@ -32,6 +33,7 @@ export class AddhorsedaysPage {
             "title_ar":this.title_ar,
             // "title_en" :this.title_en,
             "image" :this.sendimage,
+            "video" :this.video,
             // "details_ar" :this.details_ar,
             // "details_en" :this.details_en,
             // "price" :this.price,
@@ -58,12 +60,13 @@ export class AddhorsedaysPage {
 
     }
     serviceVideo(){
+        let self=this
         this.common.media().then(res=>{
             console.log('video',res[0]['fullPath'])
-            this.image= res[0]['localURL']
+            self.image= res[0]['fullPath']
             this.common.toBase64(this.image).then(base64=>{
-                this.sendimage=base64
-                    console.log(this.sendimage)
+                this.video=base64
+                    // console.log(this.sendimage)
             }).catch(e=>{
                 console.log(e)
                 this.common.presentToast('خطأ')

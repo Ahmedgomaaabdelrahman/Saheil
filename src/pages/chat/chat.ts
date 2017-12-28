@@ -62,7 +62,7 @@ getAllMessages(i?){
 
 
         }
-        this.scrollDown()
+        // this.scrollDown()
 
     }
 
