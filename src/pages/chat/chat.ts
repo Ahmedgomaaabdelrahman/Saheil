@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {ChatProvider} from "../../providers/chat/chat";
 import {CommonservicesProvider} from "../../providers/commonservices/commonservices";
 import { Content } from 'ionic-angular';
+import { ImagechatPage } from './../imagechat/imagechat';
 
 
 @Component({
@@ -220,5 +221,10 @@ if(this.navParams.data['mode']==0) {
     goPrivate(id){
         console.log(id)
         this.navCtrl.push(ChatPage,{'mode':1,'id':id})
+    }
+
+
+    openChatimage(){
+        this.navCtrl.push(ImagechatPage);
     }
 }

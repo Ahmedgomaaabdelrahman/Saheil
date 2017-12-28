@@ -112,6 +112,7 @@ import { InboxchatPage } from '../pages/inboxchat/inboxchat';
 import { ChatProvider } from '../providers/chat/chat';
 
 import { Base64 } from '@ionic-native/base64';
+import { ImagechatPage } from '../pages/imagechat/imagechat';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -187,7 +188,8 @@ export function createTranslateLoader(http: HttpClient) {
     HorsedaysPage,
     NaqldetailsPage,
     NaqlbaryPage,
-    Daf3Page
+    Daf3Page,
+    ImagechatPage
   ], 
   imports: [
     BrowserModule,HttpClientModule,
@@ -272,7 +274,8 @@ export function createTranslateLoader(http: HttpClient) {
     HorsedaysPage,
     NaqldetailsPage,
     NaqlbaryPage,
-    Daf3Page
+    Daf3Page,
+    ImagechatPage
   ], 
   providers: [
     StatusBar,

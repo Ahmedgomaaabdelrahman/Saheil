@@ -16,6 +16,7 @@ import {DiariesProvider} from "../../providers/diaries/diaries";
 import { HorsedaysPage } from '../horsedays/horsedays';
 import { ChatPage } from '../chat/chat';
 import {LoginPage} from "../login/login";
+import { TransportPage } from './../transport/transport';
 
 @Component({
     selector: 'page-home',
@@ -153,7 +154,7 @@ this.common.presentToast('انتهت اليوميات')
         this.navCtrl.push(AllclinksPage);
     }
     goTrans(){
-        this.navCtrl.push(NaqlbaryPage);
+        this.navCtrl.push(TransportPage);
     }
     goTransAir(){
         this.navCtrl.push(AirtansportPage);

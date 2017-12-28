@@ -22,7 +22,8 @@ export class CommonservicesProvider {
   constructor(private mediaCapture: MediaCapture,public event:Events,
               public actionSheetCtrl: ActionSheetController,
               private actionSheet: ActionSheet,
-              private camera: Camera,private base64: Base64,
+              private camera: Camera,
+              private base64: Base64,
               public loadingCtrl: LoadingController,private store: Storage,
               public http: HttpClient,private toast: ToastController) {
     console.log('Hello CommonservicesProvider Provider');
