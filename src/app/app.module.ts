@@ -112,6 +112,9 @@ import { InboxchatPage } from '../pages/inboxchat/inboxchat';
 import { ChatProvider } from '../providers/chat/chat';
 
 import { Base64 } from '@ionic-native/base64';
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
+// import { File } from '@ionic-native/file';
+import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-media';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -276,7 +279,7 @@ export function createTranslateLoader(http: HttpClient) {
   ], 
   providers: [
     StatusBar,
-    SplashScreen,
+    SplashScreen,FileTransfer, FileTransferObject,StreamingMedia,
     {provide: ErrorHandler, useClass: IonicErrorHandler},AuthproviderProvider,DomainProvider,GetServicesProvider,SearchProvider,UserProvider,
     CommonservicesProvider,FCM,SecureStorage,Camera,ActionSheet,Geolocation,MediaCapture,Base64,{ provide: IonicStorageModule, useClass: IonicStorageModule},
     VeterinariansProvider,
@@ -291,7 +294,7 @@ export function createTranslateLoader(http: HttpClient) {
     HorsesBlogsProvider,
     DiariesProvider,
     PaypalProvider,PayPal,
-    ChatProvider
+      ChatProvider
   ]
 })
 export class AppModule {}

@@ -9,7 +9,8 @@ import { ActionSheet, ActionSheetOptions } from '@ionic-native/action-sheet';
 import { IonicStorageModule,Storage } from '@ionic/storage';
 import { MediaCapture, MediaFile, CaptureError, CaptureImageOptions } from '@ionic-native/media-capture';
 import { Base64 } from '@ionic-native/base64';
-
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
+// import { File } from '@ionic-native/file';
 /*
   Generated class for the CommonservicesProvider provider.
 
@@ -20,6 +21,7 @@ import { Base64 } from '@ionic-native/base64';
 export class CommonservicesProvider {
 
   constructor(private mediaCapture: MediaCapture,public event:Events,
+              private transfer: FileTransfer,
               public actionSheetCtrl: ActionSheetController,
               private actionSheet: ActionSheet,
               private camera: Camera,private base64: Base64,
@@ -234,4 +236,34 @@ return promise
         });
     return promise
     }
+    fileUpload(filepath,endpoint){
+        const fileTransfer: FileTransferObject = this.transfer.create();
+        let options: FileUploadOptions = {
+            fileKey: 'image',
+            httpMethod:'GET',
+            fileName: 'test.3gp',
+            // headers: {}
+            }
+            fileTransfer.upload(filepath,endpoint,options)
+                .then((data) => {
+    console.log(data)
+                    // success
+                }, (err) => {
+                    // error
+                    console.log(err)
+
+                })
+        }
+// filedownload(endpoin){
+//
+//         const url =endpoin;
+//         fileTransfer.download(url, this.file.dataDirectory + 'file.3gp').then((entry) => {
+//             console.log('download complete: ' + entry.toURL());
+//         }, (error) => {
+//             console.log(error);
+//
+//             // handle error
+//         });
+//
+// }
 }

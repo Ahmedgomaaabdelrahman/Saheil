@@ -39,14 +39,15 @@
           <img   *ngIf="!video"[src]="item?.picpath">
 
 
-          <video  *ngIf="video != 'false'"  id="MY_VIDEO_1" class="video-js vjs-default-skin" controls
-                 preload="auto" width="320" height="240" poster="MY_VIDEO_POSTER.jpg"
-                 data-setup="{}">
-              <source [src]='item?.video' type='video/mp4'>
-              <source  [src]='item?.video' type='video/webm'>
-              <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+          <!--<video  *ngIf="video != 'false'"  id="MY_VIDEO_1" class="video-js vjs-default-skin" controls-->
+                 <!--preload="auto" width="320" height="240" poster="MY_VIDEO_POSTER.jpg"-->
+                 <!--data-setup="{}">-->
+              <!--<source [src]='item?.video' type='video/mp4'>-->
+              <!--<source  [src]='item?.video' type='video/webm'>-->
+              <!--<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>-->
+          <!--</video>-->
+          <video style="width: 100%;height: 200px;" src = "{{video}}#t=0.1" controls >
           </video>
-
 
           <div class="info">
               <ion-row>

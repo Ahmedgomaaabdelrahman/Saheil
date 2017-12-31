@@ -221,4 +221,7 @@ if(this.navParams.data['mode']==0) {
         console.log(id)
         this.navCtrl.push(ChatPage,{'mode':1,'id':id})
     }
+    maxmizeImage(){
+        
+    }
 }
