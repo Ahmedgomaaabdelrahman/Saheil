@@ -15,7 +15,11 @@ export class AlbumProvider {
     constructor(public url: DomainProvider, public http: HttpClient) {
         this.lang = url.lang;
     }
+homeSlider(){
+        //http://www.sahel-horse.com/api/ar/slider
+    return this.http.get(this.url.url+'api/'+this.lang+'/slider');
 
+}
 getcategory(){
     // http://www.sahel-horse.com/api/ar/gallery/category
         return this.http.get(this.url.url+'api/'+this.lang+'/gallery/category');

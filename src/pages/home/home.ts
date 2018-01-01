@@ -17,6 +17,7 @@ import { HorsedaysPage } from '../horsedays/horsedays';
 import { ChatPage } from '../chat/chat';
 import {LoginPage} from "../login/login";
 import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-media';
+import {AlbumProvider} from "../../providers/album/album";
 
 @Component({
     selector: 'page-home',
@@ -25,12 +26,12 @@ import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-m
 export class HomePage {
     index:any;
 timer:any
-
+slideImages:any;
 startTimer:any
     items:any;
     show:any;
     member_id
-    constructor(private streamingMedia: StreamingMedia,public diaries:DiariesProvider,public menuCtrl:MenuController,public common:CommonservicesProvider,public navCtrl: NavController) {
+    constructor(private album:AlbumProvider,private streamingMedia: StreamingMedia,public diaries:DiariesProvider,public menuCtrl:MenuController,public common:CommonservicesProvider,public navCtrl: NavController) {
         // fullscreen video
         //https://ionicframework.com/docs/native/streaming-media/
         // let options: StreamingVideoOptions = {
@@ -57,7 +58,12 @@ startTimer:any
         this.menuCtrl.enable(true)
         this.items=[]
         this.show=[]
+        this.slideImages=[]
         let self=this
+this.album.homeSlider().subscribe(res=>{
+    console.log(res)
+    this.slideImages=res;
+})
         this.diaries.getAllDiaries(this.page).subscribe(res=> {
 
             this.items=res['diaries']

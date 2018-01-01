@@ -115,6 +115,7 @@ import { Base64 } from '@ionic-native/base64';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 // import { File } from '@ionic-native/file';
 import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-media';
+import {ImagechatPage} from "../pages/imagechat/imagechat";
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -182,7 +183,7 @@ export function createTranslateLoader(http: HttpClient) {
     AllmyhorsesPage,
     FavtypePage,
     ImagedetailsPage,
-    AlbumPage,
+    AlbumPage,ImagechatPage,
     AllImagesPage,
     NexteventsPage,
     NextevedetailsPage,
@@ -217,7 +218,7 @@ export function createTranslateLoader(http: HttpClient) {
     SelectlocPage,
     HeaderComponent,
     SubheaderComponent,
-    BottomimgComponent,
+    BottomimgComponent,ImagechatPage,
     HorsesuppPage,HorsedetailsPage,
     AllsuppPage,
     KnowlegePage,
