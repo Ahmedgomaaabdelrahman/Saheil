@@ -64,9 +64,13 @@ export class AddhorsedaysPage {
         this.common.media().then(res=>{
             console.log('video',res[0]['fullPath'])
             self.image= res[0]['fullPath']
+            // this.common.fileUpload(self.image,'http://www.hefny.me/TestApi.php')
             this.common.toBase64(this.image).then(base64=>{
-                this.video=base64
-                    // console.log(this.sendimage)
+                var str = base64;
+                var res = str.split("data:image/*;charset=utf-8;base64,");
+                this.video=res[1]
+
+                    console.log(res[1])
             }).catch(e=>{
                 console.log(e)
                 this.common.presentToast('خطأ')

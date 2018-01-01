@@ -12,7 +12,7 @@ import { CommonservicesProvider } from '../../providers/commonservices/commonser
 export class HorsedaysPage {
     index:any;
     timer:any
-
+    video='http://www.sahel-horse.com/uploads/videos/5a4921ad2f46f.3gp'
     startTimer:any
     items:any;
     show:any;

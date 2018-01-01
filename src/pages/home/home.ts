@@ -16,6 +16,7 @@ import {DiariesProvider} from "../../providers/diaries/diaries";
 import { HorsedaysPage } from '../horsedays/horsedays';
 import { ChatPage } from '../chat/chat';
 import {LoginPage} from "../login/login";
+import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-media';
 
 @Component({
     selector: 'page-home',
@@ -29,8 +30,19 @@ startTimer:any
     items:any;
     show:any;
     member_id
-    constructor(public diaries:DiariesProvider,public menuCtrl:MenuController,public common:CommonservicesProvider,public navCtrl: NavController) {
-        this.menuCtrl.enable(true)
+    constructor(private streamingMedia: StreamingMedia,public diaries:DiariesProvider,public menuCtrl:MenuController,public common:CommonservicesProvider,public navCtrl: NavController) {
+        // fullscreen video
+        //https://ionicframework.com/docs/native/streaming-media/
+        // let options: StreamingVideoOptions = {
+        //
+        //     successCallback: () => { console.log('Video played') },
+        //     errorCallback: (e) => { console.log('Error streaming') },
+        //     // shouldAutoClose:'true',  // true(default)/false
+        //     // controls:'false' // true(default)/false. Used to hide controls on fullscreen
+        //             };
+        //
+        // this.streamingMedia.playVideo('http://www.sahel-horse.com/uploads/videos/5a4921ad2f46f.3gp', options);
+        // this.menuCtrl.enable(true)
 
         this.common.getStoredValue('user').then(user=>{
             console.log('user : ',user);
@@ -153,7 +165,7 @@ this.common.presentToast('انتهت اليوميات')
         this.navCtrl.push(AllclinksPage);
     }
     goTrans(){
-        this.navCtrl.push(TransportPage);
+        this.navCtrl.push(NaqlbaryPage);
     }
     goTransAir(){
         this.navCtrl.push(AirtansportPage);

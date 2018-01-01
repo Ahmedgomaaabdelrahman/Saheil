@@ -42,7 +42,7 @@
       <ion-row *ngIf="member_id == m['sender_id']" dir="rtl" style="margin:0 0 20px;">
         <!--<ion-col col-8>-->
           <!--<div class="browndiv">-->
-            <img   src={{m.attachments}} class="chatimage" (click)="openChatimage()">
+            <img   src={{m.attachments}} class="chatimage">
           <!--</div>-->
         <!--</ion-col>-->
         <!--<ion-col col-4>-->
@@ -56,7 +56,7 @@
         <ion-col col-8>
           <!--<div class="sender" style="background:{{m.sender_image}}">-->
           <img  class="sender" src={{m.sender_image}}>
-          <img   class="chatimage" src={{m.attachments}} (click)="openChatimage()">
+          <img  (click)="maxmizeImage()" class="chatimage" src={{m.attachments}} >
         </ion-col>
       </ion-row>
     </div>
