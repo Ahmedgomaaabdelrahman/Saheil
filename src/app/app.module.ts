@@ -117,6 +117,7 @@ import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-nati
 import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-media';
 import { FollowaccountsPage } from '../pages/followaccounts/followaccounts';
 import { SucesspatnerPage } from '../pages/sucesspatner/sucesspatner';
+import {ImagechatPage} from "../pages/imagechat/imagechat";
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -184,7 +185,7 @@ export function createTranslateLoader(http: HttpClient) {
     AllmyhorsesPage,
     FavtypePage,
     ImagedetailsPage,
-    AlbumPage,
+    AlbumPage,ImagechatPage,
     AllImagesPage,
     NexteventsPage,
     NextevedetailsPage,
@@ -222,6 +223,7 @@ export function createTranslateLoader(http: HttpClient) {
     HeaderComponent,
     SubheaderComponent,
     BottomimgComponent,
+    ImagechatPage,
     HorsesuppPage,HorsedetailsPage,
     AllsuppPage,
     KnowlegePage,

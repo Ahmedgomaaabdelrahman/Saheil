@@ -18,14 +18,17 @@
   
      <button ion-button block (click)="submit()" class="btn">اضافة</button>
 </form>
-
-    <video *ngIf="image != null"  id="MY_VIDEO_1" class="video-js vjs-default-skin" controls
+<div *ngIf="image != null">
+    <video *ngIf="!show"  id="MY_VIDEO_1" class="video-js vjs-default-skin" controls
            preload="auto" width="320" height="240" poster="MY_VIDEO_POSTER.jpg"
            data-setup="{}">
         <source [src]='image' type='video/mp4'>
         <source  [src]='image' type='video/webm'>
-        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+        <!--<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>-->
     </video>
+<img *ngIf="show" [src]='image'>
+
+</div>
     <!--<iframe  *ngIf="image != null" class="vid" width="420" height="315"-->
             <!--[src]='image'  webkitallowfullscreen mozallowfullscreen allowfullscreen>-->
     <!--</iframe>-->

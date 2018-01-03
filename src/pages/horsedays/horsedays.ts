@@ -12,7 +12,7 @@ import { CommonservicesProvider } from '../../providers/commonservices/commonser
 export class HorsedaysPage {
     index:any;
     timer:any
-    video='http://www.sahel-horse.com/uploads/videos/5a4921ad2f46f.3gp'
+    // video='http://www.sahel-horse.com/uploads/videos/5a4921ad2f46f.3gp'
     startTimer:any
     items:any;
     show:any;
@@ -121,9 +121,13 @@ export class HorsedaysPage {
         )
     }
     clickShow(item){
-        clearInterval(this.timer);
 
+        clearInterval(this.timer);
+        clearInterval(this.startTimer);
+console.log(item)
+console.log(item['picpath'] != 'http://www.sahel-horse.com/uploads/')
         console.log(item['picpath'])
+        console.log(item['video'])
         this.show=[]
 
         this.show={
@@ -131,5 +135,8 @@ export class HorsedaysPage {
             'username':item['member'][0]['username'],'created':item['created']
         }
 
+    }
+    addnew(){
+        this.navCtrl.push(AddhorsedaysPage);
     }
 }

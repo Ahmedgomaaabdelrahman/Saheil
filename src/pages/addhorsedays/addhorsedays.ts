@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {DiariesProvider} from "../../providers/diaries/diaries";
 import {CommonservicesProvider} from "../../providers/commonservices/commonservices";
 import {HomePage} from "../home/home";
+import {HorsedaysPage} from "../horsedays/horsedays";
 
 
 @Component({
@@ -39,33 +40,39 @@ export class AddhorsedaysPage {
             // "price" :this.price,
             // "category_id":this.category_id
             }
-        console.log(diaries)
-
+        // console.log(diaries)
+this.common.presentLoadingDefault();
         this.diaries.addDiaries(diaries).subscribe(response=>{
           if(!response['error']){
+              this.common.loadDismess()
             this.common.presentToast('تمت الاضافة بنجاح ')
-            this.navCtrl.setRoot(HomePage)}
+            this.navCtrl.setRoot(HorsedaysPage)}
             else             {
-                this.common.presentToast('لم تتم الاضافة')}
+              this.common.loadDismess()
+              this.common.presentToast('لم تتم الاضافة')}
 
             console.log(response)
 
         })
     }
+    show:boolean;
     serviceImage(){
-        this.common.presentActionSheet('use cam','use galery').then(res=> {
+        this.show=true
+        this.common.presentActionSheet('الكاميرا','الاستوديو').then(res=> {
             // console.log(res)
             this.serviceCam(res)
         })
 
     }
     serviceVideo(){
+        this.show=false
+
         let self=this
         this.common.media().then(res=>{
             console.log('video',res[0]['fullPath'])
-            self.image= res[0]['fullPath']
+            // self.image= res[0]['fullPath']
             // this.common.fileUpload(self.image,'http://www.hefny.me/TestApi.php')
-            this.common.toBase64(this.image).then(base64=>{
+            this.common.toBase64(res[0]['fullPath']).then(base64=>{
                 var str = base64;
                 var res = str.split("data:image/*;charset=utf-8;base64,");
                 this.video=res[1]
