@@ -4,6 +4,7 @@ import {DiariesProvider} from "../../providers/diaries/diaries";
 import {CommonservicesProvider} from "../../providers/commonservices/commonservices";
 import {HomePage} from "../home/home";
 import {HorsedaysPage} from "../horsedays/horsedays";
+import {Resorces} from "../../modes/resorces";
 
 
 @Component({
@@ -18,7 +19,7 @@ export class AddhorsedaysPage {
     video
     sendimage
   member_id
-  constructor(public common:CommonservicesProvider,public diaries:DiariesProvider,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public resources:Resorces,public common:CommonservicesProvider,public diaries:DiariesProvider,public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewWillEnter() {
@@ -58,7 +59,7 @@ this.common.presentLoadingDefault();
     show:boolean;
     serviceImage(){
         this.show=true
-        this.common.presentActionSheet('الكاميرا','الاستوديو').then(res=> {
+        this.common.presentActionSheet(this.resources.CAMERA_AR,this.resources.GALERY_AR).then(res=> {
             // console.log(res)
             this.serviceCam(res)
         })

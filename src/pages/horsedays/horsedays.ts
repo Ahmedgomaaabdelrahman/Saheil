@@ -132,6 +132,7 @@ console.log(item['picpath'] != 'http://www.sahel-horse.com/uploads/')
 
         this.show={
             'picpath':item['picpath'],
+            'video':item['video'],
             'username':item['member'][0]['username'],'created':item['created']
         }
 

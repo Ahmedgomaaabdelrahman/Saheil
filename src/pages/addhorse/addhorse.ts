@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import {CommonservicesProvider} from "../../providers/commonservices/commonservices";
 import {DealersProvider} from "../../providers/dealers/dealers";
 import {GetServicesProvider} from "../../providers/get-services/get-services";
+import {Resorces} from "../../modes/resorces";
 
 
 @Component({
@@ -31,7 +32,7 @@ export class AddhorsePage {
     horse_breed_imagesend
     sendimage
     allCategories
-    constructor(public services:GetServicesProvider,private common:CommonservicesProvider,private dealer:DealersProvider,public navCtrl: NavController, public navParams: NavParams) {
+    constructor(public resources:Resorces,public services:GetServicesProvider,private common:CommonservicesProvider,private dealer:DealersProvider,public navCtrl: NavController, public navParams: NavParams) {
 
     }
     cs
@@ -85,7 +86,7 @@ export class AddhorsePage {
         })
     }
     serviceImage(){
-        this.common.presentActionSheet('use cam','use galery').then(res=> {
+        this.common.presentActionSheet(this.resources.CAMERA_AR,this.resources.GALERY_AR).then(res=> {
             // console.log(res)
             this.serviceCam(res)
         })
@@ -102,7 +103,7 @@ export class AddhorsePage {
         })
     }
     serviceImagebreed_image(){
-        this.common.presentActionSheet('use cam','use galery').then(res=> {
+        this.common.presentActionSheet(this.resources.CAMERA_AR,this.resources.GALERY_AR).then(res=> {
             // console.log(res)
             this.serviceCambreed_image(res)
         })

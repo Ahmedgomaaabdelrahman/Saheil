@@ -5,6 +5,7 @@ import {CommonservicesProvider} from "../../providers/commonservices/commonservi
 import {SelectlocPage} from "../selectloc/selectloc";
 import {DomainProvider} from "../../providers/domain/domain";
 import {HomePage} from "../home/home";
+import {Resorces} from "../../modes/resorces";
 
 @Component({
   selector: 'page-editaccount',
@@ -31,7 +32,7 @@ service_details_ar:string;
 service_details_en:string;
     facebook:any;
     twitter:any;
-  constructor(public domain:DomainProvider,public modalCtrl:ModalController,public common:CommonservicesProvider,private auth:AuthproviderProvider,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public resources:Resorces,public domain:DomainProvider,public modalCtrl:ModalController,public common:CommonservicesProvider,private auth:AuthproviderProvider,public navCtrl: NavController, public navParams: NavParams) {
   this.common.getStoredValue('user').then(user=>{
       console.log('edit user',user)
       try {
@@ -92,6 +93,7 @@ submit(){
 this.common.presentLoadingDefault();
     this.auth.updateInfo(user).subscribe(res=> {
         if (res['error'] != null) {
+            this.common.loadDismess()
             this.common.presentToast(res['error'])
             console.log(res);
         } else {
@@ -110,7 +112,7 @@ this.common.presentLoadingDefault();
     })
 }
     profileImage(){
-        this.common.presentActionSheet('use cam','use galery').then(res=> {
+        this.common.presentActionSheet(this.resources.CAMERA_AR,this.resources.GALERY_AR).then(res=> {
             console.log(res)
 
             this.profileCam(res)
@@ -118,7 +120,7 @@ this.common.presentLoadingDefault();
     }
 
     serviceImage(){
-        this.common.presentActionSheet('use cam','use galery').then(res=> {
+        this.common.presentActionSheet(this.resources.CAMERA_AR,this.resources.GALERY_AR).then(res=> {
             console.log(res)
             this.serviceCam(res)
         })

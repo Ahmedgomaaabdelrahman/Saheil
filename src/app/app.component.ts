@@ -46,8 +46,9 @@ export class MyApp {
     supsSellerFlag:boolean;
     horseSellerFlag:boolean;
 
-  rootPage:any = LanguagePage;
- 
+  // rootPage:any = LanguagePage;
+  rootPage:any;
+
   constructor(public user:Users,public events:Events,platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private common:CommonservicesProvider,private auth:AuthproviderProvider)
   {
       this.flag=false;
@@ -58,19 +59,22 @@ export class MyApp {
 
         this.events.subscribe('auth', (res) => {
             console.log(res)
-            // console.log(res.service_id)
-            // this.user.setuser(res[0].service[0].service_id)
             // user and time are the same arguments passed in `events.publish(user, time)`
         this.identifyUser()
         });      // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
      this.common.getStoredValue('xuser').then(user=>{
-       console.log(user);
+       // console.log(user);
        if(user){
            this.identifyUser()
 
 
          this.nav.setRoot(HomePage,user)
+       }else{
+           this.diableFlags()
+
+           this.nav.setRoot(LanguagePage)
+
        }
      })
       statusBar.styleDefault();
@@ -90,13 +94,16 @@ this.nav.push(EditaccountPage)
   console.log(res)
   this.common.loadDismess()
     this.nav.setRoot(LoginPage)
-           this.common.removeStoredKey('xuser')
-           this.common.removeStoredKey('user')
-           this.flag=false;
-this.supsSellerFlag=false
-this.horseSellerFlag=false
+this.diableFlags()
        });
    })
+    }
+    diableFlags(){
+        this.common.removeStoredKey('xuser')
+        this.common.removeStoredKey('user')
+        this.flag=false;
+        this.supsSellerFlag=false
+        this.horseSellerFlag=false
     }
     knowladge(){
         this.nav.push(KnowlegePage)

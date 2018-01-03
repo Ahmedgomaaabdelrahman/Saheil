@@ -116,6 +116,7 @@ import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-nati
 // import { File } from '@ionic-native/file';
 import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-media';
 import {ImagechatPage} from "../pages/imagechat/imagechat";
+import {Resorces} from "../modes/resorces";
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -286,7 +287,7 @@ export function createTranslateLoader(http: HttpClient) {
     VeterinariansProvider,
     VeterinaryclinicsProvider,
     SupsProvider,
-    MailProvider,Users,
+    MailProvider,Users,Resorces,
     DealersProvider,
     KnowladgeProvider,
     ChampionsNewsProvider,
