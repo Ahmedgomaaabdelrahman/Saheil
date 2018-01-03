@@ -13,7 +13,7 @@ export class HorsesellerPage {
 
     constructor(public veterinations:VeterinariansProvider,public navCtrl: NavController, public navParams: NavParams) {
   }
-    ionViewWillLoad(){
+    ionViewWillEnter(){
         this.veterinariansArray=[]
         this.veterinations.getAllServices(6).subscribe(veterinarians=>{
             this.veterinariansArray=veterinarians;

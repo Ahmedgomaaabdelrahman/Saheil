@@ -119,6 +119,7 @@ import { FollowaccountsPage } from '../pages/followaccounts/followaccounts';
 import { SucesspatnerPage } from '../pages/sucesspatner/sucesspatner';
 import {ImagechatPage} from "../pages/imagechat/imagechat";
 import {Resorces} from "../modes/resorces";
+import { VipProvider } from '../providers/vip/vip';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -303,7 +304,8 @@ export function createTranslateLoader(http: HttpClient) {
     HorsesBlogsProvider,
     DiariesProvider,
     PaypalProvider,PayPal,
-      ChatProvider
+      ChatProvider,
+    VipProvider
   ]
 })
 export class AppModule {}

@@ -5,90 +5,33 @@
   </ion-row>
 
 
-  <ion-row dir="rtl" class="controw">
+  <ion-row *ngFor="let f of followups" dir="rtl" class="controw">
       <ion-col col-4 >
-        <img class="docimg" src="assets/imgs/sscc.png">
+        <img class="docimg" [src]='f.picpath' >
       </ion-col>
       <ion-col col-8>
         <ion-row>
           <ion-col col-12>
-             <h6>شبكة الحصان العربى</h6>
+             <h6>{{f['title_ar']}}</h6>
           </ion-col>
         </ion-row>
         <ion-row>
-            <p class="p2">+235259425</p>
+            <p class="p2">{{f['mobile']}}</p>
          </ion-row>
          <ion-row>
-            <p class="p2">ahmed@ahmed.com</p>
+            <p class="p2">{{f['email']}}</p>
           </ion-row>
       
          <ion-row  class="accimgs">
-           <img src="assets/imgs/facebookhover.png"> 
-           <img src="assets/imgs/twitterhover.png">     
-           <img src="assets/imgs/utubehover.png"> 
-           
-           <img src="assets/imgs/instagramhover.png"> 
-           <img src="assets/imgs/snapchathover.png"> 
+           <a href="{{f['facebook']}}" ><img src="assets/imgs/facebookhover.png"></a>
+             <a href="{{f['twitter']}}" > <img src="assets/imgs/twitterhover.png"></a>
+             <!--<a href="{{f['facebook']}}" >  <img src="assets/imgs/utubehover.png"></a>-->
+
+             <a href="{{f['instagram']}}" ><img src="assets/imgs/instagramhover.png"></a>
+             <!--<a href="{{f['facebook']}}" ><img src="assets/imgs/snapchathover.png"></a>-->
          </ion-row>
        
       </ion-col>
   </ion-row>
 
-  <ion-row dir="rtl" class="controw">
-    <ion-col col-4 >
-      <img class="docimg" src="assets/imgs/sscc.png">
-    </ion-col>
-    <ion-col col-8>
-      <ion-row>
-        <ion-col col-12>
-           <h6>شبكة الحصان العربى</h6>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-          <p class="p2">+235259425</p>
-       </ion-row>
-       <ion-row>
-          <p class="p2">ahmed@ahmed.com</p>
-        </ion-row>
-    
-       <ion-row  class="accimgs">
-         <img src="assets/imgs/facebookhover.png"> 
-         <img src="assets/imgs/twitterhover.png">     
-         <img src="assets/imgs/utubehover.png"> 
-         
-         <img src="assets/imgs/instagramhover.png"> 
-         <img src="assets/imgs/snapchathover.png"> 
-       </ion-row>
-     
-    </ion-col>
-</ion-row>
-
-<ion-row dir="rtl" class="controw">
-  <ion-col col-4 >
-    <img class="docimg" src="assets/imgs/sscc.png">
-  </ion-col>
-  <ion-col col-8>
-    <ion-row>
-      <ion-col col-12>
-         <h6>شبكة الحصان العربى</h6>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-        <p class="p2">+235259425</p>
-     </ion-row>
-     <ion-row>
-        <p class="p2">ahmed@ahmed.com</p>
-      </ion-row>
-  
-     <ion-row  class="accimgs">
-       <img src="assets/imgs/facebookhover.png"> 
-       <img src="assets/imgs/twitterhover.png">     
-       <img src="assets/imgs/utubehover.png"> 
-       
-       <img src="assets/imgs/instagramhover.png"> 
-       <img src="assets/imgs/snapchathover.png"> 
-     </ion-row>
-   
-  </ion-col>
-</ion-row>
 </ion-content>

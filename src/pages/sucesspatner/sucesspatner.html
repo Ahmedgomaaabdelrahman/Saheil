@@ -5,21 +5,10 @@
   </ion-row>
 
 
-  <div class="controw">
-    <img src="assets/imgs/sscc.png">
-    <h4>Logo1 </h4> 
+  <div *ngFor="let s of sponsors" class="controw">
+    <img src="{{s.picpath}}">
+    <h4>{{s.title_ar}}</h4>
   </div>
-  <div class="controw">
-    <img src="assets/imgs/sscc.png">
-    <h4>Logo1 </h4> 
-  </div>
-  <div class="controw">
-    <img src="assets/imgs/sscc.png">
-    <h4>Logo1 </h4> 
-  </div>
-  <div class="controw">
-    <img src="assets/imgs/sscc.png">
-    <h4>Logo1 </h4> 
-  </div>
+
   
 </ion-content>
