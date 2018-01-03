@@ -78,6 +78,14 @@
                      <ion-icon name="albums"></ion-icon>شراء رصيد
 
                  </button>
+                 <button class="menubtn" (click)="accounts()" menuClose ion-item color="standard">
+                    <ion-icon name="albums"></ion-icon>حسابات للمتابعة
+
+                </button>
+                <button  class="menubtn" (click)="sucesspart()" menuClose ion-item color="standard">
+                    <ion-icon name="albums"></ion-icon>شركاء النجاح
+
+                </button>
                  <button class="menubtn" *ngIf="flag" (click)="logout()" menuClose ion-item color="standard">
                     <ion-icon name="log-out"></ion-icon>الخروج من البرنامج
                  </button>

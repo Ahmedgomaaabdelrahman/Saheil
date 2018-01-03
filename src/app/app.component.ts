@@ -34,6 +34,8 @@ import { HorsedaysPage } from './../pages/horsedays/horsedays';
 import {MyhorsesPage} from "../pages/myhorses/myhorses";
 import { Daf3Page } from './../pages/daf3/daf3';
 import {InboxchatPage} from "../pages/inboxchat/inboxchat";
+import { FollowaccountsPage } from './../pages/followaccounts/followaccounts';
+import { SucesspatnerPage } from './../pages/sucesspatner/sucesspatner';
 
 
 
@@ -152,6 +154,12 @@ if(user['service'] !=null){
     fav(){
         this.nav.push(FavtypePage)
 
+    }
+    accounts(){
+        this.nav.push(FollowaccountsPage);
+    }
+    sucesspart(){
+        this.nav.push(SucesspatnerPage);
     }
     addproduct(){
         this.nav.push(AddproductPage);

@@ -40,6 +40,7 @@
     "@ngx-translate/http-loader": "^2.0.0",
     "card.io.cordova.mobilesdk": "^2.1.0",
     "com-badrit-base64": "^0.2.0",
+    "com.hutchind.cordova.plugins.streamingmedia": "~0.1.4",
     "com.paypal.cordova.mobilesdk": "^3.5.0",
     "cordova-android": "6.3.0",
     "cordova-browser": "5.0.1",
@@ -63,8 +64,7 @@
     "promise-polyfill": "6.0.2",
     "rxjs": "5.5.2",
     "sw-toolbox": "3.6.0",
-    "zone.js": "0.8.18",
-    "com.hutchind.cordova.plugins.streamingmedia": "~0.1.4"
+    "zone.js": "0.8.18"
   },
   "devDependencies": {
     "@ionic/app-scripts": "^3.1.2",
