@@ -115,6 +115,8 @@ import { Base64 } from '@ionic-native/base64';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 // import { File } from '@ionic-native/file';
 import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-media';
+import { FollowaccountsPage } from '../pages/followaccounts/followaccounts';
+import { SucesspatnerPage } from '../pages/sucesspatner/sucesspatner';
 
 
 export function createTranslateLoader(http: HttpClient) {
@@ -190,7 +192,9 @@ export function createTranslateLoader(http: HttpClient) {
     HorsedaysPage,
     NaqldetailsPage,
     NaqlbaryPage,
-    Daf3Page
+    Daf3Page,
+    FollowaccountsPage,
+    SucesspatnerPage
   ], 
   imports: [
     BrowserModule,HttpClientModule,
@@ -275,7 +279,9 @@ export function createTranslateLoader(http: HttpClient) {
     HorsedaysPage,
     NaqldetailsPage,
     NaqlbaryPage,
-    Daf3Page
+    Daf3Page,
+    FollowaccountsPage,
+    SucesspatnerPage
   ], 
   providers: [
     StatusBar,
