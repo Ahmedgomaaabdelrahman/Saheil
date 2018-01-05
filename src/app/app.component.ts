@@ -36,6 +36,7 @@ import { Daf3Page } from './../pages/daf3/daf3';
 import {InboxchatPage} from "../pages/inboxchat/inboxchat";
 import { FollowaccountsPage } from './../pages/followaccounts/followaccounts';
 import { SucesspatnerPage } from './../pages/sucesspatner/sucesspatner';
+import { SecuritytermsPage } from './../pages/securityterms/securityterms';
 
 
 
@@ -153,6 +154,10 @@ if(user['service'] !=null){
     }
     fav(){
         this.nav.push(FavtypePage)
+
+    }
+    terms(){
+        this.nav.push(SecuritytermsPage)
 
     }
     accounts(){
