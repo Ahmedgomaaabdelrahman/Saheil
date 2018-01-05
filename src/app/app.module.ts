@@ -120,7 +120,7 @@ import { SucesspatnerPage } from '../pages/sucesspatner/sucesspatner';
 import {ImagechatPage} from "../pages/imagechat/imagechat";
 import {Resorces} from "../modes/resorces";
 import { VipProvider } from '../providers/vip/vip';
-
+import { SecuritytermsPage } from './../pages/securityterms/securityterms';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -197,10 +197,12 @@ export function createTranslateLoader(http: HttpClient) {
     NaqlbaryPage,
     Daf3Page,
     FollowaccountsPage,
-    SucesspatnerPage
+    SucesspatnerPage,
+    SecuritytermsPage
   ], 
   imports: [
-    BrowserModule,HttpClientModule,
+  
+  BrowserModule,HttpClientModule,
     IonicModule.forRoot(MyApp),
 
       TranslateModule.forRoot({
@@ -285,7 +287,8 @@ export function createTranslateLoader(http: HttpClient) {
     NaqlbaryPage,
     Daf3Page,
     FollowaccountsPage,
-    SucesspatnerPage
+    SucesspatnerPage,
+    SecuritytermsPage
   ], 
   providers: [
     StatusBar,
