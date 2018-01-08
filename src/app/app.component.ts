@@ -58,26 +58,21 @@ export class MyApp {
       this.supsSellerFlag=false;
       this.horseSellerFlag=false;
     platform.ready().then(() => {
-        console.log('user',this.user.getuser())
 
+        // console.log('user',this.user.getuser())
         this.events.subscribe('auth', (res) => {
             console.log(res)
-            // user and time are the same arguments passed in `events.publish(user, time)`
         this.identifyUser()
         });      // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
      this.common.getStoredValue('xuser').then(user=>{
        // console.log(user);
-       if(user){
+       if(user != null){
            this.identifyUser()
-
-
          this.nav.setRoot(HomePage,user)
        }else{
            this.diableFlags()
-
            this.nav.setRoot(LanguagePage)
-
        }
      })
       statusBar.styleDefault();
@@ -117,15 +112,21 @@ this.diableFlags()
     identifyUser(){
 
         this.common.getStoredValue('user').then(user=>{
-if(user['service'] !=null){
-            this.user.setuser(user.service[0].service_id)
-            console.log('flag check',this.user.getuser()==5)
             if(user!=null){
                 this.flag=true
 
             }else{
                 this.flag=false
             }
+if(user['service'] !=null){
+            this.user.setuser(user.service[0].service_id)
+            console.log('flag check',this.user.getuser()==5)
+            // if(user!=null){
+            //     this.flag=true
+            //
+            // }else{
+            //     this.flag=false
+            // }
             if(this.user.getuser()==5 ){
                 this.supsSellerFlag=true
             }else{

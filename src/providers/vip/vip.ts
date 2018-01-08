@@ -23,5 +23,10 @@ export class VipProvider {
         //http://www.sahel-horse.com/api/ar/sponsors/
                     return this.http.get(this.url.url+'api/'+this.lang+'/sponsors/');
     }
+    getsecurityterms(){
+        //http://www.sahel-horse.com/api/en/privacy
+                    return this.http.get(this.url.url+'api/'+this.lang+'/privacy/');
+    }
+
 
 }

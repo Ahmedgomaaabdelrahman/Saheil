@@ -121,6 +121,7 @@ import {ImagechatPage} from "../pages/imagechat/imagechat";
 import {Resorces} from "../modes/resorces";
 import { VipProvider } from '../providers/vip/vip';
 import { SecuritytermsPage } from './../pages/securityterms/securityterms';
+import { LandtransportationProvider } from '../providers/landtransportation/landtransportation';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -308,7 +309,8 @@ export function createTranslateLoader(http: HttpClient) {
     DiariesProvider,
     PaypalProvider,PayPal,
       ChatProvider,
-    VipProvider
+    VipProvider,
+    LandtransportationProvider
   ]
 })
 export class AppModule {}

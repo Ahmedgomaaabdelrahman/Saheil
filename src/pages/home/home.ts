@@ -54,6 +54,8 @@ startTimer:any
 
     }
     ionViewWillEnter(){
+        // this.common.removeStoredKey('xuser')
+        // this.common.removeStoredKey('user')
         this.page=1
         this.menuCtrl.enable(true)
         this.items=[]
@@ -64,103 +66,103 @@ this.album.homeSlider().subscribe(res=>{
     console.log(res)
     this.slideImages=res;
 })
-        this.diaries.getAllDiaries(this.page).subscribe(res=> {
-
-            this.items=res['diaries']
-             self.show=[]
-            let i=0
-                self.startTimer=   setInterval(function () {
-                    self.show={
-                        'picpath':res['diaries'][i]['picpath'],
-                        'username':res['diaries'][i]['member'][0]['username'],'created':res['diaries'][i]['created']
-                    }
-
-                    if(i!=self.items.length-1){
-i++}else{
-                        i=0
-                    }
-                },3000);
-
-        })
+        // this.diaries.getAllDiaries(this.page).subscribe(res=> {
+        //
+        //     this.items=res['diaries']
+        //      self.show=[]
+//             let i=0
+//                 self.startTimer=   setInterval(function () {
+//                     self.show={
+//                         'picpath':res['diaries'][i]['picpath'],
+//                         'username':res['diaries'][i]['member'][0]['username'],'created':res['diaries'][i]['created']
+//                     }
+//
+//                     if(i!=self.items.length-1){
+// i++}else{
+//                         i=0
+//                     }
+//                 },3000);
+//
+//         })
     }
-    less(){
-console.log(this.page)
-        if(this.page>=0){
-            clearInterval(this.timer);
-            clearInterval(this.startTimer);
-        this.page-=1
-
-        let self=this
-        // clearInterval()
-        console.log(this.items[this.items.length-1]['diary_id'])
-        console.log(this.items.length-1)
-        this.diaries.getAllDiariesasc(this.page).subscribe(res=> {
-            this.index=0
-            this.items=[]
-            console.log('new items :',res['diaries'].length)
-
-            this.items=res['diaries']
-            self.show=[]
-            let i=0
-            self.startTimer=   setInterval(function () {
-                self.show={
-                    'picpath':res['diaries'][i]['picpath'],
-                    'username':res['diaries'][i]['member'][0]['username'],'created':res['diaries'][i]['created']
-                }
-                if(i!=self.items.length-1){
-                    i++}else{
-                    i=0
-                }
-            },3000);
-            }
-        )
-    }
-    }
+//     less(){
+// console.log(this.page)
+//         if(this.page>=0){
+//             clearInterval(this.timer);
+//             clearInterval(this.startTimer);
+//         this.page-=1
+//
+//         let self=this
+//         // clearInterval()
+//         console.log(this.items[this.items.length-1]['diary_id'])
+//         console.log(this.items.length-1)
+//         this.diaries.getAllDiariesasc(this.page).subscribe(res=> {
+//             this.index=0
+//             this.items=[]
+    //         console.log('new items :',res['diaries'].length)
+    //
+    //         this.items=res['diaries']
+    //         self.show=[]
+    //         let i=0
+    //         self.startTimer=   setInterval(function () {
+    //             self.show={
+    //                 'picpath':res['diaries'][i]['picpath'],
+    //                 'username':res['diaries'][i]['member'][0]['username'],'created':res['diaries'][i]['created']
+    //             }
+    //             if(i!=self.items.length-1){
+    //                 i++}else{
+    //                 i=0
+    //             }
+    //         },3000);
+    //         }
+    //     )
+    // }
+    // }
 page
-    more(){
+//     more(){
+//
+// this.page+=1
+//         console.log('num of page :',this.page)
+//
+//         let self=this
+//         this.diaries.getAllDiaries(this.page).subscribe(res=> {
+//
+// if(res['diaries'].length !=0){
+//     clearInterval(this.timer);
+//     clearInterval(this.startTimer);
+//     this.index=0
+//     this.items=[]
+//             this.items=res['diaries']
+//             self.show=[]
+//             let i=0
+//             self.startTimer=   setInterval(function () {
+//                 self.show={
+//                     'picpath':res['diaries'][i]['picpath'],
+//                     'username':res['diaries'][i]['member'][0]['username'],'created':res['diaries'][i]['created']
+//                 }
+//
+//                 if(i!=self.items.length-1){
+//                     i++}else{
+//                     i=0
+//                 }
+//             },3000);
+//             }else {this.page-=1
+// this.common.presentToast('انتهت اليوميات')
+// }
+//             }
+//         )
+    //}
+    // clickShow(item){
+        // clearInterval(this.timer);
+        //
+        // console.log(item)
+        // this.show=[]
+        // this.show={
+        //     'picpath':item['picpath'],
+        //     'username':item['member'][0]['username'],'created':item['created']
+        // }
 
-this.page+=1
-        console.log('num of page :',this.page)
-
-        let self=this
-        this.diaries.getAllDiaries(this.page).subscribe(res=> {
-
-if(res['diaries'].length !=0){
-    clearInterval(this.timer);
-    clearInterval(this.startTimer);
-    this.index=0
-    this.items=[]
-            this.items=res['diaries']
-            self.show=[]
-            let i=0
-            self.startTimer=   setInterval(function () {
-                self.show={
-                    'picpath':res['diaries'][i]['picpath'],
-                    'username':res['diaries'][i]['member'][0]['username'],'created':res['diaries'][i]['created']
-                }
-
-                if(i!=self.items.length-1){
-                    i++}else{
-                    i=0
-                }
-            },3000);
-            }else {this.page-=1
-this.common.presentToast('انتهت اليوميات')
-}
-            }
-        )
-    }
-    clickShow(item){
-        clearInterval(this.timer);
-
-        console.log(item)
-        this.show=[]
-        this.show={
-            'picpath':item['picpath'],
-            'username':item['member'][0]['username'],'created':item['created']
-        }
-
-    }
+    // }
     live(){
         this.navCtrl.push(LivestreamPage)
     }

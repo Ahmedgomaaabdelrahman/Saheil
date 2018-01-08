@@ -14,6 +14,7 @@ import {Resorces} from "../../modes/resorces";
 export class EditaccountPage {
     D=this.domain.url;
 member_id;
+normalUserFlag:boolean;
     image:any;
     sendimage:any;
   username:string;
@@ -137,6 +138,9 @@ this.common.presentLoadingDefault();
         })
     }
     profileCam(source){
+        this.image=''
+        this.sendimage=''
+
         this.common.camPic(source).then(res=>{
             // console.log('img',res)
             // this.image=res;

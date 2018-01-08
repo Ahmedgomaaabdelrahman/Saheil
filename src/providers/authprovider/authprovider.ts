@@ -19,7 +19,8 @@ register(user){
 }
     login(user){
         return this.http.post(this.url.url+'/api/login/',user);
-    }  forgotPassword(email){
+    }
+    forgotPassword(email){
         return this.http.post(this.url.url+'/api/forgot/password/',email);
     }
     updateInfo(user){
