@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {CommonservicesProvider} from "../../providers/commonservices/commonservices";
 import {LandtransportationProvider} from "../../providers/landtransportation/landtransportation";
+import { TransportionhisdetailsPage } from './../transportionhisdetails/transportionhisdetails';
 
 /**
  * Generated class for the TransportationCustomerHistoryPage page.
@@ -40,4 +41,9 @@ this.transportationProvider.customerHistory(member).subscribe(
 })
     }
 
+
+
+    histdetails(){
+        this.navCtrl.push(TransportionhisdetailsPage);
+    }
 }

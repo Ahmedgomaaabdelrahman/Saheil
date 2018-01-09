@@ -124,6 +124,7 @@ import { SecuritytermsPage } from './../pages/securityterms/securityterms';
 import { LandtransportationProvider } from '../providers/landtransportation/landtransportation';
 import {TransportationCustomerHistoryPage} from "../pages/transportation-customer-history/transportation-customer-history";
 import {TransportationTransporterHistoryPage} from "../pages/transportation-transporter-history/transportation-transporter-history";
+import { TransportionhisdetailsPage } from '../pages/transportionhisdetails/transportionhisdetails';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -201,7 +202,8 @@ export function createTranslateLoader(http: HttpClient) {
     Daf3Page,
     FollowaccountsPage,
     SucesspatnerPage,
-    SecuritytermsPage
+    SecuritytermsPage,
+    TransportionhisdetailsPage
   ], 
   imports: [
   
@@ -291,7 +293,8 @@ export function createTranslateLoader(http: HttpClient) {
     Daf3Page,
     FollowaccountsPage,
     SucesspatnerPage,
-    SecuritytermsPage
+    SecuritytermsPage,
+    TransportionhisdetailsPage
   ], 
   providers: [
     StatusBar,
@@ -310,7 +313,7 @@ export function createTranslateLoader(http: HttpClient) {
     HorsesBlogsProvider,
     DiariesProvider,
     PaypalProvider,PayPal,
-      ChatProvider,
+    ChatProvider,
     VipProvider,
     LandtransportationProvider
   ]
