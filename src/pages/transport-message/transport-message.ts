@@ -3,6 +3,7 @@ import {IonicPage, Modal, ModalController, NavController, NavParams} from 'ionic
 import {VeterinariansProvider} from "../../providers/veterinarians/veterinarians";
 import {CommonservicesProvider} from "../../providers/commonservices/commonservices";
 import {SelectlocPage} from "../selectloc/selectloc";
+import {LandtransportationProvider} from "../../providers/landtransportation/landtransportation";
 
 /**
  * Generated class for the TransportMessagePage page.
@@ -20,15 +21,17 @@ export class TransportMessagePage {
     _subject
     latlng
     origin
-    origin_map
+    origin_map_lat
+    origin_map_lng
     destination
-    destination_map
+    destination_map_lat
+    destination_map_lng
     _destination
     _origin
     _message
     flag:boolean
 
-    constructor(public modalCtrl:ModalController,public common:CommonservicesProvider,public v:VeterinariansProvider,public navCtrl: NavController, public navParams: NavParams) {
+    constructor(public modalCtrl:ModalController,public common:CommonservicesProvider,public v:LandtransportationProvider,public navCtrl: NavController, public navParams: NavParams) {
         let self=this;
         this.flag=false
         this.common.getStoredValue('user').then(res=>{
@@ -50,18 +53,23 @@ export class TransportMessagePage {
     send(){
         let msg={
             'member_id':this._member_id,
-            'member_service_id':this.navParams.data,
-'origin':this.origin,
-            'origin_map':this.origin_map,
+            // 'member_service_id':this.navParams.data,
+            'origin':this.origin,
+            'origin_latitude':this.origin_map_lat,
+            'origin_longitude':this.origin_map_lng,
             'destination':this.destination,
-            'destination_map':this.destination_map
+            'destination_latitude':this.destination_map_lat,
+            'destination_longitude':this.destination_map_lng
             // 'subject':this._subject,
             // 'message':this._message
         }
         this.v.sendOrder(msg).subscribe(res=>{
             console.log(res)
-            if(res[0]['message_id']!=null){
-                this.common.presentToast('تم الارسال')}else{
+            if(res['error'] == null){
+                this.common.presentToast('تم الارسال')
+            console.log(res[0][status])
+            }else{
+
                 this.common.presentToast('لم يتم الارسال')
             }
         })
@@ -72,7 +80,8 @@ export class TransportMessagePage {
         townModal.onDidDismiss(data=>{
             if(data !=null){
                 this.latlng=data.lat+','+data.lng
-                this.origin_map=data.lat+','+data.lng
+                this.origin_map_lat=data.lat
+                this.origin_map_lng=data.lng
                 this.origin=data.adress
                 console.log('loc from model :',  this.latlng,data.adress )
             }
@@ -87,7 +96,8 @@ export class TransportMessagePage {
         townModal.onDidDismiss(data=>{
             if(data !=null){
                 this.latlng=data.lat+','+data.lng
-                this.destination_map=data.lat+','+data.lng
+                this.destination_map_lat=data.lat
+                this.destination_map_lng=data.lng
                 this.destination=data.adress
                 console.log('loc from model :',  this.latlng,data.adress )
             }

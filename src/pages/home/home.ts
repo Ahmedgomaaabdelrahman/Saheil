@@ -18,6 +18,7 @@ import { ChatPage } from '../chat/chat';
 import {LoginPage} from "../login/login";
 import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-media';
 import {AlbumProvider} from "../../providers/album/album";
+import {TransportMessagePage} from "../transport-message/transport-message";
 
 @Component({
     selector: 'page-home',
@@ -173,7 +174,7 @@ page
         this.navCtrl.push(AllclinksPage);
     }
     goTrans(){
-        this.navCtrl.push(NaqlbaryPage);
+        this.navCtrl.push(TransportMessagePage);
     }
     goTransAir(){
         this.navCtrl.push(AirtansportPage);

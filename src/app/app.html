@@ -12,6 +12,12 @@
                  <button class="menubtn" *ngIf="flag" (click)="updateInfo()" menuClose ion-item color="standard">
                     <ion-icon name="person"></ion-icon> حسابى 
                  </button>
+                 <button class="menubtn" *ngIf="flag" (click)="transportationReq()" menuClose ion-item color="standard">
+                     <ion-icon name="person"></ion-icon>طلبات النقل البري
+                 </button>
+                 <button class="menubtn" *ngIf="transporterFlag" (click)="transportationReq()" menuClose ion-item color="standard">
+                     <ion-icon name="person"></ion-icon>طلبات العملاء
+                 </button>
                  <button class="menubtn"  *ngIf="supsSellerFlag" (click)="supsSeller()" menuClose ion-item color="standard" >
                      <ion-icon name="basket"></ion-icon>متجر مستلزمات الخيل
                  </button>

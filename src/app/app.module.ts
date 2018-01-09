@@ -122,6 +122,8 @@ import {Resorces} from "../modes/resorces";
 import { VipProvider } from '../providers/vip/vip';
 import { SecuritytermsPage } from './../pages/securityterms/securityterms';
 import { LandtransportationProvider } from '../providers/landtransportation/landtransportation';
+import {TransportationCustomerHistoryPage} from "../pages/transportation-customer-history/transportation-customer-history";
+import {TransportationTransporterHistoryPage} from "../pages/transportation-transporter-history/transportation-transporter-history";
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -155,7 +157,7 @@ export function createTranslateLoader(http: HttpClient) {
     CancelhintPage,
     ComplainPage,
     HorsesuppPage,
-    AllsuppPage,TransportMessagePage,
+    AllsuppPage,TransportMessagePage,TransportationCustomerHistoryPage,TransportationTransporterHistoryPage,
     KnowlegePage,
     KnowlegedetailsPage,
     CommentsPage,
@@ -239,7 +241,7 @@ export function createTranslateLoader(http: HttpClient) {
     ForgetpassPage,
     ChoosecountryPage,
     DoctordetailsPage,
-    AlldoctorsPage,TransportMessagePage,
+    AlldoctorsPage,TransportMessagePage,TransportationCustomerHistoryPage,TransportationTransporterHistoryPage,
     ClinkdetailsPage,
     AllclinksPage,
     EditaccountPage,

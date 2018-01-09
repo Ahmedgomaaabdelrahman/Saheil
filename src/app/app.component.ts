@@ -37,6 +37,7 @@ import {InboxchatPage} from "../pages/inboxchat/inboxchat";
 import { FollowaccountsPage } from './../pages/followaccounts/followaccounts';
 import { SucesspatnerPage } from './../pages/sucesspatner/sucesspatner';
 import { SecuritytermsPage } from './../pages/securityterms/securityterms';
+import {TransportationCustomerHistoryPage} from "../pages/transportation-customer-history/transportation-customer-history";
 
 
 
@@ -48,6 +49,7 @@ export class MyApp {
   flag:boolean;
     supsSellerFlag:boolean;
     horseSellerFlag:boolean;
+    transporterFlag:boolean;
 
   // rootPage:any = LanguagePage;
   rootPage:any;
@@ -57,6 +59,7 @@ export class MyApp {
       this.flag=false;
       this.supsSellerFlag=false;
       this.horseSellerFlag=false;
+      this.transporterFlag=false;
     platform.ready().then(() => {
 
         // console.log('user',this.user.getuser())
@@ -102,6 +105,7 @@ this.diableFlags()
         this.flag=false;
         this.supsSellerFlag=false
         this.horseSellerFlag=false
+        this.transporterFlag=false
     }
     knowladge(){
         this.nav.push(KnowlegePage)
@@ -139,6 +143,12 @@ if(user['service'] !=null){
                 this.horseSellerFlag=false
 
             }
+    if(this.user.getuser()== 4 ){
+        this.transporterFlag=true
+    }else{
+        this.transporterFlag=false
+
+    }
 }
         })
 
@@ -191,6 +201,9 @@ if(user['service'] !=null){
     chatBox(){
         this.nav.push(InboxchatPage);
 
+    }
+    transportationReq(){
+        this.nav.push(TransportationCustomerHistoryPage);
     }
 }
 
