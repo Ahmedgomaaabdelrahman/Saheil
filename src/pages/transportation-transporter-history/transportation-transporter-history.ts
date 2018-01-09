@@ -28,6 +28,7 @@ export class TransportationTransporterHistoryPage {
     ionViewWillEnter() {
         this._allHistoryOrders=[]
         let member={'member_id':this._member_id}
+        console.log(member)
         this.transportationProvider.transporterHistory(member).subscribe(res=>{
             console.log(res)
             res[0]=this._allHistoryOrders
