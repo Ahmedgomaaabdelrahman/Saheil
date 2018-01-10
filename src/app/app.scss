@@ -9,10 +9,28 @@ src: url("../assets/fonts/Cairo/Cairo-regular.ttf");
     font-family:sFont;
     src: url("../assets/fonts/ArefRuqaa-Regular.ttf");
     }
+
+
+
+ion-menu .header{
+    height:110px;
+    .toolbar{
+        height: 100%;
+    }
+}
+
+ion-menu .toolbar-title-ios {
+    height: 100px;
+    padding: 10px;
+}
 .topp{
     margin:0;
     font-family: sFont;
     
+}
+
+.menu-inner > ion-content{
+    margin-top:0;
 }
 // App Global Sass
 // --------------------------------------------------

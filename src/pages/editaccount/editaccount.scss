@@ -67,4 +67,18 @@ page-editaccount {
     background-color: #dfc262;
     font-family: Appfont;
 }
+.text-input{
+    direction: ltr;
+}
+.text-input[name="service_details_en"] , 
+.text-input[name="service_name_en"] ,
+.text-input[name="service_adress_en"],
+
+{
+    direction: rtl;
+    ::placeholder{
+        position: fixed;
+        right: 0;
+    }
+  }
 }
