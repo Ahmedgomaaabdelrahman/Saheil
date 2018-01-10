@@ -20,30 +20,33 @@ export class TransportationCustomerHistoryPage {
     _member_id
   _allHistoryOrders
   constructor(public transportationProvider:LandtransportationProvider,public common:CommonservicesProvider,public navCtrl: NavController, public navParams: NavParams) {
-      this.common.getStoredValue('user').then(res=>{
-          if(res!=null) {
-              this._member_id = res.member_id
-          }
-      })
+
   }
 
     ionViewWillLoad() {
       this._allHistoryOrders=[]
       let self=this
-      let member={'member_id':4}
-      // let member={'member_id':this._member_id}
-this.transportationProvider.customerHistory(member).subscribe(
-    (data)=>{
-    data=self._allHistoryOrders
+      // let member={'member_id':4}
 
- console.log(data[0])
-  console.log(data)
-})
+////////////////////
+        this.common.getStoredValue('user').then(res=>{
+            if(res!=null) {
+                self._member_id = res.member_id
+
+            let member={'member_id':res.member_id}
+            console.log('obj',member)
+                self.transportationProvider.customerHistory(member).subscribe(data=>{
+                self._allHistoryOrders=data
+                console.log(data)
+            })}
+        })
+        ///////////////////////
+
     }
 
 
 
-    histdetails(){
-        this.navCtrl.push(TransportionhisdetailsPage);
+    histdetails(order){
+        this.navCtrl.push(TransportionhisdetailsPage,order);
     }
 }

@@ -70,4 +70,12 @@ page-transportionhisdetails {
           width: 85%;
           margin: 20px auto;
       }
+  .editinput , .message{
+    border:1px solid lightgray;
+    width: 90%;
+    height: 30px;
+    margin: 10px auto 0;
+    ::placeholder{
+      font-family: Appfont;
+    }}
 }

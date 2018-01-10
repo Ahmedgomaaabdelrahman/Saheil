@@ -54,7 +54,8 @@
                 </ion-col>
                 </ion-row>
         </div>
-        <div class="serrow" (click)="goTrans()">
+
+        <div *ngIf="!transporterFlag" class="serrow" (click)="goTrans()">
                 <h6 style="text-align:center">نقل برى</h6>
                 <ion-row style="height:65px">
                 <ion-col col-4><img width="50px"  src="assets/imgs/serv3.png" alt=""></ion-col>

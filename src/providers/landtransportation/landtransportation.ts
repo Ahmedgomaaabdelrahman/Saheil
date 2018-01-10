@@ -16,10 +16,10 @@ export class LandtransportationProvider {
     //http://sahel-horse.com/api/transport/order/history
     //http://sahel-horse.com/api/transport/order/history/provider
 
-    public static CONTINUE:string='continue';
-    public static CANCEL:string='cancel';
-    public static FINISH:string='finish';
-    public static CONFIRM:string='confirm';
+    public  CONTINUE:string='continue';
+    public  CANCEL:string='cancel';
+    public  FINISH:string='finish';
+    public  CONFIRM:string='confirm';
     lang:any
     constructor(public url:DomainProvider,public http: HttpClient) {
         this.lang=url.lang;

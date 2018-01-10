@@ -9,51 +9,88 @@
       <ion-col col-12>
         <ion-row>
           <ion-col col-12>
-            <h6>طلب واحد </h6>
+            <h6>{{order_id}} </h6>
           </ion-col>
          
         </ion-row>
         <ion-row>
           <ion-col col-11>
             <p class="p1">
-             مكان الاستلام : المندره 
+             مكان الاستلام : {{origin}}
             </p>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col col-11>
             <p class="p1">
-             مكان الوصول :رشدى 
+             مكان الوصول :{{destination}}
+            </p>
+          </ion-col>
+        </ion-row>        <ion-row>
+          <ion-col col-11>
+            <p class="p1">
+            حالة الطلب :{{status}}
             </p>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col col-11>
             <p class="p1">
-             اسم مقدم الخدمة : احمد جمعه  
+             اسم مقدم الخدمة : {{transport_service_provider}}
             </p>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col col-11>
             <p class="p1">
-              السعر : 200   
+<a href="http://www.sahel-horse.com/api/ar/map/{{order_id}}">الخريطة</a>
             </p>
           </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-11>
+            <p class="p1">
+              السعر : {{cost}}
+            </p>
+          </ion-col>
+        </ion-row>
+<form #f="ngForm">
+  <div *ngIf="!transporterFlag">
+        <ion-row>
+          <div *ngIf="status != 'finish'">
+
+          <ion-col col-4>
+            <button ion-button (click)="action('finish')" block class="mybtn">انهاء</button>
+          </ion-col>
+          </div>
+          <ion-col col-4>
+            <button ion-button (click)="action('cancel')" block class="mybtn">اللغاء</button>
+          </ion-col>
+          <div *ngIf="status == 'pending'">
+            <ion-col col-4>
+              <button ion-button (click)="action('continue')" block class="mybtn">استمرار</button>
+            </ion-col>
+          </div>
+
+
+
         </ion-row>
 
-        <ion-row>
-          <ion-col col-4>
-            <button ion-button block class="mybtn">زرار 1</button>
-          </ion-col>
-          <ion-col col-4>
-            <button ion-button block class="mybtn">زرار 1</button>
-          </ion-col>
-          <ion-col col-4>
-            <button ion-button block class="mybtn">زرار 1</button>
-          </ion-col>
-        </ion-row>
+  <ion-row>
+    <ion-col col-4>
+      <ion-input style="border:dotted;" [(ngModel)]="sendComplain" name="sendComplain" type="text" placeholder="ارسل شكوي"></ion-input>
+    </ion-col>
+    <ion-col col-6>
+      <button ion-button (click)="complain()" block class="mybtn">ارسال شكوي</button>
+    </ion-col>
+  </ion-row></div><div *ngIf="transporterFlag">
 
+  <ion-col col-4>
+    <button ion-button (click)="action('confirm')" block class="mybtn">قبول الطلب</button>
+  </ion-col>
+
+</div>
+</form>
         
       </ion-col>
     </ion-row>

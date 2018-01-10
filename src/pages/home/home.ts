@@ -32,6 +32,7 @@ startTimer:any
     items:any;
     show:any;
     member_id
+    transporterFlag
     constructor(private album:AlbumProvider,private streamingMedia: StreamingMedia,public diaries:DiariesProvider,public menuCtrl:MenuController,public common:CommonservicesProvider,public navCtrl: NavController) {
         // fullscreen video
         //https://ionicframework.com/docs/native/streaming-media/
@@ -50,6 +51,12 @@ startTimer:any
             console.log('user : ',user);
             if(user !=null){
                 this.member_id=user['member_id']
+                if(user['service'][0]['service_id']==4){
+                    this.transporterFlag=true
+                }else{
+                    this.transporterFlag=false
+
+                }
             }
         })
 
