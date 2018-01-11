@@ -1,0 +1,42 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content>
+ <header></header>
+ <subheader></subheader>
+<ion-row class="toprow">
+  <ion-col col-1></ion-col>
+  <ion-col col-6 style="text-align:end;font-weight: bold;">تسجيل الدخول</ion-col>
+  <ion-col col-1 style="text-align:start"><img src="assets/imgs/signin.png" height="30px"></ion-col>
+  <ion-col col-4 style="text-align:end"></ion-col>
+</ion-row>
+
+
+<form class="myform" #f="ngForm">
+   <p class="thelabel">رقم الهاتف</p>
+   <ion-input [(ngModel)]="_mobile" name="_mobile" style="text-align:center" type="number"></ion-input>
+   <p class="thelabel">كلمه المرور</p>
+   <ion-input style="text-align:center" [(ngModel)]="_password" name="_password" type="password"></ion-input>
+
+   <ion-row style="margin: 15px 0;">
+     <ion-col col-4 style="text-align:start">
+       <div class="remb">
+         <ion-checkbox [(ngModel)]="_save" name="_save" color="gray"></ion-checkbox>
+         <h6>تذكرنى</h6>
+       </div>
+     </ion-col>
+     <ion-col col-4 style="text-align:center">
+       <button ion-button block (click)="submit()" [disabled]="!f.valid"  class="btn">دخول</button>
+     </ion-col>
+     <ion-col col-4 style="text-align:end" (click)="forgetPass()"><p class="forget">نسيت كلمه المرور ؟</p></ion-col>
+   </ion-row>
+
+  <!--<div class="face"> تسجيل الدخول عن طريق الفيس بوك </div>-->
+  <!--<div class="twr">تسجيل الدخول عن طريق تويتر  </div>-->
+</form>
+
+</ion-content>

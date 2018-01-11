@@ -1,0 +1,40 @@
+<ion-content>
+  <header>
+      <link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+      <script src="http://vjs.zencdn.net/4.12/video.js"></script>
+  </header>
+ <subheader></subheader>
+<ion-row class="toprow"><ion-col col-12 >يوميات الخيل</ion-col></ion-row>
+<form class="myform" #f="ngForm">
+
+  <!--<ion-input type="text"   placeholder="اسم المستخدم">{{title_ar}}</ion-input>-->
+  <!--<ion-input type="text"placeholder="اضف صوره/فيديو" readonly></ion-input>-->
+  <div style="border: 1px solid lightgray;">
+    <img class="upload" (click)="serviceImage()" src="assets/imgs/addimage.png">
+    <img class="upload" (click)="serviceVideo()" src="assets/imgs/video.png">
+    <!--<img class="upload"  src="assets/imgs/camera.png">-->
+  </div>
+  <ion-input type="text" [(ngModel)]="title_ar" name="title_ar" placeholder="عنوان الصوره">{{title_ar}}</ion-input>
+  
+     <button ion-button block (click)="submit()" class="btn">اضافة</button>
+</form>
+<div *ngIf="image != null">
+    <video *ngIf="!show"  id="MY_VIDEO_1" class="video-js vjs-default-skin" controls
+           preload="auto" width="320" height="240" poster="MY_VIDEO_POSTER.jpg"
+           data-setup="{}">
+        <source [src]='image' type='video/mp4'>
+        <source  [src]='image' type='video/webm'>
+        <!--<p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>-->
+    </video>
+<img *ngIf="show" [src]='image'>
+
+</div>
+    <!--<iframe  *ngIf="image != null" class="vid" width="420" height="315"-->
+            <!--[src]='image'  webkitallowfullscreen mozallowfullscreen allowfullscreen>-->
+    <!--</iframe>-->
+    <!--<video *ngIf="image != null"  width="320" height="240" controls>-->
+        <!--<source src={{sendimage}} >-->
+        <!--&lt;!&ndash;<source src="mov_bbb.ogg" type="video/ogg">&ndash;&gt;-->
+        <!--&lt;!&ndash;Your browser does not support HTML5 video.&ndash;&gt;-->
+    <!--</video>-->
+</ion-content>

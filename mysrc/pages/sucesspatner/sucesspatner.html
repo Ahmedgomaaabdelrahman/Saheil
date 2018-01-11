@@ -1,0 +1,14 @@
+<ion-content>
+  <header></header>
+  <subheader></subheader>
+  <ion-row class="toprow"><ion-col col-12 >شركاء النجاح</ion-col>
+  </ion-row>
+
+
+  <div *ngFor="let s of sponsors" class="controw">
+    <img src="{{s.picpath}}">
+    <h4>{{s.title_ar}}</h4>
+  </div>
+
+  
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-content>
+  <header></header>
+ <subheader></subheader>
+<ion-row class="toprow"><ion-col col-12 >اختار اللغة</ion-col></ion-row>
+
+
+
+
+<ion-list>
+  <ion-item *ngFor="let country of countries" class="choose">
+
+    <ion-label (click)="submit(country)">{{country.title_ar}}</ion-label>
+    <!--<ion-select [(ngModel)]="gaming" (ionChange)="goSign()">-->
+      <!--<ion-option value="Egypt">Egypt</ion-option>-->
+      <!--<ion-option value="Qatar">Qatar</ion-option>-->
+      <!--<ion-option value="Sudia">Sudia</ion-option>-->
+    <!--</ion-select>-->
+  </ion-item>
+</ion-list>
+
+
+</ion-content>

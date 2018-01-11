@@ -1,0 +1,41 @@
+page-cancelhint {
+.content{
+    background-image: url("../assets/imgs/bg2.png");
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+}
+.contdiv{
+    height: 200px;
+    font-family: Appfont;
+    direction: rtl;
+    width: 85%;
+    margin: 50px auto;
+    text-align: center;
+
+}
+.topp{
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    font-size: 20px;
+    right: 0;
+    color:white;
+}
+
+.p1{
+    width: 180px;
+    position: fixed;
+    bottom: 0px;
+    font-size: 20px;
+    right: 0;
+    color:white;
+}
+.p2{
+    width: 170px;
+    position: fixed;
+    bottom: 0px;
+    font-size: 20px;
+    left: 0;
+    color:white;
+}
+}

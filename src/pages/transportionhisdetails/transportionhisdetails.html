@@ -57,19 +57,21 @@
 <form #f="ngForm">
   <div *ngIf="!transporterFlag">
         <ion-row>
-          <div *ngIf="status != 'finish'">
+          <div *ngIf="status != 'pending'">
+
+          <div *ngIf="status != 'cancel' && status != 'finish' ">
 
           <ion-col col-4>
             <button ion-button (click)="action('finish')" block class="mybtn">انهاء</button>
           </ion-col>
-          </div>
           <ion-col col-4>
             <button ion-button (click)="action('cancel')" block class="mybtn">اللغاء</button>
           </ion-col>
-          <div *ngIf="status == 'pending'">
             <ion-col col-4>
               <button ion-button (click)="action('continue')" block class="mybtn">استمرار</button>
             </ion-col>
+          </div>
+
           </div>
 
 

@@ -38,6 +38,7 @@ import { FollowaccountsPage } from './../pages/followaccounts/followaccounts';
 import { SucesspatnerPage } from './../pages/sucesspatner/sucesspatner';
 import { SecuritytermsPage } from './../pages/securityterms/securityterms';
 import {TransportationCustomerHistoryPage} from "../pages/transportation-customer-history/transportation-customer-history";
+import {SignupPage} from "../pages/signup/signup";
 
 
 
@@ -151,6 +152,14 @@ if(user['service'] !=null){
     }
 }
         })
+
+    }
+    login(){
+        this.nav.push(LoginPage)
+
+    }
+    signUp(){
+        this.nav.push(SignupPage)
 
     }
     inbox(){

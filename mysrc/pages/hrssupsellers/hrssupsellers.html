@@ -1,0 +1,60 @@
+<ion-content>
+    <header></header>
+    <subheader></subheader>
+    <ion-row class="toprow"><ion-col col-12 >تجار مستلزمات الخيل</ion-col></ion-row>
+
+
+
+
+    <!--<ion-row>-->
+    <!--<ion-col col-11>-->
+    <!--<p class="p3">المزيد</p>-->
+    <!--<img height="8px" src="assets/imgs/more.png">-->
+    <!--</ion-col>-->
+    <!--<ion-col col-1>-->
+    <!--<img src="assets/imgs/fav.png">-->
+    <!--</ion-col>-->
+    <!--</ion-row>-->
+
+    <!--</ion-col>-->
+    <!--</ion-row>-->
+    <div *ngFor="let v of veterinariansArray">
+        <ion-row dir="rtl" class="controw">
+            <ion-col col-3 >
+                <img class="docimg" src={{v.service_image}}>
+            </ion-col>
+            <ion-col col-9>
+                <ion-row>
+                    <ion-col col-11>
+                        <h6>{{v.service_name}}</h6>
+                    </ion-col>
+                    <ion-col col-1>
+                        <img src="assets/imgs/star.png">
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-11>
+                        <p class="p1">
+                            {{v.service_address}}
+                        </p>
+                    </ion-col>
+                    <ion-col col-1 style="padding-top: 25px;">
+                        <img  src="assets/imgs/chat.png">
+                    </ion-col>
+                </ion-row>
+
+
+                <ion-row>
+                    <ion-col col-11 (click)="gotodetails(v.member_service_id)">
+                        <p class="p3">المزيد</p>
+                        <img height="8px" src="assets/imgs/more.png">
+                    </ion-col>
+                    <ion-col col-1>
+                        <img src="assets/imgs/fav.png">
+                    </ion-col>
+                </ion-row>
+
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>

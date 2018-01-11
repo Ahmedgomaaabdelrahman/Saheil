@@ -1,0 +1,167 @@
+<ion-content>
+<header></header>
+<subheader></subheader>
+<ion-row class="toprow"><ion-col col-12 >الصفحه الرئيسيه</ion-col></ion-row>
+
+    <ion-slides pager>   
+        <ion-slide *ngFor="let s of slideImages">
+            <img [src]="s['picpath']" alt="">
+        </ion-slide>
+
+        <!--<ion-slide>-->
+            <!--<img src="assets/imgs/topimg.png" alt="">-->
+        <!--</ion-slide>-->
+
+        <!--<ion-slide>-->
+            <!--<img src="assets/imgs/image.png" alt="">-->
+        <!--</ion-slide>-->
+    </ion-slides>
+
+<div>
+<ion-segment [(ngModel)]="pet" dir="rtl" style="width: 100%; padding-top: 0px;">
+    <ion-segment-button value="services">
+        الخدمات 
+    </ion-segment-button>
+    <ion-segment-button value="Album" (click)="gochat()">
+      دردشة 
+    </ion-segment-button>
+    <ion-segment-button value="horsesoc">
+       اخبار البطولات
+    </ion-segment-button>
+    <ion-segment-button value="horseday" >
+       يوميات الخيل
+    </ion-segment-button>
+</ion-segment>
+</div>
+<div [ngSwitch]="pet" class="segdiv">
+    <div class="bigdiv" *ngSwitchDefault ngSelected="selected" >
+        <div class="serrow" (click)="gotodoctors()">
+            
+            <ion-row style="height: 80px;">
+            <ion-col col-4><img width="50px"  src="assets/imgs/serv1.png" alt=""></ion-col>
+            <ion-col col-8>
+                <h6 style="text-align:center">اطباء بيطرين</h6>
+            </ion-col>
+            </ion-row>
+        </div>
+
+        <div class="serrow" (click)="gotoclincs()">
+               
+                <ion-row style="height: 80px;">
+                <ion-col col-4><img width="50px"  src="assets/imgs/serv2.png" alt=""></ion-col>
+                <ion-col col-8>
+                    <h6 style="text-align:center">عيادات بيطريه</h6>
+                </ion-col>
+                </ion-row>
+        </div>
+
+        <div *ngIf="!transporterFlag" class="serrow" (click)="goTrans()">
+                
+                <ion-row style="height: 80px;">
+                <ion-col col-4><img width="50px"  src="assets/imgs/serv3.png" alt=""></ion-col>
+                <ion-col col-8>
+                    <h6 style="text-align:center">نقل برى</h6>
+                </ion-col>
+                </ion-row>
+        </div>
+        <div class="serrow" (click)="goTransAir()">
+                
+                <ion-row style="height: 80px;">
+                <ion-col col-4><img width="50px"  src="assets/imgs/serv7.jpg" alt=""></ion-col>
+                <ion-col col-8>
+                    <h6 style="text-align:center">نقل جوى</h6>
+                </ion-col>
+                </ion-row>
+        </div>
+        <div class="serrow" (click)="goHorsesupp()">
+             
+                <ion-row style="height: 80px;">
+                <ion-col col-4><img width="50px"  src="assets/imgs/serv4.png" alt=""></ion-col>
+                <ion-col col-8>
+                    <h6 style="text-align:center">مستلزمات الخيل</h6>
+                </ion-col>
+                </ion-row>
+        </div>      
+        <div class="serrow" (click)="goHorseSellers()">
+               
+                <ion-row style="height: 80px;">
+                <ion-col col-4><img width="50px"  src="assets/imgs/serv5.png" alt=""></ion-col>
+                <ion-col col-8>
+                    <h6 style="text-align:center">تجار الخيل</h6>
+                </ion-col>
+                </ion-row>
+        </div>  
+        
+    </div>
+
+    <div *ngSwitchCase="'Album'">
+       
+     </div>
+
+    <div *ngSwitchCase="'horsesoc'" >
+        <div class="btndiv" (click)="live()">بث مباشر</div>
+        <div class="btndiv" (click)="tours()">اخبار البطولات</div>
+    </div>
+
+    <div *ngSwitchCase="'horseday'">
+        <!--<ion-row style="direction:rtl">-->
+            <!--<ion-col col-6 style="text-align:start">-->
+                 <!--<button ion-button block class="more" style="float:right" (click)="more()">المزيد <ion-icon name="arrow-round-back" style="margin:0 5px"></ion-icon></button>                    -->
+            <!--</ion-col>-->
+            <!--<ion-col col-6 style="text-align:end">-->
+                <!--<button ion-button block class="more" style="float:left"(click)="less()"><ion-icon name="arrow-round-forward" style="margin:0 5px"></ion-icon>الرجوع </button>-->
+            <!--</ion-col>-->
+            <!---->
+        <!--</ion-row>-->
+        <!--<ion-row style="height:120px">-->
+            <!--<ion-col col-9>-->
+              <!---->
+                <!--<button ion-button (click)="less()">less</button>-->
+
+             <!--<ion-scroll scrollX="true" has-bouncing="true" style="height:130px" >-->
+               <!--<ion-segment >-->
+                   <!--<ion-segment-button  style="-->
+                 <!--height: 200px;    background-color: transparent" *ngFor="let item of items">-->
+                   <!--<div class="imgdiv"><img (click)="clickShow(item)" src={{item.picpath}}></div>-->
+                       <!--<ion-infinite-scroll not-on (ionInfinite)="doInfinite($event)">-->
+                           <!--<ion-infinite-scroll-content scrollX="true"  scrollY="false"-->
+                                                        <!--loadingSpinner="bubbles"-->
+                                                        <!--loadingText="Loading more data...">-->
+                           <!--&lt;!&ndash;</ion-infinite-scroll-content>                 </ion-infinite-scroll>&ndash;&gt;-->
+                 <!--</ion-segment-button>-->
+        <!---->
+               <!--</ion-segment>-->
+
+
+             <!--</ion-scroll>-->
+
+            <!--</ion-col>-->
+            <!--<ion-col col-3 (click)="addnew()">-->
+              <!--<div class="addimg">-->
+                <!--<ion-icon name="add"></ion-icon>-->
+                <!--<p>اضف صوره</p>-->
+              <!--</div>-->
+            <!--</ion-col>-->
+          <!--</ion-row>-->
+         <!--<hr>-->
+          <!--<div class="details"  >-->
+         <!--<img *ngIf="show.picpath" src={{show.picpath}}>-->
+         <!--<div *ngIf="show.picpath" class="info">-->
+           <!--<ion-row>-->
+             <!--<ion-col col-6><h6>{{show.username}}</h6></ion-col>-->
+             <!--<ion-col  col-4><p>{{show.created}}</p></ion-col>-->
+             <!--<ion-col col-2>-->
+                 <!--&lt;!&ndash;<img id="prof" src="assets/imgs/prf.png">&ndash;&gt;-->
+             <!--</ion-col>-->
+           <!--</ion-row>-->
+         <!---->
+            <!--</div>-->
+          <!--</div>-->
+        <div class="btndiv" (click)="addnew()">اضف يومية</div>
+        <div class="btndiv" (click)="gohorsdays()">الذهاب الي يوميات الخيل</div>
+    </div>
+</div>
+
+  
+  
+</ion-content>

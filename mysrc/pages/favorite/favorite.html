@@ -1,0 +1,41 @@
+<ion-content>
+    <header></header>
+    <subheader></subheader>
+   <ion-row class="toprow"><ion-col col-12 >المفضلة</ion-col>
+   </ion-row>
+   <div *ngIf="favs != null" class="contdiv">
+       <ion-row  class="itemrow" *ngFor="let f of favs;let i=index">
+    <ion-col col-4>
+        <img *ngIf="!mode" class="shopimg" src={{f.supplies[0].picpath}}>
+        <img *ngIf="mode" class="shopimg" src={{f.horses[0].picpath}}>
+    </ion-col>
+    <ion-col col-8>
+      <ion-row style="height:35px">
+          <ion-col col-10>
+            <p *ngIf="mode == 0" class="p1">{{f.supplies[0].title}}</p>
+            <p *ngIf="mode == 1" class="p1">{{f.horses[0].title_ar}}</p>
+        </ion-col>
+        <ion-col col-2 style="text-align: center;">
+            <img src="assets/imgs/delete.png" *ngIf="mode == 0" height="15px" style="margin: 10px 5px;" (click)="deleteToUserFav(f.supply_favorite_id,i)">
+            <img src="assets/imgs/delete.png"  *ngIf="mode == 1"  height="15px" style="margin: 10px 5px;" (click)="deleteHorseUserFav(f.horse_favorite_id,i)">
+        </ion-col>
+    </ion-row>
+      <ion-row>
+          <ion-col col-12><p *ngIf="mode  == 0" class="p2">{{f.supplies[0].details}}</p></ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col col-10>
+              <p *ngIf="mode  == 0" class="p3">{{f.supplies[0].price}} ريال</p>
+              <button ion-button block *ngIf="mode  == 1" class="edit" (click)="gotodetails(f.horses[0]['horse_id'])">التفاصيل</button>
+          </ion-col>
+          <!-- <ion-col col-2 style="text-align: center;"><img src="assets/imgs/delete.png" height="15px" style="margin: 10px 5px;" (click)="deleteToUserFav(f.supplies[0].supply_id,i)"></ion-col> -->
+      </ion-row>
+    </ion-col>
+      <!--<button ion-button block class="edit" (click)="gotodetails(f.supplies[0].price.supply_id)">التفاصيل</button>-->
+
+  </ion-row>
+
+   </div>
+
+   
+</ion-content>

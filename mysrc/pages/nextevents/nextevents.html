@@ -1,0 +1,35 @@
+
+<ion-content>
+<header></header>
+<subheader></subheader>
+<ion-row class="toprow"><ion-col col-12 >الفاعليات القادمة</ion-col>
+</ion-row>
+
+
+<ion-row dir="rtl" class="controw" *ngFor="let e of upevents">
+    <ion-col  >
+      <img class="docimg" src={{e.picpath}}>
+    </ion-col>
+    <ion-col col-8>
+      <ion-row>
+        <ion-col col-12>
+           <h6>{{e.title_ar}} </h6>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+         <ion-col col-11>
+            <p class="p1">
+{{e.details}}
+            </p>
+         </ion-col>
+       </ion-row>
+       
+       <ion-row>
+          <ion-col col-11 (click)="gotodetails(e.upcoming_events_id)">
+              <p class="p3">المزيد</p>
+              <img height="8px" src="assets/imgs/more.png">
+          </ion-col>
+      </ion-row>
+   </ion-col>
+   </ion-row>
+   </ion-content>

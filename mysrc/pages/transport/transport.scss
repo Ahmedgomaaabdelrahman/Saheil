@@ -1,0 +1,97 @@
+page-transport {
+.toprow{
+    background-color: #efc658;
+    text-align: center;
+    font-family: 'AppFont' !important;
+}
+.map{
+    height: 100%;
+}
+
+.mapinput1, .mapinput2 {
+    width: 90%;
+    margin: 10px auto;
+    border: 2px solid #e68905;
+    position: absolute;
+    z-index: 1;
+    right: 5%;
+    background: white;
+    opacity: 0.5;
+    height: 40px;
+    color: black;
+  
+}
+.mapinput1::value{
+    color: #e68905;
+}
+.mapinput2 {
+    top: 215px;
+}
+.input-cover{
+    position: static;
+}
+.text-input-md , .text-input-ios{
+    margin: 10px auto;
+    width: 85%;
+}
+.order{
+    width: 80%;
+    background-image: url(../assets/imgs/hovershape.png);
+    position: fixed;
+    z-index: 1;
+    bottom: 30px;
+    left: 10%;
+    text-align: center;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: Appfont;
+    color: white;
+    padding-top: 6px;
+    font-size: 17px;
+
+}
+.Info{
+    height: auto;
+    background: rgba(0, 0, 0, 0.8);
+    width: 80%;
+    color: white;
+    font-family: Appfont;
+    left: 10%;
+    padding: 5px;
+    position: relative;
+    p{
+        margin: 0;
+        font-size: 11px;
+    }
+}
+
+.star{
+    color: #efc658;
+}
+#infodiv{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+   
+}
+.scroll-content {
+    overflow-y: hidden;
+}
+.bottomdiv{
+    background-image: url(../assets/imgs/bottom.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 49%;
+    margin: 5px 0 0;
+    height: 50px;
+    display: inline-block;
+    font-family: Appfont;
+    padding-top: 8px;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+}
+}
