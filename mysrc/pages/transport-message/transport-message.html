@@ -1,0 +1,25 @@
+<ion-content>
+  <header></header>
+  <subheader></subheader>
+  <ion-row class="toprow">
+    <ion-col col-12 style="text-align:center;font-weight: bold;">ارسال الطلب</ion-col>
+    
+  </ion-row>
+  <form #f="ngForm">
+    <!--<ion-input class="editinput" type="text" placeholder="اسم المستخدم"></ion-input>-->
+    <!--<ion-input class="editinput" [(ngModel)]="_subject" name="_subject" type="text" placeholder="الموضوع"></ion-input>-->
+
+    <!--<ion-input class="editinput" [(ngModel)]="_origin" name="_subject" type="text" placeholder="مكان البداية"></ion-input>-->
+    <!--<ion-input class="editinput" [(ngModel)]="_destination" name="_subject" type="text" placeholder="مكان التسليم"></ion-input>-->
+    <!--<ion-input class="editinput" type="text" placeholder="الجوال"></ion-input>-->
+    <!--<ion-textarea class="message" [(ngModel)]="_message" name="_message" type="text" placeholder="الرساله"></ion-textarea>-->
+    <button ion-button block class="btn"  (click)="selectLocoregin()"> عنوان نقطة البداية </button>
+    <button ion-button block class="btn"  (click)="selectLocdestination()"> عنوان نقطة التسليم </button>
+
+    <button ion-button (click)="send()" block class="sendbtn">ارسال</button>
+
+
+
+  </form>
+
+</ion-content>

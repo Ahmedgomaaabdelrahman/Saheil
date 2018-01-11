@@ -1,0 +1,29 @@
+page-allsupp {
+.toprow{
+    background-color: #efc658;
+    text-align: center;
+    font-family: 'AppFont' !important;
+}
+
+.btnrow{
+    direction: rtl;
+    text-align: center;
+    margin-top: 20px;
+    .button{
+        border-color: #bc8a06;
+        color: #4b3620;
+        font-family: Appfont;
+        height: 40px;
+        width: 120px;
+        font-weight: 600;
+    }
+    .disable-hover.button.button-md.button-outline.button-outline-md.activated{
+       color:white;
+       background-color: #bc8a06;
+    }
+    ::hover{
+        color:white;
+        background-color: #bc8a06;
+    }
+}
+}

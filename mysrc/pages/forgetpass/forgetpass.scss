@@ -1,0 +1,36 @@
+page-forgetpass {
+.content{
+    background-image: url("../assets/imgs/forpass.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.contdiv{
+    height: 200px;
+    font-family: Appfont;
+    direction: rtl;
+    width: 85%;
+    margin: 50px auto;
+    text-align: center;
+
+}
+.text-input-md ,.text-input-ios{
+    text-align:end;
+    border: 1px solid lightgray;
+    padding: 10px 
+}
+
+.input-cover {
+    left: 0 ;
+    top: 20% !important;
+    position: static !important;
+}
+.button-outline-md ,.button-outline-ios {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #bb8700;
+    color: #bb8700;
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+}

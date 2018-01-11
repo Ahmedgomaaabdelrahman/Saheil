@@ -1,0 +1,30 @@
+page-album {
+.toprow{
+    background-color: #efc658;
+    text-align: center;
+    font-family: 'AppFont' !important;
+}
+.controw{
+    direction: rtl;
+    font-family: Appfont;
+}
+p{
+    color:gray
+}
+h6{
+    text-align: start;
+    height: 30px;
+    color: #ba8700;
+    min-height: 30px;
+    margin: 0 auto;
+    font-size: 15px;
+    max-height: 30px
+}
+.imgcont{
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+h6 , p {margin: 0 10px;}
+}

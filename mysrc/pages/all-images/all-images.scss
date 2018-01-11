@@ -1,0 +1,54 @@
+page-all-images {
+    .toprow{
+        background-color: #efc658;
+        text-align: center;
+        font-family: 'AppFont' !important;
+    }
+    .controw{
+        direction: rtl;
+        font-family: Appfont;
+    }
+    p{
+        color:gray
+    }
+    h6{
+        text-align: start;
+        height: 40px;
+        color: #ba8700;
+        background-color: rgba(0, 0, 0, 0.7);
+        min-height: 30px;
+        font-size: 15px;
+        max-height: 30px
+    }
+    .imgcont{
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .alldiv{
+        position: relative;
+        bottom: 40px;
+        background-color: rgba(0,0,0,0.8);
+        color: white;
+        height: 35px;
+        padding: 4px 5px;
+        
+    }
+
+    .imgdivv{
+        border: 1px solid lightgray;
+        margin: 5px;
+        height: 217px;
+        max-height: 217px;
+        img{
+            height: 100%;
+            min-height: 100%;
+            max-height: 100%;
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+        }
+    }
+    }
+    

@@ -1,0 +1,38 @@
+<ion-content>
+   <header></header>
+   <ion-row class="toprow">
+     <ion-col col-8 style="text-align:end" >
+       <p>تعديل الحساب</p>
+    </ion-col>
+    <ion-col col-4 style="text-align:start">
+      <img height="25px" src="assets/imgs/icon.png" >
+    </ion-col>
+  </ion-row>
+   <div class="topdiv">
+    
+    <div class="simg">
+      <img height="25px" class="editicon" (click)="profileImage()" src="assets/imgs/editicon.png" ></div>
+   </div>
+
+<form #f="ngForm">
+  <ion-input class="editinput" [(ngModel)]="username" name="username" type="text" placeholder="اسم المستخدم"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="email" name="email" type="email" placeholder="البريد الالكترونى"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="service_details_ar" name="service_details_ar" type="text" placeholder="نبذة تعريفيه بالعربية"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="service_details_en" name="service_details_en" type="text" placeholder="نبذة تعريفيه بالانجليزية"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="service_name_ar" name="service_name_ar" type="text" placeholder="اسم الخدمة بالعربية"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="service_name_en" name="service_name_en" type="text" placeholder="اسم الخدمة بالانجليزية"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="service_adress_ar" name="service_adress_ar" type="text" placeholder="العنوان بالعربية"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="service_adress_en" name="service_adress_en" type="text" placeholder="العنوان بالانجليزية"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="mobile" name="mobile" type="tel" placeholder="الجوال"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="password" name="password" type="password" placeholder="الرقم السري"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="facebook" name="facebook" type="text" placeholder="فيس بوك"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="twitter" name="twitter" type="text" placeholder="تويتر"></ion-input>
+
+  <!--<ion-input class="editinput" type="text" placeholder="العنوان على الخريظه"></ion-input>-->
+    <button ion-button block class="btn"  (click)="selectLoc()">العنوان على الخريظه</button>
+    <button ion-button block class="btn"  (click)="serviceImage()">اضف صورة عن الخدمة  </button>
+<img src='{{service_image}}'>
+     <button ion-button block class="btn"(click)="submit()">تعديل</button>
+</form>
+
+</ion-content>

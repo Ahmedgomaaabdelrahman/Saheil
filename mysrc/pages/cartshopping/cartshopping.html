@@ -1,0 +1,55 @@
+<ion-content>
+    <header></header>
+    <subheader></subheader>
+   <ion-row class="toprow"><ion-col col-12 >سلة المشتريات</ion-col>
+   </ion-row>
+   <div class="contdiv">
+
+        <ion-row *ngFor="let sup of sups;let i =index;" class="itemrow">
+            <ion-col col-1 style="text-align:center">
+                <!--<img src={{sup.picpath}} height="15px">-->
+                <p ></p>
+             <img src="assets/imgs/delete.png"  height="15px" style="margin: 10px 5px;" (click)="delete(i)">
+            </ion-col>
+            <ion-col col-4><img class="shopimg" src={{sup.picpath}}></ion-col>
+            <ion-col col-7>
+              <ion-row>
+                <ion-col col-11><p class="p1">{{sup.title}}</p></ion-col>
+                <ion-col col-1><ion-icon name="add" (click)="add(i)"></ion-icon></ion-col>
+              </ion-row>
+              <ion-row>
+                 <ion-col col-11>
+                     <p class="p2">{{sup.details}}</p>
+                 </ion-col>
+                 <ion-col col-1><p>{{quantity[i]}}</p></ion-col>
+               </ion-row>
+               <ion-row>
+                   <ion-col col-11><p class="p3">{{sup.price}} ريال</p></ion-col>
+                   <ion-col col-1><ion-icon name="remove" (click)="remove(i)"></ion-icon></ion-col>
+                 </ion-row>
+            </ion-col>
+           
+           </ion-row>
+
+<form  #f="ngForm">
+           <ion-row>
+
+             <ion-input [(ngModel)]="adress" name="adress"  type="text" class="inpttt" placeholder="عنوان الشحن"></ion-input>
+           </ion-row>
+
+           <ion-row>
+            <ion-input [(ngModel)]="mobile" name="mobile" type="number" class="inpttt" placeholder="رقم الموبايل"></ion-input>
+          </ion-row>
+
+</form>
+
+   
+
+    <ion-row class="botrow">
+      <ion-col col-8><p>المجموع {{totalPrice}} ريال</p></ion-col>
+      <ion-col (click)="buy()" col-4  ><p>تاكيد</p></ion-col>
+    </ion-row>
+</div>
+
+   
+</ion-content>

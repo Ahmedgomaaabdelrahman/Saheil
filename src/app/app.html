@@ -12,6 +12,18 @@
                  <button class="menubtn" *ngIf="flag" (click)="updateInfo()" menuClose ion-item color="standard">
                     <ion-icon name="person"></ion-icon> حسابى 
                  </button>
+
+
+                 <div *ngIf="!flag">
+
+                     <button class="menubtn" (click)="login()" menuClose ion-item color="standard">
+                         <ion-icon name="person"></ion-icon> تسجيل دخول
+                     </button>
+                     <button class="menubtn" (click)="signUp()" menuClose ion-item color="standard">
+                         <ion-icon name="person"></ion-icon> تسجيل حساب جديد
+                     </button>
+                 </div>
+
                  <button class="menubtn" *ngIf="flag" (click)="transportationReq()" menuClose ion-item color="standard">
                      <ion-icon name="person"></ion-icon>طلبات النقل البري
                  </button>

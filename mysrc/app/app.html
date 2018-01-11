@@ -1,0 +1,106 @@
+<ion-menu side="right" [content]="content">
+        <ion-header>
+          <ion-toolbar>
+            <ion-title style="text-align:center;">
+              <img src="assets/imgs/x.png" menuClose  style="float: left;margin-top: 10px;"height="40px"height="25px">
+              <img src="assets/imgs/smallsahel.png" height="40px">  <br><p class="topp">بوابتك الى عالم الخيل</p>
+            </ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content>
+             <ion-list>
+                 <button class="menubtn" *ngIf="flag" (click)="updateInfo()" menuClose ion-item color="standard">
+                    <ion-icon name="person"></ion-icon> حسابى 
+                 </button>
+                 <button class="menubtn" *ngIf="flag" (click)="transportationReq()" menuClose ion-item color="standard">
+                     <ion-icon name="person"></ion-icon>طلبات النقل البري
+                 </button>
+                 <button class="menubtn" *ngIf="transporterFlag" (click)="transportationReq()" menuClose ion-item color="standard">
+                     <ion-icon name="person"></ion-icon>طلبات العملاء
+                 </button>
+                 <button class="menubtn"  *ngIf="supsSellerFlag" (click)="supsSeller()" menuClose ion-item color="standard" >
+                     <ion-icon name="basket"></ion-icon>متجر مستلزمات الخيل
+                 </button>
+                 <button class="menubtn"  *ngIf="horseSellerFlag" (click)="addHorse()" menuClose ion-item color="standard" >
+                     <ion-icon name="basket"></ion-icon>متجر الخيل
+                 </button>
+                 <button class="menubtn"  *ngIf="flag" (click)="fav()" menuClose ion-item color="standard" >
+                     <ion-icon name="star"></ion-icon>المفضلة
+                 </button>
+                 <button class="menubtn" (click)="goToMain()" menuClose ion-item color="standard" >
+                    <ion-icon name="desktop"></ion-icon>الرئيسية 
+                 </button>
+                 <!--<button class="menubtn" (click)="addproduct()" menuClose ion-item color="standard" >-->
+                        <!--<ion-icon name="add-circle"></ion-icon>اضافه منتج -->
+                 <!--</button>-->
+                 <button class="menubtn" *ngIf="flag" (click)="inbox()" menuClose ion-item color="standard" >
+                    <ion-icon name="mail"></ion-icon>صندوق الوارد
+                </button>
+                 <button class="menubtn" *ngIf="flag" (click)="outbox()" menuClose ion-item color="standard" >
+                     <ion-icon name="mail"></ion-icon>صندوق الصادر
+                 </button>
+
+
+                 <!--*ngIf="flag"-->
+                 <button class="menubtn" (click)="chatBox()" menuClose ion-item color="standard" >
+                    <ion-icon name="mail"></ion-icon> المحادثات
+                </button>
+
+
+                 <button class="menubtn"  (click)="tournmentsNews()" menuClose ion-item color="standard" >
+                     <ion-icon name="md-trophy"></ion-icon>اخبار البطولات
+                 </button>
+                 <button class="menubtn" menuClose ion-item color="standard" >
+                    <ion-icon name="bulb"></ion-icon>نبذة عن صهيل
+                </button>
+                <!--<button class="menubtn" menuClose ion-item color="standard" >-->
+                    <!--<ion-icon name="basket"></ion-icon>المتجر -->
+                <!--</button>-->
+               <!--<button class="menubtn" menuClose ion-item color="standard" >-->
+              <!--الخدمات-->
+               <!---->
+              <!--</button>-->
+               <!--<button class="menubtn" menuClose ion-item color="standard" >-->
+             <!---->
+               <!--البوم الصور-->
+              <!--</button>-->
+                 <button class="menubtn" (click)="knowladge()" menuClose ion-item color="standard" >
+                    <ion-icon name="book"></ion-icon>ثقف نفسك   
+
+                 </button>
+               <button class="menubtn" (click)="goAlbum()" menuClose ion-item color="standard">
+                  <ion-icon name="trophy"></ion-icon>البوم صور  
+              </button>
+
+               <!--<button class="menubtn" menuClose ion-item color="standard">-->
+               <!--يوميات الخيل -->
+               <!---->
+              <!--</button>-->
+               <button class="menubtn" (click)="nextEvent()" menuClose ion-item color="standard">
+                  <ion-icon name="albums"></ion-icon> الفاعليات القادمة 
+               
+              </button>
+                 <button  *ngIf="flag" class="menubtn" (click)="pay()" menuClose ion-item color="standard">
+                     <ion-icon name="albums"></ion-icon>شراء رصيد
+
+                 </button>
+                 <button class="menubtn" (click)="accounts()" menuClose ion-item color="standard">
+                    <ion-icon name="albums"></ion-icon>حسابات للمتابعة
+
+                </button>
+                <button  class="menubtn" (click)="sucesspart()" menuClose ion-item color="standard">
+                    <ion-icon name="albums"></ion-icon>شركاء النجاح
+
+                </button>
+                <button  class="menubtn" (click)="terms()" menuClose ion-item color="standard">
+                    <ion-icon name="albums"></ion-icon>شروط الخصوصيه
+
+                </button>
+                 <button class="menubtn" *ngIf="flag" (click)="logout()" menuClose ion-item color="standard">
+                    <ion-icon name="log-out"></ion-icon>الخروج من البرنامج
+                 </button>
+            </ion-list>
+        </ion-content>
+      </ion-menu>
+
+<ion-nav [root]="rootPage" #content></ion-nav>

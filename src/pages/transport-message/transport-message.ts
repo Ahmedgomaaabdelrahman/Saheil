@@ -67,7 +67,7 @@ export class TransportMessagePage {
             console.log(res)
             if(res['error'] == null){
                 this.common.presentToast('تم الارسال')
-            console.log(res[0][status])
+            // console.log(res[0][status])
             }else{
 
                 this.common.presentToast('لم يتم الارسال')

@@ -1,0 +1,88 @@
+page-chat {
+.toprow{
+    background-color: white;
+    text-align: center;
+    color:#efc658;
+    font-family: 'AppFont' !important;
+    border-bottom: 2px solid gray;
+}
+.conrdiv{
+    // background-color: #f4f4f4;
+    height:100%;
+    font-family: Appfont;
+    p{
+        margin:0;
+        height: auto;
+    }
+}
+.browndiv{
+       background-color: #ab7d04;
+    width: 90%;
+    margin: 5px auto 0;
+    height: auto;
+    padding: 0 10px;
+    .p1{
+        color:white;
+    }
+
+}
+
+.graydiv{
+    background-color: lightgray;
+    width: 78%;
+    height: auto;
+    padding: 0 10px;
+    .p1{
+        color:black;
+    }
+    
+}
+.sender{
+    border-radius: 50%;
+    //background-color: gray;
+    height: 50px;
+    width: 50px;
+    float: left;
+    //display: inline-block;
+}
+.msg{
+    border: 1px solid #ab7d04;
+    font-family: Appfont;
+    
+}
+.btnchat{
+    height: 100%;
+    border: 1px solid #ab7d04;
+    margin: 0;
+    color: #ab7d04;
+
+    ion-icon{
+        font-size: 30px;
+    }
+}
+
+.chatimage{
+    height: 160px;
+    width: 160px;
+    float: right;
+    max-height: 160px;
+    max-width: 160px;
+    margin: 10px 20px;
+    border: 1px solid gray;
+    border-radius: 20px
+}
+.titlename , .titlename1{
+    width: 190px;
+    color: gray;
+    border: 1px solid lightgray;
+    margin: 5px 0 10px;
+    padding: 5px 14px;
+    text-align: end;
+    font-size: 15px;
+    border-radius: 10px;
+}
+.titlename1{
+    text-align: start;
+    margin: 0 10px 0;
+}
+}

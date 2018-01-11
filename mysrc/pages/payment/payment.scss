@@ -1,0 +1,43 @@
+page-payment {
+.toprow{
+    background-color: #efc658;
+    text-align: center;
+    font-family: 'AppFont' !important;
+}
+
+.text-input{
+    border: 1px solid lightgray;
+    height: 40px;
+    margin: 20px 0 0;
+    padding: 0 5px;
+    width: 100%;
+    direction: rtl;
+    
+}
+.text-input[placeholder="product name"] , .text-input[placeholder="Description"] , .text-input[placeholder="price"]{
+    direction: ltr;
+    
+}
+.text-input::placeholder{
+        font-family: Appfont;
+        font-size: 12px;
+        padding: 5px
+    }
+.myform{
+    width:90%;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.btn{
+    background-color: #ba8700;
+    border-radius: 5px;
+    width: 30%;
+    margin:20px auto;
+    font-family: Appfont;
+    z-index: 1;
+}
+.item-cover{
+    position: relative;
+} 
+}
