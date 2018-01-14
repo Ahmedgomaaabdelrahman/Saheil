@@ -3,7 +3,7 @@
 <ion-content>
     <header></header>
     <subheader></subheader>
-   <ion-row class="toprow"><ion-col col-12 >النقل الجوي</ion-col></ion-row>
+   <ion-row class="toprow"><ion-col col-12 >{{'Air Transport'|translate}}</ion-col></ion-row>
     <div class="topdiv">
         <img class="heart" src="assets/imgs/fav.png">
         <!-- <img class="fimg" src="assets/imgs/topimg.png"> -->
@@ -27,10 +27,10 @@
             <!--الموقع-->
             <!--</ion-segment-button>-->
             <ion-segment-button value="contact">
-                للتواصل
+                {{'Contact'|translate}}
             </ion-segment-button>
             <ion-segment-button value="about">
-                نبذة تعريفية
+                {{'About' | translate}}
             </ion-segment-button>
         </ion-segment>
     </div>
@@ -76,6 +76,6 @@
     </div>
     <div #map id="map"></div>
 
-    <button ion-button block (click)="contact()" class="send">ارسال الطلب</button>
+    <button ion-button block (click)="contact()" class="send">{{'Send Request'|translate}}</button>
 
 </ion-content>

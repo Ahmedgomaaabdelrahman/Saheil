@@ -1,10 +1,10 @@
 <ion-content>
   <header></header>
  <subheader></subheader>
-<ion-row class="toprow"><ion-col col-12 >اضافة منتج</ion-col></ion-row>
+<ion-row class="toprow"><ion-col col-12 >{{'Add Product'|translate}}</ion-col></ion-row>
 <form class="myform" #f="ngForm">
 
-  <button ion-button block (click)="serviceImage()" class="btn" >اضافة صور</button>
+  <button ion-button block (click)="serviceImage()" class="btn" >{{'Add Images'|translate}}</button>
 <img *ngIf="image != null" src={{image}}/>
     <ion-input type="text" [(ngModel)]="title_ar" name="title_ar" placeholder="اسم المنتج">{{title_ar}}</ion-input>
   <ion-input type="text" [(ngModel)]="title_en" name="title_en" placeholder="product name">{{title_en}}</ion-input>
@@ -14,7 +14,7 @@
   <!--<ion-input type="text" placeholder="price"></ion-input>-->
   
   <ion-item class="selection">
-         <ion-label>اختر القسم</ion-label>
+         <ion-label>{{'Choose Categorey'|translate}}</ion-label>
              <ion-select   okText="اختر" cancelText="الغاء" required="true">
 
              <ion-option (ionSelect)="getSelectedCat(c.category_id)"  *ngFor="let c of allCategories"  value={{c.title_ar}} required>{{c.title_ar}}</ion-option>
@@ -23,7 +23,7 @@
         </ion-select>
      </ion-item>
 
-     <button ion-button block (click)="submit()" class="btn">اضافة</button>
+     <button ion-button block (click)="submit()" class="btn">{{'Add'|translate}}</button>
 </form>
 
 </ion-content>

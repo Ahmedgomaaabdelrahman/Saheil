@@ -1,7 +1,7 @@
 <ion-content>
     <header></header>
    <subheader></subheader>
-  <ion-row class="toprow"><ion-col col-12 >اضافة بيانات الخيل</ion-col></ion-row>
+  <ion-row class="toprow"><ion-col col-12 >{{'Add Horse Information'|translate}}</ion-col></ion-row>
     <!--<form class="myform" #f="ngForm">-->
 
         <!--&lt;!&ndash;<button ion-button block (click)="serviceImage()" class="btn" >اضافة صور</button>&ndash;&gt;-->
@@ -27,12 +27,12 @@
     <!--</form>-->
 
     <form class="myform" #f="ngForm">
-      <button ion-button block (click)="serviceImage()"  class="btn">اضافة صورة الحصان</button>
-        <ion-label  *ngIf="image != null">صورة الحصان</ion-label>
+      <button ion-button block (click)="serviceImage()"  class="btn">{{'Add Horse Image'|translate}}</button>
+        <ion-label  *ngIf="image != null">{{'Add Horse Image'|translate}}</ion-label>
         <div class="divimg"> <img *ngIf="image != null" src={{image}}></div>
-      <button ion-button block (click)="serviceImagebreed_image()"  class="btn">اضافة صورة الفصيلة</button>
+      <button ion-button block (click)="serviceImagebreed_image()"  class="btn">{{'Add Horse Type'|translate}}</button>
 
-        <ion-label *ngIf="horse_breed_image != null" >صورة الفصيلة</ion-label>
+        <ion-label *ngIf="horse_breed_image != null">{{'Horse Type image'|translate}}</ion-label>
 
         <div class="divimg"> <img *ngIf="horse_breed_image != null" src={{horse_breed_image}}></div>
     <ion-input type="text" [(ngModel)]="title_ar" name="title_ar" placeholder="اسم الخيل">{{title_ar}}</ion-input>
@@ -51,20 +51,20 @@
     <!--<ion-input type="text" placeholder="Age"></ion-input>-->
     
     <ion-item class="selection">
-        <ion-label>اختر القسم</ion-label>
+        <ion-label>{{'Choose Categorey'|translate}}</ion-label>
         <ion-select   okText="اختر" cancelText="الغاء" required="true">
             <ion-option (ionSelect)="getSelectedCat(c.category_id)"  *ngFor="let c of allCategories"  value={{c.title_ar}} required>{{c.title_ar}}</ion-option>
         </ion-select>
     </ion-item>
     <ion-item class="selection">
-        <ion-label>اختر البلد</ion-label>
+        <ion-label>{{'Choose Countery'|translate}}</ion-label>
         <ion-select>
             <ion-option (ionSelect)="getSelectedC(con.country_id)"  *ngFor="let con of cs"  value={{con.title_ar}} required>{{con.title_ar}}</ion-option>
 
         </ion-select>
  </ion-item>
 
-        <button ion-button block (click)="submit()" class="btn">اضافة</button>
+        <button ion-button block (click)="submit()" class="btn">{{'Add'|translate}}</button>
   </form>
   
   </ion-content>

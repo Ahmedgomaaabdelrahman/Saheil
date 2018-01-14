@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoadingPage } from "../pages/loading/loading";
@@ -126,9 +127,11 @@ import {TransportationCustomerHistoryPage} from "../pages/transportation-custome
 import {TransportationTransporterHistoryPage} from "../pages/transportation-transporter-history/transportation-transporter-history";
 import { TransportionhisdetailsPage } from '../pages/transportionhisdetails/transportionhisdetails';
 
+import { HttpModule, Http } from '@angular/http';
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
+
 @NgModule({
   declarations: [
     MyApp,

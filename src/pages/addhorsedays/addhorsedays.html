@@ -4,7 +4,7 @@
       <script src="http://vjs.zencdn.net/4.12/video.js"></script>
   </header>
  <subheader></subheader>
-<ion-row class="toprow"><ion-col col-12 >يوميات الخيل</ion-col></ion-row>
+<ion-row class="toprow"><ion-col col-12 >{{'Horse Days'|translate}}</ion-col></ion-row>
 <form class="myform" #f="ngForm">
 
   <!--<ion-input type="text"   placeholder="اسم المستخدم">{{title_ar}}</ion-input>-->
@@ -16,7 +16,7 @@
   </div>
   <ion-input type="text" [(ngModel)]="title_ar" name="title_ar" placeholder="عنوان الصوره">{{title_ar}}</ion-input>
   
-     <button ion-button block (click)="submit()" class="btn">اضافة</button>
+     <button ion-button block (click)="submit()" class="btn">{{'Add'|translate}}</button>
 </form>
 <div *ngIf="image != null">
     <video *ngIf="!show"  id="MY_VIDEO_1" class="video-js vjs-default-skin" controls
