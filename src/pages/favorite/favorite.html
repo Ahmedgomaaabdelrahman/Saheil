@@ -1,7 +1,7 @@
 <ion-content>
     <header></header>
     <subheader></subheader>
-   <ion-row class="toprow"><ion-col col-12 >المفضلة</ion-col>
+   <ion-row class="toprow"><ion-col col-12 >{{'Favorites'|translate}}</ion-col>
    </ion-row>
    <div *ngIf="favs != null" class="contdiv">
        <ion-row  class="itemrow" *ngFor="let f of favs;let i=index">
@@ -25,8 +25,8 @@
       </ion-row>
       <ion-row>
           <ion-col col-10>
-              <p *ngIf="mode  == 0" class="p3">{{f.supplies[0].price}} ريال</p>
-              <button ion-button block *ngIf="mode  == 1" class="edit" (click)="gotodetails(f.horses[0]['horse_id'])">التفاصيل</button>
+              <p *ngIf="mode  == 0" class="p3">{{f.supplies[0].price}} {{'SAR'|translate}}</p>
+              <button ion-button block *ngIf="mode  == 1" class="edit" (click)="gotodetails(f.horses[0]['horse_id'])">{{'Details'|translate}}</button>
           </ion-col>
           <!-- <ion-col col-2 style="text-align: center;"><img src="assets/imgs/delete.png" height="15px" style="margin: 10px 5px;" (click)="deleteToUserFav(f.supplies[0].supply_id,i)"></ion-col> -->
       </ion-row>

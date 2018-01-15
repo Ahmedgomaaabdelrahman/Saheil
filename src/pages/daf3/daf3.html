@@ -1,16 +1,16 @@
 <ion-content>
   <header></header>
  <subheader></subheader>
-<ion-row class="toprow"><ion-col col-12 >الدفع</ion-col></ion-row>
+<ion-row class="toprow"><ion-col col-12 >{{'Payment'|translate}}</ion-col></ion-row>
 <form class="myform" #f="ngForm">
   <!--<p class="thelabel">الرصيد الحالى </p>-->
   <!--<ion-input [(ngModel)] name="_username" type="text" readonly placeholder="2342374"></ion-input>-->
   <!--<p class="dollar">دولار </p>-->
-  <p class="thelabel">اضف رصيد</p>
+  <p class="thelabel">{{'Add Balance'|translate}}</p>
   <ion-input [(ngModel)]="amount" name="amount" type="text"></ion-input>
-  <p class="dollar">دولار </p>
+  <p class="dollar"> </p>
   
-     <button *ngIf="flag" ion-button block (click)="submit()" class="btn">اضافة</button>
+     <button *ngIf="flag" ion-button block (click)="submit()" class="btn">{{'Add'|translate}}</button>
 </form>
 
 </ion-content>

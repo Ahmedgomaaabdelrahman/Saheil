@@ -2,7 +2,7 @@
    <header></header>
    <ion-row class="toprow">
      <ion-col col-8 style="text-align:end" >
-       <p>تعديل الحساب</p>
+       <p>{{'Edit Account'|translate}}</p>
     </ion-col>
     <ion-col col-4 style="text-align:start">
       <img height="25px" src="assets/imgs/icon.png" >
@@ -29,8 +29,8 @@
   <ion-input class="editinput" [(ngModel)]="twitter" name="twitter" type="text" placeholder="تويتر"></ion-input>
 
   <!--<ion-input class="editinput" type="text" placeholder="العنوان على الخريظه"></ion-input>-->
-    <button ion-button block class="btn"  (click)="selectLoc()">العنوان على الخريظه</button>
-    <button ion-button block class="btn"  (click)="serviceImage()">اضف صورة عن الخدمة  </button>
+    <button ion-button block class="btn"  (click)="selectLoc()">{{'Address On Map'|translate}}</button>
+    <button ion-button block class="btn"  (click)="serviceImage()"> {{'Add Image of Service'|translate}} </button>
 <img src='{{service_image}}'>
      <button ion-button block class="btn"(click)="submit()">تعديل</button>
 </form>

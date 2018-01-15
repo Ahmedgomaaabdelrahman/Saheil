@@ -1,7 +1,7 @@
 <ion-content>
 <header></header>
 <subheader></subheader>
-<ion-row class="toprow"><ion-col col-12 >الصفحه الرئيسيه</ion-col></ion-row>
+<ion-row class="toprow"><ion-col col-12 >{{'Home'|translate}}</ion-col></ion-row>
 
     <ion-slides pager>   
         <ion-slide *ngFor="let s of slideImages">
@@ -20,16 +20,16 @@
 <div>
 <ion-segment [(ngModel)]="pet" dir="rtl" style="width: 100%; padding-top: 0px;">
     <ion-segment-button value="services">
-        الخدمات 
+        {{'Services'|translate}} 
     </ion-segment-button>
     <ion-segment-button value="Album" (click)="gochat()">
-      دردشة 
+        {{'Chat'|translate}} 
     </ion-segment-button>
     <ion-segment-button value="horsesoc">
-       اخبار البطولات
+        {{'Tournament News'|translate}}
     </ion-segment-button>
     <ion-segment-button value="horseday" >
-       يوميات الخيل
+        {{'Horse Days'|translate}}
     </ion-segment-button>
 </ion-segment>
 </div>
@@ -40,7 +40,7 @@
             <ion-row style="height: 80px;">
             <ion-col col-4><img width="50px"  src="assets/imgs/serv1.png" alt=""></ion-col>
             <ion-col col-8>
-                <h6 style="text-align:center">اطباء بيطرين</h6>
+                <h6 style="text-align:center">{{'Veterinarians'|translate}}</h6>
             </ion-col>
             </ion-row>
         </div>
@@ -50,7 +50,7 @@
                 <ion-row style="height: 80px;">
                 <ion-col col-4><img width="50px"  src="assets/imgs/serv2.png" alt=""></ion-col>
                 <ion-col col-8>
-                    <h6 style="text-align:center">عيادات بيطريه</h6>
+                    <h6 style="text-align:center">{{'Veterinary Clinics'|translate}}</h6>
                 </ion-col>
                 </ion-row>
         </div>
@@ -60,7 +60,7 @@
                 <ion-row style="height: 80px;">
                 <ion-col col-4><img width="50px"  src="assets/imgs/serv3.png" alt=""></ion-col>
                 <ion-col col-8>
-                    <h6 style="text-align:center">نقل برى</h6>
+                    <h6 style="text-align:center">{{'Transport'|translate}}</h6>
                 </ion-col>
                 </ion-row>
         </div>
@@ -69,7 +69,7 @@
                 <ion-row style="height: 80px;">
                 <ion-col col-4><img width="50px"  src="assets/imgs/serv7.jpg" alt=""></ion-col>
                 <ion-col col-8>
-                    <h6 style="text-align:center">نقل جوى</h6>
+                    <h6 style="text-align:center">{{'Air Transport'|translate}}</h6>
                 </ion-col>
                 </ion-row>
         </div>
@@ -78,7 +78,7 @@
                 <ion-row style="height: 80px;">
                 <ion-col col-4><img width="50px"  src="assets/imgs/serv4.png" alt=""></ion-col>
                 <ion-col col-8>
-                    <h6 style="text-align:center">مستلزمات الخيل</h6>
+                    <h6 style="text-align:center">{{'Horse Supplies'|translate}}</h6>
                 </ion-col>
                 </ion-row>
         </div>      
@@ -87,7 +87,7 @@
                 <ion-row style="height: 80px;">
                 <ion-col col-4><img width="50px"  src="assets/imgs/serv5.png" alt=""></ion-col>
                 <ion-col col-8>
-                    <h6 style="text-align:center">تجار الخيل</h6>
+                    <h6 style="text-align:center">{{'Horse Dealers'|translate}}</h6>
                 </ion-col>
                 </ion-row>
         </div>  
@@ -99,8 +99,8 @@
      </div>
 
     <div *ngSwitchCase="'horsesoc'" >
-        <div class="btndiv" (click)="live()">بث مباشر</div>
-        <div class="btndiv" (click)="tours()">اخبار البطولات</div>
+        <div class="btndiv" (click)="live()">{{'Live Stream'|translate}}</div>
+        <div class="btndiv" (click)="tours()">{{'Tournament News'|translate}}</div>
     </div>
 
     <div *ngSwitchCase="'horseday'">
@@ -157,8 +157,8 @@
          <!---->
             <!--</div>-->
           <!--</div>-->
-        <div class="btndiv" (click)="addnew()">اضف يومية</div>
-        <div class="btndiv" (click)="gohorsdays()">الذهاب الي يوميات الخيل</div>
+        <div class="btndiv" (click)="addnew()">{{'Add Day'|translate}}</div>
+        <div class="btndiv" (click)="gohorsdays()">{{'Go to Horse Days'|translate}}</div>
     </div>
 </div>
 
