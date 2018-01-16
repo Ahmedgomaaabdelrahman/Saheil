@@ -12,18 +12,18 @@
 
 <p class="topp">كما يمكنك استخدام اسم المستخدم وكلمه المرور لتسجيل الدخول للموقع</p>
 <form class="myform"  #f="ngForm">
-   <p class="thelabel">اسم المستخدم</p>
+   <p class="thelabel">{{'Username'|translate}}</p>
    <ion-input [(ngModel)]="_username" id="_username" name="_username" style="text-align:center" type="text"></ion-input>
-    <p class="thelabel">البريد الالكترونى</p>
+    <p class="thelabel">{{'Email'|translate}}</p>
    <ion-input [(ngModel)]="_email" id="_email" name="_email" style="text-align:center" type="email"></ion-input>
-   <p class="thelabel">كلمه المرور</p>
+   <p class="thelabel">{{'Password'|translate}}</p>
    <ion-input [(ngModel)]="_password" id="_password" name="_password" style="text-align:center" type="password"></ion-input>
-   <p class="thelabel">الجوال </p>
+   <p class="thelabel">{{'Phone Number'|translate}} </p>
    <ion-input [(ngModel)]="_mobile" id="_mobile" name="_mobile"  style="text-align:center" type="tel"></ion-input>
 
     <ion-item class="selection">
    <!--<p class="thelabel">الدولة</p>-->
-        <ion-label>اختر الخدمة</ion-label>
+        <ion-label>{{'Choose Service'|translate}}</ion-label>
 
         <ion-select   okText="اختر" cancelText="الغاء" required="true">
                 <!--<img src={{country.picpath}}>-->
@@ -45,13 +45,13 @@
   <!--<p class="thelabel">الخدمات المقدمة</p>-->
   <!--<ion-input style="text-align:center" type="text" placeholder="الخدمات المقدمة"></ion-input>-->
     <ion-item class="selection">
-        <ion-label> اختر الدولة</ion-label>
+        <ion-label>{{'Choose Countery'|translate}}</ion-label>
         <ion-select  okText="اختر" cancelText="الغاء" required="true" >
             <ion-option (ionSelect)="getSelectedC(c.title_ar)"  *ngFor="let c of cs"  value={{c.title_ar}} required>{{c.title_ar}}</ion-option>
         </ion-select>
     </ion-item>
 
-  <button  [disabled]="!f.valid" (click)="submit()" ion-button block class="btn">التسجيل</button>
+  <button  [disabled]="!f.valid" (click)="submit()" ion-button block class="btn">{{'Sign Up'|translate}}</button>
 
 </form>
 

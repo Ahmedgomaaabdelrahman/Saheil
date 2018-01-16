@@ -12,7 +12,7 @@
         <ion-icon style="color:gray" ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
       </button>
     </ion-buttons>
-    <ion-title>selectloc</ion-title>
+    <ion-title>{{'selectloc'|translate}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -22,7 +22,7 @@
   <div #map id="map"></div>
   <form class="forma">
     <ion-input name="placelabel" [(ngModel)]="placelabel" class="placename" placeholder="العنوان" type="text"></ion-input>
-    <button ion-button block class="tobalagh" (click)="sendLocation()">Save</button>
+    <button ion-button block class="tobalagh" (click)="sendLocation()">{{'Save'|translate}}</button>
   </form>
 
 </ion-content>

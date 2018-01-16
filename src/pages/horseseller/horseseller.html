@@ -2,7 +2,7 @@
 <ion-content>
     <header></header>
     <subheader></subheader>
-   <ion-row class="toprow"><ion-col col-12 >تجار الخيل</ion-col></ion-row>
+   <ion-row class="toprow"><ion-col col-12 >{{'Horse Dealers'|translate}}</ion-col></ion-row>
   
    
     <div *ngFor="let v of veterinariansArray">
@@ -42,7 +42,7 @@
 
                 <ion-row>
                     <ion-col col-11 (click)="gotodetails(v.member_service_id)">
-                        <p class="p3">المزيد</p>
+                        <p class="p3">{{'more'|translate}}</p>
                         <img height="8px" src="assets/imgs/more.png">
                     </ion-col>
 

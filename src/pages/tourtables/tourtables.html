@@ -1,7 +1,7 @@
 <ion-content>
   <header></header>
   <subheader></subheader>
-  <ion-row class="toprow"><ion-col col-12 >اخبار البطولات والجداول</ion-col>
+  <ion-row class="toprow"><ion-col col-12 >{{'Tournament & Tables News'|translate}}</ion-col>
   </ion-row>
 
   <div class="contdiv" *ngFor="let t of tours" (click)="goone(t.tournament_id)">{{t.title_ar}}</div>
