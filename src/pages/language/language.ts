@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
-import {MenuController, NavController, NavParams} from 'ionic-angular';
+// import {MenuController, NavController, NavParams, Platform} from 'ionic-angular';
 import { AboutsahielPage } from '../aboutsahiel/aboutsahiel';
 import { LoadingPage } from '../loading/loading';
 import { AlldoctorsPage } from '../alldoctors/alldoctors';
 import { AllclinksPage } from '../allclinks/allclinks';
+import { IonicPage, NavController, NavParams ,Platform,MenuController} from 'ionic-angular';
+import {TranslateService} from "@ngx-translate/core";
+// import {MainService} from "../../providers/main-service";
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'page-language',
@@ -11,7 +15,10 @@ import { AllclinksPage } from '../allclinks/allclinks';
 })
 export class LanguagePage {
 
-  constructor(public menuCtrl:MenuController,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public menuCtrl:MenuController,public navCtrl: NavController, public navParams: NavParams,
+    public platform: Platform,
+    private translate: TranslateService,
+    private storage: Storage) {
       this.menuCtrl.enable(true)
 
   }
@@ -19,11 +26,19 @@ export class LanguagePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LanguagePage');
   }
-  gotoNotes(){
+  gotoNotes(type){
+      console.log('ionViewDidLoad LanguagePage',this.translate.getDefaultLang());
+      this.translate.use(type)
+
+      this.translate.setDefaultLang(type);
+      console.log('ionViewDidLoad LanguagePage',this.translate.getDefaultLang());
+
+      this.storage.set('lang',type);
     this.navCtrl.push(LoadingPage);
   }
 
   goDoctors(){
+
     this.navCtrl.push(AlldoctorsPage);
   }
   gotoclinks(){
@@ -31,4 +46,24 @@ export class LanguagePage {
 
       // this.navCtrl.push(AllclinksPage);
   }
+    Change_Toggle(type) {
+        this.translate.setDefaultLang(type);
+        this.storage.set('lang',type);
+        // MainService.lang = type;
+        if(type == 'ar'){
+            this.platform.setDir('rtl', true);
+            console.log(type);
+            console.log("arabic");
+        }
+        else
+        {
+            this.platform.setDir('ltr', true);
+            console.log(type);
+            console.log("English");
+        }
+    }
+    toggleMenu()
+    {
+        this.menuCtrl.toggle();
+    }
 }

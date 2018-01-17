@@ -217,7 +217,7 @@ export function createTranslateLoader(http: HttpClient) {
           loader: {
               provide: TranslateLoader,
               useFactory: (createTranslateLoader),
-              deps: [HttpClientModule]
+              deps: [HttpClient]
           }
       }),IonicStorageModule.forRoot()
 

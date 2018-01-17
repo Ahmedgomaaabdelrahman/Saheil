@@ -12,7 +12,8 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class DomainProvider {
 public url="http://sahel-horse.com/";
-public lang="ar";
+public lang="en";
+
   constructor(public http: HttpClient) {
     console.log('Hello DomainProvider Provider');
   }
