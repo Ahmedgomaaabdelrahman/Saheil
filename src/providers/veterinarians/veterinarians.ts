@@ -13,7 +13,7 @@ export class VeterinariansProvider {
 lang:any
   constructor(public url:DomainProvider,public http: HttpClient) {
     console.log('Hello VeterinariansProvider Provider');
-    this.lang=url.lang;
+    this.lang=url.getLang();
   }
     getAllServices(id){
         return this.http.get(this.url.url+'api/'+this.lang+'/members/services/'+id);

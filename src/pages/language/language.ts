@@ -8,6 +8,7 @@ import { IonicPage, NavController, NavParams ,Platform,MenuController} from 'ion
 import {TranslateService} from "@ngx-translate/core";
 // import {MainService} from "../../providers/main-service";
 import { Storage } from '@ionic/storage';
+import {DomainProvider} from "../../providers/domain/domain";
 
 @Component({
   selector: 'page-language',
@@ -18,7 +19,7 @@ export class LanguagePage {
   constructor(public menuCtrl:MenuController,public navCtrl: NavController, public navParams: NavParams,
     public platform: Platform,
     private translate: TranslateService,
-    private storage: Storage) {
+    private storage: Storage,private domain:DomainProvider) {
       this.menuCtrl.enable(true)
 
   }
@@ -29,7 +30,7 @@ export class LanguagePage {
   gotoNotes(type){
       console.log('ionViewDidLoad LanguagePage',this.translate.getDefaultLang());
       this.translate.use(type)
-
+this.domain.setLang(type)
       this.translate.setDefaultLang(type);
       console.log('ionViewDidLoad LanguagePage',this.translate.getDefaultLang());
 
