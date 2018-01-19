@@ -15,7 +15,7 @@ export class SupsProvider {
 
     constructor(public url: DomainProvider, public http: HttpClient ,private paypal:PaypalProvider) {
         console.log('Hello VeterinariansProvider Provider');
-        this.lang = url.lang;
+      this.lang = DomainProvider.lang;
     }
 
     getAllSupplies(id) {

@@ -13,7 +13,7 @@ export class MailProvider {
     lang:any
     constructor(public url:DomainProvider,public http: HttpClient) {
         console.log('Hello VeterinariansProvider Provider');
-        this.lang=url.lang;
+      this.lang = DomainProvider.lang;
     }
     getMyInbox(id){
         let mail={

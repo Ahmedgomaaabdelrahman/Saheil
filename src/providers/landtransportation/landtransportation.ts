@@ -22,7 +22,7 @@ export class LandtransportationProvider {
     public  CONFIRM:string='confirm';
     lang:any
     constructor(public url:DomainProvider,public http: HttpClient) {
-        this.lang=url.lang;
+      this.lang = DomainProvider.lang;
     }
     sendOrder(msg){
         return this.http.post(this.url.url+'api/transport/order',msg);

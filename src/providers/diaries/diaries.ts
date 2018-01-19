@@ -14,7 +14,7 @@ export class DiariesProvider {
     lang: any
 
     constructor(public url: DomainProvider, public http: HttpClient) {
-        this.lang = url.lang;
+      this.lang = DomainProvider.lang;
     }
     getAllDiaries(index){
         // http://www.sahel-horse.com/api/ar/diaries/page/3

@@ -39,6 +39,8 @@ import { SucesspatnerPage } from './../pages/sucesspatner/sucesspatner';
 import { SecuritytermsPage } from './../pages/securityterms/securityterms';
 import {TransportationCustomerHistoryPage} from "../pages/transportation-customer-history/transportation-customer-history";
 import {SignupPage} from "../pages/signup/signup";
+import {DomainProvider} from "../providers/domain/domain";
+import {TranslateService} from "@ngx-translate/core";
 
 
 
@@ -55,14 +57,30 @@ export class MyApp {
   // rootPage:any = LanguagePage;
   rootPage:any;
 
-  constructor(public user:Users,public events:Events,platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private common:CommonservicesProvider,private auth:AuthproviderProvider)
+  constructor(    private translate: TranslateService,
+                  public domain:DomainProvider,public user:Users,public events:Events,platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,private common:CommonservicesProvider,private auth:AuthproviderProvider)
   {
+
       this.flag=false;
       this.supsSellerFlag=false;
       this.horseSellerFlag=false;
       this.transporterFlag=false;
     platform.ready().then(() => {
+      let self=this
+      // DomainProvider.lang='ar'
+      // self.translate.setDefaultLang('ar');
+      this.common.getStoredValue('lang').then(lang=>{
+        if(lang != null){
+          console.log(lang)
+          DomainProvider.lang=lang
+          self.translate.use(lang);}
+        else{
 
+          DomainProvider.lang='ar'
+          self.translate.use('ar');
+        }
+
+      })
         // console.log('user',this.user.getuser())
         this.events.subscribe('auth', (res) => {
             console.log(res)
@@ -192,7 +210,7 @@ if(user['service'] !=null){
     addHorse(){
         this.nav.push(MyhorsesPage);
     }
-    goAlbum(){ 
+    goAlbum(){
         this.nav.push(AllImagesPage);
     }
     nextEvent(){

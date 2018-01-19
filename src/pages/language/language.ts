@@ -30,7 +30,7 @@ export class LanguagePage {
   gotoNotes(type){
       console.log('ionViewDidLoad LanguagePage',this.translate.getDefaultLang());
       this.translate.use(type)
-this.domain.setLang(type)
+    DomainProvider.lang=type
       this.translate.setDefaultLang(type);
       console.log('ionViewDidLoad LanguagePage',this.translate.getDefaultLang());
 

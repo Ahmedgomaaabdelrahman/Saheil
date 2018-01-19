@@ -17,7 +17,7 @@ export class PaypalProvider {
 
 
     constructor(public common:CommonservicesProvider,public url: DomainProvider, public http: HttpClient ,private payPal: PayPal) {
-        this.lang = url.lang;
+      this.lang = DomainProvider.lang;
 
         console.log('Hello PaypalProvider Provider');
     this.YOUR_PRODUCTION_CLIENT_ID='access_token$sandbox$hstrvszg9ny74q6p$dee384ac4fbe8f7220e2f958fe2f9824'

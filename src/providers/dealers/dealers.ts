@@ -16,7 +16,7 @@ export class DealersProvider {
 
     constructor(public url: DomainProvider, public http: HttpClient) {
         console.log('Hello VeterinariansProvider Provider');
-        this.lang = url.lang;
+      this.lang = DomainProvider.lang;
     }
   getDealerHourses(id){
         return this.http.get(this.url.url+'api/'+this.lang+'/members/services/details/'+id);

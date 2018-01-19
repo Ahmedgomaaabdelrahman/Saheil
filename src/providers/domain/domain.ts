@@ -25,14 +25,14 @@ public static lang;
     //   })
     // }
   }
-  getLang(){
-    return this.lang
-  }
-setLang(lang){
-
-    this.lang=null
-  this.lang=lang
-  return  this.lang
-}
+//   getLang(){
+//     return lang
+//   }
+// setLang(lang){
+//
+//     lang=null
+//   lang=lang
+//   return  this.lang
+// }
 
 }
