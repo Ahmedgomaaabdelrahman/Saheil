@@ -31,6 +31,7 @@ export class LanguagePage {
       console.log('ionViewDidLoad LanguagePage',this.translate.getDefaultLang());
       this.translate.use(type)
     DomainProvider.lang=type
+
       this.translate.setDefaultLang(type);
       console.log('ionViewDidLoad LanguagePage',this.translate.getDefaultLang());
 

@@ -25,14 +25,6 @@ public static lang;
     //   })
     // }
   }
-//   getLang(){
-//     return lang
-//   }
-// setLang(lang){
-//
-//     lang=null
-//   lang=lang
-//   return  this.lang
-// }
+
 
 }
