@@ -64,6 +64,36 @@ startTimer:any;
         })
 
     }
+    sliderImage:any;
+  sliderIndex:any;
+    sliderRefresher(){
+this.sliderIndex=0;
+let self=this
+      this.sliderImage=''
+      console.log(self.sliderIndex);
+      console.log(self.slideImages[self.sliderIndex]);
+      console.log(self.slideImages[self.sliderIndex]['picpath']);
+      self.sliderImage=self.slideImages[self.sliderIndex]['picpath']
+      self.sliderIndex++
+
+      this.startTimer=   setInterval(function () {
+this.sliderImage=''
+                        console.log(self.sliderIndex);
+                        console.log(self.slideImages[self.sliderIndex]);
+                        console.log(self.slideImages[self.sliderIndex]['picpath']);
+                        self.sliderImage=self.slideImages[self.sliderIndex]['picpath']
+                        if(self.sliderIndex<(self.slideImages.length-1)){
+                          self.sliderIndex++
+
+                        }else if(self.sliderIndex==(self.slideImages.length-1)){
+                          self.sliderIndex=0
+                        }
+                },4000);
+
+    }
+    ionViewWillLeave(){
+      clearInterval(this.startTimer)
+    }
     ionViewWillEnter(){
         // this.common.removeStoredKey('xuser')
         // this.common.removeStoredKey('user')
@@ -76,6 +106,7 @@ startTimer:any;
 this.album.homeSlider().subscribe(res=>{
     console.log(res)
     this.slideImages=res;
+    this.sliderRefresher();
 })
         // this.diaries.getAllDiaries(this.page).subscribe(res=> {
         //

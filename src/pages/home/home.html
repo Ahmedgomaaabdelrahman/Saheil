@@ -3,9 +3,11 @@
 <subheader></subheader>
 <ion-row class="toprow"><ion-col col-12 >{{'Home'|translate}}</ion-col></ion-row>
 
-    <ion-slides pager>   
-        <ion-slide *ngFor="let s of slideImages">
-            <img [src]="s['picpath']" alt="">
+    <ion-slides pager>
+        <!--<ion-slide *ngFor="let s of slideImages">-->
+        <ion-slide >
+            <!--<img [src]="s['picpath']" alt="">-->
+            <img [src]="sliderImage" alt="">
         </ion-slide>
 
     </ion-slides>
@@ -13,10 +15,10 @@
 <div>
 <ion-segment [(ngModel)]="pet" dir="rtl" style="width: 100%; padding-top: 0px;">
     <ion-segment-button value="services">
-        {{'Services'|translate}} 
+        {{'Services'|translate}}
     </ion-segment-button>
     <ion-segment-button value="Album" (click)="gochat()">
-        {{'Chat'|translate}} 
+        {{'Chat'|translate}}
     </ion-segment-button>
     <ion-segment-button value="horsesoc">
         {{'Tournament News'|translate}}
@@ -29,7 +31,7 @@
 <div [ngSwitch]="pet" class="segdiv">
     <div class="bigdiv" *ngSwitchDefault ngSelected="selected" >
         <div class="serrow" (click)="gotodoctors()">
-            
+
             <ion-row style="height: 80px;">
             <ion-col col-4><img width="50px"  src="assets/imgs/serv1.png" alt=""></ion-col>
             <ion-col col-8>
@@ -39,7 +41,7 @@
         </div>
 
         <div class="serrow" (click)="gotoclincs()">
-               
+
                 <ion-row style="height: 80px;">
                 <ion-col col-4><img width="50px"  src="assets/imgs/serv2.png" alt=""></ion-col>
                 <ion-col col-8>
@@ -49,7 +51,7 @@
         </div>
 
         <div *ngIf="!transporterFlag" class="serrow" (click)="goTrans()">
-                
+
                 <ion-row style="height: 80px;">
                 <ion-col col-4><img width="50px"  src="assets/imgs/serv3.png" alt=""></ion-col>
                 <ion-col col-8>
@@ -58,7 +60,7 @@
                 </ion-row>
         </div>
         <div class="serrow" (click)="goTransAir()">
-                
+
                 <ion-row style="height: 80px;">
                 <ion-col col-4><img width="50px"  src="assets/imgs/serv7.jpg" alt=""></ion-col>
                 <ion-col col-8>
@@ -67,28 +69,28 @@
                 </ion-row>
         </div>
         <div class="serrow" (click)="goHorsesupp()">
-             
+
                 <ion-row style="height: 80px;">
                 <ion-col col-4><img width="50px"  src="assets/imgs/serv4.png" alt=""></ion-col>
                 <ion-col col-8>
                     <h6 style="text-align:center">{{'Horse Supplies'|translate}}</h6>
                 </ion-col>
                 </ion-row>
-        </div>      
+        </div>
         <div class="serrow" (click)="goHorseSellers()">
-               
+
                 <ion-row style="height: 80px;">
                 <ion-col col-4><img width="50px"  src="assets/imgs/serv5.png" alt=""></ion-col>
                 <ion-col col-8>
                     <h6 style="text-align:center">{{'Horse Dealers'|translate}}</h6>
                 </ion-col>
                 </ion-row>
-        </div>  
-        
+        </div>
+
     </div>
 
     <div *ngSwitchCase="'Album'">
-       
+
      </div>
 
     <div *ngSwitchCase="'horsesoc'" >
@@ -155,6 +157,6 @@
     </div>
 </div>
 
-  
-  
+
+
 </ion-content>
