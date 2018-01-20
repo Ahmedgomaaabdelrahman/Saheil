@@ -29,6 +29,7 @@ service_sendimage:any;
 service_adress_ar:string;
 service_adress_en:string;
     map:any;
+    qPrice:any;
 service_details_ar:string;
 service_details_en:string;
     facebook:any;
@@ -41,6 +42,7 @@ service_details_en:string;
           // console.log(user);
           this.member_id = user.member_id;
 //////////////
+          this.qPrice=user.price;
           this.image = user.image;
           this.username = user.username;
           this.email = user.email;
@@ -86,7 +88,8 @@ submit(){
       'service_details_ar':this.service_details_ar,
       'service_details_en':this.service_details_en,
       'facebook':this.facebook,
-      'twitter':this.twitter
+      'twitter':this.twitter,
+      'price':this.qPrice
     };
     console.log('u',user)
 

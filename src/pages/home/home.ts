@@ -28,12 +28,15 @@ export class HomePage {
     index:any;
 timer:any
 slideImages:any;
-startTimer:any
+startTimer:any;
+    topSliderIndex:any;
     items:any;
     show:any;
-    member_id
-    transporterFlag
+    member_id:any;
+    transporterFlag:any;
     constructor(private album:AlbumProvider,private streamingMedia: StreamingMedia,public diaries:DiariesProvider,public menuCtrl:MenuController,public common:CommonservicesProvider,public navCtrl: NavController) {
+
+
         // fullscreen video
         //https://ionicframework.com/docs/native/streaming-media/
         // let options: StreamingVideoOptions = {

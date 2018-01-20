@@ -35,8 +35,8 @@ export class AddhorsePage {
     allCategories
     lang
     constructor(public domain:DomainProvider,public resources:Resorces,public services:GetServicesProvider,private common:CommonservicesProvider,private dealer:DealersProvider,public navCtrl: NavController, public navParams: NavParams) {
-        console.log(this.domain.getLang())
-this.lang=this.domain.getLang();
+        console.log(DomainProvider.lang)
+this.lang=DomainProvider.lang;
     }
     cs
     ionViewWillEnter(){
