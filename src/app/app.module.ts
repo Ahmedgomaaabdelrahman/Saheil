@@ -129,6 +129,7 @@ import { TransportionhisdetailsPage } from '../pages/transportionhisdetails/tran
 
 import { HttpModule, Http } from '@angular/http';
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
+import {AutocompletePage} from "../pages/autocomplete/autocomplete";
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -139,6 +140,7 @@ export function createTranslateLoader(http: HttpClient) {
     MyApp,
     InboxchatPage,
     HomePage,
+    AutocompletePage,
     LoadingPage,
     AboutsahielPage,
     LoginPage,
@@ -233,7 +235,7 @@ export function createTranslateLoader(http: HttpClient) {
     AboutsahielPage,
     LoginPage,
     SignupPage,
-    SelectlocPage,
+    SelectlocPage,AutocompletePage,
     HeaderComponent,
     SubheaderComponent,
     BottomimgComponent,

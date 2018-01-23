@@ -1,8 +1,10 @@
-import {NavController, NavParams, Platform, ViewController} from 'ionic-angular';
+import {ModalController,NavController, NavParams, Platform, ViewController} from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
 import {BehaviorSubject} from "rxjs/BehaviorSubject";
 
 import { Component } from "@angular/core/";
+import {AutocompletePage} from "../autocomplete/autocomplete";
+
 import {ElementRef, ViewChild} from "@angular/core";
 /**
  * Generated class for the SelectlocPage page.
@@ -25,14 +27,28 @@ export class SelectlocPage {
     public lng ;
     public placelabel:string;
     public customerid : string;
-    constructor(public view:ViewController,public platform:Platform,public geolocation: Geolocation,public navCtrl: NavController, public navParams: NavParams){
-        platform.ready().then(() => {
+    ////////////
+  address
+  ///////////
+    constructor(private modalCtrl: ModalController,public view:ViewController,public platform:Platform,public geolocation: Geolocation,public navCtrl: NavController, public navParams: NavParams){
+        // platform.ready().then(() => {
             this.loadMap();
-        });
+        // });
+      ////////////
+      this.address = {
+        place: ''
+      };
+      ///////////
     }
+  showAddressModal () {
+    let modal = this.modalCtrl.create(AutocompletePage);
+    let me = this;
+    modal.onDidDismiss(data => {
+      this.address.place = data;
+    });
+    modal.present();
+  }
 
-    ionViewDidLoad() {
-    }
     setMapOnAll(map) {
         for (var i = 0; i < this.markers.length; i++) {
             this.markers[i].setMap(map);
