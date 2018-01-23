@@ -19,6 +19,7 @@ import {LoginPage} from "../login/login";
 import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-media';
 import {AlbumProvider} from "../../providers/album/album";
 import {TransportMessagePage} from "../transport-message/transport-message";
+import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 
 @Component({
     selector: 'page-home',
@@ -34,7 +35,7 @@ startTimer:any;
     show:any;
     member_id:any;
     transporterFlag:any;
-    constructor(private album:AlbumProvider,private streamingMedia: StreamingMedia,public diaries:DiariesProvider,public menuCtrl:MenuController,public common:CommonservicesProvider,public navCtrl: NavController) {
+    constructor(private nativePageTransitions: NativePageTransitions,private album:AlbumProvider,private streamingMedia: StreamingMedia,public diaries:DiariesProvider,public menuCtrl:MenuController,public common:CommonservicesProvider,public navCtrl: NavController) {
 
 
         // fullscreen video
@@ -94,6 +95,34 @@ this.sliderImage=''
     ionViewWillLeave(){
       clearInterval(this.startTimer)
     }
+  // example of adding a transition when a page/modal closes
+  // ionViewWillLeave() {
+
+    // let options: NativeTransitionOptions = {
+    //   direction: 'up',
+    //   duration: 500,
+    //   slowdownfactor: 3,
+  //     slidePixels: 20,
+  //     iosdelay: 100,
+  //     androiddelay: 150,
+  //     fixedPixelsTop: 0,
+  //     fixedPixelsBottom: 60
+  //   };
+  //
+  //   this.nativePageTransitions.slide(options)
+  //     .then(onSuccess)
+  //     .catch(onError);
+  //
+  // }
+
+
+// example of adding a transition when pushing a new page
+//   openPage(page: any) {
+//
+//     this.nativePageTransitions.slide(options);
+//     this.navCtrl.push(page);
+//
+//   }
     ionViewWillEnter(){
         // this.common.removeStoredKey('xuser')
         // this.common.removeStoredKey('user')

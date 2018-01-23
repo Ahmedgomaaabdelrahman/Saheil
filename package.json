@@ -27,9 +27,10 @@
     "@ionic-native/core": "4.3.3",
     "@ionic-native/fcm": "^4.4.2",
     "@ionic-native/file-transfer": "^4.5.2",
-    "@ionic-native/geolocation": "^4.4.2",
+    "@ionic-native/geolocation": "^4.5.2",
     "@ionic-native/google-maps": "^4.4.2",
     "@ionic-native/media-capture": "^4.5.2",
+    "@ionic-native/native-page-transitions": "^4.5.2",
     "@ionic-native/paypal": "^4.5.2",
     "@ionic-native/secure-storage": "^4.4.2",
     "@ionic-native/splash-screen": "4.3.3",
@@ -42,6 +43,7 @@
     "com-badrit-base64": "^0.2.0",
     "com.hutchind.cordova.plugins.streamingmedia": "~0.1.4",
     "com.paypal.cordova.mobilesdk": "^3.5.0",
+    "com.telerik.plugins.nativepagetransitions": "^0.6.5",
     "cordova-android": "6.3.0",
     "cordova-browser": "5.0.1",
     "cordova-plugin-actionsheet": "^2.3.3",
@@ -88,7 +90,8 @@
       "cordova-plugin-media-capture": {},
       "com-badrit-base64": {},
       "cordova-plugin-file-transfer": {},
-      "com.hutchind.cordova.plugins.streamingmedia": {}
+      "com.hutchind.cordova.plugins.streamingmedia": {},
+      "com.telerik.plugins.nativepagetransitions": {}
     },
     "platforms": [
       "browser",

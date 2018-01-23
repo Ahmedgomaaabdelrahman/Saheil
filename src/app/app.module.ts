@@ -128,6 +128,8 @@ import {TransportationTransporterHistoryPage} from "../pages/transportation-tran
 import { TransportionhisdetailsPage } from '../pages/transportionhisdetails/transportionhisdetails';
 
 import { HttpModule, Http } from '@angular/http';
+import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
+
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -207,9 +209,9 @@ export function createTranslateLoader(http: HttpClient) {
     SucesspatnerPage,
     SecuritytermsPage,
     TransportionhisdetailsPage
-  ], 
+  ],
   imports: [
-  
+
   BrowserModule,HttpClientModule,
     IonicModule.forRoot(MyApp),
 
@@ -298,13 +300,13 @@ export function createTranslateLoader(http: HttpClient) {
     SucesspatnerPage,
     SecuritytermsPage,
     TransportionhisdetailsPage
-  ], 
+  ],
   providers: [
     StatusBar,
     SplashScreen,FileTransfer, FileTransferObject,StreamingMedia,
     {provide: ErrorHandler, useClass: IonicErrorHandler},AuthproviderProvider,DomainProvider,GetServicesProvider,SearchProvider,UserProvider,
     CommonservicesProvider,FCM,SecureStorage,Camera,ActionSheet,Geolocation,MediaCapture,Base64,{ provide: IonicStorageModule, useClass: IonicStorageModule},
-    VeterinariansProvider,
+    VeterinariansProvider,NativePageTransitions,
     VeterinaryclinicsProvider,
     SupsProvider,
     MailProvider,Users,Resorces,

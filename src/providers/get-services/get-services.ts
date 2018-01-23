@@ -22,7 +22,7 @@ export class GetServicesProvider {
 countryid():Promise <any>{
       let promise=new Promise((resolve,reject)=>{
           try{
-          this.http.get(this.domain.url+"api/"+this.domain.lang+"/country").subscribe(
+          this.http.get(this.domain.url+"api/"+DomainProvider.lang+"/country").subscribe(
               res=>{resolve(res)}
           )}catch (E){
               reject(E)
@@ -33,7 +33,7 @@ countryid():Promise <any>{
 serviceId():Promise <any>{
     let promise=new Promise((resolve,reject)=>{
         try{
-            this.http.get(this.domain.url+"api/"+this.domain.lang+"/service").subscribe(
+            this.http.get(this.domain.url+"api/"+DomainProvider.lang+"/service").subscribe(
                 res=>{resolve(res)}
             )}catch (E){
             reject(E)
