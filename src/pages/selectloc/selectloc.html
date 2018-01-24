@@ -23,7 +23,7 @@
   <div #map id="map"></div>
   <ion-list>
     <ion-item>
-      <ion-input (click)="showAddressModal()" [(ngModel)]="address.place" type="text" placeholder="Pick an address"></ion-input>
+      <!--<ion-input (click)="showAddressModal()" [(ngModel)]="address.place" type="text" placeholder="Pick an address"></ion-input>-->
     </ion-item>
   </ion-list>
   <form class="forma">
@@ -31,6 +31,7 @@
 
 
 
+    <ion-input (click)="showAddressModal()" [(ngModel)]="address['place']" name="address['place']" class="placename" type="text" placeholder="Pick an address"></ion-input>
 
     <ion-input name="placelabel" [(ngModel)]="placelabel" class="placename" placeholder="العنوان" type="text"></ion-input>
     <button ion-button block class="tobalagh" (click)="sendLocation()">{{'Save'|translate}}</button>
