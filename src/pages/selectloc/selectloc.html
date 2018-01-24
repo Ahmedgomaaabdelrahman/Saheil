@@ -31,9 +31,10 @@
 
 
 
-    <ion-input (click)="showAddressModal()" [(ngModel)]="address['place']" name="address['place']" class="placename" type="text" placeholder="Pick an address"></ion-input>
+    <ion-input  [(ngModel)]="address['place']" name="address['place']" class="placename" type="text" placeholder="Pick an address">
+     </ion-input> <button (click)="showAddressModal()" ion-button class="searchButton"><ion-icon name="search" style="color: #2d2d2d ;"></ion-icon></button>
 
-    <ion-input name="placelabel" [(ngModel)]="placelabel" class="placename" placeholder="العنوان" type="text"></ion-input>
+    <!--<ion-input name="placelabel" [(ngModel)]="placelabel" class="placename" placeholder="العنوان" type="text"></ion-input>-->
     <button ion-button block class="tobalagh" (click)="sendLocation()">{{'Save'|translate}}</button>
   </form>
 

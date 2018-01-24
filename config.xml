@@ -91,8 +91,8 @@
     <plugin name="com-badrit-base64" spec="^0.2.0" />
     <plugin name="cordova-plugin-file-transfer" spec="^1.7.0" />
     <plugin name="com.hutchind.cordova.plugins.streamingmedia" spec="~0.1.4" />
-    <engine name="browser" spec="5.0.1" />
-    <engine name="android" spec="6.3.0" />
     <plugin name="com.telerik.plugins.nativepagetransitions" spec="^0.6.5" />
     <plugin name="cordova-plugin-geolocation" spec="^3.0.0" />
+    <engine name="browser" spec="5.0.1" />
+    <engine name="android" spec="6.3.0" />
 </widget>
