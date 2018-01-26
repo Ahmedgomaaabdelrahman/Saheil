@@ -29,10 +29,14 @@ page-selectloc {
     bottom:0;
     width:100%
   }
+  .bar-buttons-ios {
+    margin: 0 !important;
+  }
   .searchButton{
     width: 10%;
     margin-bottom: 1%;
     border-radius:25%;
+    height: 35px;
     margin-left: 88%;
     border: 1px black solid;
     //margin-left: 90%;

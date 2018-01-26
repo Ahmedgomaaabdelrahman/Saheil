@@ -33,7 +33,6 @@ page-clinkdetails {
             text-align: center;
             font-family: 'AppFont' !important;
             font-weight: bold;
-            margin-top: -26px;
         }
     
         .send{
@@ -89,6 +88,7 @@ page-clinkdetails {
                 color: gray;
                 font-size: 13px;
                 max-height: 180px;
+                overflow: scroll;
             }
             .row{
                 direction: rtl;
