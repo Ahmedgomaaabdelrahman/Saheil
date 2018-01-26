@@ -5,8 +5,11 @@
    <subheader></subheader>
   <ion-row class="toprow"><ion-col col-12 >النقل البرى</ion-col></ion-row>
   <div class="map">
-    <!--<ion-input value="منطقة الانطلاق" type="text" style="background-image:url('assets/imgs/search.png');background-repeat: no-repeat;background-position: 96%;background-size: 25px;" class="mapinput1"></ion-input>-->
-    <!--<ion-input value="منطقة الوصول" type="text" style="background-image:url('assets/imgs/search.png');background-repeat: no-repeat;background-position: 96%;background-size: 25px;"class="mapinput2"></ion-input>-->
+    <p style="background-repeat: no-repeat;background-position: 96%;font-size:150%; text-align:center;background-size: 25px;" class="mapinput1">
+      {{'Origin Place'|translate}}  : {{origin}}
+    </p>
+    <p style="background-repeat: no-repeat;background-position: 96%; text-align:center;font-size:150%;background-size: 25px;"class="mapinput2">{{'Destination Place'|translate}}  :{{destination}}
+    </p>
     <img width="100%" src="assets/imgs/map2.png"></div>
     <!--<div class="order" id="order" *ngIf="!order" (click)="Contiue()">استمرار</div>-->
     <!--<div class="order" id="order" *ngIf="order" (click)="Order()">اطلب الان</div>-->
@@ -14,29 +17,39 @@
     <div id="infodiv" >
         <div class="Info">
             <ion-row dir="rtl">
-              <ion-col col-5 style="border-left:1px solid lightgray;">
-                <p>السائق :محمد محمود</p>
-                <ion-row>
-                  <ion-icon class="star" name="star"></ion-icon>
-                  <ion-icon class="star" name="star"></ion-icon>
-                  <ion-icon class="star" name="star"></ion-icon>
-                  <ion-icon class="star" name="star"></ion-icon>
-                  <ion-icon class="star" name="outline-star"></ion-icon>
-                </ion-row>
-                <p>السياره:شيفروليه افيو</p>
-                <p>رقم السياره:342673</p>
+              <ion-col col-5 style="border-left:1px solid lightgray;margin-left: 40px">
+                <p>
+                  {{'Service Provider name'|translate}} : {{transport_service_provider}}
+                </p>
+                <!--<ion-row>-->
+                  <!--<ion-icon class="star" name="star"></ion-icon>-->
+                  <!--<ion-icon class="star" name="star"></ion-icon>-->
+                  <!--<ion-icon class="star" name="star"></ion-icon>-->
+                  <!--<ion-icon class="star" name="star"></ion-icon>-->
+                  <!--<ion-icon class="star" name="outline-star"></ion-icon>-->
+                <!--</ion-row>-->
+                <!--<p>السياره:شيفروليه افيو</p>-->
+                <!--<p>رقم السياره:342673</p>-->
               </ion-col>
               <ion-col col-4>
-                  <p>المسافة :كم</p>
-                  <p>التكلفة:100ريال</p>
+                  <p>{{'Distance'|translate}} :{{distance}}
+                    {{'km'|translate}}
+                  </p>
+                  <p>
+                    {{'Price'|translate}} : {{cost}}
+                  </p>
                   <div style="text-align:center;padding-top:10px"><img height="20px" src="assets/imgs/phone.png">
-                       <p style="color:#efc658">اتصل بالسائق</p>
+                       <p style="color:#efc658">{{'Phone Number'|translate}}:{{mobile}}
+                       </p>
+
                   </div>
               </ion-col>
-              <ion-col col-3 style="text-align:center;padding-top:15px"><img height="70px" src="assets/imgs/driverimage.png"></ion-col>
+              <ion-col col-3 style="text-align:center;padding-top:15px">
+                <!--<img height="70px" src="assets/imgs/driverimage.png">-->
+              </ion-col>
             </ion-row>
         </div>
-        <div class="bottomdiv" (click)="finish()">الغاء</div>
+        <!--<div class="bottomdiv" (click)="finish()">الغاء</div>-->
         <div class="bottomdiv" (click)="fee()">استمرار</div>
     </div>
 </ion-content>

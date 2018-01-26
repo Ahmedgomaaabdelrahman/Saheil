@@ -16,6 +16,8 @@
   "Name":"الاسم",
   "Email":"البريد الالكتروني",
   "Phone Number":"رقم الهاتف",
+  "Distance":"المسافة",
+  "km":"كم",
   "Password":"كلمه المرور",
   "Confirm Password":"تاكيد كلمه المرور",
   "Confirm":"تاكيد",

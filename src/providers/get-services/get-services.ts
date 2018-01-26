@@ -41,6 +41,17 @@ serviceId():Promise <any>{
     })
     return promise;
 }
+aboutSahil():Promise <any>{
+    let promise=new Promise((resolve,reject)=>{
+        try{
+            this.http.get(this.domain.url+"api/"+DomainProvider.lang+"/service").subscribe(
+                res=>{resolve(res)}
+            )}catch (E){
+            reject(E)
+        }
+    })
+    return promise;
+}
 getToken():Promise<any>{
 let promise=new Promise((resolve,reject)=>{
     this.fcm.getToken().then(token=>{

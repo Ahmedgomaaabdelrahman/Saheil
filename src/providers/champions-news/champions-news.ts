@@ -16,6 +16,9 @@ export class ChampionsNewsProvider {
     }
     getAllTournaments(){
         return this.http.get(this.url.url + 'api/' + this.lang + '/tournaments' );
+
+      // return this.http.get(this.url.url + 'api/' + this.lang + '/upcoming/events/new' );
+
     }
     getnewsTournaments(news_id){
         return this.http.get(this.url.url + 'api/' + this.lang + '/tournaments/'+news_id);
