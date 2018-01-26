@@ -1,7 +1,7 @@
 {
   "All Products":"كل المنتجات",
   "Main":"الرئيسية",
-  "My Account":"ملفي الشخصي",  
+  "My Account":"ملفي الشخصي",
   "Shopping Cart":"عربة التسوق",
   "Favorites":"المفضلة",
   "Settings":"الضبط",
@@ -10,6 +10,7 @@
   "Search...":"بحث...",
   "gm":"جرام",
   " SAR":"ريال",
+  "mobile":"الهاتف",
   "On Sale":"الخصومات",
   "Search":"بحث",
   "Name":"الاسم",

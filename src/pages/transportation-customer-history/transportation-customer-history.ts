@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {CommonservicesProvider} from "../../providers/commonservices/commonservices";
 import {LandtransportationProvider} from "../../providers/landtransportation/landtransportation";
 import { TransportionhisdetailsPage } from './../transportionhisdetails/transportionhisdetails';
+import { TransportPage } from './../transport/transport';
 
 /**
  * Generated class for the TransportationCustomerHistoryPage page.
@@ -47,6 +48,6 @@ export class TransportationCustomerHistoryPage {
 
 
     histdetails(order){
-        this.navCtrl.push(TransportionhisdetailsPage,order);
+        this.navCtrl.push(TransportPage,order);
     }
 }

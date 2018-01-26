@@ -19,7 +19,7 @@ page-transport {
     opacity: 0.5;
     height: 40px;
     color: black;
-  
+
 }
 .mapinput1::value{
     color: #e68905;
@@ -70,12 +70,12 @@ page-transport {
     color: #efc658;
 }
 #infodiv{
-    display: none;
+    //display: none;
     position: fixed;
     bottom: 0;
     width: 100%;
     height: auto;
-   
+
 }
 .scroll-content {
     overflow-y: hidden;
