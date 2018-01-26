@@ -159,7 +159,7 @@ loadMap() {
     });
     this.transportersMarkers.push(marker);
 
-
+console.log('all markers',this.transportersMarkers)
   }
     sendLocation(){
         // this.location = new Location (this.lat,this.lng,this.placelabel);
