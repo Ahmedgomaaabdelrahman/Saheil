@@ -65,18 +65,18 @@ service_details_en:string;
           this.twitter = user.twitter;
 ///////////////
 //         let i=1
-        // this.services.serviceDetails().subscribe(res=>{
-        //   console.log('lenth : ',res)
-        //   console.log('lenth : ',res.length)
+        this.services.serviceDetails().subscribe(res=>{
+          console.log('lenth : ',res)
+          console.log('lenth : ',res.length)
 
-        //   for (let i=1;i<res.length;i++){
-        //     if(this.service_id==res[i].service_id){
-        //       this.commetion=res[i].commision
-        //       console.log(res[i])
-        //     }
-        //   }
+          for (let i=1;i<res.length;i++){
+            if(this.service_id==res[i].service_id){
+              this.commetion=res[i].commision
+              console.log(res[i])
+            }
+          }
 
-        // })
+        })
 
         console.log(this.service_id)
 
