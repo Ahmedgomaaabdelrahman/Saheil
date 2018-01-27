@@ -38,44 +38,48 @@ service_details_en:string;
     facebook:any;
     twitter:any;
   constructor(public services:GetServicesProvider,public resources:Resorces,public domain:DomainProvider,public modalCtrl:ModalController,public common:CommonservicesProvider,private auth:AuthproviderProvider,public navCtrl: NavController, public navParams: NavParams) {
-  this.common.getStoredValue('user').then(user=>{
+  let self=this
+    this.common.getStoredValue('user').then(user=>{
       console.log('edit user',user)
       try {
           // console.log(user.member_id);
           // console.log(user);
-          this.member_id = user.member_id;
+        self.member_id = user.member_id;
 //////////////
-          this.qPrice=user.price;
-          this.image = user.image;
-          this.username = user.username;
-          this.email = user.email;
-          this.mobile = user.mobile;
-          this.latlng = user.latlng;
-          this.password = user.password;
-          this.gcm_regid=user.gcm_regid;
-          this.service_id = user.service[0].service_id;
-          this.service_name_ar = user.service_name_ar;
-          this.service_name_en = user.service_name_en;
-          this.service_image = user.service_image;
-          this.service_adress_ar = user.service_adress_ar;
-          this.service_adress_en = user.service_adress_en;
-          this.service_details_ar = user.service_details_ar;
-          this.service_details_en = user.service_details_en;
-          this.facebook = user.facebook;
-          this.twitter = user.twitter;
+        self.qPrice=user.price;
+        self.image = user.image;
+        self.username = user.username;
+        self.email = user.email;
+        self.mobile = user.mobile;
+        self.latlng = user.latlng;
+        self.password = user.password;
+        self.gcm_regid=user.gcm_regid;
+        self.service_id = user.service[0].service_id;
+        self.service_name_ar = user.service_name_ar;
+        self.service_name_en = user.service_name_en;
+        self.service_image = user.service_image;
+        self.service_adress_ar = user.service_adress_ar;
+        self.service_adress_en = user.service_adress_en;
+        self.service_details_ar = user.service_details_ar;
+        self.service_details_en = user.service_details_en;
+        self.facebook = user.facebook;
+        self.twitter = user.twitter;
 ///////////////
+        console.log('lenth :`{{}}` ',user.image,)
+        document.getElementById("profileImage").style.backgroundImage="url("+this.image+")";
+
 //         let i=1
-        this.services.serviceDetails().subscribe(res=>{
+        self.services.serviceDetails().subscribe(res=>{
           console.log('lenth : ',res)
-          console.log('lenth : ',res.length)
-
-          for (let i=1;i<res.length;i++){
-            if(this.service_id==res[i].service_id){
-              this.commetion=res[i].commision
-              console.log(res[i])
-            }
-          }
-
+          // console.log('lenth : ',res.length)
+if(res!=null) {
+  for (let i = 1; i < res['length']; i++) {
+    if (self.service_id == res[i].service_id) {
+      self.commetion = res[i].commision
+      console.log(res[i])
+    }
+  }
+}
         })
 
         console.log(this.service_id)
