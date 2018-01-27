@@ -4,6 +4,7 @@ import {CommonservicesProvider} from "../../providers/commonservices/commonservi
 import {DealersProvider} from "../../providers/dealers/dealers";
 import {GetServicesProvider} from "../../providers/get-services/get-services";
 import {Resorces} from "../../modes/resorces";
+import {DomainProvider} from "../../providers/domain/domain";
 
 
 @Component({
@@ -32,8 +33,10 @@ export class AddhorsePage {
     horse_breed_imagesend
     sendimage
     allCategories
-    constructor(public resources:Resorces,public services:GetServicesProvider,private common:CommonservicesProvider,private dealer:DealersProvider,public navCtrl: NavController, public navParams: NavParams) {
-
+    lang
+    constructor(public domain:DomainProvider,public resources:Resorces,public services:GetServicesProvider,private common:CommonservicesProvider,private dealer:DealersProvider,public navCtrl: NavController, public navParams: NavParams) {
+        console.log(DomainProvider.lang)
+this.lang=DomainProvider.lang;
     }
     cs
     ionViewWillEnter(){

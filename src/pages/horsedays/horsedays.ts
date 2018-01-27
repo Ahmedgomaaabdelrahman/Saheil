@@ -25,6 +25,10 @@ export class HorsedaysPage {
         })
 
     }
+  ionViewWillLeave(){
+    clearInterval(this.startTimer)
+    clearInterval(this.timer)
+  }
     ionViewWillEnter(){
         this.page=1
         this.menuCtrl.enable(true)

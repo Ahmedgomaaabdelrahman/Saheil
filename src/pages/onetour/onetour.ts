@@ -16,6 +16,7 @@ export class OnetourPage {
     ionViewWillEnter() {
         this.tours=[]
         this.champs.getAllTournaments().subscribe(res=>{
+          console.log('ee',res)
             this.tours=res
         })
         console.log('ionViewDidLoad TourtablesPage');
@@ -23,7 +24,7 @@ export class OnetourPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad OnetourPage');
   }
-  
+
   gotodetails(id){
     this.navCtrl.push(OnetourdetailsPage,id);
   }

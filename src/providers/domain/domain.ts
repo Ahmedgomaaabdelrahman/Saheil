@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Storage } from '@ionic/storage';
 
 import 'rxjs/add/operator/map';
 
@@ -12,9 +13,18 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class DomainProvider {
 public url="http://sahel-horse.com/";
-public lang="ar";
-  constructor(public http: HttpClient) {
+public static lang;
+
+  constructor(public storage:Storage,public http: HttpClient) {
     console.log('Hello DomainProvider Provider');
+    // if(this.lang==null){
+    //   this.storage.get('lang').then(lang=>{
+    //     if(lang !== null)
+    //     this.lang=lang
+    //       else this.lang='ar'
+    //   })
+    // }
   }
+
 
 }

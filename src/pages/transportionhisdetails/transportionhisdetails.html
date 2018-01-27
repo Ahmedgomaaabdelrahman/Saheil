@@ -2,7 +2,7 @@
 <ion-content>
   <header></header>
   <subheader></subheader>
-  <ion-row class="toprow"><ion-col col-12 >تفاصيل الطلب</ion-col></ion-row>
+  <ion-row class="toprow"><ion-col col-12 >{{'Order Details'|translate}}</ion-col></ion-row>
 
   <div>
     <ion-row dir="rtl" class="controw">
@@ -11,46 +11,53 @@
           <ion-col col-12>
             <h6>{{order_id}} </h6>
           </ion-col>
-         
+
         </ion-row>
         <ion-row>
           <ion-col col-11>
             <p class="p1">
-             مكان الاستلام : {{origin}}
+                {{'Origin Place'|translate}}  : {{origin}}
             </p>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col col-11>
             <p class="p1">
-             مكان الوصول :{{destination}}
-            </p>
-          </ion-col>
-        </ion-row>        <ion-row>
-          <ion-col col-11>
-            <p class="p1">
-            حالة الطلب :{{status}}
+                {{'Destination Place'|translate}}  :{{destination}}
             </p>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col col-11>
             <p class="p1">
-             اسم مقدم الخدمة : {{transport_service_provider}}
+           {{'Order Status'|translate}}:{{status}}
+            </p>
+          </ion-col>
+        </ion-row>      <ion-row>
+          <ion-col col-11>
+            <p class="p1">
+           {{'Phone Number'|translate}}:{{mobile}}
             </p>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col col-11>
             <p class="p1">
-<a href="http://www.sahel-horse.com/api/ar/map/{{order_id}}">الخريطة</a>
+                {{'Service Provider name'|translate}} : {{transport_service_provider}}
             </p>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col col-11>
             <p class="p1">
-              السعر : {{cost}}
+<a href="http://www.sahel-horse.com/api/ar/map/{{order_id}}">{{'Map'|translate}}</a>
+            </p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-11>
+            <p class="p1">
+              {{'Price'|translate}} : {{cost}}
             </p>
           </ion-col>
         </ion-row>
@@ -62,13 +69,13 @@
           <div *ngIf="status != 'cancel' && status != 'finish' ">
 
           <ion-col col-4>
-            <button ion-button (click)="action('finish')" block class="mybtn">انهاء</button>
+            <button ion-button (click)="action('finish')" block class="mybtn">{{'Finish'|translate}}</button>
           </ion-col>
           <ion-col col-4>
-            <button ion-button (click)="action('cancel')" block class="mybtn">اللغاء</button>
+            <button ion-button (click)="action('cancel')" block class="mybtn">{{'Cancel'|translate}}</button>
           </ion-col>
             <ion-col col-4>
-              <button ion-button (click)="action('continue')" block class="mybtn">استمرار</button>
+              <button ion-button (click)="action('continue')" block class="mybtn">{{'Continue'|translate}}</button>
             </ion-col>
           </div>
 
@@ -93,7 +100,7 @@
 
 </div>
 </form>
-        
+
       </ion-col>
     </ion-row>
   </div>

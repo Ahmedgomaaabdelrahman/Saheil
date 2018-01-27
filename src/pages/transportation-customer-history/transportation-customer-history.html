@@ -2,7 +2,7 @@
 <ion-content>
   <header></header>
   <subheader></subheader>
-  <ion-row class="toprow"><ion-col col-12 >طلباتى</ion-col></ion-row>
+  <ion-row class="toprow"><ion-col col-12 >{{'My Orders'|translate}}</ion-col></ion-row>
 
   <div *ngFor="let order of _allHistoryOrders">
     <ion-row dir="rtl" class="controw" (click)="histdetails(order)">
@@ -11,26 +11,33 @@
           <ion-col col-11>
             <!--<h6>طلب واحد </h6>-->
           </ion-col>
-         
+
         </ion-row>
         <ion-row>
           <ion-col col-11>
             <p class="p1">
-             مكان الاستلام : {{order.destination}}
+                {{'Destination Place'|translate}} : {{order.destination}}
             </p>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col col-11>
             <p class="p1">
-             مكان الوصول :{{order.origin}}
+                {{'Origin Place'|translate}} :{{order.origin}}
             </p>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col col-11>
             <p class="p1">
-             اسم مقدم الخدمة : {{order.transport_service_provider}}
+                {{'Service Provider name'|translate}}  : {{order.transport_service_provider}}
+            </p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-11>
+            <p class="p1">
+                {{'Phone Number'|translate}}  : {{order.mobile}}
             </p>
           </ion-col>
         </ion-row>

@@ -75,7 +75,7 @@ export class TransportMessagePage {
         })
     }
     selectLocoregin(){
-        const townModal:Modal =this.modalCtrl.create(SelectlocPage);
+        const townModal:Modal =this.modalCtrl.create(SelectlocPage,{'transportation':true});
         townModal.present();
         townModal.onDidDismiss(data=>{
             if(data !=null){
@@ -91,7 +91,7 @@ export class TransportMessagePage {
         // this.navCtrl.push(SelectlocPage)
     }
     selectLocdestination(){
-        const townModal:Modal =this.modalCtrl.create(SelectlocPage);
+        const townModal:Modal =this.modalCtrl.create(SelectlocPage,{'transportation':true});
         townModal.present();
         townModal.onDidDismiss(data=>{
             if(data !=null){

@@ -10,10 +10,10 @@
 <ion-content>
 <div style="height: 55px;"></div>
 <div class="contdiv">
-  <p> لاسترجاع كلمه المرور يرجى ادخال البريد الالكترونى</p>
+  <p>{{'To Reset Password , Please Enter Email'|translate}}</p>
   <form #f="ngForm">
   <ion-input type="email" [(ngModel)]="email" name="email" class="" placeholder="البريد الالكترونى" required></ion-input>
-  <button ion-button outline (click)="dismiss()">موافق</button>
+  <button ion-button outline (click)="dismiss()">{{'Accept'|translate}}</button>
   </form>
 </div>
 </ion-content>

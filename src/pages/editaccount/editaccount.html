@@ -2,16 +2,19 @@
    <header></header>
    <ion-row class="toprow">
      <ion-col col-8 style="text-align:end" >
-       <p>تعديل الحساب</p>
+       <p>{{'Edit Account'|translate}}</p>
     </ion-col>
     <ion-col col-4 style="text-align:start">
-      <img height="25px" src="assets/imgs/icon.png" >
+      <img  height="25px" src="assets/imgs/icon.png" >
     </ion-col>
   </ion-row>
    <div class="topdiv">
-    
-    <div class="simg">
-      <img height="25px" class="editicon" (click)="profileImage()" src="assets/imgs/editicon.png" ></div>
+
+     <div id="profileImage" class="simg">
+       <!--style="background-image: url(../assets/imgs/doctor.png);">-->
+       <img height="25px" class="editicon" (click)="profileImage()" src="assets/imgs/editicon.png" ></div>
+     <!--<div *ngIf="image != null" class="simg" style="background-image:url(`${{image}}`)!important">-->
+       <!--<img height="25px" class="editicon" (click)="profileImage()" src="assets/imgs/editicon.png" ></div>-->
    </div>
 
 <form #f="ngForm">
@@ -27,10 +30,12 @@
   <ion-input class="editinput" [(ngModel)]="password" name="password" type="password" placeholder="الرقم السري"></ion-input>
   <ion-input class="editinput" [(ngModel)]="facebook" name="facebook" type="text" placeholder="فيس بوك"></ion-input>
   <ion-input class="editinput" [(ngModel)]="twitter" name="twitter" type="text" placeholder="تويتر"></ion-input>
+  <ion-input class="editinput" [(ngModel)]="qPrice" name="qPrice" type="text" placeholder="سعر الاستشارة"></ion-input>
+  <p class="text">قيمة العمولة :%{{commetion}}</p>
 
   <!--<ion-input class="editinput" type="text" placeholder="العنوان على الخريظه"></ion-input>-->
-    <button ion-button block class="btn"  (click)="selectLoc()">العنوان على الخريظه</button>
-    <button ion-button block class="btn"  (click)="serviceImage()">اضف صورة عن الخدمة  </button>
+    <button ion-button block class="btn"  (click)="selectLoc()">{{'Address On Map'|translate}}</button>
+    <button ion-button block class="btn"  (click)="serviceImage()"> {{'Add Image of Service'|translate}} </button>
 <img src='{{service_image}}'>
      <button ion-button block class="btn"(click)="submit()">تعديل</button>
 </form>

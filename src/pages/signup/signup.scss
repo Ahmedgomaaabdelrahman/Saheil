@@ -35,7 +35,7 @@ header .headerrow img {
         font-size: 15px
    }
 }
-.text-input{
+.text-input , .code{
     border: 1px solid lightgray;
     height: 25px;
     margin: 5px 0;
@@ -141,4 +141,23 @@ header .headerrow img {
         color: black
     }
  }   
+
+ .code{
+    border: 1px solid lightgray;
+    height: 25px;
+    margin: 5px 0;
+    direction: rtl;
+    width: 100%;
+    min-height: 25px;
+    ion-select{
+        max-width: 100%;
+        .select-text{
+            min-width: 54px !important;
+        }
+    }
+
+   
+  
+
+ }
 }

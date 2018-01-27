@@ -14,7 +14,7 @@ export class ChatProvider {
     lang: any
 
     constructor(public url: DomainProvider, public http: HttpClient) {
-        this.lang = url.lang;
+      this.lang = DomainProvider.lang;
 
     }
     getPublicChat(index) {

@@ -1,7 +1,7 @@
 <ion-content>
   <header></header>
   <subheader></subheader>
-  <ion-row class="toprow"><ion-col col-12 >اخبار البطولات</ion-col>
+  <ion-row class="toprow"><ion-col col-12 >{{'Tournament News'|translate}}</ion-col>
   </ion-row>
 
 
@@ -22,16 +22,16 @@
               <!--<img src="assets/imgs/pdficon.png">-->
           </ion-col>
            <ion-col col-11>
-              <!--<p class="p1">-->
-<!--{{t.details}}-->
-              <!--</p>-->
+              <p class="p1">
+{{t.title}}
+              </p>
            </ion-col>
          </ion-row>
-   
-      
+
+
          <ion-row>
-               <ion-col col-4 (click)="gotodetails(t.tournament_id)">
-                 <p class="p3">المزيد</p>
+               <ion-col col-4 (click)="gotodetails(t.new_event_id)">
+                 <p class="p3">{{'more'|translate}}</p>
                  <img height="8px" src="assets/imgs/more.png">
                </ion-col>
                <ion-col col-4>
@@ -41,7 +41,7 @@
                   <!--<p class="p2">اعجابات 50</p>-->
                  </ion-col>
              </ion-row>
-       
+
       </ion-col>
   </ion-row>
 

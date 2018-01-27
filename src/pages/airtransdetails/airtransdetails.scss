@@ -34,7 +34,6 @@ page-airtransdetails {
         text-align: center;
         font-family: 'AppFont' !important;
         font-weight: bold;
-        margin-top: -26px;
     }
 
     .send{
@@ -66,7 +65,7 @@ page-airtransdetails {
     }
 
     .segdiv{
-        height: 185px;
+        margin-bottom: 10px;
     }
     #map {
 
@@ -81,7 +80,7 @@ page-airtransdetails {
         border-right:1px solid gray;
         border-left:1px solid gray;
         p{
-            margin:0;
+            margin: 0;
             padding: 20px 30px;
             text-align: center;
             font-family: Appfont;
@@ -89,6 +88,7 @@ page-airtransdetails {
             color: gray;
             font-size: 13px;
             max-height: 180px;
+            overflow: scroll;
         }
         .row{
             direction: rtl;

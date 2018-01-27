@@ -1,7 +1,7 @@
 <ion-content>
     <header></header>
     <subheader></subheader>
-   <ion-row class="toprow"><ion-col col-12 >سلة المشتريات</ion-col>
+   <ion-row class="toprow"><ion-col col-12 >{{'Shopping Cart'|translate}}</ion-col>
    </ion-row>
    <div class="contdiv">
 
@@ -24,7 +24,7 @@
                  <ion-col col-1><p>{{quantity[i]}}</p></ion-col>
                </ion-row>
                <ion-row>
-                   <ion-col col-11><p class="p3">{{sup.price}} ريال</p></ion-col>
+                   <ion-col col-11><p class="p3">{{sup.price}} {{'SAR'|translate}}</p></ion-col>
                    <ion-col col-1><ion-icon name="remove" (click)="remove(i)"></ion-icon></ion-col>
                  </ion-row>
             </ion-col>
@@ -46,8 +46,8 @@
    
 
     <ion-row class="botrow">
-      <ion-col col-8><p>المجموع {{totalPrice}} ريال</p></ion-col>
-      <ion-col (click)="buy()" col-4  ><p>تاكيد</p></ion-col>
+      <ion-col col-8><p>{{'Total'|translate}} {{totalPrice}} {{'SAR'|translate}}</p></ion-col>
+      <ion-col (click)="buy()" col-4  ><p>{{'Confirm'|translate}}</p></ion-col>
     </ion-row>
 </div>
 

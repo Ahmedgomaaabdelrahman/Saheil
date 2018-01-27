@@ -13,9 +13,10 @@ export class VeterinariansProvider {
 lang:any
   constructor(public url:DomainProvider,public http: HttpClient) {
     console.log('Hello VeterinariansProvider Provider');
-    this.lang=url.lang;
+    this.lang = DomainProvider.lang;
   }
     getAllServices(id){
+  //http://www.sahel-horse.com/api/ar/members/services/4
         return this.http.get(this.url.url+'api/'+this.lang+'/members/services/'+id);
     }
     getVeterinarianDetail(id){

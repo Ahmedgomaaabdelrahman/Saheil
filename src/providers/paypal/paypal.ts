@@ -17,22 +17,26 @@ export class PaypalProvider {
 
 
     constructor(public common:CommonservicesProvider,public url: DomainProvider, public http: HttpClient ,private payPal: PayPal) {
-        this.lang = url.lang;
+      this.lang = DomainProvider.lang;
 
         console.log('Hello PaypalProvider Provider');
-    this.YOUR_PRODUCTION_CLIENT_ID='access_token$sandbox$hstrvszg9ny74q6p$dee384ac4fbe8f7220e2f958fe2f9824'
-        this.YOUR_SANDBOX_CLIENT_ID='AfPU2g7JA_jZTgdEjO02XUp_c0WIUo97jOSILQkfgQaNIDgwG8RtHchWvVVt1IdYRHmEVSvScdq_ly94'
+    // this.YOUR_PRODUCTION_CLIENT_ID='access_token$sandbox$hstrvszg9ny74q6p$dee384ac4fbe8f7220e2f958fe2f9824'
+    // this.YOUR_PRODUCTION_CLIENT_ID='AZmlJfyMc3be5bK1eTWHC1eABR6ISz4FXRceZapDH_jsS45dStvJK-OAt41W86Rva5-2djxToRJlbhYr'
+    //     this.YOUR_SANDBOX_CLIENT_ID='Ad_-KPP59lCak3egBg0a5b84eSKCtS3QY9arfZsuPLORzBafshQl5jJH0A9JSB2YjiXj6eSr6X7ERWHn'
   }
-    YOUR_PRODUCTION_CLIENT_ID
-    YOUR_SANDBOX_CLIENT_ID
-pay(member_id,amount,succes_msg,fail_msg){
+    // YOUR_PRODUCTION_CLIENT_ID
+    // YOUR_SANDBOX_CLIENT_ID
+  getKeys(){
+    return this.http.get(this.url.url+'/api/paypal');
+  }
+pay(member_id,amount,succes_msg,fail_msg,YOUR_PRODUCTION_CLIENT_ID,YOUR_SANDBOX_CLIENT_ID){
 
     this.payPal.init({
-        PayPalEnvironmentProduction: this.YOUR_PRODUCTION_CLIENT_ID,
-        PayPalEnvironmentSandbox: this.YOUR_SANDBOX_CLIENT_ID
+        PayPalEnvironmentProduction: YOUR_PRODUCTION_CLIENT_ID,
+        PayPalEnvironmentSandbox: YOUR_SANDBOX_CLIENT_ID
     }).then(() => {
         // Environments: PayPalEnvironmentNoNetwork, PayPalEnvironmentSandbox, PayPalEnvironmentProduction
-        this.payPal.prepareToRender('PayPalEnvironmentSandbox', new PayPalConfiguration({
+        this.payPal.prepareToRender('PayPalEnvironmentProduction', new PayPalConfiguration({
             // Only needed if you get an "Internal Service Error" after PayPal login!
             //payPalShippingAddressOption: 2 // PayPalShippingAddressOptionPayPal
         })).then(() => {

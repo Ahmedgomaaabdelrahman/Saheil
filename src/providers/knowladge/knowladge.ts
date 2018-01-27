@@ -13,7 +13,7 @@ export class KnowladgeProvider {
 lang:any
   constructor(public url:DomainProvider,public http: HttpClient) {
     console.log('Hello KnowladgeProvider Provider');
-    this.lang=url.lang
+    this.lang = DomainProvider.lang;
   }
   getAllnews(){
           return this.http.get(this.url.url + 'api/' + this.lang + '/news' );

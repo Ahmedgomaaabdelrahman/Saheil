@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoadingPage } from "../pages/loading/loading";
@@ -126,14 +127,20 @@ import {TransportationCustomerHistoryPage} from "../pages/transportation-custome
 import {TransportationTransporterHistoryPage} from "../pages/transportation-transporter-history/transportation-transporter-history";
 import { TransportionhisdetailsPage } from '../pages/transportionhisdetails/transportionhisdetails';
 
+import { HttpModule, Http } from '@angular/http';
+import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
+import {AutocompletePage} from "../pages/autocomplete/autocomplete";
+
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
+
 @NgModule({
   declarations: [
     MyApp,
     InboxchatPage,
     HomePage,
+    AutocompletePage,
     LoadingPage,
     AboutsahielPage,
     LoginPage,
@@ -204,9 +211,9 @@ export function createTranslateLoader(http: HttpClient) {
     SucesspatnerPage,
     SecuritytermsPage,
     TransportionhisdetailsPage
-  ], 
+  ],
   imports: [
-  
+
   BrowserModule,HttpClientModule,
     IonicModule.forRoot(MyApp),
 
@@ -214,7 +221,7 @@ export function createTranslateLoader(http: HttpClient) {
           loader: {
               provide: TranslateLoader,
               useFactory: (createTranslateLoader),
-              deps: [HttpClientModule]
+              deps: [HttpClient]
           }
       }),IonicStorageModule.forRoot()
 
@@ -228,7 +235,7 @@ export function createTranslateLoader(http: HttpClient) {
     AboutsahielPage,
     LoginPage,
     SignupPage,
-    SelectlocPage,
+    SelectlocPage,AutocompletePage,
     HeaderComponent,
     SubheaderComponent,
     BottomimgComponent,
@@ -295,13 +302,13 @@ export function createTranslateLoader(http: HttpClient) {
     SucesspatnerPage,
     SecuritytermsPage,
     TransportionhisdetailsPage
-  ], 
+  ],
   providers: [
     StatusBar,
     SplashScreen,FileTransfer, FileTransferObject,StreamingMedia,
     {provide: ErrorHandler, useClass: IonicErrorHandler},AuthproviderProvider,DomainProvider,GetServicesProvider,SearchProvider,UserProvider,
     CommonservicesProvider,FCM,SecureStorage,Camera,ActionSheet,Geolocation,MediaCapture,Base64,{ provide: IonicStorageModule, useClass: IonicStorageModule},
-    VeterinariansProvider,
+    VeterinariansProvider,NativePageTransitions,
     VeterinaryclinicsProvider,
     SupsProvider,
     MailProvider,Users,Resorces,

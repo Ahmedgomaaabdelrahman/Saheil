@@ -10,29 +10,29 @@
  <subheader></subheader>
 <ion-row class="toprow">
   <ion-col col-1></ion-col>
-  <ion-col col-6 style="text-align:end;font-weight: bold;">تسجيل الدخول</ion-col>
+  <ion-col col-6 style="text-align:end;font-weight: bold;">{{'Login'|translate}}</ion-col>
   <ion-col col-1 style="text-align:start"><img src="assets/imgs/signin.png" height="30px"></ion-col>
   <ion-col col-4 style="text-align:end"></ion-col>
 </ion-row>
 
 
 <form class="myform" #f="ngForm">
-   <p class="thelabel">رقم الهاتف</p>
+   <p class="thelabel">{{'Phone Number'|translate}}</p>
    <ion-input [(ngModel)]="_mobile" name="_mobile" style="text-align:center" type="number"></ion-input>
-   <p class="thelabel">كلمه المرور</p>
+   <p class="thelabel">{{'Password'|translate}}</p>
    <ion-input style="text-align:center" [(ngModel)]="_password" name="_password" type="password"></ion-input>
 
    <ion-row style="margin: 15px 0;">
      <ion-col col-4 style="text-align:start">
        <div class="remb">
          <ion-checkbox [(ngModel)]="_save" name="_save" color="gray"></ion-checkbox>
-         <h6>تذكرنى</h6>
+         <h6>{{'Remmeber me'|translate}}</h6>
        </div>
      </ion-col>
      <ion-col col-4 style="text-align:center">
-       <button ion-button block (click)="submit()" [disabled]="!f.valid"  class="btn">دخول</button>
+       <button ion-button block (click)="submit()" [disabled]="!f.valid"  class="btn">{{'Login'|translate}}</button>
      </ion-col>
-     <ion-col col-4 style="text-align:end" (click)="forgetPass()"><p class="forget">نسيت كلمه المرور ؟</p></ion-col>
+     <ion-col col-4 style="text-align:end" (click)="forgetPass()"><p class="forget">{{'Forget Password'|translate}}</p></ion-col>
    </ion-row>
 
   <!--<div class="face"> تسجيل الدخول عن طريق الفيس بوك </div>-->

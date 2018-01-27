@@ -22,7 +22,7 @@ export class GetServicesProvider {
 countryid():Promise <any>{
       let promise=new Promise((resolve,reject)=>{
           try{
-          this.http.get(this.domain.url+"api/"+this.domain.lang+"/country").subscribe(
+          this.http.get(this.domain.url+"api/"+DomainProvider.lang+"/country").subscribe(
               res=>{resolve(res)}
           )}catch (E){
               reject(E)
@@ -33,7 +33,7 @@ countryid():Promise <any>{
 serviceId():Promise <any>{
     let promise=new Promise((resolve,reject)=>{
         try{
-            this.http.get(this.domain.url+"api/"+this.domain.lang+"/service").subscribe(
+            this.http.get(this.domain.url+"api/"+DomainProvider.lang+"/service").subscribe(
                 res=>{resolve(res)}
             )}catch (E){
             reject(E)
@@ -41,6 +41,22 @@ serviceId():Promise <any>{
     })
     return promise;
 }
+
+aboutSahil():Promise <any>{
+    let promise=new Promise((resolve,reject)=>{
+        try{
+          //http://www.sahel-horse.com/api/ar/aboutus
+            this.http.get(this.domain.url+"api/"+DomainProvider.lang+"/aboutus").subscribe(
+                res=>{resolve(res)}
+            )}catch (E){
+            reject(E)
+        }
+    })
+    return promise;
+}
+  serviceDetails(){
+    return this.http.get(this.domain.url+"api/"+DomainProvider.lang+"/service")
+  }
 getToken():Promise<any>{
 let promise=new Promise((resolve,reject)=>{
     this.fcm.getToken().then(token=>{

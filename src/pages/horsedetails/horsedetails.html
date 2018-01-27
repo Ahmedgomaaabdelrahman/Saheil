@@ -8,12 +8,12 @@
     <img class="simg" src={{details.picpath}}>
   </div>
 
-  <ion-row style="margin-top:-25px">
+  <!-- <ion-row style="margin-top:-25px">
     <ion-col col-3 style="text-align: center">
       <img height="40px" src="assets/imgs/doctorchat.png">
     </ion-col>
     <ion-col col-9></ion-col>
-  </ion-row>
+  </ion-row> -->
   <ion-row class="docname">
     <ion-col col-12>{{details.title}}</ion-col>
   </ion-row>
@@ -26,10 +26,10 @@
       <!--</ion-segment-button>-->
 
       <ion-segment-button value="about">
-صورة الفصيلة      </ion-segment-button>  <ion-segment-button value="horse">
-     صورة الحصان      </ion-segment-button>
+{{'Type image'|translate}}      </ion-segment-button>  <ion-segment-button value="horse">
+  {{'Horse Image'|translate}}      </ion-segment-button>
       <ion-segment-button value="contact">
-        التفاصيل
+        {{'Details'|translate}} 
       </ion-segment-button>
     </ion-segment>
   </div>
@@ -51,33 +51,33 @@
     <div *ngSwitchCase="'contact'">
       <div class="innerseg" style="border-bottom:1px solid gray;">
         <ion-row>
-          <ion-col col-6>السعر</ion-col>
+          <ion-col col-6>{{'Price'|translate}}</ion-col>
           <ion-col col-6>{{details.price}}</ion-col>
         </ion-row>
         <ion-row>
-          <ion-col col-6>الدولة </ion-col>
+          <ion-col col-6>{{'Countery'|translate}} </ion-col>
           <ion-col col-6>{{details.country}}</ion-col>
         </ion-row>
         <ion-row>
-          <ion-col col-6>الام</ion-col>
+          <ion-col col-6>{{'Mother'|translate}}</ion-col>
           <ion-col col-6>{{details.mother}}</ion-col>
         </ion-row>
         <ion-row>
-          <ion-col col-6>الاب</ion-col>
+          <ion-col col-6>{{'Father'|translate}}</ion-col>
           <ion-col col-6>{{details.father}}</ion-col>
         </ion-row>
         <ion-row>
-          <ion-col col-6>الفصيلة</ion-col>
+          <ion-col col-6>{{'Type'|translate}}</ion-col>
           <ion-col col-6>{{details.horse_breed}}</ion-col>
         </ion-row>
         <ion-row>
-         <ion-col col-6>اللون</ion-col>
+         <ion-col col-6>{{'Color'|translate}}</ion-col>
          <ion-col col-6>{{details.color}}</ion-col>
         </ion-row> <ion-row>
-          <ion-col col-6>السن</ion-col>
+          <ion-col col-6>{{'Age'|translate}}</ion-col>
           <ion-col col-6>{{details.age}}</ion-col>
         </ion-row><ion-row>
-          <ion-col col-6>التفاصيل</ion-col>
+          <ion-col col-6>{{'Details'|translate}}</ion-col>
           <ion-col col-6>{{details.details}}</ion-col>
         </ion-row>
       </div>
@@ -95,5 +95,5 @@
   </div>
   <!--<div #map id="map"></div>-->
 
-  <button ion-button block (click)="contact()" class="send">ارسال الطلب</button>
+  <button ion-button block (click)="contact()" class="send">{{'Send Request'|translate}}</button>
 </ion-content>

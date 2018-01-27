@@ -13,7 +13,7 @@ export class VipProvider {
 
     lang:any
     constructor(public url:DomainProvider,public http: HttpClient) {
-        this.lang=url.lang;
+      this.lang = DomainProvider.lang;
     }
     getAllfollowup(){
       //http://www.sahel-horse.com/api/ar/followup/

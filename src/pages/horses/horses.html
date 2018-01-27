@@ -2,14 +2,14 @@
   <ion-content>
     <header></header>
     <subheader></subheader>
-    <ion-row class="toprow"><ion-col col-12 >جميع الخيول </ion-col></ion-row>
+    <ion-row class="toprow"><ion-col col-12 >{{'All Horses'|translate}} </ion-col></ion-row>
     <ion-row class="controw"  >
       <ion-col col-6 *ngFor="let horse of hourses;let i=index">
         <div>
           <div style="height: 120px;">
             <ion-row style="position: absolute;top: 10px;width: 95%;">
               <ion-col col-6> <img src="assets/imgs/starb.png" height="15px"></ion-col>
-              <ion-col col-6><p class="p1">{{horse.price}}ريال</p></ion-col>
+              <ion-col col-6><p class="p1">{{horse.price}}{{'SAR'|translate}}</p></ion-col>
             </ion-row>
             <img height="100%" width="100%" src={{horse.picpath}}>
           </div>
@@ -23,7 +23,7 @@
                 <img height="15px" (click)="addFav(horse.horse_id)" src="assets/imgs/favb.png">
               </ion-col>
               <ion-col col-6 style="text-align:center">
-                  <button style="background-color: transparent;" (click)="more(horse)">المزيد</button>
+                  <button style="background-color: transparent;" (click)="more(horse)">{{'more'|translate}}</button>
               </ion-col>
             </ion-row>
           </div>
