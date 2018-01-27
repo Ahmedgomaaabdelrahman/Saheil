@@ -10,60 +10,60 @@
         <ion-content>
              <ion-list>
                  <button class="menubtn" *ngIf="flag" (click)="updateInfo()" menuClose ion-item color="standard">
-                    <ion-icon name="person"></ion-icon> حسابى
+                    <ion-icon name="person"></ion-icon> {{'My Account' | translate}}
                  </button>
 
 
                  <div *ngIf="!flag">
 
                      <button class="menubtn" (click)="login()" menuClose ion-item color="standard">
-                         <ion-icon name="person"></ion-icon> تسجيل دخول
+                         <ion-icon name="person"></ion-icon>{{'login' | translate}}
                      </button>
                      <button class="menubtn" (click)="signUp()" menuClose ion-item color="standard">
-                         <ion-icon name="person"></ion-icon> تسجيل حساب جديد
+                         <ion-icon name="person"></ion-icon> {{'Sign up' | translate}}
                      </button>
                  </div>
 
                  <button class="menubtn" *ngIf="flag" (click)="transportationReq()" menuClose ion-item color="standard">
-                     <ion-icon name="person"></ion-icon>طلبات النقل البري
+                     <ion-icon name="person"></ion-icon>{{'Transport Orders' | translate}}
                  </button>
                  <button class="menubtn" *ngIf="transporterFlag" (click)="transportationReq()" menuClose ion-item color="standard">
-                     <ion-icon name="person"></ion-icon>طلبات العملاء
+                     <ion-icon name="person"></ion-icon>{{'Customers Orders' | translate}}
                  </button>
                  <button class="menubtn"  *ngIf="supsSellerFlag" (click)="supsSeller()" menuClose ion-item color="standard" >
-                     <ion-icon name="basket"></ion-icon>متجر مستلزمات الخيل
+                     <ion-icon name="basket"></ion-icon>{{'Horses Supplies Shop' | translate}}
                  </button>
                  <button class="menubtn"  *ngIf="horseSellerFlag" (click)="addHorse()" menuClose ion-item color="standard" >
-                     <ion-icon name="basket"></ion-icon>متجر الخيل
+                     <ion-icon name="basket"></ion-icon>{{'Horses Shop' | translate}}
                  </button>
                  <button class="menubtn"  *ngIf="flag" (click)="fav()" menuClose ion-item color="standard" >
-                     <ion-icon name="star"></ion-icon>المفضلة
+                     <ion-icon name="star"></ion-icon>{{'Favorites' | translate}}
                  </button>
                  <button class="menubtn" (click)="goToMain()" menuClose ion-item color="standard" >
-                    <ion-icon name="desktop"></ion-icon>الرئيسية
+                    <ion-icon name="desktop"></ion-icon>{{'Home' | translate}}
                  </button>
                  <!--<button class="menubtn" (click)="addproduct()" menuClose ion-item color="standard" >-->
                         <!--<ion-icon name="add-circle"></ion-icon>اضافه منتج -->
                  <!--</button>-->
                  <button class="menubtn" *ngIf="flag" (click)="inbox()" menuClose ion-item color="standard" >
-                    <ion-icon name="mail"></ion-icon>صندوق الوارد
+                    <ion-icon name="mail"></ion-icon>{{'Imports Box' | translate}}
                 </button>
                  <button class="menubtn" *ngIf="flag" (click)="outbox()" menuClose ion-item color="standard" >
-                     <ion-icon name="mail"></ion-icon>صندوق الصادر
+                     <ion-icon name="mail"></ion-icon>{{'Exports Box' | translate}}
                  </button>
 
 
                  <!--*ngIf="flag"-->
                  <button class="menubtn" (click)="chatBox()" menuClose ion-item color="standard" >
-                    <ion-icon name="mail"></ion-icon> المحادثات
+                    <ion-icon name="mail"></ion-icon> {{'Chating' | translate}}
                 </button>
 
 
                  <button class="menubtn"  (click)="tournmentsNews()" menuClose ion-item color="standard" >
-                     <ion-icon name="md-trophy"></ion-icon>اخبار البطولات
+                     <ion-icon name="md-trophy"></ion-icon>{{'Tournament News' | translate}}
                  </button>
                  <button class="menubtn" (click)="aboutUs()" menuClose ion-item color="standard" >
-                    <ion-icon name="bulb"></ion-icon>نبذة عن صهيل
+                    <ion-icon name="bulb"></ion-icon>{{'About Saheil' | translate}}
                 </button>
                 <!--<button class="menubtn" menuClose ion-item color="standard" >-->
                     <!--<ion-icon name="basket"></ion-icon>المتجر -->
@@ -77,11 +77,11 @@
                <!--البوم الصور-->
               <!--</button>-->
                  <button class="menubtn" (click)="knowladge()" menuClose ion-item color="standard" >
-                    <ion-icon name="book"></ion-icon>ثقف نفسك
+                    <ion-icon name="book"></ion-icon>{{'Knowledge Yourself' | translate}}
 
                  </button>
                <button class="menubtn" (click)="goAlbum()" menuClose ion-item color="standard">
-                  <ion-icon name="trophy"></ion-icon>البوم صور
+                  <ion-icon name="trophy"></ion-icon>{{'Images Album' | translate}}
               </button>
 
                <!--<button class="menubtn" menuClose ion-item color="standard">-->
@@ -89,27 +89,27 @@
                <!---->
               <!--</button>-->
                <button class="menubtn" (click)="nextEvent()" menuClose ion-item color="standard">
-                  <ion-icon name="albums"></ion-icon> الفاعليات القادمة
+                  <ion-icon name="albums"></ion-icon> {{'Upcoming Events' | translate}}
 
               </button>
                  <button  *ngIf="flag" class="menubtn" (click)="pay()" menuClose ion-item color="standard">
-                     <ion-icon name="albums"></ion-icon>شراء رصيد
+                     <ion-icon name="albums"></ion-icon>{{'Pay Charge' | translate}}
 
                  </button>
                  <button class="menubtn" (click)="accounts()" menuClose ion-item color="standard">
-                    <ion-icon name="albums"></ion-icon>حسابات تستحق المتابعة
+                    <ion-icon name="albums"></ion-icon>{{'Accounts to follow' | translate}}
 
                 </button>
                 <button  class="menubtn" (click)="sucesspart()" menuClose ion-item color="standard">
-                    <ion-icon name="albums"></ion-icon>شركاء النجاح
+                    <ion-icon name="albums"></ion-icon>{{'Sucess Partner' | translate}}
 
                 </button>
                 <button  class="menubtn" (click)="terms()" menuClose ion-item color="standard">
-                    <ion-icon name="albums"></ion-icon>شروط الخصوصيه
+                    <ion-icon name="albums"></ion-icon>{{'Privacy Terms' | translate}}
 
                 </button>
                  <button class="menubtn" *ngIf="flag" (click)="logout()" menuClose ion-item color="standard">
-                    <ion-icon name="log-out"></ion-icon>الخروج من البرنامج
+                    <ion-icon name="log-out"></ion-icon>{{'Log Out' | translate}}
                  </button>
             </ion-list>
         </ion-content>

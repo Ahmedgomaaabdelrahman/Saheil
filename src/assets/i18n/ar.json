@@ -1,7 +1,6 @@
 {
   "All Products":"كل المنتجات",
   "Main":"الرئيسية",
-  "My Account":"ملفي الشخصي",
   "Shopping Cart":"عربة التسوق",
   "Favorites":"المفضلة",
   "Settings":"الضبط",
@@ -68,7 +67,7 @@
   "Removed successfully":"تم الحذف",
 
 
-  "About Saheil":"نبذة عن تطبيق صهيل",
+  "About Saheil":"نبذة عن صهيل",
   "Why Saheil":"لماذا صهيل",
   "Easy to get nearest clink":"سهوله البحث هن اقرب عياده",
   "Horses and their Supplies":"مستلزمات الخيل والفرس",
@@ -172,10 +171,25 @@
   "Service Provider name":"اسم مقدم الخدمة",
   "Consultaions":"الاستشارات",
   "More Details":"المزيد من التفاصيل",
-  "more":"المزيد",
   "Order Details":"تفاصيل الطلب",
   "Order Status":" حالة الطلب ",
   "Map":"الخريطة",
   "Continue":"استمرار",
-  "Finish":"انهاء"
+  "Finish":"انهاء",
+  "My Account":"حسابى",
+  "Log Out":"الخروج من البرنامج",
+  "Privacy Terms":"شروط الخصوصيه",
+  "Sucess Partner":"شركاء النجاح",
+  "Accounts to follow":"حسابات تستحق المتابعة",
+  "Pay Charge":"شراء رصيد",
+  "Upcoming Events":"الفاعليات القادمة",
+  "Chating":"المحادثات",
+  "Exports Box":"صندوق الصادر",
+  "Imports Box":"صندوق الوارد",
+  "Horses Shop":"متجر الخيل",
+  "Horses Supplies Shop":"متجر مستلزمات الخيل",
+  "Customers Orders":"طلبات العملاء",
+  "Transport Orders":"طلبات النقل البري",
+  "Sign up":"تسجيل حساب جديد",
+  "login":" تسجيل دخول"
 }
