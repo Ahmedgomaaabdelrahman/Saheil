@@ -15,13 +15,14 @@ export class ChampionsNewsProvider {
       this.lang = DomainProvider.lang;
     }
     getAllTournaments(){
-        return this.http.get(this.url.url + 'api/' + this.lang + '/tournaments' );
+        // return this.http.get(this.url.url + 'api/' + this.lang + '/tournaments' );
 
-      // return this.http.get(this.url.url + 'api/' + this.lang + '/upcoming/events/new' );
+      return this.http.get(this.url.url + 'api/' + this.lang + '/upcoming/events/new' );
 
     }
     getnewsTournaments(news_id){
-        return this.http.get(this.url.url + 'api/' + this.lang + '/tournaments/'+news_id);
+        return this.http.get(this.url.url + 'api/' + this.lang + '/upcoming/events/new/'+news_id);
+        // return this.http.get(this.url.url + 'api/' + this.lang + '/tournaments/'+news_id);
 
     }
     live(){

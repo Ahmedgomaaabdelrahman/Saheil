@@ -14,6 +14,8 @@ title
     winner
     points
     judge
+  start
+  location
   constructor(public champs:ChampionsNewsProvider,public navCtrl: NavController, public navParams: NavParams) {
   }
 tDetails
@@ -23,12 +25,15 @@ tDetails
     this.champs.getnewsTournaments(this.navParams.data).subscribe(res=>{
         console.log(res[0]);
 this.title=res[0].title_ar
+this.title=res[0].title
         this.details=res[0].details
         this.picpath=res[0].picpath
         this.tDetails=res[0]
         this.winner=res[0].winner
         this.points=res[0].points
         this.judge=res[0].judge
+        this.start=res[0].start
+        this.location=res[0].location
     })
   }
 
