@@ -41,6 +41,7 @@ import {TransportationCustomerHistoryPage} from "../pages/transportation-custome
 import {SignupPage} from "../pages/signup/signup";
 import {DomainProvider} from "../providers/domain/domain";
 import {TranslateService} from "@ngx-translate/core";
+import {AboutsahielPage} from "../pages/aboutsahiel/aboutsahiel";
 
 
 
@@ -231,6 +232,9 @@ if(user['service'] !=null){
     }
     transportationReq(){
         this.nav.push(TransportationCustomerHistoryPage);
+    }
+    aboutUs(){
+      this.nav.push(AboutsahielPage)
     }
 }
 

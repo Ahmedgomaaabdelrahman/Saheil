@@ -6,6 +6,7 @@ import {SelectlocPage} from "../selectloc/selectloc";
 import {DomainProvider} from "../../providers/domain/domain";
 import {HomePage} from "../home/home";
 import {Resorces} from "../../modes/resorces";
+import {GetServicesProvider} from "../../providers/get-services/get-services";
 
 @Component({
   selector: 'page-editaccount',
@@ -28,13 +29,15 @@ service_image:any;
 service_sendimage:any;
 service_adress_ar:string;
 service_adress_en:string;
+  service_id:string;
     map:any;
     qPrice:any;
+commetion:any;
 service_details_ar:string;
 service_details_en:string;
     facebook:any;
     twitter:any;
-  constructor(public resources:Resorces,public domain:DomainProvider,public modalCtrl:ModalController,public common:CommonservicesProvider,private auth:AuthproviderProvider,public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public services:GetServicesProvider,public resources:Resorces,public domain:DomainProvider,public modalCtrl:ModalController,public common:CommonservicesProvider,private auth:AuthproviderProvider,public navCtrl: NavController, public navParams: NavParams) {
   this.common.getStoredValue('user').then(user=>{
       console.log('edit user',user)
       try {
@@ -50,6 +53,7 @@ service_details_en:string;
           this.latlng = user.latlng;
           this.password = user.password;
           this.gcm_regid=user.gcm_regid;
+          this.service_id = user.service[0].service_id;
           this.service_name_ar = user.service_name_ar;
           this.service_name_en = user.service_name_en;
           this.service_image = user.service_image;
@@ -60,6 +64,22 @@ service_details_en:string;
           this.facebook = user.facebook;
           this.twitter = user.twitter;
 ///////////////
+//         let i=1
+        this.services.serviceDetails().subscribe(res=>{
+          console.log('lenth : ',res)
+          console.log('lenth : ',res.length)
+
+          for (let i=1;i<res.length;i++){
+            if(this.service_id==res[i].service_id){
+              this.commetion=res[i].commision
+              console.log(res[i])
+            }
+          }
+
+        })
+
+        console.log(this.service_id)
+
       }catch (e){
           console.log(e)
       }

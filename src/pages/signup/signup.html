@@ -20,7 +20,23 @@
    <ion-input [(ngModel)]="_password" id="_password" name="_password" style="text-align:center" type="password"></ion-input>
    <p class="thelabel">{{'Phone Number'|translate}} </p>
    <ion-input [(ngModel)]="_mobile" id="_mobile" name="_mobile"  style="display: inline-flex;text-align:center;width:78% !important" type="tel"></ion-input>
-   <ion-input  name="code" placeholder="{{'Code'|translate}}" style="display: inline-flex;text-align:center;width:20% !important" type="tel"></ion-input>
+   <!--<ion-input  name="code" placeholder="{{'Code'|translate}}" style="display: inline-flex;text-align:center;width:20% !important" type="tel"></ion-input>-->
+
+
+
+  <ion-item name="code"  style="
+  border:1px #000000  solid;  font-size:50px; width:20%" >
+    <!--<p class="thelabel">الدولة</p>-->
+    <!--<ion-label></ion-label>-->
+
+    <ion-select   okText="اختر" cancelText="الغاء" required="true">
+      <!--<img src={{country.picpath}}>-->
+      <ion-option (ionSelect)="getSelectedKeyCode(k.key)" value={{k.key}}  *ngFor="let k of cs" value={{k.key}}  required>
+        {{k.key}}
+      </ion-option>
+    </ion-select>
+  </ion-item>
+
 
     <ion-item class="selection">
    <!--<p class="thelabel">الدولة</p>-->

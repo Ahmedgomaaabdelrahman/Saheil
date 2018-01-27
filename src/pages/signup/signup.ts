@@ -43,8 +43,11 @@ console.log(resS)
       });
 
   }
-
-
+keyKode:any
+  getSelectedKeyCode(keyKode){
+    this.keyKode=keyKode;
+    console.log(keyKode);
+  }
     getSelectedService(service){
         this._service_id=service;
         console.log(service);

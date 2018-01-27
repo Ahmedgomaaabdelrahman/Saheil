@@ -10,7 +10,7 @@
         <ion-content>
              <ion-list>
                  <button class="menubtn" *ngIf="flag" (click)="updateInfo()" menuClose ion-item color="standard">
-                    <ion-icon name="person"></ion-icon> حسابى 
+                    <ion-icon name="person"></ion-icon> حسابى
                  </button>
 
 
@@ -40,7 +40,7 @@
                      <ion-icon name="star"></ion-icon>المفضلة
                  </button>
                  <button class="menubtn" (click)="goToMain()" menuClose ion-item color="standard" >
-                    <ion-icon name="desktop"></ion-icon>الرئيسية 
+                    <ion-icon name="desktop"></ion-icon>الرئيسية
                  </button>
                  <!--<button class="menubtn" (click)="addproduct()" menuClose ion-item color="standard" >-->
                         <!--<ion-icon name="add-circle"></ion-icon>اضافه منتج -->
@@ -62,7 +62,7 @@
                  <button class="menubtn"  (click)="tournmentsNews()" menuClose ion-item color="standard" >
                      <ion-icon name="md-trophy"></ion-icon>اخبار البطولات
                  </button>
-                 <button class="menubtn" menuClose ion-item color="standard" >
+                 <button class="menubtn" (click)="aboutUs()" menuClose ion-item color="standard" >
                     <ion-icon name="bulb"></ion-icon>نبذة عن صهيل
                 </button>
                 <!--<button class="menubtn" menuClose ion-item color="standard" >-->
@@ -77,11 +77,11 @@
                <!--البوم الصور-->
               <!--</button>-->
                  <button class="menubtn" (click)="knowladge()" menuClose ion-item color="standard" >
-                    <ion-icon name="book"></ion-icon>ثقف نفسك   
+                    <ion-icon name="book"></ion-icon>ثقف نفسك
 
                  </button>
                <button class="menubtn" (click)="goAlbum()" menuClose ion-item color="standard">
-                  <ion-icon name="trophy"></ion-icon>البوم صور  
+                  <ion-icon name="trophy"></ion-icon>البوم صور
               </button>
 
                <!--<button class="menubtn" menuClose ion-item color="standard">-->
@@ -89,8 +89,8 @@
                <!---->
               <!--</button>-->
                <button class="menubtn" (click)="nextEvent()" menuClose ion-item color="standard">
-                  <ion-icon name="albums"></ion-icon> الفاعليات القادمة 
-               
+                  <ion-icon name="albums"></ion-icon> الفاعليات القادمة
+
               </button>
                  <button  *ngIf="flag" class="menubtn" (click)="pay()" menuClose ion-item color="standard">
                      <ion-icon name="albums"></ion-icon>شراء رصيد

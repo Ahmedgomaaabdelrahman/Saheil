@@ -20,6 +20,7 @@ import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-m
 import {AlbumProvider} from "../../providers/album/album";
 import {TransportMessagePage} from "../transport-message/transport-message";
 import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
+import {GetServicesProvider} from "../../providers/get-services/get-services";
 
 @Component({
     selector: 'page-home',
@@ -35,9 +36,27 @@ startTimer:any;
     show:any;
     member_id:any;
     transporterFlag:any;
-    constructor(private nativePageTransitions: NativePageTransitions,private album:AlbumProvider,private streamingMedia: StreamingMedia,public diaries:DiariesProvider,public menuCtrl:MenuController,public common:CommonservicesProvider,public navCtrl: NavController) {
+    service1
+    service2
+    service3
+    service4
+    service5
+    service6
+    constructor(public service:GetServicesProvider,private nativePageTransitions: NativePageTransitions,private album:AlbumProvider,private streamingMedia: StreamingMedia,public diaries:DiariesProvider,public menuCtrl:MenuController,public common:CommonservicesProvider,public navCtrl: NavController) {
+      let self=this
+      this.service.serviceDetails().subscribe(res=>{
+        console.log(res)
+        self.servicesDetails=res
+        self.service1=res[1].details
+        self.service2=res[2].details
+        self.service3=res[3].details
+        self.service4=res[4].details
+        self.service5=res[5].details
+        self.service6=res[6].details
 
+        console.log('ddd', self.servicesDetails)
 
+      })
         // fullscreen video
         //https://ionicframework.com/docs/native/streaming-media/
         // let options: StreamingVideoOptions = {
@@ -95,41 +114,15 @@ this.sliderImage=''
     ionViewWillLeave(){
       clearInterval(this.startTimer)
     }
-  // example of adding a transition when a page/modal closes
-  // ionViewWillLeave() {
-
-    // let options: NativeTransitionOptions = {
-    //   direction: 'up',
-    //   duration: 500,
-    //   slowdownfactor: 3,
-  //     slidePixels: 20,
-  //     iosdelay: 100,
-  //     androiddelay: 150,
-  //     fixedPixelsTop: 0,
-  //     fixedPixelsBottom: 60
-  //   };
-  //
-  //   this.nativePageTransitions.slide(options)
-  //     .then(onSuccess)
-  //     .catch(onError);
-  //
-  // }
-
-
-// example of adding a transition when pushing a new page
-//   openPage(page: any) {
-//
-//     this.nativePageTransitions.slide(options);
-//     this.navCtrl.push(page);
-//
-//   }
+servicesDetails:any;
     ionViewWillEnter(){
-        // this.common.removeStoredKey('xuser')
-        // this.common.removeStoredKey('user')
+
+
         this.page=1
         this.menuCtrl.enable(true)
         this.items=[]
         this.show=[]
+      // this.servicesDetails=[]
         this.slideImages=[]
         let self=this
 this.album.homeSlider().subscribe(res=>{
@@ -137,103 +130,12 @@ this.album.homeSlider().subscribe(res=>{
     this.slideImages=res;
     this.sliderRefresher();
 })
-        // this.diaries.getAllDiaries(this.page).subscribe(res=> {
-        //
-        //     this.items=res['diaries']
-        //      self.show=[]
-//             let i=0
-//                 self.startTimer=   setInterval(function () {
-//                     self.show={
-//                         'picpath':res['diaries'][i]['picpath'],
-//                         'username':res['diaries'][i]['member'][0]['username'],'created':res['diaries'][i]['created']
-//                     }
-//
-//                     if(i!=self.items.length-1){
-// i++}else{
-//                         i=0
-//                     }
-//                 },3000);
-//
-//         })
-    }
-//     less(){
-// console.log(this.page)
-//         if(this.page>=0){
-//             clearInterval(this.timer);
-//             clearInterval(this.startTimer);
-//         this.page-=1
-//
-//         let self=this
-//         // clearInterval()
-//         console.log(this.items[this.items.length-1]['diary_id'])
-//         console.log(this.items.length-1)
-//         this.diaries.getAllDiariesasc(this.page).subscribe(res=> {
-//             this.index=0
-//             this.items=[]
-    //         console.log('new items :',res['diaries'].length)
-    //
-    //         this.items=res['diaries']
-    //         self.show=[]
-    //         let i=0
-    //         self.startTimer=   setInterval(function () {
-    //             self.show={
-    //                 'picpath':res['diaries'][i]['picpath'],
-    //                 'username':res['diaries'][i]['member'][0]['username'],'created':res['diaries'][i]['created']
-    //             }
-    //             if(i!=self.items.length-1){
-    //                 i++}else{
-    //                 i=0
-    //             }
-    //         },3000);
-    //         }
-    //     )
-    // }
-    // }
-page
-//     more(){
-//
-// this.page+=1
-//         console.log('num of page :',this.page)
-//
-//         let self=this
-//         this.diaries.getAllDiaries(this.page).subscribe(res=> {
-//
-// if(res['diaries'].length !=0){
-//     clearInterval(this.timer);
-//     clearInterval(this.startTimer);
-//     this.index=0
-//     this.items=[]
-//             this.items=res['diaries']
-//             self.show=[]
-//             let i=0
-//             self.startTimer=   setInterval(function () {
-//                 self.show={
-//                     'picpath':res['diaries'][i]['picpath'],
-//                     'username':res['diaries'][i]['member'][0]['username'],'created':res['diaries'][i]['created']
-//                 }
-//
-//                 if(i!=self.items.length-1){
-//                     i++}else{
-//                     i=0
-//                 }
-//             },3000);
-//             }else {this.page-=1
-// this.common.presentToast('انتهت اليوميات')
-// }
-//             }
-//         )
-    //}
-    // clickShow(item){
-        // clearInterval(this.timer);
-        //
-        // console.log(item)
-        // this.show=[]
-        // this.show={
-        //     'picpath':item['picpath'],
-        //     'username':item['member'][0]['username'],'created':item['created']
-        // }
 
-    // }
+
+    }
+
+page
+
     live(){
         this.navCtrl.push(LivestreamPage)
     }
@@ -275,29 +177,5 @@ page
     addnew(){
         this.navCtrl.push(AddhorsedaysPage);
       }
-    // doInfinite(infiniteScroll) {
-    //     console.log('Begin async operation');
-    //
-    //     // setTimeout(() => {
-    //             // this.items.push( this.items.length );
-    //             this.diaries.getAllDiaries(this.items.length-1).subscribe(res=> {
-    //                 console.log(res['diaries'])
-    //                 for (let i = 0; i <4; i++) {
-    //                     if(res['diaries'][i]!=null){
-    //                     this.items.push(res['diaries'][i])}
-    //
-    //
-    //                 }
-    //                 })
-    //
-    //         // this.diaries.getAllDiaries(this.items.length-1).subscribe(res=> {
-    //         //     console.log(res['diaries'])
-    //         //     this.items=res['diaries']
-    //         // })
-    //         console.log('Async operation has ended');
-
-            // infiniteScroll.complete();
-    // }
-
 
 }

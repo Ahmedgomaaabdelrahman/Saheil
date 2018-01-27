@@ -9,7 +9,7 @@
     </ion-col>
   </ion-row>
    <div class="topdiv">
-    
+
     <div class="simg" style="background-image: url(../assets/imgs/doctor.png);">
       <img height="25px" class="editicon" (click)="profileImage()" src="assets/imgs/editicon.png" ></div>
    </div>
@@ -28,6 +28,7 @@
   <ion-input class="editinput" [(ngModel)]="facebook" name="facebook" type="text" placeholder="فيس بوك"></ion-input>
   <ion-input class="editinput" [(ngModel)]="twitter" name="twitter" type="text" placeholder="تويتر"></ion-input>
   <ion-input class="editinput" [(ngModel)]="qPrice" name="qPrice" type="text" placeholder="سعر الاستشارة"></ion-input>
+  <p class="text">قيمة العمولة :%{{commetion}}</p>
 
   <!--<ion-input class="editinput" type="text" placeholder="العنوان على الخريظه"></ion-input>-->
     <button ion-button block class="btn"  (click)="selectLoc()">{{'Address On Map'|translate}}</button>
