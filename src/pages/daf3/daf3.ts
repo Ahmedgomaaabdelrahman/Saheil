@@ -12,6 +12,8 @@ export class Daf3Page {
 private member_id
   private amount
   flag:boolean
+  private YOUR_PRODUCTION_CLIENT_ID
+  private YOUR_SANDBOX_CLIENT_ID
   constructor(private common:CommonservicesProvider,private pay:PaypalProvider,public navCtrl: NavController, public navParams: NavParams) {
 
   }
@@ -30,8 +32,10 @@ this.common.getStoredValue('user').then(user=>{
   }
     submit(){
   if(this.member_id !=null){
-      this.pay.pay(this.member_id,this.amount,'تمت العملية بنجاح','فشلت العملية')
-
+    this.pay.getKeys().subscribe(res=> {
+      console.log( res['PRODUCTION_CLIENT_ID'])
+      this.pay.pay(this.member_id, this.amount, 'تمت العملية بنجاح', 'فشلت العملية', res['PRODUCTION_CLIENT_ID'], res['SANDBOX_CLIENT_ID'])
+    })
   }
     }
 }
