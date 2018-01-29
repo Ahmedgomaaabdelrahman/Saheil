@@ -1,6 +1,6 @@
 import {ModalController,NavController, NavParams, Platform, ViewController} from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
-import {BehaviorSubject} from "rxjs/BehaviorSubject";
+// import {BehaviorSubject} from "rxjs/BehaviorSubject";
 
 import { Component } from "@angular/core/";
 import {AutocompletePage} from "../autocomplete/autocomplete";
@@ -37,7 +37,7 @@ export class SelectlocPage {
   ///////////
     constructor(public service:VeterinariansProvider,public zone:NgZone,private modalCtrl: ModalController,public view:ViewController,public platform:Platform,public geolocation: Geolocation,public navCtrl: NavController, public navParams: NavParams){
       // platform.ready().then(() => {
-      this.zone.run(()=> this.loadMap())
+      this.loadMap()
       // });
       let self=this
       console.log(this.navParams.get('transportation'))
@@ -87,6 +87,7 @@ transporterMarkers
 loadMap() {
 
     this.geolocation.getCurrentPosition().then((resp) => {
+      this.zone.run(()=>resp)
         let latLng = new google.maps.LatLng(resp.coords.latitude, resp.coords.longitude);
         this.lat = resp.coords.latitude;
         this.lng = resp.coords.longitude;
@@ -105,6 +106,7 @@ loadMap() {
             this.lng = location.lng();
             console.log(this.lat);
             console.log(this.lng);
+            
             this.addMarker(location);
         });
         this.addMarker(this.map.getCenter());
