@@ -66,7 +66,8 @@ export class MyApp {
     this.horseSellerFlag = false;
     this.transporterFlag = false;
     platform.ready().then(() => {
-      let self = this
+      let self = this;
+      splashScreen.hide();
       // DomainProvider.lang='ar'
       // self.translate.setDefaultLang('ar');
       this.common.getStoredValue('lang').then(lang => {
@@ -99,7 +100,7 @@ export class MyApp {
         }
       })
       statusBar.styleDefault();
-      splashScreen.hide();
+      
     });
   }
 
