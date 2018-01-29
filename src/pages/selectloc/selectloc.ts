@@ -37,7 +37,7 @@ export class SelectlocPage {
   ///////////
     constructor(public service:VeterinariansProvider,public zone:NgZone,private modalCtrl: ModalController,public view:ViewController,public platform:Platform,public geolocation: Geolocation,public navCtrl: NavController, public navParams: NavParams){
       // platform.ready().then(() => {
-      this.loadMap()
+      // this.loadMap()
       // });
       let self=this
       console.log(this.navParams.get('transportation'))
@@ -66,6 +66,7 @@ export class SelectlocPage {
       ///////////
     }
     ionViewWillEnter(){
+      this.loadMap()
 
     }
   showAddressModal () {
@@ -106,7 +107,7 @@ loadMap() {
             this.lng = location.lng();
             console.log(this.lat);
             console.log(this.lng);
-            
+
             this.addMarker(location);
         });
         this.addMarker(this.map.getCenter());
