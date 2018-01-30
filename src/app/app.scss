@@ -153,3 +153,10 @@ button.item-ios:not([detail-none]) .item-inner {
 .segment-ios .segment-button {
     border: 1px solid #efc658 ;
 }
+.button-md:hover:not(.disable-hover) , .button-ios:hover:not(.disable-hover){
+    background-color: #fff;
+}
+.button-ios.activated {
+    background-color: #ba8700;
+    color:#fff;
+}

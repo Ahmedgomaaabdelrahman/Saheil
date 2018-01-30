@@ -64,17 +64,17 @@
 <form #f="ngForm">
   <div *ngIf="!transporterFlag">
         <ion-row>
-          <div *ngIf="status != 'pending'">
+         
+            <div style="width:100%" *ngIf="status != 'pending'">
 
-          <div *ngIf="status != 'cancel' && status != 'finish' ">
-
-          <ion-col col-4>
+                <div style="width:100%" *ngIf="status != 'cancel' && status != 'finish' ">
+          <ion-col col-12>
             <button ion-button (click)="action('finish')" block class="mybtn">{{'Finish'|translate}}</button>
           </ion-col>
-          <ion-col col-4>
+          <ion-col col-12>
             <button ion-button (click)="action('cancel')" block class="mybtn">{{'Cancel'|translate}}</button>
           </ion-col>
-            <ion-col col-4>
+            <ion-col col-12>
               <button ion-button (click)="action('continue')" block class="mybtn">{{'Continue'|translate}}</button>
             </ion-col>
           </div>
@@ -86,13 +86,18 @@
         </ion-row>
 
   <ion-row>
-    <ion-col col-4>
+    <ion-col col-12>
       <ion-input style="border:dotted;" [(ngModel)]="sendComplain" name="sendComplain" type="text" placeholder="ارسل شكوي"></ion-input>
     </ion-col>
-    <ion-col col-6>
+  </ion-row>
+  <ion-row>
+    <ion-col col-12>
       <button ion-button (click)="complain()" block class="mybtn">ارسال شكوي</button>
     </ion-col>
-  </ion-row></div><div *ngIf="transporterFlag">
+  </ion-row>
+</div>
+  
+  <div *ngIf="transporterFlag">
 
   <ion-col col-4>
     <button ion-button (click)="action('confirm')" block class="mybtn">قبول الطلب</button>

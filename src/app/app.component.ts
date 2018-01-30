@@ -67,6 +67,7 @@ export class MyApp {
     this.transporterFlag = false;
     platform.ready().then(() => {
       let self = this;
+      statusBar.styleDefault();
       splashScreen.hide();
       
       // DomainProvider.lang='ar'
@@ -100,7 +101,7 @@ export class MyApp {
           this.nav.setRoot(LanguagePage)
         }
       })
-      statusBar.styleDefault();
+     
       
     });
   }

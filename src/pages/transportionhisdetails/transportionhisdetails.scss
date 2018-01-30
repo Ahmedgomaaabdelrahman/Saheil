@@ -68,7 +68,8 @@ page-transportionhisdetails {
           font-weight: 600;
           background-color: white;
           width: 85%;
-          margin: 20px auto;
+          margin: 10px auto;
+         
       }
   .editinput , .message{
     border:1px solid lightgray;
@@ -77,5 +78,9 @@ page-transportionhisdetails {
     margin: 10px auto 0;
     ::placeholder{
       font-family: Appfont;
-    }}
+    }};
+
+    .text-input{
+      direction: rtl;
+    }
 }
