@@ -44,20 +44,20 @@ export class SelectlocPage {
     if(this.navParams.get('transportation')==true){
       // this.transportationMessageMode=this.navParams.get('transportation');
       this.transporterMarkers=[]
-      // this.arr=[]
-      // this.service.getAllServices(4).subscribe((res)=>{
-      //   self.arr=res
-      //   this.arr.forEach( (item) =>{
-      //     // for(let i;i<self.arr.length;i++){
-      //     console.log(item.latitude,item.longitude)
+      this.arr=[]
+      this.service.getAllServices(4).subscribe((res)=>{
+        self.arr=res
+        this.arr.forEach( (item) =>{
+          // for(let i;i<self.arr.length;i++){
+          console.log(item.latitude,item.longitude)
 
-      //     let latLng = new google.maps.LatLng(item.latitude,item.longitude);
+          let latLng = new google.maps.LatLng(item.latitude,item.longitude);
 
-      //     self.addTransportersMarkers(latLng,item.title)
-      //     // }
-      //   })
-      //   // console.log(res)
-      // },(e)=>{})
+          self.addTransportersMarkers(latLng,item.title)
+          // }
+        })
+        // console.log(res)
+      },(e)=>{})
     }
     ////////////
     this.address = {
