@@ -68,6 +68,7 @@ export class MyApp {
     platform.ready().then(() => {
       let self = this;
       splashScreen.hide();
+      
       // DomainProvider.lang='ar'
       // self.translate.setDefaultLang('ar');
       this.common.getStoredValue('lang').then(lang => {
