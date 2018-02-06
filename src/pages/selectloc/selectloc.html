@@ -15,7 +15,7 @@
     <ion-title>{{'selectloc'|translate}}</ion-title>
   </ion-navbar>
   <!--<script src='http://maps.googleapis.com/maps/api/js?v=3&sensor=false&amp;libraries=places&key=AIzaSyDsQacWO4uTKuGvMqqdsAaslq0Xa5a8RzQ'></script>-->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsQacWO4uTKuGvMqqdsAaslq0Xa5a8RzQ&libraries=places&callback=initMap" async defer></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsQacWO4uTKuGvMqqdsAaslq0Xa5a8RzQ&libraries=places&callback=initMap" async defer></script> -->
 </ion-header>
 
 
@@ -31,10 +31,12 @@
 
 
 
-    <ion-input  [(ngModel)]="address['place']" name="address['place']" class="placename" type="text" placeholder="Pick an address">
-     </ion-input> <button (click)="showAddressModal()" ion-button class="searchButton"><ion-icon name="search" style="color: #2d2d2d ;"></ion-icon></button>
+    <!--<ion-input  [(ngModel)]="address['placelabel']" name="address['placelabel']" class="placename" type="text" placeholder="Pick an address">-->
+     <!--</ion-input>-->
+    <ion-input name="placelabel" [(ngModel)]="placelabel" class="placename" placeholder="العنوان" type="text"></ion-input>
 
-    <!--<ion-input name="placelabel" [(ngModel)]="placelabel" class="placename" placeholder="العنوان" type="text"></ion-input>-->
+    <button (click)="showAddressModal()" ion-button class="searchButton"><ion-icon name="search" style="color: #2d2d2d ;"></ion-icon></button>
+
     <button ion-button block class="tobalagh" (click)="sendLocation()">{{'Save'|translate}}</button>
   </form>
 

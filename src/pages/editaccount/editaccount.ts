@@ -66,6 +66,12 @@ service_details_en:string;
         self.twitter = user.twitter;
 ///////////////
         console.log('lenth :`{{}}` ',user.image,)
+        if(user.service[0].service_id==-1){
+
+          self.normalUserFlag=true
+          console.log("self.service_id",user.service[0].service_id)
+
+        }
         document.getElementById("profileImage").style.backgroundImage="url("+this.image+")";
 
 //         let i=1
@@ -75,6 +81,7 @@ service_details_en:string;
 if(res!=null) {
   for (let i = 1; i < res['length']; i++) {
     if (self.service_id == res[i].service_id) {
+
       self.commetion = res[i].commision
       console.log(res[i])
     }
@@ -142,11 +149,18 @@ this.common.presentLoadingDefault();
         this.common.presentToast('تم التعديل')
         this.common.loadDismess();
         self.common.getStoredValue('xuser').then(u => {
-            self.common.storeValue('user', user)
+          let newUser={
+          mobile: self.mobile,
+            password: self.password,
+            gcm_regid: '123456'}
+          this.auth.login(newUser).subscribe(storeUser=>{
+            self.common.storeValue('user', storeUser)
             this.navCtrl.setRoot(HomePage)
             if (u != null) {
-                self.common.storeValue('xuser', u)
+              self.common.storeValue('xuser', storeUser)
             }
+          })
+
         })
     }
     })

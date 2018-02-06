@@ -39,12 +39,29 @@ updateSearch() {
     return;
   }
   let me = this;
-  this.service.getPlacePredictions({ input: this.autocomplete.query, componentRestrictions: {country: 'TH'} }, function (predictions, status) {
+//////////////////
+// this.autocomplete.getPlace();
+// console.log( 'places'this.autocomplete.getPlace())
+////////////////////
+  this.service.getPlacePredictions({ input: this.autocomplete.query
+    //to limit to specific countries
+    // ,componentRestrictions: {country: 'eg'} 
+  }, function (predictions, status) {
+    // this.autocomplete.setComponentRestrictions({'country': countries});
+
     me.autocompleteItems = [];
+
     me.zone.run(function () {
+      // console.log()
+      if(predictions!=null){
+
       predictions.forEach(function (prediction) {
         me.autocompleteItems.push(prediction.description);
-      });
+
+      });} else{
+        me.autocompleteItems.push("no results");
+
+      }
     });
   });
 }
