@@ -98,6 +98,7 @@ export class MyApp {
         } else {
           this.diableFlags()
           this.nav.setRoot(LanguagePage)
+         
         }
       })
       statusBar.styleDefault();
