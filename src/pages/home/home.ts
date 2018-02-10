@@ -95,20 +95,24 @@ let self=this
       console.log(self.slideImages[self.sliderIndex]['picpath']);
       self.sliderImage=self.slideImages[self.sliderIndex]['picpath']
       self.sliderIndex++
-
+try{
       this.startTimer=   setInterval(function () {
+
 this.sliderImage=''
-                        console.log(self.sliderIndex);
-                        console.log(self.slideImages[self.sliderIndex]);
-                        console.log(self.slideImages[self.sliderIndex]['picpath']);
+                        // console.log(self.sliderIndex);
+                        // console.log(self.slideImages[self.sliderIndex]);
+        if(self.slideImages [self.sliderIndex]!=null){                // console.log(self.slideImages[self.sliderIndex]['picpath']);
+
                         self.sliderImage=self.slideImages[self.sliderIndex]['picpath']
                         if(self.sliderIndex<(self.slideImages.length-1)){
                           self.sliderIndex++
 
                         }else if(self.sliderIndex==(self.slideImages.length-1)){
                           self.sliderIndex=0
-                        }
-                },4000);
+                        }}
+                },4000);}catch (e){
+
+}
 
     }
     ionViewWillLeave(){

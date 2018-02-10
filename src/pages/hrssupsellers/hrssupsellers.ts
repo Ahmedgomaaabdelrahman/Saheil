@@ -29,8 +29,8 @@ export class HrssupsellersPage {
     }
     gotodetails(id){
 
-        // this.navCtrl.push(HorsesuppPage,id);
-                this.navCtrl.push(DoctordetailsPage,id);
+        this.navCtrl.push(HorsesuppPage,id);
+                // this.navCtrl.push(DoctordetailsPage,id);
 
     }
 }

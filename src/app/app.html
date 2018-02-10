@@ -24,7 +24,7 @@
                      </button>
                  </div>
 
-                 <button class="menubtn" *ngIf="flag" (click)="transportationReq()" menuClose ion-item color="standard">
+                 <button class="menubtn" *ngIf="!transporterFlag" (click)="transportationReq()" menuClose ion-item color="standard">
                      <ion-icon name="person"></ion-icon>{{'Transport Orders' | translate}}
                  </button>
                  <button class="menubtn" *ngIf="transporterFlag" (click)="transportationReq()" menuClose ion-item color="standard">
