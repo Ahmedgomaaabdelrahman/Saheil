@@ -102,13 +102,8 @@ export class MyApp {
          
         }
       })
-<<<<<<< HEAD
      
       
-=======
-      statusBar.styleDefault();
-
->>>>>>> 87eea3cf340739dde4681ed03250bdc462ee3f1b
     });
   }
 
