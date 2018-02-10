@@ -46,6 +46,8 @@ export class SelectlocPage {
       this.transporterMarkers=[]
       this.arr=[]
       this.service.getAllServices(4).subscribe((res)=>{
+        console.log(res)
+        
         self.arr=res
         this.arr.forEach( (item) =>{
           // for(let i;i<self.arr.length;i++){
@@ -101,7 +103,7 @@ export class SelectlocPage {
         let mapOptions = {
           center: latLng,
           disableDefaultUI: true,
-          zoom: 22,
+          zoom: 10,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
@@ -138,7 +140,7 @@ export class SelectlocPage {
       let mapOptions = {
         center: latLng,
         disableDefaultUI: true,
-        zoom: 22,
+        zoom: 10,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       };
 

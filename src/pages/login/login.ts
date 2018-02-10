@@ -27,13 +27,14 @@ export class LoginPage {
   succsesMSG = 'مرحباّ!'
 
   submit() {
-    console.log(this._save)
     // this.getService.getToken().then(token=>{
     var user = {
       mobile: this._mobile,
       password: this._password,
       gcm_regid: '123456'
     }
+    console.log('send',user)
+
     this.common.presentLoadingDefault(this.loadingMSG)
     this.auth.login(user).subscribe(res => {
       if (res['error'] != null) {

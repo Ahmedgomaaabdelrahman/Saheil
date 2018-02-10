@@ -46,7 +46,8 @@ service_details_en:string;
           // console.log(user);
         self.member_id = user.member_id;
 //////////////
-        self.qPrice=user.price;
+//         self.qPrice=user.price;
+        self.qPrice=user.balance;
         self.image = user.image;
         self.username = user.username;
         self.email = user.email;
@@ -55,17 +56,23 @@ service_details_en:string;
         self.password = user.password;
         self.gcm_regid=user.gcm_regid;
         self.service_id = user.service[0].service_id;
-        self.service_name_ar = user.service_name_ar;
-        self.service_name_en = user.service_name_en;
-        self.service_image = user.service_image;
-        self.service_adress_ar = user.service_adress_ar;
-        self.service_adress_en = user.service_adress_en;
-        self.service_details_ar = user.service_details_ar;
-        self.service_details_en = user.service_details_en;
-        self.facebook = user.facebook;
-        self.twitter = user.twitter;
+        self.service_name_ar = user.service[0].title_ar;
+        self.service_name_en = user.service[0].title_en;
+        self.service_image = user.members_services[0].service_image;
+        self.service_adress_ar = user.members_services[0].service_address_ar;
+        self.service_adress_en = user.members_services[0].service_address_en;
+        self.service_details_ar = user.members_services[0].service_details_ar;
+        self.service_details_en = user.members_services[0].service_details_en;
+        self.facebook = user.members_services[0].facebook;
+        self.twitter = user.members_services[0].twitter;
 ///////////////
         console.log('lenth :`{{}}` ',user.image,)
+        if(user.service[0].service_id==-1){
+
+          self.normalUserFlag=true
+          console.log("self.service_id",user.service[0].service_id)
+
+        }
         document.getElementById("profileImage").style.backgroundImage="url("+this.image+")";
 
 //         let i=1
@@ -75,6 +82,7 @@ service_details_en:string;
 if(res!=null) {
   for (let i = 1; i < res['length']; i++) {
     if (self.service_id == res[i].service_id) {
+
       self.commetion = res[i].commision
       console.log(res[i])
     }
@@ -119,8 +127,8 @@ submit(){
       'service_name_ar':this.service_name_ar,
       'service_name_en':this.service_name_en,
       'service_image':this.service_sendimage,//use cam
-      'service_adress_ar':this.service_adress_ar,
-      'service_adress_en':this.service_adress_en,
+      'service_address_ar':this.service_adress_ar,
+      'service_address_en':this.service_adress_en,
       'service_details_ar':this.service_details_ar,
       'service_details_en':this.service_details_en,
       'facebook':this.facebook,
@@ -142,11 +150,19 @@ this.common.presentLoadingDefault();
         this.common.presentToast('تم التعديل')
         this.common.loadDismess();
         self.common.getStoredValue('xuser').then(u => {
-            self.common.storeValue('user', user)
+          let newUser={
+          mobile: self.mobile,
+            password: self.password,
+            gcm_regid: '123456'}
+            console.log('login info : ',newUser)
+          this.auth.login(newUser).subscribe(storeUser=>{
+            self.common.storeValue('user', storeUser)
             this.navCtrl.setRoot(HomePage)
             if (u != null) {
-                self.common.storeValue('xuser', u)
+              self.common.storeValue('xuser', storeUser)
             }
+          })
+
         })
     }
     })

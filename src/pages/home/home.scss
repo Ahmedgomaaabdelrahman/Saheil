@@ -2,6 +2,15 @@ page-home {
     .content{
         background-image: none;
     }
+    .scroll-content {
+        position: fixed !important;
+        overflow-x: unset !important;
+        overflow-y: unset !important;
+    }
+    .divscroll{
+        overflow: scroll;
+        height: 100%
+    }
     .toprow{
         background-color: #efc658;
         text-align: center;

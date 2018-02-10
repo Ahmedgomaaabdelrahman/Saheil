@@ -69,7 +69,7 @@ export class MyApp {
       let self = this;
       statusBar.styleDefault();
       splashScreen.hide();
-      
+
       // DomainProvider.lang='ar'
       // self.translate.setDefaultLang('ar');
       this.common.getStoredValue('lang').then(lang => {
@@ -99,10 +99,16 @@ export class MyApp {
         } else {
           this.diableFlags()
           this.nav.setRoot(LanguagePage)
+         
         }
       })
+<<<<<<< HEAD
      
       
+=======
+      statusBar.styleDefault();
+
+>>>>>>> 87eea3cf340739dde4681ed03250bdc462ee3f1b
     });
   }
 

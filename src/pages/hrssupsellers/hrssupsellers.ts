@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SellerdetailsPage } from '../sellerdetails/sellerdetails';
 import {VeterinariansProvider} from "../../providers/veterinarians/veterinarians";
 import {HorsesuppPage} from "../horsesupp/horsesupp";
+import { DoctordetailsPage } from '../doctordetails/doctordetails';
 
 
 
@@ -27,6 +28,9 @@ export class HrssupsellersPage {
         console.log('ionViewDidLoad AlldoctorsPage');
     }
     gotodetails(id){
+
         this.navCtrl.push(HorsesuppPage,id);
+                // this.navCtrl.push(DoctordetailsPage,id);
+
     }
 }

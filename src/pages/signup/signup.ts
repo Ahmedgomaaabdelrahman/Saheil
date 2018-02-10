@@ -74,8 +74,10 @@ keyKode:any
         }
 
 console.log('user',User);
-        this.common.presentLoadingDefault('وف يتم التسجيل برجاء الانتظار')
+        this.common.presentLoadingDefault('سوف يتم التسجيل برجاء الانتظار')
 this.auth.register(User).subscribe(res=>{
+    console.log(res);
+
     this.common.loadDismess()
     if(res['error']!=null) {
         this.common.presentToast(res['error'])
