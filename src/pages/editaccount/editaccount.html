@@ -36,8 +36,14 @@
   <!--<ion-input class="editinput" type="text" placeholder="العنوان على الخريظه"></ion-input>-->
     <button ion-button block class="btn"  (click)="selectLoc()">{{'Address On Map'|translate}}</button>
     <button ion-button block class="btn"  *ngIf="!normalUserFlag" (click)="serviceImage()"> {{'Add Image of Service'|translate}} </button>
-<img *ngIf="!normalUserFlag" src='{{service_image}}'>
-     <button ion-button block class="btn"(click)="submit()">تعديل</button>
+
+<div *ngIf="service_image !== 'http://www.sahel-horse.com/uploads/'">
+
+
+
+    <img *ngIf="!normalUserFlag" src='{{service_image}}'>
+</div>
+    <button ion-button block class="btn"(click)="submit()">تعديل</button>
 </form>
 
 </ion-content>
