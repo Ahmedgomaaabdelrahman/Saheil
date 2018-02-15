@@ -54,7 +54,13 @@ ionViewWillEnter(){
 
     })
 }
-    delete(i){
+    delete(i,sup){
+console.log(sup)
+this.cart.deleteFromCart(sup.order_id).subscribe((res)=>{},(e)=>{
+    console.log(e)
+})
+
+        
     // if()
 this.totalPrice=this.totalPrice-(this.quantity[i]*parseInt(this.sups[i].price))
         console.log(this.quantity[i]*parseInt(this.sups[i].price))
@@ -102,6 +108,9 @@ this.prepareToBuy().then(starttoBuy=>{
 
     this.cart.buyslected(this.member_id,this.adress,this.mobile,starttoBuy,this.totalPrice).subscribe(res=>{
         console.log(res)
+        if(res['error']!=null){
+            this.comman.presentToast(res['error'])
+        }
     })
 })
 
