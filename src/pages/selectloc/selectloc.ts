@@ -182,7 +182,7 @@ export class SelectlocPage {
         map: this.map,
         animation: google.maps.Animation.DROP,
         title:title,
-        icon:'assets/imgs/address.png',
+        icon:'assets/imgs/mappointer.png',
 
         position: LatLng
       });
